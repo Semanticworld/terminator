@@ -5,6 +5,11 @@ $(document).ready(function () {
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
+        this.loadcss(home+"plugins/jquery-ui/jquery-ui.css");
+        this.loadjs(home+"plugins/jquery-ui/jquery-ui.min.js");
+
+        
+
         var waitPanel = setInterval(function() {
             console.log("wait");
             if ($("i.em-smiley").length){
