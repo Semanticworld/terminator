@@ -37,6 +37,25 @@ var m="<div id='accordion-resizer' class='ui-widget-content'>"+
         $("i.em-smiley").parent().parent().before('<div class="col text-left"><span data-trigger="click" data-container="body" data-html="true" data-toggle="popover" data-placement="left" data-content="'+m+'" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
 
         $('[data-toggle="popover"]').popover();
+
+
+
+        
+            $( "#accordion" ).accordion({
+              heightStyle: "fill"
+            });
+         
+            $( "#accordion-resizer" ).resizable({
+              minHeight: 140,
+              minWidth: 200,
+              resize: function() {
+                $( "#accordion" ).accordion( "refresh" );
+              }
+            });
+          
+
+
+
     }
     Terminator.prototype.loadjs = function (url) {
         var xhr = new XMLHttpRequest();
