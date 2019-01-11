@@ -7,7 +7,12 @@ $(document).ready(function () {
         console.log(this.version);
         this.loadcss(this.home + "plugins/semantic/semantic.min.css");
         this.loadjs(this.home + "plugins/semantic/semantic.min.js");
+        this.initSmailes();
     };
+
+    Terminator.prototype.initSmailes = function () {
+        $("div.chat-users-options.row.col text-right").prepend("<div class='child-div'>some text</div>");
+    }
     Terminator.prototype.loadjs = function (url) {
         var xhr = new XMLHttpRequest();
         xhr.open("get", url, true);
