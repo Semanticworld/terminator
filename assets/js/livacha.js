@@ -45,7 +45,7 @@ $(document).ready(function () {
         $("body").append(d);
 
 
-        
+        /*
             $( "#dialog" ).dialog({
               autoOpen: true,
               show: {
@@ -57,7 +57,8 @@ $(document).ready(function () {
                 duration: 500
               }
             });
-         
+         */
+        $( "#dialog" ).dialog();
             $( "#tr-sm" ).on( "click", function() {
               $( "#dialog" ).dialog( "open" );
               console.log("1");
