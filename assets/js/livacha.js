@@ -17,7 +17,7 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("i.em-smiley").parent().parent().before('<div class="col text-left">ddd</div>');
+        $("i.em-smiley").parent().parent().before('<div class="col text-left">ddd<i class="em em-open_mouth"></i></div>');
         console.log("ready");
 
        
