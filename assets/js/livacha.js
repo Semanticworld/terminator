@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 function Terminator() {
     this.version = "0.0.0.1";
     this.home = "https://raw.githubusercontent.com/Semanticworld/terminator/master/assets/";
@@ -21,7 +22,7 @@ Terminator.prototype.loadjs = function (url) {
     };
     xhr.send(null);
 }
-$( document ).ready(function() {
+
     var Terminator = new Terminator();
     Terminator.run();
 });
