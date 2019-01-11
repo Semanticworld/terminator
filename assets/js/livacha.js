@@ -21,7 +21,7 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("div.chat-users-options.togglers.em-smiley").before('<div class="col text-left">some text</div>');
+        $("div.chat-users-options.em-smiley").before('<div class="col text-left">some text</div>');
         console.log("ready");
 
         
