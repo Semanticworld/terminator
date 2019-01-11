@@ -43,11 +43,27 @@ $(document).ready(function () {
         $("i.em-smiley")
             .parent()
             .parent()
-            .before('<div class="col text-left"><span data-trigger="click" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>').
+            .before('<div class="col text-left"><span id="tr-sm" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>').
         before(d);
 
 
-
+        $( function() {
+            $( "#dialog" ).dialog({
+              autoOpen: false,
+              show: {
+                effect: "blind",
+                duration: 1000
+              },
+              hide: {
+                effect: "explode",
+                duration: 1000
+              }
+            });
+         
+            $( "#tr-sm" ).on( "click", function() {
+              $( "#dialog" ).dialog( "open" );
+            });
+          } );
 
 
 
