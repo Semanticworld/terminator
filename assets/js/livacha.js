@@ -21,7 +21,7 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("i.em-smiley").parent().parent().before('<div class="ui col text-left"><i class="smile red outline icon"></i>test</div>');
+        $("i.em-smiley").parent().parent().before('<div class="col text-left"><i class="smile red outline icon"></i>test<div class="ui label"><i class="mail icon"></i> 23</div></div>');
         console.log("ready");
 
        
