@@ -42,7 +42,3 @@ $(document).ready(function () {
     var Terminator = new Terminator();
     Terminator.run();
 });
-
-<
-link href = "https://livacha.com/css/ui.css?v=111"
-rel = "stylesheet" > < /link>
