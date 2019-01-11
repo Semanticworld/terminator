@@ -62,6 +62,7 @@ $(document).ready(function () {
          
             $( "#tr-sm" ).on( "click", function() {
               $( "#dialog" ).dialog( "open" );
+              console.log("1");
             });
         
 
