@@ -7,7 +7,7 @@ $(document).ready(function () {
         console.log(this.version);
         this.loadcss(this.home + "plugins/semantic/semantic.min.css");
         this.loadcss(this.home + "plugins/semantic/components/icon.min.css");
-        this.loadjs(this.home + "plugins/semantic/components/icon.min.css");
+        this.loadjs(this.home + "plugins/semantic/semantic.min.js");
 
 
         var waitPanel = setInterval(function() {
