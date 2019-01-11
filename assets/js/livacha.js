@@ -31,7 +31,7 @@ $(document).ready(function () {
                 if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
                     var style = document.createElement("style");
                     style.type = 'text/css';
-                    script.text = xhr.responseText;
+                    style.text = xhr.responseText;
                     //  document.body.appendChild(script);
                     document.getElementsByTagName('head')[0].appendChild(style);
                 }
