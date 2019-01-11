@@ -5,13 +5,6 @@ $(document).ready(function () {
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
-        this.loadcss( "https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css");
-        this.loadjs( "https://code.jquery.com/jquery-3.1.1.min.js");
-
-        
-        this.loadjs( "https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js");
-
-
         var waitPanel = setInterval(function() {
             console.log("wait");
             if ($("i.em-smiley").length){
@@ -24,7 +17,7 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("i.em-smiley").parent().parent().before('<div class="col text-left"><i class="smile red outline icon"></i>test<div class="ui label"><i class="mail icon"></i> 23</div></div>');
+        $("i.em-smiley").parent().parent().before('<div class="col text-left">ddd</div>');
         console.log("ready");
 
        
