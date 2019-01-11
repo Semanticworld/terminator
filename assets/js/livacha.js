@@ -13,7 +13,7 @@ $(document).ready(function () {
             console.log("wait");
             if ($("i.em-smiley").length){
                 clearInterval(waitPanel);
-                this.initSmailes();
+                Terminator.initSmailes();
             }
           }, 2000);
 
