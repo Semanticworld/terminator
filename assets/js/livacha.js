@@ -36,7 +36,7 @@ $(document).ready(function () {
             "</div>";
 
 
-        var d = '<div id="dialog"><p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the x icon.</p></div>';
+        var d = '<div id="dialog2"><p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the x icon.</p></div>';
 
 
 
@@ -60,7 +60,13 @@ $(document).ready(function () {
        // $( "#dialog" ).dialog( "open" ); 
       // $( "#dialog" ).dialog({ autoOpen: false });
             $( "#tr-sm" ).on( "click", function() {
-              $( "#dialog" ).dialog( "open" );
+                $("#dialog2").dialog({
+                    // modal: true,
+                     resizable: false,
+                     show: 'blind',
+                     hide: 'blind',
+                     width: 400
+                 });
               console.log("1");
             });
         
@@ -82,13 +88,7 @@ $(document).ready(function () {
 
 
 
-$("#dialog").dialog({
-   // modal: true,
-    resizable: false,
-    show: 'blind',
-    hide: 'blind',
-    width: 400
-});
+
 
 
         
