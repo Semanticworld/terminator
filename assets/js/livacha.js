@@ -85,14 +85,6 @@ $(document).ready(function () {
 $("#dialog").dialog({
    // modal: true,
     resizable: false,
-    buttons: {
-        "Yeah!": function() {
-            $(this).dialog("close");
-        },
-        "Sure, Why Not": function() {
-            $(this).dialog("close");
-        }
-    }
 });
 
 
