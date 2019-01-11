@@ -26,5 +26,6 @@
         }
     }
     var dom = getHostName(document.location.href);
-    console.log(dom);
+    //console.log(dom);
+    alert("test");
 });
