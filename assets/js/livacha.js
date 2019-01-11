@@ -85,6 +85,9 @@ $(document).ready(function () {
 $("#dialog").dialog({
    // modal: true,
     resizable: false,
+    show: 'blind',
+    hide: 'blind',
+    width: 400
 });
 
 
