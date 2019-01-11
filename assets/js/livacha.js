@@ -5,9 +5,7 @@ $(document).ready(function () {
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
-        (function(jQuery) {
-            Terminator.loadjs("https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js");
-          })($);
+
 
        
 
