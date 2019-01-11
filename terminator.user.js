@@ -2,7 +2,7 @@
 // @name        Terminator
 // @description Terminator - chat optimizator
 // @author      Semanticworld
-// @version     0.0.0.2
+// @version     0.0.0.3
 // @updateURL   https://github.com/Semanticworld/terminator/raw/master/terminator.user.js
 // @namespace   https://livacha.com/
 // @match       https://livacha.com/chat/*
