@@ -5,8 +5,8 @@ $(document).ready(function () {
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
-        this.loadcss(home+"plugins/jquery-ui/jquery-ui.css");
-        this.loadjs(home+"plugins/jquery-ui/jquery-ui.min.js");
+        this.loadcss(this.home+"plugins/jquery-ui/jquery-ui.css");
+        this.loadjs(this.home+"plugins/jquery-ui/jquery-ui.min.js");
 
         
 
