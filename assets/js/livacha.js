@@ -45,7 +45,7 @@ $(document).ready(function () {
             .parent()
             .parent()
             .before('<div class="col text-left"><span id="tr-sm" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
-            $("body").appendChild(d);
+            $("body").append(d);
 
 
         
