@@ -47,7 +47,7 @@ $(document).ready(function () {
         before(d);
 
 
-        $( function() {
+        
             $( "#dialog" ).dialog({
               autoOpen: false,
               show: {
@@ -63,7 +63,7 @@ $(document).ready(function () {
             $( "#tr-sm" ).on( "click", function() {
               $( "#dialog" ).dialog( "open" );
             });
-          } );
+        
 
 
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
             }
         });
 
-        $('[data-toggle="popover"]').popover();
+        
 
 
     }
