@@ -21,10 +21,10 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("i.em-smiley").parent().parent().before('<div class="col text-left">some text</div>');
+        $("i.em-smiley").parent().parent().before('<div class="col text-left"><i class="smile red outline icon"></i></div>');
         console.log("ready");
 
-        
+       
     }
     Terminator.prototype.loadjs = function (url) {
         var xhr = new XMLHttpRequest();
