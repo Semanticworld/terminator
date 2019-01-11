@@ -5,7 +5,7 @@ $(document).ready(function () {
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
-
+        var j$132 = $.noConflict(true);
 
         this.loadjs("https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js");
 
@@ -43,7 +43,7 @@ $(document).ready(function () {
 
         var d = '<div id="dialog2"><p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the x icon.</p></div>';
 
-        var j$132 = $.noConflict(true);
+        
 
         $("i.em-smiley").parent().parent().before('<div class="col text-left"><span id="tr-sm" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
         $("body").append(d);
