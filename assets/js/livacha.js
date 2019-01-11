@@ -49,14 +49,14 @@ $(document).ready(function () {
 
         
             $( "#dialog" ).dialog({
-              autoOpen: false,
+              autoOpen: true,
               show: {
                 effect: "blind",
-                duration: 1000
+                duration: 500
               },
               hide: {
                 effect: "explode",
-                duration: 1000
+                duration: 500
               }
             });
          
