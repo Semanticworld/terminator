@@ -5,7 +5,7 @@ $(document).ready(function () {
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
-        var j$132 = $.noConflict(true);
+        var $ = $.noConflict(true);
 
         this.loadjs("https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js");
 
