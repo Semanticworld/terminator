@@ -4,7 +4,7 @@ function Terminator() {
 }
 Terminator.prototype.run = function () {
     console.log(this.version);
-    this.loadjs(this.home + "semantic/semantic.min.js");
+    this.loadjs(this.home + "plugins/semantic/semantic.min.js");
 };
 Terminator.prototype.loadjs = function (url) {
     var xhr = new XMLHttpRequest();
@@ -21,7 +21,5 @@ Terminator.prototype.loadjs = function (url) {
     };
     xhr.send(null);
 }
-
-
 var Terminator = new Terminator();
 Terminator.run();
