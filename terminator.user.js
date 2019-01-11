@@ -2,7 +2,7 @@
 // @name        Terminator
 // @description Terminator - chat optimizator
 // @author      Semanticworld
-// @version     0.0.0.1
+// @version     0.0.0.2
 // @namespace   https://livacha.com/
 // @match       https://livacha.com/chat/*
 // @match       https://dropmefiles.com/*
