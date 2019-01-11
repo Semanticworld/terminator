@@ -5,8 +5,7 @@ $(document).ready(function () {
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
-        this.loadcss(this.home + "plugins/jquery-ui/jquery-ui.css");
-        this.loadcss(this.home + "plugins/jquery-ui/themes/blitzer/theme.css");
+        this.loadcss(this.home + "plugins/jquery-ui/themes/start/jquery-ui.min.css");
         this.loadjs(this.home + "plugins/jquery-ui/jquery-ui.min.js");
 
        
@@ -59,7 +58,7 @@ $(document).ready(function () {
             });
          */
        // $( "#dialog" ).dialog( "open" ); 
-       $( "#dialog" ).dialog({ autoOpen: false });
+      // $( "#dialog" ).dialog({ autoOpen: false });
             $( "#tr-sm" ).on( "click", function() {
               $( "#dialog" ).dialog( "open" );
               console.log("1");
@@ -67,7 +66,7 @@ $(document).ready(function () {
         
 
 
-
+/*
         $("#accordion").accordion({
             heightStyle: "fill"
         });
@@ -79,6 +78,23 @@ $(document).ready(function () {
                 $("#accordion").accordion("refresh");
             }
         });
+*/
+
+
+
+$("#dialog").dialog({
+    modal: true,
+    resizable: false,
+    buttons: {
+        "Yeah!": function() {
+            $(this).dialog("close");
+        },
+        "Sure, Why Not": function() {
+            $(this).dialog("close");
+        }
+    }
+});
+
 
         
 
