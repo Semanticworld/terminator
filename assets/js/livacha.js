@@ -36,7 +36,7 @@ var m="<div id='ter-smiles' class='ui-widget-content'>"+
 "</div>";
         $("i.em-smiley").parent().parent().before('<div class="col text-left"><span data-trigger="click" data-container="body" data-html="true" data-toggle="popover" data-placement="left" data-content="'+m+'" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
 
-        $('[data-toggle="popover"]').popover();
+        
 
 
 
@@ -53,7 +53,7 @@ var m="<div id='ter-smiles' class='ui-widget-content'>"+
               }
             });
           
-
+$('[data-toggle="popover"]').popover();
 
 
     }
