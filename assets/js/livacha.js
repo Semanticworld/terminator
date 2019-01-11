@@ -7,11 +7,21 @@ $(document).ready(function () {
         console.log(this.version);
         this.loadcss(this.home + "plugins/semantic/semantic.min.css");
         this.loadjs(this.home + "plugins/semantic/semantic.min.js");
-        this.initSmailes();
+
+
+        var waitPanel = setInterval(function() {
+            console.log("wait");
+            if ($("i.em-smiley").length){
+                clearInterval(waitPanel);
+                this.initSmailes();
+            }
+          }, 2000);
+
+        
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("i.em-smiley").parents().prepend("<div>some text</div>");
+       // $("i.em-smiley").parents().prepend("<div>some text</div>");
         console.log("ready");
     }
     Terminator.prototype.loadjs = function (url) {
