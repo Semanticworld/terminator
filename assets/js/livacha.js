@@ -58,7 +58,8 @@ $(document).ready(function () {
               }
             });
          */
-        $( "#dialog" ).dialog(); 
+       // $( "#dialog" ).dialog( "open" ); 
+       $( "#dialog" ).dialog({ autoOpen: false });
             $( "#tr-sm" ).on( "click", function() {
               $( "#dialog" ).dialog( "open" );
               console.log("1");
