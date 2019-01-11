@@ -21,5 +21,9 @@ Terminator.prototype.loadjs = function (url) {
     };
     xhr.send(null);
 }
-var Terminator = new Terminator();
-Terminator.run();
+$( document ).ready(function() {
+    var Terminator = new Terminator();
+    Terminator.run();
+});
+
+
