@@ -22,7 +22,7 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-var m="<div id='accordion-resizer' class='ui-widget-content'>"+
+var m="<div id='ter-smiles' class='ui-widget-content'>"+
 "<div id='accordion'>"+
   "<h3>Section 1</h3>"+
   "<div><p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p></div>"+
@@ -45,7 +45,7 @@ var m="<div id='accordion-resizer' class='ui-widget-content'>"+
               heightStyle: "fill"
             });
          
-            $( "#accordion-resizer" ).resizable({
+            $( "#ter-smiles" ).resizable({
               minHeight: 140,
               minWidth: 200,
               resize: function() {
