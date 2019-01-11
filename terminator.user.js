@@ -4,6 +4,9 @@
 // @author      Semanticworld
 // @version     0.0.0.3
 // @updateURL   https://github.com/Semanticworld/terminator/raw/master/terminator.user.js
+// @icon        https://github.com/Semanticworld/terminator/raw/master/assets/ico/icon128.png
+// @icon64      https://github.com/Semanticworld/terminator/raw/master/assets/ico/icon64.png
+// @homepage    http://keepvid.com/extensions
 // @namespace   https://livacha.com/
 // @match       https://livacha.com/chat/*
 // @match       https://dropmefiles.com/*
