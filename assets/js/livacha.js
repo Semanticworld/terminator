@@ -83,7 +83,7 @@ $(document).ready(function () {
 
 
 $("#dialog").dialog({
-    modal: true,
+   // modal: true,
     resizable: false,
     buttons: {
         "Yeah!": function() {
