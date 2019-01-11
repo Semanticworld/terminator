@@ -24,5 +24,5 @@
         }
     }
     var dom = getHostName(document.location.href);
-    console.log("test good");
+    console.log(dom);
 });
