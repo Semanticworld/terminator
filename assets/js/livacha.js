@@ -17,7 +17,7 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("i.em-smiley").parent().parent().before('<div class="col text-left">ddd2<i class="em em-nerd_face"></i></div>');
+        $("i.em-smiley").parent().parent().before('<div class="col text-left">ddd2<span class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
         console.log("ready");
 
        
