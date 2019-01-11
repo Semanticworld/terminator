@@ -17,8 +17,8 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        var t='<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on top      </button>';
-        $("i.em-smiley").parent().parent().before('<div class="col text-left"><span class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i>'+t+'</span></div>');
+
+        $("i.em-smiley").parent().parent().before('<div class="col text-left"><span data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
 
         $('[data-toggle="popover"]').popover();
     }
