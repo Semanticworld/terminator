@@ -6,7 +6,6 @@ $(document).ready(function () {
     Terminator.prototype.run = function () {
         console.log(this.version);
         this.loadcss(this.home + "plugins/semantic/semantic.min.css");
-        this.loadcss(this.home + "plugins/semantic/components/icon.min.css");
         this.loadjs(this.home + "plugins/semantic/semantic.min.js");
 
 
@@ -22,7 +21,7 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("i.em-smiley").parent().parent().before('<div class="col text-left"><i class="smile red outline icon"></i></div>');
+        $("i.em-smiley").parent().parent().before('<div class="col text-left"><i class="smile red outline icon"></i>test</div>');
         console.log("ready");
 
        
