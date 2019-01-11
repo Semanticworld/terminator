@@ -21,7 +21,7 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("i.em-smiley").parent().parent().prepend("<div>some text</div>");
+        $("div.chat-users-options").prepend("<div>some text</div>");
         console.log("ready");
     }
     Terminator.prototype.loadjs = function (url) {
