@@ -21,7 +21,7 @@ $(document).ready(function () {
     };
 
     Terminator.prototype.initSmailes = function () {
-        $("div.chat-users-options.row.col").prepend('<div class="col text-left">some text</div>');
+        $("div.chat-users-options.row").prepend('<div class="col text-left">some text</div>');
         console.log("ready");
     }
     Terminator.prototype.loadjs = function (url) {
