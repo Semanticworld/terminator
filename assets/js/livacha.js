@@ -5,6 +5,11 @@ $(document).ready(function () {
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
+
+
+        this.loadjs("https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js);
+
+        
      //   this.loadcss(this.home + "plugins/jquery-ui/themes/start/jquery-ui.min.css");
       //  this.loadjs(this.home + "plugins/jquery-ui/jquery-ui.min.js");
 
