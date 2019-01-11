@@ -28,4 +28,4 @@
     var dom = getHostName(document.location.href);
     //console.log(dom);
     alert("test");
-});
+})();
