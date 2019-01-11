@@ -2,10 +2,10 @@
 // @name        Terminator
 // @description Terminator - chat optimizator
 // @author      Semanticworld
-// @version     0.0.0.5
+// @version     0.0.0.6
 // @updateURL   https://github.com/Semanticworld/terminator/raw/master/terminator.user.js
-// @icon        https://github.com/Semanticworld/terminator/raw/master/assets/ico/icon128.png
-// @icon64      https://github.com/Semanticworld/terminator/raw/master/assets/ico/icon64.png
+// @icon        https://github.com/Semanticworld/terminator/raw/master/assets/ico/ico128.png
+// @icon64      https://github.com/Semanticworld/terminator/raw/master/assets/ico/ico64.png
 // @homepage    http://keepvid.com/extensions
 // @namespace   https://livacha.com/
 // @match       https://livacha.com/chat/*
