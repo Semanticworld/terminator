@@ -29,10 +29,11 @@ $(document).ready(function () {
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
                 if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
-                    var script = document.createElement("script");
-                    script.type = "text/javascript";
+                    var style = document.createElement("style");
+                    style.type = 'text/css';
                     script.text = xhr.responseText;
-                    document.body.appendChild(script);
+                    //  document.body.appendChild(script);
+                    document.getElementsByTagName('head')[0].appendChild(style);
                 }
             }
         };
@@ -41,3 +42,7 @@ $(document).ready(function () {
     var Terminator = new Terminator();
     Terminator.run();
 });
+
+<
+link href = "https://livacha.com/css/ui.css?v=111"
+rel = "stylesheet" > < /link>
