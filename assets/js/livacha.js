@@ -6,7 +6,8 @@ $(document).ready(function () {
     Terminator.prototype.run = function () {
         console.log(this.version);
         this.loadcss(this.home + "plugins/semantic/semantic.min.css");
-        this.loadjs(this.home + "plugins/semantic/semantic.min.js");
+        this.loadcss(this.home + "plugins/semantic/components/icon.min.css");
+        this.loadjs(this.home + "plugins/semantic/components/icon.min.css");
 
 
         var waitPanel = setInterval(function() {
