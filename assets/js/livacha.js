@@ -58,7 +58,7 @@ $(document).ready(function () {
               }
             });
          */
-        $( "#dialog" ).dialog();
+        $( "#dialog" ).dialog(); 
             $( "#tr-sm" ).on( "click", function() {
               $( "#dialog" ).dialog( "open" );
               console.log("1");
