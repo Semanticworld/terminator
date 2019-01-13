@@ -15,7 +15,6 @@ $(document).ready(function () {
 
     Terminator.prototype.initSmailes = function () {
         $("i.em-smiley").parent().parent().before('<div class="col text-left"><span id="tr-sm" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
-        $("body").append(d);
         Terminator.load("js", home + "js/functions.js?r=" + Math.random(), function () {Terminator.createSmilesBox();});
         Terminator.load("css", home + "css/main.css?r=" + Math.random());
     }
