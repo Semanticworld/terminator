@@ -1,8 +1,10 @@
 .tr-window {
+    position: absolute;
     border: 1px solid #89B;
     background: #BCE;
     height: 300px;
     width: 310px;
+    z-index: 100;
  /*   visibility: hidden;*/
  top:100px;
  left: 300px;
