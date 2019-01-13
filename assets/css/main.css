@@ -25,6 +25,8 @@
     content: "\00274C";
 }
 
+
+
 .tr-smile {
     padding: 10px;
 
@@ -39,6 +41,7 @@
     width: 16px;
     height: 16px;
 }
+
 
 .tr-tab-content::-webkit-scrollbar {
     width: 10px;
@@ -62,6 +65,14 @@
 .tr-tab-content::-webkit-scrollbar-thumb:active {
     background: #F3F5F6
 }
+
+
+
+
+
+
+
+
 
 .tr-tab-caption {
     margin: 0;
@@ -95,7 +106,7 @@
 }
 
 .tr-tab-caption li {
-    padding: 9px 15px;
+    padding: 9px 10px;
     margin: 1px 0 0 1px;
     background: #F3F5F6;
     color: black;
