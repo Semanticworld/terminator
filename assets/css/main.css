@@ -11,9 +11,9 @@
 
     min-height: 340px;
     min-width: 330px;
-    
+
     overflow: auto;
-    resize: both;
+    resize: horizontal;
 }
 
 .tr-title {
