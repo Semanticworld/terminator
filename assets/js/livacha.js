@@ -151,7 +151,9 @@ $(document).ready(function () {
             var t = $(element).find("div.chat-text-content").html();
             if (t!=undefined){
                 var a=t.match( /\*...\*/g );
-                console.log(a);
+                if (a!=null){
+                    console.log(a);
+                }
             }
 
         });
