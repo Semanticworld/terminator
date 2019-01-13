@@ -70,10 +70,9 @@ $(document).ready(function () {
         });
         $(".tr-close").on("click", function (e) {
             e.preventDefault();
+            localStorage.setItem('tr-win-y', $(".tr-window").offset().top);
+            localStorage.setItem('tr-win-x', $(".tr-window").offset().left);
             $(".tr-window").css("visibility", "hidden");
-
-            console.log($(".tr-window").offset().top);
-            console.log($(".tr-window").offset().left);
         });
         $('ul.tr-tab-caption').on('click', 'li:not(.active)', function () {
             $(this)
@@ -135,6 +134,12 @@ $(document).ready(function () {
         $(".tr-sm0-block").append(s);
         $("#tr-smbtn").on("click", function (e) {
             $(".tr-window").css("visibility", "visible");
+            var x = (localStorage.getItem("tr-win-x") != undefined) ? localStorage.getItem("tr-win-x") : 300;
+            var y = (localStorage.getItem("tr-win-y") != undefined) ? localStorage.getItem("tr-win-y") : 300;
+            $(".tr-window").offset({
+                top: y,
+                left: x
+            });
         })
         lazyload();
     }
