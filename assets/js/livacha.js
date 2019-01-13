@@ -148,7 +148,8 @@ $(document).ready(function () {
         function repl(str,f,r){
             var l="/s"+f[2]+"/"+f[3]+f[4]+".gif";
             var regex = new RegExp(f, "g");
-            return str.replace(regex,l);
+            l= str.replace(regex,l);
+            return l.split("*").join("");
         }
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             var element = e.target;
