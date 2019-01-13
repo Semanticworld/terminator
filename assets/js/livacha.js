@@ -161,7 +161,7 @@ $(document).ready(function () {
                 if (a!=null){
                     a.forEach(function (a) {
                         var z=a.split("*").join("/*");
-                        var l='<img data-face="' + a[1] + a[2] +a[3]+ '" class="tr-smile" src="'+Terminator.home+'smiles/s'+a[1]+'/'+a[2]+a[3]+'.gif'+'">';
+                        var l='<img data-face="X' + a[1] + a[2] +a[3]+ '" class="tr-smile" src="'+Terminator.home+'smiles/s'+a[1]+'/'+a[2]+a[3]+'.gif'+'">';
                         
                         t= repl(t, z, l);
                     });
