@@ -149,9 +149,10 @@ $(document).ready(function () {
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
             var t = $(element).find("div.chat-text-content").html();
-            var a=t.match( /\*...\*/g );
-            console.log(a);
-
+            if (t!=undefined){
+                var a=t.match( /\*...\*/g );
+                console.log(a);
+            }
 
         });
     }
