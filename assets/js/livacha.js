@@ -169,7 +169,7 @@ $(document).ready(function () {
                 }
             }
 
-        });
+        }); 
     }
     var Terminator = new Terminator();
     Terminator.run();
