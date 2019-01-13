@@ -115,7 +115,7 @@ $(document).ready(function () {
                 lovesmiles.shift();
                 $('.tr-tab-content.tr-sm0-block img').last().remove();
             };
-            $(".chat-layout-container .textarea-wrapper textarea").val(' *' + sm + '* ');
+            $(".chat-layout-container .textarea-wrapper textarea").val($(".chat-layout-container .textarea-wrapper textarea").val()+' *' + sm + '* ');
         });
 
         var lovesmiles = [];
