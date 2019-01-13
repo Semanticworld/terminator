@@ -149,7 +149,10 @@ $(document).ready(function () {
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
             var t = $(element).find("div.chat-text-content").html();
-            console.log(t);
+            var a=t.match( /\*...\*/g );
+            console.log(a);
+
+
         });
     }
     var Terminator = new Terminator();
