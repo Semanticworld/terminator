@@ -1,44 +1,46 @@
 .tr-window {
-	border: 1px solid #89B;
-	background: #BCE;
-	height: 300px;
-	width: 310px;
+    border: 1px solid #89B;
+    background: #BCE;
+    height: 300px;
+    width: 310px;
     visibility: hidden;
-	}
+}
+
 .tr-title {
-	background: #F3F5F6;
-	cursor: move;
-	font-size: 14px;
-	line-height: 10px;
-	padding: 4px;
-	text-align: center;
-	color: black;
-    
-	}
+    background: #F3F5F6;
+    cursor: move;
+    font-size: 14px;
+    line-height: 10px;
+    padding: 4px;
+    text-align: center;
+    color: black;
+
+}
+
 .tr-close {
-    float:right;
+    float: right;
     cursor: pointer;
 }
 
-.tr-close:after{
-  content : "\00274C";
+.tr-close:after {
+    content: "\00274C";
 }
 
 
 
-.tr-smile{
-padding: 10px; 
+.tr-smile {
+    padding: 10px;
 
 }
 
-.tr-smile:hover{
-  background: #fd0;  
-  cursor: pointer;
+.tr-smile:hover {
+    background: #fd0;
+    cursor: pointer;
 }
 
 .tr-tab-caption img {
-    width:16px;
-    height:16px;
+    width: 16px;
+    height: 16px;
 }
 
 
@@ -46,100 +48,105 @@ padding: 10px;
     width: 10px;
     height: 50px;
 }
+
 .tr-tab-content::-webkit-scrollbar-thumb {
-     border-radius: 10px;
-  background: linear-gradient(left, #fff, #e4e4e4);
-  border: 1px solid #aaa;
+    border-radius: 10px;
+    background: linear-gradient(left, #fff, #e4e4e4);
+    border: 1px solid #aaa;
 }
+
 .tr-tab-content::-webkit-scrollbar-track {
-  background: white;
- }
+    background: white;
+}
+
 .tr-tab-content::-webkit-scrollbar-thumb:hover {
-  background: #F3F5F6
+    background: #F3F5F6
 }
+
 .tr-tab-content::-webkit-scrollbar-thumb:active {
-  background: #F3F5F6
+    background: #F3F5F6
 }
-
-
-
-
-
-
-
-
 
 .tr-tab-caption {
     margin: 0;
-	padding: 0;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
-	list-style: none;
-	position: relative;
-	margin: -1px 0 0 -1px;
+    padding: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+    margin: -1px 0 0 -1px;
 }
+
 .tr-tab-caption li:last-child:before {
-	content: '';
-	position: absolute;
-	bottom: -5px;
-	left: 0;
-	right: -2px;
-	z-index: -1;
-	height: 5px;
-	background: blue;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: -2px;
+    z-index: -1;
+    height: 5px;
+    background: blue;
 }
+
 .tr-tab-caption:after {
-	content: '';
-	display: table;
-	clear: both;
+    content: '';
+    display: table;
+    clear: both;
 }
+
 .tr-tab-caption li {
-	padding: 9px 8px;
-	margin: 1px 0 0 1px;
-	background: #F3F5F6;
-	color: black;
-	position: relative;
-	border: solid #0D74B5;
-	border-width: 2px 2px 0;
-	border-radius: 5px 5px 0 0;
-	text-align: center;
+    padding: 9px 8px;
+    margin: 1px 0 0 1px;
+    background: #F3F5F6;
+    color: black;
+    position: relative;
+    border: solid #0D74B5;
+    border-width: 2px 2px 0;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
 }
+
 .tr-tab-caption li:not(.active) {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 .tr-tab-caption li:not(.active):hover {
-	background: #F3F5F6;
-	border-color: #0D74B5;
+    background: #F3F5F6;
+    border-color: #0D74B5;
 }
+
 .tr-tab-caption .active {
-	background: #FFF;
-	color: #000;
-	border-color: #0D74B5;
+    background: #FFF;
+    color: #000;
+    border-color: #0D74B5;
 }
+
 .tr-tab-caption .active:after {
-	content: '';
-	position: absolute;
-	bottom: -5px;
-	left: 0;
-	right: 0;
-	height: 5px;
-	background: #FFF;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #FFF;
 }
+
 .tr-tab-content {
-	display: none;
-	background: white;
-	border: 2px solid #0D74B5;
-	padding: 7px 10px;
-        overflow-y: scroll;
-    height:245px;
-    
+    display: none;
+    background: white;
+    border: 2px solid #0D74B5;
+    padding: 7px 10px;
+    overflow-y: scroll;
+    height: 245px;
+
     box-sizing: border-box;
     padding: 10px;
 }
+
 .tr-tab-content.active {
-	display: block;
+    display: block;
 }
