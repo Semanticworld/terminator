@@ -115,17 +115,15 @@ $(document).ready(function () {
                 lovesmiles.shift();
                 $('.tr-tab-content.tr-sm0-block img').last().remove();
             };
+            $(".chat-layout-container .textarea-wrapper textarea").val('*' + sm + '*');
         });
 
-       // var lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
-       var lovesmiles =[];
-       var t=localStorage.getItem("tr-love-smiles");
-       
-       if (undefined!=t){
-        lovesmiles = JSON.parse(t);
-       }
-       alert(t);
-      
+
+        var lovesmiles = [];
+        var t = localStorage.getItem("tr-love-smiles");
+        if (undefined != t) {
+            lovesmiles = JSON.parse(t);
+        }
         var s = '';
         if (lovesmiles) {
             lovesmiles.forEach(function (a) {
