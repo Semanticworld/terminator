@@ -71,6 +71,9 @@ $(document).ready(function () {
         $(".tr-close").on("click", function (e) {
             e.preventDefault();
             $(".tr-window").css("visibility", "hidden");
+
+            console.log($(".tr-window").offset().top);
+            console.log($(".tr-window").offset().left);
         });
         $('ul.tr-tab-caption').on('click', 'li:not(.active)', function () {
             $(this)
@@ -130,11 +133,10 @@ $(document).ready(function () {
             });
         }
         $(".tr-sm0-block").append(s);
-        lazyload();
-
         $("#tr-smbtn").on("click", function (e) {
             $(".tr-window").css("visibility", "visible");
         })
+        lazyload();
     }
 
     var Terminator = new Terminator();
