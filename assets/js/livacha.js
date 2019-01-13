@@ -117,7 +117,8 @@ $(document).ready(function () {
                 $('.tr-tab-content.tr-sm0-block img').last().remove();
             };
         });
-      //  console.log(JSON.parse(localStorage.getItem("tr-love-smiles")));
+        var t=JSON.parse(localStorage.getItem("tr-love-smiles"));
+        console.log(t);
         Terminator.lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
         var s = '';
         if (Terminator.lovesmiles) {
