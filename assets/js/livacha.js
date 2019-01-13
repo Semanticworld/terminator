@@ -147,7 +147,7 @@ $(document).ready(function () {
     Terminator.prototype.chat = function () {
         function repl(str,f,r){
             var regex = new RegExp(f, "g");
-            l= str.replace(regex,l);
+            var l= str.replace(regex,l);
             return l.split("*").join("");
         }
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
