@@ -94,7 +94,7 @@ $(document).ready(function () {
         smilespack.forEach(function (a, b) {
             var s = '';
             a.forEach(function (a) {
-                s += '<img src="' + this.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + this.home + 'smiles/' + 's' + b + '/' + a + '.gif">';
+                s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.gif">';
             });
             $(".tr-sm" + b + "-block").append(s);
         });
@@ -106,7 +106,7 @@ $(document).ready(function () {
                 lovesmiles.splice(index, 1);
             } else {
                 $(".tr-tab-content.tr-sm0-block")
-                    .prepend('<img src="' + this.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
+                    .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
 
             }
             lovesmiles.push(sm);
@@ -121,7 +121,7 @@ $(document).ready(function () {
         var s = '';
         if (lovesmiles) {
             lovesmiles.forEach(function (a) {
-                s += '<img src="' + this.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + this.home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.gif">';
+                s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.gif">';
             });
         }
         $(".tr-sm0-block").append(s);
