@@ -128,6 +128,7 @@ $(document).ready(function () {
         lazyload();
 
         $("#tr-smbtn").on("click", function (e) {
+            console.log("starting");
             $(".tr-window").css("visibility", "visible");
         })
     }
