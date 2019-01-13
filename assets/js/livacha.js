@@ -2,7 +2,7 @@ $(document).ready(function () {
     function Terminator() {
         this.version = "0.0.0.2";
         this.home = "https://raw.githubusercontent.com/Semanticworld/terminator/master/assets/";
-        this.lovesmiles = ["1aa"];
+        this.lovesmiles=["1aa"];
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
@@ -58,7 +58,6 @@ $(document).ready(function () {
         xhr.send(null);
     }
     Terminator.prototype.createSmilesBox = function () {
-        
         $("#page").append($("<div/>").addClass("tr-window").prepend($("<div/>").addClass("tr-title").prepend('<span>Смайлы</span><span class="tr-close"></span>')));
         $($("<div/>").addClass("tr-tabs")).insertAfter($(".tr-title"));
         for (var i = 8; i >= 0; i--) {
@@ -103,27 +102,23 @@ $(document).ready(function () {
         $(document).on("click", ".tr-smile", function (e) {
             e.preventDefault();
             var sm = $(this).data("face");
-            if (Terminator.lovesmiles.length>-1) {
-                var index = Terminator.lovesmiles.indexOf(sm);
-                if (index > -1) {
-                    Terminator.lovesmiles.splice(index, 1);
-                } else {
-                    $(".tr-tab-content.tr-sm0-block")
-                        .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
+            var index = Terminator.lovesmiles.indexOf(sm);
+            if (index > -1) {
+                Terminator.lovesmiles.splice(index, 1);
+            } else {
+                $(".tr-tab-content.tr-sm0-block")
+                    .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
 
-                }
-                lovesmiles.push(sm);
             }
-
+            Terminator.lovesmiles.push(sm);
             localStorage.setItem('tr-love-smiles', JSON.stringify(Terminator.lovesmiles));
             if (Terminator.lovesmiles.length > 50) {
                 Terminator.lovesmiles.shift();
                 $('.tr-tab-content.tr-sm0-block img').last().remove();
             };
         });
-        if (undefined != localStorage.getItem("tr-love-smiles")) {
-            Terminator.lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
-        }
+
+        Terminator.lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
         var s = '';
         if (Terminator.lovesmiles) {
             Terminator.lovesmiles.forEach(function (a) {
