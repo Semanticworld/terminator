@@ -2,7 +2,7 @@ $(document).ready(function () {
     function Terminator() {
         this.version = "0.0.0.2";
         this.home = "https://raw.githubusercontent.com/Semanticworld/terminator/master/assets/";
-        this.lovesmiles=["1aa"];
+        this.lovesmiles = ["1aa"];
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
@@ -102,13 +102,15 @@ $(document).ready(function () {
         $(document).on("click", ".tr-smile", function (e) {
             e.preventDefault();
             var sm = $(this).data("face");
-            var index = Terminator.lovesmiles.indexOf(sm);
-            if (index > -1) {
-                Terminator.lovesmiles.splice(index, 1);
-            } else {
-                $(".tr-tab-content.tr-sm0-block")
-                    .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
+            if (Terminator.lovesmiles) {
+                var index = Terminator.lovesmiles.indexOf(sm);
+                if (index > -1) {
+                    Terminator.lovesmiles.splice(index, 1);
+                } else {
+                    $(".tr-tab-content.tr-sm0-block")
+                        .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
 
+                }
             }
             Terminator.lovesmiles.push(sm);
             localStorage.setItem('tr-love-smiles', JSON.stringify(Terminator.lovesmiles));
@@ -117,8 +119,6 @@ $(document).ready(function () {
                 $('.tr-tab-content.tr-sm0-block img').last().remove();
             };
         });
-        var t=JSON.parse(localStorage.getItem("tr-love-smiles"));
-        console.log(t);
         Terminator.lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
         var s = '';
         if (Terminator.lovesmiles) {
