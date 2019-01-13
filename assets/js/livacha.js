@@ -121,6 +121,7 @@ $(document).ready(function () {
                 $('.tr-tab-content.tr-sm0-block img').last().remove();
             };
         });
+        console.log(localStorage.getItem("tr-love-smiles"));
         lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
         var s = '';
         if (lovesmiles) {
