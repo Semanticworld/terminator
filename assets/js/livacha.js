@@ -102,26 +102,26 @@ $(document).ready(function () {
         $(document).on("click", ".tr-smile", function (e) {
             e.preventDefault();
             var sm = $(this).data("face");
-            var index = lovesmiles.indexOf(sm);
+            var index = Terminator.lovesmiles.indexOf(sm);
             if (index > -1) {
-                lovesmiles.splice(index, 1);
+                Terminator.lovesmiles.splice(index, 1);
             } else {
                 $(".tr-tab-content.tr-sm0-block")
                     .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
 
             }
-            lovesmiles.push(sm);
-            localStorage.setItem('tr-love-smiles', JSON.stringify(lovesmiles));
-            if (lovesmiles.length > 50) {
-                lovesmiles.shift();
+            Terminator.lovesmiles.push(sm);
+            localStorage.setItem('tr-love-smiles', JSON.stringify(Terminator.lovesmiles));
+            if (Terminator.lovesmiles.length > 50) {
+                Terminator.lovesmiles.shift();
                 $('.tr-tab-content.tr-sm0-block img').last().remove();
             };
         });
 
-        var lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
+        Terminator.lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
         var s = '';
-        if (lovesmiles) {
-            lovesmiles.forEach(function (a) {
+        if (Terminator.lovesmiles) {
+            Terminator.lovesmiles.forEach(function (a) {
                 s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.gif">';
             });
         }
