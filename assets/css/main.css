@@ -5,7 +5,7 @@
     height: 300px;
     width: 310px;
     z-index: 100;
- /*   visibility: hidden;*/
+    visibility: hidden;
  top:100px;
  left: 300px;
 }
