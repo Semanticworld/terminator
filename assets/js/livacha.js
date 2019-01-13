@@ -146,7 +146,7 @@ $(document).ready(function () {
 
     Terminator.prototype.chat = function () {
         function repl(str,f,r){
-            var l="/s"+f[2]+"/"+f[3]+f[4]+".gif";
+            var l=this.home+"smiles/s"+f[2]+"/"+f[3]+f[4]+".gif";
             var regex = new RegExp(f, "g");
             l= str.replace(regex,l);
             return l.split("*").join("");
@@ -161,6 +161,7 @@ $(document).ready(function () {
                     a.forEach(function (a) {
                         var z=a.split("*").join("/*");
                         t= repl(t, z, 'img');
+                        
                     });
                     console.log(t);
                 }
