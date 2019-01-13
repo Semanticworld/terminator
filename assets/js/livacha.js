@@ -118,6 +118,7 @@ $(document).ready(function () {
         });
 
        // var lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
+       var lovesmiles =[];
         var s = '';
         if (lovesmiles) {
             lovesmiles.forEach(function (a) {
