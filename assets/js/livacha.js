@@ -158,11 +158,12 @@ $(document).ready(function () {
                 var a=t.match( /\*...\*/g );
                 if (a!=null){
                     a.forEach(function (a) {
-                        var l='<img src="'+Terminator.home+"smiles/s"+a[1]+"/"+a[2]+a[3]+".gif"+'>';
+                        var l='<img src="'+Terminator.home+'smiles/s'+a[1]+'/'+a[2]+a[3]+'.gif'+'">';
                         var z=a.split("*").join("/*");
                         t= repl(t, z, l);
                     });
                     console.log(t);
+                    $($mms).html(t);
                 }
             }
 
