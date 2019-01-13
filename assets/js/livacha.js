@@ -118,7 +118,6 @@ $(document).ready(function () {
             $(".chat-layout-container .textarea-wrapper textarea").val(' *' + sm + '* ');
         });
 
-
         var lovesmiles = [];
         var t = localStorage.getItem("tr-love-smiles");
         if (undefined != t) {
