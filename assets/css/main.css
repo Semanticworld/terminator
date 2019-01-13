@@ -8,6 +8,10 @@
     visibility: hidden;
     top: 300px;
     left: 300px;
+
+
+    overflow: auto;
+    resize: both;
 }
 
 .tr-title {
