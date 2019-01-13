@@ -148,7 +148,8 @@ $(document).ready(function () {
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
-            console.log($mms);
+            var t = $(element).find("div.chat-text-content").html();
+            console.log(t);
         });
     }
     var Terminator = new Terminator();
