@@ -15,8 +15,11 @@ $(document).ready(function () {
 
     Terminator.prototype.initSmailes = function () {
         $("i.em-smiley").parent().parent().before('<div class="col text-left"><span id="tr-sm" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
-        Terminator.load("js", this.home + "js/functions.js?r=" + Math.random(), function () {Terminator.createSmilesBox();});
         Terminator.load("css", this.home + "css/main.css?r=" + Math.random());
+        Terminator.load("js", this.home + "js/functions.js?r=" + Math.random(), function () {
+            Terminator.createSmilesBox();
+        });
+
     }
 
     Terminator.prototype.load = function (type, url, cb) {
@@ -54,53 +57,14 @@ $(document).ready(function () {
         xhr.send(null);
     }
     Terminator.prototype.createSmilesBox = function () {
-        console.log(1111);
-    }
-
-    var Terminator = new Terminator();
-    Terminator.run();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-$(document).ready(function () {
-
-    var home = 'https://raw.githubusercontent.com/Semanticworld/terminator/master/assets/';
-
-
-
-    function run() {
-        $("body").append($("<div/>")
-            .addClass("tr-window")
-            .prepend($("<div/>").addClass("tr-title")
-                .prepend('<span>Смайлы</span><span class="tr-close"></span>')));
+        $("body").append($("<div/>").addClass("tr-window").prepend($("<div/>").addClass("tr-title").prepend('<span>Смайлы</span><span class="tr-close"></span>')));
         $($("<div/>").addClass("tr-tabs")).insertAfter($(".tr-title"));
         for (var i = 8; i >= 0; i--) {
-            $(".tr-window .tr-tabs")
-                .prepend($("<div/>")
-                    .addClass("tr-tab-content tr-sm" + i + "-block"));
+            $(".tr-window .tr-tabs").prepend($("<div/>").addClass("tr-tab-content tr-sm" + i + "-block"));
         }
         $(".tr-sm0-block").addClass("active");
         $(".tr-tabs")
-            .prepend('<ul class="tr-tab-caption"><li class="active"><img src="' + home + 'ico/0.png"></li><li><img src="' + home + 'ico/1.png"></li><li>2</li><li>3</li><li><img src="' + home + 'ico/4.png"></li><li>5</li><li>6</li><li>7</li><li>8</li></ul>');
-
+            .prepend('<ul class="tr-tab-caption"><li class="active"><img src="' + this.home + 'ico/0.png"></li><li><img src="' + this.home + 'ico/1.png"></li><li>2</li><li>3</li><li><img src="' + this.home + 'ico/4.png"></li><li>5</li><li>6</li><li>7</li><li>8</li></ul>');
         $('.tr-window').tr_drags({
             handle: ".tr-title"
         });
@@ -108,7 +72,6 @@ $(document).ready(function () {
             e.preventDefault();
             $(".tr-window").css("visibility", "hidden");
         });
-
         $('ul.tr-tab-caption').on('click', 'li:not(.active)', function () {
             $(this)
                 .addClass('active').siblings().removeClass('active')
@@ -131,7 +94,7 @@ $(document).ready(function () {
         smilespack.forEach(function (a, b) {
             var s = '';
             a.forEach(function (a) {
-                s += '<img src="' + home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + home + 'smiles/' + 's' + b + '/' + a + '.gif">';
+                s += '<img src="' + this.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + this.home + 'smiles/' + 's' + b + '/' + a + '.gif">';
             });
             $(".tr-sm" + b + "-block").append(s);
         });
@@ -143,7 +106,7 @@ $(document).ready(function () {
                 lovesmiles.splice(index, 1);
             } else {
                 $(".tr-tab-content.tr-sm0-block")
-                    .prepend('<img src="' + home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
+                    .prepend('<img src="' + this.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
 
             }
             lovesmiles.push(sm);
@@ -159,7 +122,7 @@ $(document).ready(function () {
         var lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
         var s = '';
         lovesmiles.forEach(function (a) {
-            s += '<img src="' + home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.gif">';
+            s += '<img src="' + this.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + this.home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.gif">';
         });
         $(".tr-sm0-block").append(s);
         lazyload();
@@ -168,8 +131,8 @@ $(document).ready(function () {
         $(".start").on("click", function (e) {
             $(".tr-window").css("visibility", "visible");
         })
-
     }
 
+    var Terminator = new Terminator();
+    Terminator.run();
 });
-*/
