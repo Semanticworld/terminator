@@ -118,6 +118,8 @@ $(document).ready(function () {
         });
 
        // var lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
+       var t=localStorage.getItem("tr-love-smiles");
+       alert(t);
        var lovesmiles =[];
         var s = '';
         if (lovesmiles) {
