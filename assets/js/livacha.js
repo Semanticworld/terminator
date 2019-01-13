@@ -119,9 +119,11 @@ $(document).ready(function () {
 
         var lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
         var s = '';
-        lovesmiles.forEach(function (a) {
-            s += '<img src="' + this.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + this.home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.gif">';
-        });
+        if (lovesmiles) {
+            lovesmiles.forEach(function (a) {
+                s += '<img src="' + this.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + this.home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.gif">';
+            });
+        }
         $(".tr-sm0-block").append(s);
         lazyload();
 
