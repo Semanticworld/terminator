@@ -117,8 +117,6 @@ $(document).ready(function () {
             };
         });
 
-
-
         var lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
         var s = '';
         lovesmiles.forEach(function (a) {
@@ -126,7 +124,6 @@ $(document).ready(function () {
         });
         $(".tr-sm0-block").append(s);
         lazyload();
-
 
         $(".start").on("click", function (e) {
             $(".tr-window").css("visibility", "visible");
