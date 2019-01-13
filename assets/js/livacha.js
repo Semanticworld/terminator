@@ -144,6 +144,12 @@ $(document).ready(function () {
         lazyload();
     }
 
+    Terminator.prototype.chat = function () {
+        $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
+            var $mms = $(element).find("div.chat-text-content");
+            console.log($mms);
+        });
+    }
     var Terminator = new Terminator();
     Terminator.run();
 });
