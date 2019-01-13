@@ -145,6 +145,11 @@ $(document).ready(function () {
     }
 
     Terminator.prototype.chat = function () {
+        function repl(str,f,r){
+            var l="/s"+f[2]+"/"+f[3]+f[4]+".gif";
+            var regex = new RegExp(f, "g");
+            return str.replace(regex,l);
+        }
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
@@ -152,7 +157,11 @@ $(document).ready(function () {
             if (t!=undefined){
                 var a=t.match( /\*...\*/g );
                 if (a!=null){
-                    console.log(a);
+                    a.forEach(function (a) {
+                        var z=a.split("*").join("/*");
+                        t= repl(t, z, 'img');
+                    });
+                    console.log(t);
                 }
             }
 
