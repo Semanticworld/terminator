@@ -5,132 +5,169 @@ $(document).ready(function () {
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
-
-
-       
-
-        
-     //   this.loadcss(this.home + "plugins/jquery-ui/themes/start/jquery-ui.min.css");
-      //  this.loadjs(this.home + "plugins/jquery-ui/jquery-ui.min.js");
-
-       
-
         var waitPanel = setInterval(function () {
-            console.log("wait");
             if ($("i.em-smiley").length) {
                 clearInterval(waitPanel);
                 Terminator.initSmailes();
             }
         }, 2000);
-
-
     };
 
     Terminator.prototype.initSmailes = function () {
-        var m = "<div id='ter-smiles' class='ui-widget-content'>" +
-            "<div id='accordion'>" +
-            "<h3>Section 1</h3>" +
-            "<div><p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p></div>" +
-            "<h3>Section 2</h3>" +
-            "<div><p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p></div>" +
-            "<h3>Section 3</h3>" +
-            "<div><p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p><ul><li>List item one</li>    <li>List item two</li>      <li>List item three</li>    </ul>  </div>" +
-            "<h3>Section 4</h3>" +
-            "<div><p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p></div>" +
-            "</div>" +
-            "</div>";
-
-
-        var d = '<div id="dialog2"><p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the x icon.</p></div>';
-
-        
-
         $("i.em-smiley").parent().parent().before('<div class="col text-left"><span id="tr-sm" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
         $("body").append(d);
-
-
-        /*
-            $( "#dialog" ).dialog({
-              autoOpen: true,
-              show: {
-                effect: "blind",
-                duration: 500
-              },
-              hide: {
-                effect: "explode",
-                duration: 500
-              }
-            });
-         */
-       // $( "#dialog" ).dialog( "open" ); 
-      // $( "#dialog" ).dialog({ autoOpen: false });
-            $( "#tr-sm" ).on( "click", function() {
-                $("#dialog2").dialog({
-                    // modal: true,
-                     resizable: false,
-                     show: 'blind',
-                     hide: 'blind',
-                     width: 400
-                 });
-              console.log("1");
-            });
-        
-
-
-/*
-        $("#accordion").accordion({
-            heightStyle: "fill"
-        });
-
-        $("#ter-smiles").resizable({
-            minHeight: 140,
-            minWidth: 200,
-            resize: function () {
-                $("#accordion").accordion("refresh");
-            }
-        });
-*/
-
-
-
-
-
-
-        
-
-
     }
-    Terminator.prototype.loadjs = function (url) {
-        var xhr = new XMLHttpRequest();
+    Terminator.prototype.load = function (type, url, cb) {
+        var xhr = new XMLHttpRequest(),
+            f = false;
         xhr.open("get", url, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
                 if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
-                    var script = document.createElement("script");
-                    script.type = "text/javascript";
-                    script.text = xhr.responseText;
-                    document.body.appendChild(script);
+                    switch (type) {
+                        case "css":
+                            head = document.head || document.getElementsByTagName('head')[0],
+                                style = document.createElement('style');
+                            style.type = 'text/css';
+                            if (style.styleSheet) {
+                                style.styleSheet.cssText = xhr.responseText;
+                            } else {
+                                style.appendChild(document.createTextNode(xhr.responseText));
+                            }
+                            head.appendChild(style);
+                            break;
+                        case "js":
+                            f = document.createElement("script");
+                            f.type = "text/javascript";
+                            f.text = xhr.responseText;
+                            document.body.appendChild(f);
+                            break;
+                    }
+                    if (typeof cb === "function") {
+                        cb();
+                    }
                 }
             }
         };
         xhr.send(null);
     }
-    Terminator.prototype.loadcss = function (url) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("get", url, true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4) {
-                if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
-                    var style = document.createElement("style");
-                    style.type = 'text/css';
-                    style.text = xhr.responseText;
-                    //  document.body.appendChild(script);
-                    document.getElementsByTagName('head')[0].appendChild(style);
-                }
-            }
-        };
-        xhr.send(null);
-    }
+
     var Terminator = new Terminator();
     Terminator.run();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+$(document).ready(function () {
+
+    var home = 'https://raw.githubusercontent.com/Semanticworld/terminator/master/assets/';
+
+    LoadSelectedTerminator("js", home + "js/functions.js?r=" + Math.random(), function () {
+        run();
+    });
+    LoadSelectedTerminator("css", home + "css/main.css?r=" + Math.random());
+
+    function run() {
+        $("body").append($("<div/>")
+            .addClass("tr-window")
+            .prepend($("<div/>").addClass("tr-title")
+                .prepend('<span>Смайлы</span><span class="tr-close"></span>')));
+        $($("<div/>").addClass("tr-tabs")).insertAfter($(".tr-title"));
+        for (var i = 8; i >= 0; i--) {
+            $(".tr-window .tr-tabs")
+                .prepend($("<div/>")
+                    .addClass("tr-tab-content tr-sm" + i + "-block"));
+        }
+        $(".tr-sm0-block").addClass("active");
+        $(".tr-tabs")
+            .prepend('<ul class="tr-tab-caption"><li class="active"><img src="' + home + 'ico/0.png"></li><li><img src="' + home + 'ico/1.png"></li><li>2</li><li>3</li><li><img src="' + home + 'ico/4.png"></li><li>5</li><li>6</li><li>7</li><li>8</li></ul>');
+
+        $('.tr-window').tr_drags({
+            handle: ".tr-title"
+        });
+        $(".tr-close").on("click", function (e) {
+            e.preventDefault();
+            $(".tr-window").css("visibility", "hidden");
+        });
+
+        $('ul.tr-tab-caption').on('click', 'li:not(.active)', function () {
+            $(this)
+                .addClass('active').siblings().removeClass('active')
+                .closest('div.tr-tabs').find('div.tr-tab-content').removeClass('active').eq($(this).index()).addClass('active');
+        });
+        var smilespack = [];
+        smilespack["1"] = [
+            "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "aw", "ax", "ay", "az",
+            "ba", "bb", "bc", "bd", "be", "bf", "bg", "bh", "bi", "bj", "bk", "bl", "bm", "bn", "bo", "bp", "bq", "br", "bs", "bt", "bu", "bv", "bw", "bx", "by", "bz",
+            "ca", "cb", "cc", "cd", "ce", "cf", "cg", "ch", "ci", "cj", "ck", "cl", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cv", "cw", "cx", "cy", "cz",
+            "da", "db", "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do", "dp", "dq", "dr", "ds", "dt", "du", "dv", "dw", "dx", "dy", "dz",
+            "ea", "eb", "ec", "ed", "ef"
+        ];
+        smilespack["4"] = [
+            "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "aw", "ax", "ay", "az",
+            "ba", "bb"
+        ];
+        smilespack["2"] = ["aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "at", "au", "av", "aw", "ax", "ay", "az"];
+
+        smilespack.forEach(function (a, b) {
+            var s = '';
+            a.forEach(function (a) {
+                s += '<img src="' + home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + home + 'smiles/' + 's' + b + '/' + a + '.gif">';
+            });
+            $(".tr-sm" + b + "-block").append(s);
+        });
+        $(document).on("click", ".tr-smile", function (e) {
+            e.preventDefault();
+            var sm = $(this).data("face");
+            var index = lovesmiles.indexOf(sm);
+            if (index > -1) {
+                lovesmiles.splice(index, 1);
+            } else {
+                $(".tr-tab-content.tr-sm0-block")
+                    .prepend('<img src="' + home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
+
+            }
+            lovesmiles.push(sm);
+            localStorage.setItem('tr-love-smiles', JSON.stringify(lovesmiles));
+            if (lovesmiles.length > 50) {
+                lovesmiles.shift();
+                $('.tr-tab-content.tr-sm0-block img').last().remove();
+            };
+        });
+
+
+
+        var lovesmiles = JSON.parse(localStorage.getItem("tr-love-smiles"));
+        var s = '';
+        lovesmiles.forEach(function (a) {
+            s += '<img src="' + home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.gif">';
+        });
+        $(".tr-sm0-block").append(s);
+        lazyload();
+
+
+        $(".start").on("click", function (e) {
+            $(".tr-window").css("visibility", "visible");
+        })
+
+    }
+
+});
+*/
