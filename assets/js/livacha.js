@@ -164,7 +164,6 @@ $(document).ready(function () {
                         var z=a.split("*").join("/*");
                         t= repl(t, z, l);
                     });
-                    console.log(t);
                     $($mms).html(t);
                 }
             }
