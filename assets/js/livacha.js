@@ -16,7 +16,10 @@ $(document).ready(function () {
     Terminator.prototype.initSmailes = function () {
         $("i.em-smiley").parent().parent().before('<div class="col text-left"><span id="tr-sm" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
         $("body").append(d);
+        Terminator.load("js", home + "js/functions.js?r=" + Math.random(), function () {Terminator.createSmilesBox();});
+        Terminator.load("css", home + "css/main.css?r=" + Math.random());
     }
+
     Terminator.prototype.load = function (type, url, cb) {
         var xhr = new XMLHttpRequest(),
             f = false;
@@ -51,6 +54,9 @@ $(document).ready(function () {
         };
         xhr.send(null);
     }
+    Terminator.prototype.createSmilesBox = function () {
+        console.log(1111);
+    }
 
     var Terminator = new Terminator();
     Terminator.run();
@@ -79,10 +85,7 @@ $(document).ready(function () {
 
     var home = 'https://raw.githubusercontent.com/Semanticworld/terminator/master/assets/';
 
-    LoadSelectedTerminator("js", home + "js/functions.js?r=" + Math.random(), function () {
-        run();
-    });
-    LoadSelectedTerminator("css", home + "css/main.css?r=" + Math.random());
+
 
     function run() {
         $("body").append($("<div/>")
