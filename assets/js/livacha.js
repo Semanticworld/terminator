@@ -103,7 +103,7 @@ $(document).ready(function () {
         $(document).on("click", ".tr-smile", function (e) {
             e.preventDefault();
             var sm = $(this).data("face");
-            if (Terminator.lovesmiles) {
+            if (Terminator.lovesmiles.length>-1) {
                 var index = Terminator.lovesmiles.indexOf(sm);
                 if (index > -1) {
                     Terminator.lovesmiles.splice(index, 1);
