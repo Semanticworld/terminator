@@ -38,6 +38,17 @@
     cursor: pointer;
 }
 
+.tr-smilex {
+    padding: 10px;
+}
+
+.tr-smilex:hover {
+    background: #fd0;
+    cursor: pointer;
+}
+
+
+
 .tr-tab-caption img {
     width: 16px;
     height: 16px;
