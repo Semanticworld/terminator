@@ -57,7 +57,7 @@ $(document).ready(function () {
         xhr.send(null);
     }
     Terminator.prototype.createSmilesBox = function () {
-        $("body").append($("<div/>").addClass("tr-window").prepend($("<div/>").addClass("tr-title").prepend('<span>Смайлы</span><span class="tr-close"></span>')));
+        $("#page").append($("<div/>").addClass("tr-window").prepend($("<div/>").addClass("tr-title").prepend('<span>Смайлы</span><span class="tr-close"></span>')));
         $($("<div/>").addClass("tr-tabs")).insertAfter($(".tr-title"));
         for (var i = 8; i >= 0; i--) {
             $(".tr-window .tr-tabs").prepend($("<div/>").addClass("tr-tab-content tr-sm" + i + "-block"));
