@@ -94,7 +94,7 @@ $(document).ready(function () {
             "da", "db", "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do"
         ];
         smilespack["2"] = ["aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "at", "au", "av", "aw", "ax", "ay", "az"];
-
+        smilespack["5"] = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
         smilespack.forEach(function (a, b) {
             var s = '';
             a.forEach(function (a) {
