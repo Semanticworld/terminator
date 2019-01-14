@@ -101,10 +101,10 @@ $(document).ready(function () {
         ];
         smilespack["2"] = [
             "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "ar", "at", "au", "av", "aw", "ax", "ay", "az",
-            "ba","bb"
+            "ba", "bb"
         ];
         smilespack["3"] = [
-            "aa",
+            "aa", "ab", "ac", "ad", "ae",
             "za"
         ];
 
@@ -120,7 +120,7 @@ $(document).ready(function () {
             "ia", "ib", "ic", "id", "ie", "if", "ig", "ih", "ii", "ij", "ik", "il", "im", "in", "io", "ip", "iq", "ir", "is", "it", "iu", "iv", "iw", "ix", "iy", "iz",
             "ja", "jb", "jc", "jd", "je", "jf", "jg"
 
-    ];
+        ];
         smilespack.forEach(function (a, b) {
             var s = '';
             a.forEach(function (a) {
