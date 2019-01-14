@@ -81,12 +81,12 @@ $(document).ready(function () {
         });
         var smilespack = [];
         smilespack["1"] = [
-            "xa","xb","xc","xd","xe",
+            "xa", "xb", "xc", "xd", "xe",
             "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "aw", "ax", "ay", "az",
             "ba", "bb", "bc", "bd", "be", "bf", "bg", "bh", "bi", "bj", "bk", "bl", "bm", "bn", "bo", "bp", "bq", "br", "bs", "bt", "bu", "bv", "bw", "bx", "by", "bz",
             "ca", "cb", "cc", "cd", "ce", "cf", "cg", "ch", "ci", "cj", "ck", "cl", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cv", "cw", "cx", "cy", "cz",
             "da", "db", "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do", "dp", "dq", "dr", "ds", "dt", "du", "dv", "dw", "dx", "dy", "dz",
-            "ea", "eb", "ec", "ed", "ef","eg"
+            "ea", "eb", "ec", "ed", "ef", "eg"
         ];
         smilespack["4"] = [
             "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "aw", "ax", "ay", "az",
@@ -109,7 +109,7 @@ $(document).ready(function () {
         $(document).on("click", ".tr-smilex", function (e) {
             e.preventDefault();
             var sm = $(this).data("face");
-            sm=sm.split("-").join("");
+            sm = sm.split("-").join("");
             $(".chat-layout-container .textarea-wrapper textarea").val($(".chat-layout-container .textarea-wrapper textarea").val() + ' *' + sm + '* ');
         });
 
@@ -158,29 +158,29 @@ $(document).ready(function () {
     }
 
     Terminator.prototype.chat = function () {
-        function repl(str,f,r){
+        function repl(str, f, r) {
             var regex = new RegExp(f, "g");
-            var l= str.replace(regex,r);
+            var l = str.replace(regex, r);
             return l.split("*").join("");
         }
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
             var t = $(element).find("div.chat-text-content").html();
-            if (t!=undefined){
-                var a=t.match( /\*...\*/g );
-                if (a!=null){
+            if (t != undefined) {
+                var a = t.match(/\*...\*/g);
+                if (a != null) {
                     a.forEach(function (a) {
-                        var z=a.split("*").join("/*");
-                        var l='<img data-face="' + a[1]+"-" + a[2] +a[3]+ '" class="tr-smilex" src="'+Terminator.home+'smiles/s'+a[1]+'/'+a[2]+a[3]+'.gif'+'">';
-                        
-                        t= repl(t, z, l);
+                        var z = a.split("*").join("/*");
+                        var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.gif' + '">';
+
+                        t = repl(t, z, l);
                     });
                     $($mms).html(t);
                 }
             }
 
-        }); 
+        });
     }
     var Terminator = new Terminator();
     Terminator.run();
