@@ -101,7 +101,12 @@ $(document).ready(function () {
         ];
         smilespack["2"] = [
             "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "ar", "at", "au", "av", "aw", "ax", "ay", "az",
-            "ba","bb"];
+            "ba","bb"
+        ];
+        smilespack["3"] = [
+            "aa",
+            "za"
+        ];
 
         smilespack["5"] = [
             "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "aw", "ax", "ay", "az",
