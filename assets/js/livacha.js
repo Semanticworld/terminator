@@ -315,7 +315,7 @@ $(document).ready(function () {
                         }
                         if (a[1] == "8") {
                             console.log("play:" + a);
-                            l = '';
+                            l = '>>>';
 
 
 
