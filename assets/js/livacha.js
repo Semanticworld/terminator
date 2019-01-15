@@ -144,7 +144,6 @@ $(document).ready(function () {
 
 
 
-
         smilespack.forEach(function (a, b) {
             if (b == "8") {
                 a.forEach(function (a) {
