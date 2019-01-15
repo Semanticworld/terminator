@@ -134,7 +134,7 @@ $(document).ready(function () {
             "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gi", "gj", "gk", "gl", "gm", "gn", "go", "gp", "gq", "gr", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
             "ha", "hb", "hc", "hd", "he", "hf", "hg", "hh", "hi", "hj", "hk", "hl", "hm", "hn", "ho", "hp", "hq", "hr", "hs", "ht", "hu", "hv", "hw", "hx", "hy", "hz"
         ];
-        smilespack.forEach(function (a, b) {
+        smilespack.forEach(function (a, b) { 
             var s = '',
                 ext = 'gif';
             a.forEach(function (a) {
