@@ -230,6 +230,7 @@ $(document).ready(function () {
                     $(document).snowfall({image :Terminator.home + 'smiles/s7/ac.gif', minSize: 10, maxSize:32});
                     break;
             }
+            setTimeout(function(){$(document).snowfall('clear')}, 10000);
         }
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             var element = e.target;
