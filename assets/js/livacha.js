@@ -217,7 +217,8 @@ $(document).ready(function () {
             return l.split("*").join("");
         }
         function showfx(name){
-            if (this.fx){return;}
+            console.log(this.fx);
+            //if (this.fx){return;}
             switch (name){
                 case "aa":
                 this.fx=true;
