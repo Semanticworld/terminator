@@ -235,7 +235,8 @@ $(document).ready(function () {
                     case "ac":
                     this.fx = true;
                     $(document).trsnow({
-                        img: Terminator.home + 'smiles/s7/ac.gif'
+                        img: Terminator.home + 'smiles/s7/ac.gif',
+                        Quantity:18
                     });
                     break;
             }
