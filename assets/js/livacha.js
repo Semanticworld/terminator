@@ -189,7 +189,6 @@ $(document).ready(function () {
             var s = '';
             if (b == "8") {
                 for (var u in a) {
-                    console.log(u);
                     if (u.length > 2) {
                         s += '<hr><center>' + u + '</center>';
                     } else {
