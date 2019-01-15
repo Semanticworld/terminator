@@ -56,6 +56,32 @@ $(document).ready(function () {
         };
         xhr.send(null);
     }
+
+    Terminator.prototype.playSound = function (url) {
+        if ($("#traudio").length) {
+            $("#traudio").remove();
+        }
+        if (!$("#traudio").length) {
+            var sound = document.createElement('audio');
+            sound.id = 'traudio';
+            sound.controls = 'controls';
+            sound.src = url;
+            sound.type = 'audio/mpeg';
+            sound.autobuffer = true;
+            sound.controls = true;
+            sound.style.position = 'fixed';
+            sound.style.bottom = '30px';
+            sound.addEventListener("play", function () {}, false);
+            sound.addEventListener("ended", function () {
+                sound.style.visibility = 'hidden';
+            }, false);
+            document.body.appendChild(sound);
+            sound.play();
+        }
+
+    }
+
+
     Terminator.prototype.createSmilesBox = function () {
         $("#page").append($("<div/>").addClass("tr-window").prepend($("<div/>").addClass("tr-title").prepend('<span>Смайлы</span><span class="tr-close"></span>')));
         $($("<div/>").addClass("tr-tabs")).insertAfter($(".tr-title"));
@@ -316,27 +342,7 @@ $(document).ready(function () {
                         if (a[1] == "8") {
                             console.log("play:" + a);
                             var l = '<img data-face="8-' + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s8/aa.png">';
-
-                            if ($("#traudio").length) {
-                                $("#traudio").remove();
-                            }
-                            if (!$("#traudio").length) {
-                                var sound = document.createElement('audio');
-                                sound.id = 'traudio';
-                                sound.controls = 'controls';
-                                sound.src = Terminator.home + 'sound/' + a[2] + a[3] + ".mp3";
-                                sound.type = 'audio/mpeg';
-                                sound.autobuffer = true;
-                                sound.controls = true;
-                                sound.style.position = 'fixed';
-                                sound.style.bottom = '30px';
-                                sound.addEventListener("play", function () {}, false);
-                                sound.addEventListener("ended", function () {
-                                    sound.style.visibility = 'hidden';
-                                }, false);
-                                document.body.appendChild(sound);
-                                sound.play();
-                            }
+                            Terminator.playSound(Terminator.home + 'sound/' + a[2] + a[3] + ".mp3");
                         } else {
                             var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
                         }
