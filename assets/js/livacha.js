@@ -210,14 +210,17 @@ $(document).ready(function () {
     }
 
     Terminator.prototype.chat = function () {
+        this.fx=false;
         function repl(str, f, r) {
             var regex = new RegExp(f, "g");
             var l = str.replace(regex, r);
             return l.split("*").join("");
         }
         function showfx(name){
+            if (this.fx){return;}
             switch (name){
                 case "aa":
+                this.fx=true;
                 $(document).trsnow({ img: Terminator.home + 'smiles/s7/aa.gif' });
                 break;
             }
