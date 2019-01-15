@@ -236,7 +236,7 @@ $(document).ready(function () {
                   //  $(document).trsnow({
                   //      img: Terminator.home + 'smiles/s7/ac.gif',
                   //      Quantity:18
-                    });
+                  //  });
                     break;
             }
         }
