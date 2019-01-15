@@ -209,54 +209,53 @@ $(document).ready(function () {
     }
 
     Terminator.prototype.chat = function () {
-        this.fx = false;
-
         function repl(str, f, r) {
             var regex = new RegExp(f, "g");
             var l = str.replace(regex, r);
             return l.split("*").join("");
         }
 
-        function showfx(name) {
-            $(document).snowfall('clear');
-            switch (name) {
-                case "aa":
-                    $(document).snowfall({
-                        image: Terminator.home + 'smiles/s7/aa.gif',
-                        minSize: 10,
-                        maxSize: 32
-                    });
-                    break;
-                case "ab":
-                    $(document).snowfall({
-                        image: Terminator.home + 'smiles/s7/ab.gif',
-                        minSize: 10,
-                        maxSize: 32
-                    });
-                    break;
-                case "ac":
-                    $(document).snowfall({
-                        image: Terminator.home + 'smiles/s7/ac.gif',
-                        minSize: 10,
-                        maxSize: 32
-                    });
-                    break;
-                case "сd":
-                    $(document).snowfall({
-                        image: Terminator.home + 'smiles/s7/сd.gif',
-                        minSize: 10,
-                        maxSize: 20,
-                        flakeCount: 150
-                    });
 
-
-                    break;
-            }
-            setTimeout(function () {
-                $(document).snowfall('clear')
-            }, 20000);
-        }
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
+            function showfx(name) {
+                $(document).snowfall('clear');
+                switch (name) {
+                    case "aa":
+                        $(document).snowfall({
+                            image: Terminator.home + 'smiles/s7/aa.gif',
+                            minSize: 10,
+                            maxSize: 32
+                        });
+                        break;
+                    case "ab":
+                        $(document).snowfall({
+                            image: Terminator.home + 'smiles/s7/ab.gif',
+                            minSize: 10,
+                            maxSize: 32
+                        });
+                        break;
+                    case "ac":
+                        $(document).snowfall({
+                            image: Terminator.home + 'smiles/s7/ac.gif',
+                            minSize: 10,
+                            maxSize: 32
+                        });
+                        break;
+                    case "сd":
+                        $(document).snowfall({
+                            image: Terminator.home + 'smiles/s7/сd.gif',
+                            minSize: 10,
+                            maxSize: 20,
+                            flakeCount: 150
+                        });
+    
+    
+                        break;
+                }
+                setTimeout(function () {
+                    $(document).snowfall('clear')
+                }, 20000);
+            }
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
             var t = $(element).find("div.chat-text-content").html();
