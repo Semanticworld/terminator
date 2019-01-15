@@ -319,36 +319,39 @@ $(document).ready(function () {
 
 
 
-                            var oAudio;
-                            if (!$("#traudio").length){
-console.log("NOOOOSOUND");
+
+                            if ($("#traudio").length) {
+                                $("#traudio").remove();
                             }
-                    /*        if (document.getElementById('myaudio')) {
-                                removeElement('myaudio');
+                            if (!$("#traudio").length) {
+                                var sound = document.createElement('audio');
+                                sound.id = 'traudio';
+                                sound.controls = 'controls';
+                                sound.src = Terminator.home + 'sound/' + a[2] + a[3] + ".mp3";
+                                sound.type = 'audio/mpeg';
+                                document.body.appendChild(sound);
+                                sound.play();
+
                             }
 
-                            if (!document.getElementById('myaudio')) {
-                                var oAudio = create("audio", {
-                                    id: 'myaudio'
-                                });
-                                document.body.appendChild(oAudio);
-                            }
-
-                            oAudio = document.getElementById('myaudio');
+                            /*
+                                                        oAudio = document.getElementById('myaudio');
 
 
-                            oAudio.autobuffer = true;
-                            oAudio.controls = true;
-                            oAudio.style.position = 'fixed';
-                            oAudio.style.bottom = '30px';
-                            oAudio.style.visibility = 'hidden';
-                            oAudio.addEventListener("play", function () {}, false);
-                            oAudio.addEventListener("ended", function () {
-                                removeElement('MusicStop');
-                                var oAudio = document.getElementById('myaudio');
-                                oAudio.style.visibility = 'hidden';
-                            }, false);
-*/
+                                                        oAudio.autobuffer = true;
+                                                        oAudio.controls = true;
+                                                        oAudio.style.position = 'fixed';
+                                                        oAudio.style.bottom = '30px';
+                                                        oAudio.style.visibility = 'hidden';
+                                                        oAudio.addEventListener("play", function () {}, false);
+                                                        oAudio.addEventListener("ended", function () {
+                                                            removeElement('MusicStop');
+                                                            var oAudio = document.getElementById('myaudio');
+                                                            oAudio.style.visibility = 'hidden';
+                                                        }, false);
+
+                            */
+
 
 
 
