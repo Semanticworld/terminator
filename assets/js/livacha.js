@@ -143,11 +143,11 @@ $(document).ready(function () {
         };
 
 
-
+       
         smilespack.forEach(function (a, b) {
             if (b == "8") {
-                a.forEach(function (a) {
-                    console.log(a);
+                for (var u in a) {
+                    console.log(u);
                     if (a.length > 2) {
                         s += '<center>' + a + '</center><hr>';
                     } else {
