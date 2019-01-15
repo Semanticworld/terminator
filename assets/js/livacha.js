@@ -333,26 +333,26 @@ $(document).ready(function () {
                                 sound.controls = true;
                                 sound.style.position = 'fixed';
                                 sound.style.bottom = '30px';
-                                sound.style.visibility = 'hidden';
+                                sound.addEventListener("play", function () {}, false);
+                                sound.addEventListener("ended", function () {
+                                    //  removeElement('MusicStop');
+                                    // var oAudio = document.getElementById('myaudio');
+                                    sound.style.visibility = 'hidden';
+                                }, false);
                                 document.body.appendChild(sound);
                                 sound.play();
-
+                                sound.style.visibility = 'hidden';
                             }
 
-                            /*
-                                                      
 
 
-                                                        
-                                                        
-                                                        oAudio.addEventListener("play", function () {}, false);
-                                                        oAudio.addEventListener("ended", function () {
-                                                            removeElement('MusicStop');
-                                                            var oAudio = document.getElementById('myaudio');
-                                                            oAudio.style.visibility = 'hidden';
-                                                        }, false);
 
-                            */
+
+
+
+
+
+
 
 
 
