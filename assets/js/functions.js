@@ -22,7 +22,7 @@ function tr_snow(settings){
     for (i = 0; i < no; ++i) {
         dx[i] = 0, xp[i] = Math.random()*(doc_width-50), yp[i] = Math.random()*doc_height, am[i] = Math.random()*20, stx[i] = 0.02 + Math.random()/10, sty[i] = 0.7 + Math.random();
         var flake = $("<div />");
-        var id = ("dot" + i);
+        var id = ("trdot" + i);
         flake.attr("id", id);
         flake.css({
                     position: "absolute",
@@ -34,9 +34,6 @@ function tr_snow(settings){
         flake.append("<img src='" + snowsrc + "'>");
         flake.appendTo("body");
         flakes[i] = $("#" + id);
-        if (i>=1){
-        flakes[i].show();
-        }
     }
 
     var animateSnow;
@@ -56,7 +53,8 @@ function tr_snow(settings){
 		if(window.snowtimer)
             clearTimeout(snowtimer)
         for (i = 0; i < no; i++)
-            flakes[i].hide();
+            //flakes[i].hide();
+            flakes[i].remove();
             this.fx=false;
 	}
     animateSnow();
