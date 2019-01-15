@@ -134,7 +134,7 @@ $(document).ready(function () {
             "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gi", "gj", "gk", "gl", "gm", "gn", "go", "gp", "gq", "gr", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
             "ha", "hb", "hc", "hd", "he", "hf", "hg", "hh", "hi", "hj", "hk", "hl", "hm", "hn", "ho", "hp", "hq", "hr", "hs", "ht", "hu", "hv", "hw", "hx", "hy", "hz"
         ];
-        smilespack.forEach(function (a, b) { 
+        smilespack.forEach(function (a, b) {
             var s = '',
                 ext = 'gif';
             a.forEach(function (a) {
@@ -162,8 +162,12 @@ $(document).ready(function () {
             if (index > -1) {
                 lovesmiles.splice(index, 1);
             } else {
+                var ext = 'gif';
+                if (sm[0] == "6") {
+                    ext = 'png';
+                }
                 $(".tr-tab-content.tr-sm0-block")
-                    .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.gif" class="tr-smile" data-face="' + sm + '">');
+                    .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.' + ext + '" class="tr-smile" data-face="' + sm + '">');
 
             }
             lovesmiles.push(sm);
@@ -183,7 +187,11 @@ $(document).ready(function () {
         var s = '';
         if (lovesmiles) {
             lovesmiles.forEach(function (a) {
-                s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.gif">';
+                var ext = 'gif';
+                if (a[0] == "6") {
+                    ext = 'png';
+                }
+                s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + a[0] + '/' + a[1] + a[2] + '.' + ext + '">';
             });
         }
         $(".tr-sm0-block").append(s);
@@ -213,8 +221,13 @@ $(document).ready(function () {
                 var a = t.match(/\*...\*/g);
                 if (a != null) {
                     a.forEach(function (a) {
-                        var z = a.split("*").join("/*");
-                        var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.gif' + '">';
+                        var z = a.split("*").join("/*"),
+                            ext = 'gif';
+                        if (a[1] == "6") {
+                            ext = 'png';
+                        }
+
+                        var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
 
                         t = repl(t, z, l);
                     });
