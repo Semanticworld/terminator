@@ -153,7 +153,7 @@ $(document).ready(function () {
                     } else {
                         s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
                     }
-                });
+                }
 
             } else {
                 var s = '',
