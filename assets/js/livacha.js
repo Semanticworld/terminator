@@ -134,7 +134,7 @@ $(document).ready(function () {
             "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gi", "gj", "gk", "gl", "gm", "gn", "go", "gp", "gq", "gr", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
             "ha", "hb", "hc", "hd", "he", "hf", "hg", "hh", "hi", "hj", "hk", "hl", "hm", "hn", "ho", "hp", "hq", "hr", "hs", "ht", "hu", "hv", "hw", "hx", "hy", "hz"
         ];
-        smilespack["7"] = ["aa"];
+        smilespack["7"] = ["aa","ab"];
 
         smilespack.forEach(function (a, b) {
             var s = '',
@@ -220,9 +220,13 @@ $(document).ready(function () {
             if (this.fx) return;
             switch (name){
                 case "aa":
-                this.fx=true;
-                $(document).trsnow({ img: Terminator.home + 'smiles/s7/aa.gif' });
-                break;
+                    this.fx=true;
+                    $(document).trsnow({ img: Terminator.home + 'smiles/s7/aa.gif' });
+                    break;
+                case "ab":
+                    this.fx=true;
+                    $(document).trsnow({ img: Terminator.home + 'smiles/s7/ab.gif' });
+                    break;
             }
         }
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
