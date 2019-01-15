@@ -24,7 +24,6 @@ function tr_snow(settings){
         var flake = $("<div />");
         var id = ("dot" + i);
         flake.attr("id", id);
-        flakes.show();
         flake.css({
                     position: "absolute",
                     zIndex: i,
@@ -35,7 +34,9 @@ function tr_snow(settings){
         flake.append("<img src='" + snowsrc + "'>");
         flake.appendTo("body");
         flakes[i] = $("#" + id);
-        
+        if (i!0){
+        flakes[i].show();
+        }
     }
 
     var animateSnow;
