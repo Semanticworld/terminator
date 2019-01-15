@@ -55,7 +55,7 @@ function tr_snow(settings){
             clearTimeout(snowtimer)
         for (i = 0; i < no; i++)
             flakes[i].hide();
-            console.log(this.fx);
+            this.fx=false;
 	}
     animateSnow();
 	if (settings.HideSnowTime > 0)
