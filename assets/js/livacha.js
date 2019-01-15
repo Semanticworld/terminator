@@ -218,12 +218,14 @@ $(document).ready(function () {
         }
 
         function showfx(name) {
-            if (this.fx) return;
+            if (this.fx) {
+                $('body').snowfall('clear');
+            };
             switch (name) {
                 case "aa":
                     this.fx = true;
                    // $(document).trsnow({img: Terminator.home + 'smiles/s7/aa.gif'});
-                   $(document).snowfall({flakeCount : 100, maxSpeed : 10});
+                   $('body').snowfall({flakeCount : 100, maxSpeed : 10});
                     break;
                 case "ab":
                     this.fx = true;
