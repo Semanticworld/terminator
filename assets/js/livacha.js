@@ -228,7 +228,6 @@ $(document).ready(function () {
                 if (sm[0] == "6") {
                     ext = 'png';
                 }
-                console.log(sm[0]);
                 if (sm[0] != "8") {
                     $(".tr-tab-content.tr-sm0-block")
                         .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.' + ext + '" class="tr-smile" data-face="' + sm + '">');
@@ -333,15 +332,12 @@ $(document).ready(function () {
                             maxSize: 20,
                             flakeCount: 150
                         });
-
-
                         break;
                 }
                 setTimeout(function () {
                     $(document).snowfall('clear')
                 }, 20000);
             }
-
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
             var t = $(element).find("div.chat-text-content").html();
@@ -355,7 +351,6 @@ $(document).ready(function () {
                             ext = 'png';
                         }
                         if (a[1] == "8") {
-                            console.log("play:" + a);
                             var l = '<img data-face="8-' + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s8/aa.png">';
                             Terminator.playSound(Terminator.home + 'sound/' + a[2] + a[3] + ".mp3");
                         } else {
