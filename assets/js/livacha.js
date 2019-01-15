@@ -333,17 +333,18 @@ $(document).ready(function () {
                                 sound.controls = true;
                                 sound.style.position = 'fixed';
                                 sound.style.bottom = '30px';
+                                sound.style.visibility = 'hidden';
                                 document.body.appendChild(sound);
                                 sound.play();
 
                             }
 
                             /*
-                                                        oAudio = document.getElementById('myaudio');
+                                                      
 
 
                                                         
-                                                        oAudio.style.visibility = 'hidden';
+                                                        
                                                         oAudio.addEventListener("play", function () {}, false);
                                                         oAudio.addEventListener("ended", function () {
                                                             removeElement('MusicStop');
