@@ -143,15 +143,15 @@ $(document).ready(function () {
         };
 
 
-       
+
         smilespack.forEach(function (a, b) {
             if (b == "8") {
                 for (var u in a) {
                     console.log(u);
-                    if (a.length > 2) {
-                        s += '<center>' + a + '</center><hr>';
+                    if (u.length > 2) {
+                        s += '<center>' + u + '</center><hr>';
                     } else {
-                        s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
+                        s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + u + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
                     }
                 }
 
