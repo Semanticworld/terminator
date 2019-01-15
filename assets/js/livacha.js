@@ -218,6 +218,7 @@ $(document).ready(function () {
 
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             function showfx(name) {
+                clearTimeout(fx);
                 $(document).snowfall();
                 $(document).snowfall('clear');
                 switch (name) {
@@ -253,9 +254,13 @@ $(document).ready(function () {
     
                         break;
                 }
-                setTimeout(function () {
+                var fx=setTimeout(function () {
                     $(document).snowfall('clear')
                 }, 20000);
+
+
+                
+
             }
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
