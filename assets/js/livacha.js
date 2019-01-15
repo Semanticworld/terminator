@@ -215,6 +215,13 @@ $(document).ready(function () {
             var l = str.replace(regex, r);
             return l.split("*").join("");
         }
+        function showfx(name){
+            switch ($name){
+                case "aa":
+                $(document).trsnow({ img: "https://raw.githubusercontent.com/Semanticworld/terminator/master/assets/smiles/s6/hr.png" });
+                break;
+            }
+        }
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
@@ -228,10 +235,11 @@ $(document).ready(function () {
                         if (a[1] == "6") {
                             ext = 'png';
                         }
-
                         var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
-
                         t = repl(t, z, l);
+                        if (a[1]=="7"){
+                            showfx(a[2]+a[3]);
+                        }
                     });
                     $($mms).html(t);
                 }

@@ -5,7 +5,7 @@
 
 
 function tr_snow(settings){
-    var snowsrc = settings.SnowImage;
+    var snowsrc = settings.img;
     var no = settings.Quantity;
     var dx, xp, yp;
     var am, stx, sty;
@@ -63,7 +63,7 @@ function tr_snow(settings){
 (function($) {
     $.fn.trsnow = function(options) {
     var settings = $.extend({
-            SnowImage:      undefined,
+            img:      undefined,
             Quantity:       7,
             HideSnowTime:   0
         }, options);
