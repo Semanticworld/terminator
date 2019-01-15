@@ -222,21 +222,20 @@ $(document).ready(function () {
             switch (name) {
                 case "aa":
                     this.fx = true;
-                    $(document).trsnow({
-                        img: Terminator.home + 'smiles/s7/aa.gif'
-                    });
+                   // $(document).trsnow({img: Terminator.home + 'smiles/s7/aa.gif'});
+                   $(document).snowfall({flakeCount : 100, maxSpeed : 10});
                     break;
                 case "ab":
                     this.fx = true;
-                    $(document).trsnow({
-                        img: Terminator.home + 'smiles/s7/ab.gif'
-                    });
+                   // $(document).trsnow({
+                   //     img: Terminator.home + 'smiles/s7/ab.gif'
+                   // });
                     break;
                     case "ac":
                     this.fx = true;
-                    $(document).trsnow({
-                        img: Terminator.home + 'smiles/s7/ac.gif',
-                        Quantity:18
+                  //  $(document).trsnow({
+                  //      img: Terminator.home + 'smiles/s7/ac.gif',
+                  //      Quantity:18
                     });
                     break;
             }
