@@ -144,7 +144,11 @@ $(document).ready(function () {
                     ext = 'png';
                 }
                 if (b == "8") {
-                    s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
+                    if (a.length > 2) {
+
+                    } else {
+                        s += '<center>'+a+'</center><hr>';
+                    }
                 } else {
                     s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
                 }
