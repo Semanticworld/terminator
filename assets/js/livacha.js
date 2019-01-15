@@ -244,8 +244,8 @@ $(document).ready(function () {
                 case "сd":
                     $(document).snowfall({
                         image: Terminator.home + 'smiles/s7/сd.gif',
-                        minSize: 15,
-                        maxSize: 25,
+                        minSize: 10,
+                        maxSize: 20,
                         flakeCount: 150
                     });
 
