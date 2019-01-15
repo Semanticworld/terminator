@@ -221,9 +221,10 @@ $(document).ready(function () {
             switch (name) {
                 case "aa":
                 $(document).snowfall('clear');
-                $(document).snowfall({shadow : true, round : true,  minSize: 5, maxSize:8});
-                   // $(document).trsnow({img: Terminator.home + 'smiles/s7/aa.gif'});
-                  // $(document).snowfall({flakeCount : 100, maxSpeed : 10});
+                $(document).snowfall({image :Terminator.home + 'smiles/s7/aa.gif', minSize: 10, maxSize:32});
+
+          //      $(document).snowfall({shadow : true, round : true,  minSize: 5, maxSize:8});
+
                     break;
                 case "ab":
                     this.fx = true;
