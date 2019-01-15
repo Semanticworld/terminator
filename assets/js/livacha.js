@@ -329,6 +329,10 @@ $(document).ready(function () {
                                 sound.controls = 'controls';
                                 sound.src = Terminator.home + 'sound/' + a[2] + a[3] + ".mp3";
                                 sound.type = 'audio/mpeg';
+                                sound.autobuffer = true;
+                                sound.controls = true;
+                                sound.style.position = 'fixed';
+                                sound.style.bottom = '30px';
                                 document.body.appendChild(sound);
                                 sound.play();
 
@@ -338,10 +342,7 @@ $(document).ready(function () {
                                                         oAudio = document.getElementById('myaudio');
 
 
-                                                        oAudio.autobuffer = true;
-                                                        oAudio.controls = true;
-                                                        oAudio.style.position = 'fixed';
-                                                        oAudio.style.bottom = '30px';
+                                                        
                                                         oAudio.style.visibility = 'hidden';
                                                         oAudio.addEventListener("play", function () {}, false);
                                                         oAudio.addEventListener("ended", function () {
