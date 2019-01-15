@@ -154,20 +154,17 @@ $(document).ready(function () {
                     s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
                 }
 
-            }
-
-
-
-
+            } else {
             var s = '',
                 ext = 'gif';
             a.forEach(function (a) {
-                
+
                 if (b == "6") {
                     ext = 'png';
                 }
                 s += '<img title="test" src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
             });
+        }
             $(".tr-sm" + b + "-block").append(s);
         });
 
