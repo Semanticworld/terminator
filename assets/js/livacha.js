@@ -314,6 +314,7 @@ $(document).ready(function () {
                         }
                         if (a[1] == "8") {
                             console.log("play:" + a);
+                            l='';
                         } else {
                             var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
                         }
