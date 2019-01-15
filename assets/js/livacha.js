@@ -155,7 +155,6 @@ $(document).ready(function () {
                         s += '<img title="' + a[u] + '" src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + u + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
                     }
                 }
-
             } else {
                 var ext = 'gif';
                 a.forEach(function (a) {
