@@ -145,7 +145,7 @@ $(document).ready(function () {
                 }
                 if (b == "8") {
                     if (a.length > 2) {
-                        s += 'center>'+a+'</center><hr>';
+                        s += '<center>'+a+'</center><hr>';
                     } else {
                         s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
                     }
