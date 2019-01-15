@@ -218,7 +218,6 @@ $(document).ready(function () {
 
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             function showfx(name) {
-                clearTimeout(fx);
                 $(document).snowfall();
                 $(document).snowfall('clear');
                 switch (name) {
@@ -250,16 +249,16 @@ $(document).ready(function () {
                             maxSize: 20,
                             flakeCount: 150
                         });
-    
-    
+
+
                         break;
                 }
-                var fx=setTimeout(function () {
+                setTimeout(function () {
                     $(document).snowfall('clear')
                 }, 20000);
 
 
-                
+
 
             }
             var element = e.target;
