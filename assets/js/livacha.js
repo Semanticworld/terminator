@@ -134,6 +134,8 @@ $(document).ready(function () {
             "ha", "hb", "hc", "hd", "he", "hf", "hg", "hh", "hi", "hj", "hk", "hl", "hm", "hn", "ho", "hp", "hq", "hr", "hs", "ht", "hu", "hv", "hw", "hx", "hy", "hz"
         ];
         smilespack["7"] = ["aa", "ab", "ac", "ca", "cb", "cc", "сd"];
+
+        smilespack["8"] = ["ДМБ", "01", "02", "03"];
         smilespack.forEach(function (a, b) {
             var s = '',
                 ext = 'gif';
@@ -141,7 +143,11 @@ $(document).ready(function () {
                 if (b == "6") {
                     ext = 'png';
                 }
-                s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
+                if (b == "8") {
+                    s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
+                } else {
+                    s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
+                }
             });
             $(".tr-sm" + b + "-block").append(s);
         });
