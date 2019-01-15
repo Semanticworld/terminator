@@ -134,8 +134,7 @@ $(document).ready(function () {
             "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gi", "gj", "gk", "gl", "gm", "gn", "go", "gp", "gq", "gr", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
             "ha", "hb", "hc", "hd", "he", "hf", "hg", "hh", "hi", "hj", "hk", "hl", "hm", "hn", "ho", "hp", "hq", "hr", "hs", "ht", "hu", "hv", "hw", "hx", "hy", "hz"
         ];
-        smilespack["7"] = ["aa","ab"];
-
+        smilespack["7"] = ["aa", "ab"];
         smilespack.forEach(function (a, b) {
             var s = '',
                 ext = 'gif';
@@ -210,22 +209,28 @@ $(document).ready(function () {
     }
 
     Terminator.prototype.chat = function () {
-        this.fx=false;
+        this.fx = false;
+
         function repl(str, f, r) {
             var regex = new RegExp(f, "g");
             var l = str.replace(regex, r);
             return l.split("*").join("");
         }
-        function showfx(name){
+
+        function showfx(name) {
             if (this.fx) return;
-            switch (name){
+            switch (name) {
                 case "aa":
-                    this.fx=true;
-                    $(document).trsnow({ img: Terminator.home + 'smiles/s7/aa.gif' });
+                    this.fx = true;
+                    $(document).trsnow({
+                        img: Terminator.home + 'smiles/s7/aa.gif'
+                    });
                     break;
                 case "ab":
-                    this.fx=true;
-                    $(document).trsnow({ img: Terminator.home + 'smiles/s7/ab.gif' });
+                    this.fx = true;
+                    $(document).trsnow({
+                        img: Terminator.home + 'smiles/s7/ab.gif'
+                    });
                     break;
             }
         }
@@ -244,8 +249,8 @@ $(document).ready(function () {
                         }
                         var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
                         t = repl(t, z, l);
-                        if (a[1]=="7"){
-                            showfx(a[2]+a[3]);
+                        if (a[1] == "7") {
+                            showfx(a[2] + a[3]);
                         }
                     });
                     $($mms).html(t);
