@@ -145,6 +145,7 @@ $(document).ready(function () {
 
 
         smilespack.forEach(function (a, b) {
+            var s = '';
             if (b == "8") {
                 for (var u in a) {
                     console.log(u);
@@ -156,8 +157,7 @@ $(document).ready(function () {
                 }
 
             } else {
-                var s = '',
-                    ext = 'gif';
+                var ext = 'gif';
                 a.forEach(function (a) {
 
                     if (b == "6") {
