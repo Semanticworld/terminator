@@ -134,7 +134,7 @@ $(document).ready(function () {
             "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gi", "gj", "gk", "gl", "gm", "gn", "go", "gp", "gq", "gr", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
             "ha", "hb", "hc", "hd", "he", "hf", "hg", "hh", "hi", "hj", "hk", "hl", "hm", "hn", "ho", "hp", "hq", "hr", "hs", "ht", "hu", "hv", "hw", "hx", "hy", "hz"
         ];
-        smilespack["7"] = ["aa", "ab", "ac"];
+        smilespack["7"] = ["aa", "ab", "ac", "ad"];
         smilespack.forEach(function (a, b) {
             var s = '',
                 ext = 'gif';
@@ -240,6 +240,17 @@ $(document).ready(function () {
                         minSize: 10,
                         maxSize: 32
                     });
+                    break;
+                case "ad":
+                    $(document).snowfall({
+                        image: Terminator.home + 'smiles/s7/ad.gif',
+                        minSize: 5,
+                        maxSize: 32,
+                        shadow: true,
+                        flakeCount: 200
+                    });
+
+
                     break;
             }
             setTimeout(function () {
