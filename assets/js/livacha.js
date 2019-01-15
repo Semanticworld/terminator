@@ -134,7 +134,7 @@ $(document).ready(function () {
             "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gi", "gj", "gk", "gl", "gm", "gn", "go", "gp", "gq", "gr", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
             "ha", "hb", "hc", "hd", "he", "hf", "hg", "hh", "hi", "hj", "hk", "hl", "hm", "hn", "ho", "hp", "hq", "hr", "hs", "ht", "hu", "hv", "hw", "hx", "hy", "hz"
         ];
-        smilespack["7"] = ["aa", "ab","ac"];
+        smilespack["7"] = ["aa", "ab", "ac"];
         smilespack.forEach(function (a, b) {
             var s = '',
                 ext = 'gif';
@@ -221,16 +221,30 @@ $(document).ready(function () {
             $(document).snowfall('clear');
             switch (name) {
                 case "aa":
-                    $(document).snowfall({image :Terminator.home + 'smiles/s7/aa.gif', minSize: 10, maxSize:32});
+                    $(document).snowfall({
+                        image: Terminator.home + 'smiles/s7/aa.gif',
+                        minSize: 10,
+                        maxSize: 32
+                    });
                     break;
                 case "ab":
-                    $(document).snowfall({image :Terminator.home + 'smiles/s7/ab.gif', minSize: 10, maxSize:32});
+                    $(document).snowfall({
+                        image: Terminator.home + 'smiles/s7/ab.gif',
+                        minSize: 10,
+                        maxSize: 32
+                    });
                     break;
                 case "ac":
-                    $(document).snowfall({image :Terminator.home + 'smiles/s7/ac.gif', minSize: 10, maxSize:32});
+                    $(document).snowfall({
+                        image: Terminator.home + 'smiles/s7/ac.gif',
+                        minSize: 10,
+                        maxSize: 32
+                    });
                     break;
             }
-            setTimeout(function(){$(document).snowfall('clear')}, 10000);
+            setTimeout(function () {
+                $(document).snowfall('clear')
+            }, 20000);
         }
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             var element = e.target;
