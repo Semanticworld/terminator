@@ -33,8 +33,8 @@ function tr_snow(settings){
 
         flake.append("<img src='" + snowsrc + "'>");
         flake.appendTo("body");
-        flakes[i] = $("#" + id);
         flakes[i].show();
+        flakes[i] = $("#" + id);
     }
 
     var animateSnow;
