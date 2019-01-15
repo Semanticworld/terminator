@@ -245,9 +245,8 @@ $(document).ready(function () {
                     $(document).snowfall({
                         image: Terminator.home + 'smiles/s7/ad2.gif',
                         minSize: 5,
-                        maxSize: 32,
-                        shadow: true,
-                        flakeCount: 200
+                        maxSize: 25,
+                        flakeCount: 150
                     });
 
 
