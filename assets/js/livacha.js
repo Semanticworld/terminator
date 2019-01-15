@@ -136,28 +136,37 @@ $(document).ready(function () {
         smilespack["7"] = ["aa", "ab", "ac", "ca", "cb", "cc", "сd"];
 
         smilespack["8"] = {
-            "ДМБ":"",
-            "01":"Видишь суслика? И я не вижу, а он есть!",
+            "ДМБ": "",
+            "01": "Видишь суслика? И я не вижу, а он есть!",
             "02": "Может бахнем? Обязательно бахнем! Весь мир в труху! Но потом.",
-            "03" : "Жизнь без армии это все равно что любовь в резеинке, движение есть а прогресса нет."
+            "03": "Жизнь без армии это все равно что любовь в резеинке, движение есть а прогресса нет."
         };
+
+
+
+
         smilespack.forEach(function (a, b) {
+            if (b == "8") {
+                console.log(a);
+                if (a.length > 2) {
+                    s += '<center>' + a + '</center><hr>';
+                } else {
+                    s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
+                }
+
+            }
+
+
+
+
             var s = '',
                 ext = 'gif';
-            a.forEach(function (a, t) {
-                console.log(a);
+            a.forEach(function (a) {
+                
                 if (b == "6") {
                     ext = 'png';
                 }
-                if (b == "8") {
-                    if (a.length > 2) {
-                        s += '<center>' + a + '</center><hr>';
-                    } else {
-                        s += '<img src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/s8/aa.png">';
-                    }
-                } else {
-                    s += '<img title="test" src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
-                }
+                s += '<img title="test" src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
             });
             $(".tr-sm" + b + "-block").append(s);
         });
