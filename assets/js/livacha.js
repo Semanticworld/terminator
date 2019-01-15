@@ -315,10 +315,7 @@ $(document).ready(function () {
                         }
                         if (a[1] == "8") {
                             console.log("play:" + a);
-                            l = '>>>';
-
-
-
+                            var l = '<img data-face="8-' + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s8/aa.png">';
 
                             if ($("#traudio").length) {
                                 $("#traudio").remove();
@@ -335,31 +332,11 @@ $(document).ready(function () {
                                 sound.style.bottom = '30px';
                                 sound.addEventListener("play", function () {}, false);
                                 sound.addEventListener("ended", function () {
-                                    //  removeElement('MusicStop');
-                                    // var oAudio = document.getElementById('myaudio');
                                     sound.style.visibility = 'hidden';
                                 }, false);
                                 document.body.appendChild(sound);
                                 sound.play();
-                             //   sound.style.visibility = 'hidden';
                             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         } else {
                             var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
                         }
