@@ -341,7 +341,7 @@ $(document).ready(function () {
                                 }, false);
                                 document.body.appendChild(sound);
                                 sound.play();
-                                sound.style.visibility = 'hidden';
+                             //   sound.style.visibility = 'hidden';
                             }
 
 
