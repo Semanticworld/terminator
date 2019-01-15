@@ -243,7 +243,7 @@ $(document).ready(function () {
                     break;
                 case "ad":
                     $(document).snowfall({
-                        image: Terminator.home + 'smiles/s7/ad.gif',
+                        image: Terminator.home + 'smiles/s7/ad2.gif',
                         minSize: 5,
                         maxSize: 32,
                         shadow: true,
