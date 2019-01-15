@@ -169,14 +169,13 @@ $(document).ready(function () {
                 }
                 $(".tr-tab-content.tr-sm0-block")
                     .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.' + ext + '" class="tr-smile" data-face="' + sm + '">');
-
             }
             lovesmiles.push(sm);
-            localStorage.setItem('tr-love-smiles', JSON.stringify(lovesmiles));
             if (lovesmiles.length > 50) {
                 lovesmiles.shift();
                 $('.tr-tab-content.tr-sm0-block img').last().remove();
             };
+            localStorage.setItem('tr-love-smiles', JSON.stringify(lovesmiles));
             $(".chat-layout-container .textarea-wrapper textarea").val($(".chat-layout-container .textarea-wrapper textarea").val() + ' *' + sm + '* ');
         });
 
@@ -187,7 +186,7 @@ $(document).ready(function () {
         }
         var s = '';
         if (lovesmiles) {
-            lovesmiles.forEach(function (a) {
+            lovesmiles.reverse().forEach(function (a) {
                 var ext = 'gif';
                 if (a[0] == "6") {
                     ext = 'png';
