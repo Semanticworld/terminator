@@ -218,26 +218,16 @@ $(document).ready(function () {
         }
 
         function showfx(name) {
+            $(document).snowfall('clear');
             switch (name) {
                 case "aa":
-                $(document).snowfall('clear');
-                $(document).snowfall({image :Terminator.home + 'smiles/s7/aa.gif', minSize: 10, maxSize:32});
-
-          //      $(document).snowfall({shadow : true, round : true,  minSize: 5, maxSize:8});
-
+                    $(document).snowfall({image :Terminator.home + 'smiles/s7/aa.gif', minSize: 10, maxSize:32});
                     break;
                 case "ab":
-                    this.fx = true;
-                   // $(document).trsnow({
-                   //     img: Terminator.home + 'smiles/s7/ab.gif'
-                   // });
+                    $(document).snowfall({image :Terminator.home + 'smiles/s7/ab.gif', minSize: 10, maxSize:32});
                     break;
-                    case "ac":
-                    this.fx = true;
-                  //  $(document).trsnow({
-                  //      img: Terminator.home + 'smiles/s7/ac.gif',
-                  //      Quantity:18
-                  //  });
+                case "ac":
+                    $(document).snowfall({image :Terminator.home + 'smiles/s7/ac.gif', minSize: 10, maxSize:32});
                     break;
             }
         }
