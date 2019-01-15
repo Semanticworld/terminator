@@ -250,7 +250,7 @@ $(document).ready(function () {
                         break;
                     case "cb":
                         $(document).snowfall({
-                            image: Terminator.home + 'smiles/s7/ca.gif',
+                            image: Terminator.home + 'smiles/s7/cb.gif',
                             minSize: 10,
                             maxSize: 32
                         });
