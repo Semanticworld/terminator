@@ -218,7 +218,7 @@ $(document).ready(function () {
         function showfx(name){
             switch (name){
                 case "aa":
-                $(document).trsnow({ img: Terminator.home + 'smiles/s7/aa.png' });
+                $(document).trsnow({ img: Terminator.home + 'smiles/s7/aa.gif' });
                 break;
             }
         }

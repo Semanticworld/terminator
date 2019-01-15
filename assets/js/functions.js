@@ -65,7 +65,7 @@ function tr_snow(settings){
     var settings = $.extend({
             img:      undefined,
             Quantity:       7,
-            HideSnowTime:   0
+            HideSnowTime:   10
         }, options);
     tr_snow(settings);
     return this;
