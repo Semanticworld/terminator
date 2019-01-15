@@ -34,6 +34,7 @@ function tr_snow(settings){
         flake.append("<img src='" + snowsrc + "'>");
         flake.appendTo("body");
         flakes[i] = $("#" + id);
+        flakes[i].show();
     }
 
     var animateSnow;
@@ -64,7 +65,7 @@ function tr_snow(settings){
     $.fn.trsnow = function(options) {
     var settings = $.extend({
             img:      undefined,
-            Quantity:       7,
+            Quantity:       8,
             HideSnowTime:   10
         }, options);
     tr_snow(settings);
