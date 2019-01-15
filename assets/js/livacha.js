@@ -216,7 +216,7 @@ $(document).ready(function () {
             return l.split("*").join("");
         }
         function showfx(name){
-            switch ($name){
+            switch (name){
                 case "aa":
                 $(document).trsnow({ img: "https://raw.githubusercontent.com/Semanticworld/terminator/master/assets/smiles/s6/hr.png" });
                 break;
