@@ -74,6 +74,7 @@ $(document).ready(function () {
             localStorage.setItem('tr-win-x', $(".tr-window").offset().left);
             $(".tr-window").css("visibility", "hidden");
         });
+
         $('ul.tr-tab-caption').on('click', 'li:not(.active)', function () {
             $(this)
                 .addClass('active').siblings().removeClass('active')
