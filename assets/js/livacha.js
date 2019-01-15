@@ -188,6 +188,7 @@ $(document).ready(function () {
                 if (sm[0] == "6") {
                     ext = 'png';
                 }
+                console.log(sm[0]);
                 if (sm[0] != "8") {
                     $(".tr-tab-content.tr-sm0-block")
                         .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.' + ext + '" class="tr-smile" data-face="' + sm + '">');
