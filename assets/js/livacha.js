@@ -300,6 +300,7 @@ $(document).ready(function () {
                     $(document).snowfall('clear')
                 }, 20000);
             }
+
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
             var t = $(element).find("div.chat-text-content").html();
@@ -314,7 +315,46 @@ $(document).ready(function () {
                         }
                         if (a[1] == "8") {
                             console.log("play:" + a);
-                            l='';
+                            l = '';
+
+
+
+                            var oAudio;
+                            if (!$("#traudio").length){
+console.log("NOOOOSOUND");
+                            }
+                    /*        if (document.getElementById('myaudio')) {
+                                removeElement('myaudio');
+                            }
+
+                            if (!document.getElementById('myaudio')) {
+                                var oAudio = create("audio", {
+                                    id: 'myaudio'
+                                });
+                                document.body.appendChild(oAudio);
+                            }
+
+                            oAudio = document.getElementById('myaudio');
+
+
+                            oAudio.autobuffer = true;
+                            oAudio.controls = true;
+                            oAudio.style.position = 'fixed';
+                            oAudio.style.bottom = '30px';
+                            oAudio.style.visibility = 'hidden';
+                            oAudio.addEventListener("play", function () {}, false);
+                            oAudio.addEventListener("ended", function () {
+                                removeElement('MusicStop');
+                                var oAudio = document.getElementById('myaudio');
+                                oAudio.style.visibility = 'hidden';
+                            }, false);
+*/
+
+
+
+
+
+
                         } else {
                             var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
                         }
