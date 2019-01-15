@@ -76,12 +76,12 @@ $(document).ready(function () {
                 sound.style.visibility = 'hidden';
             }, false);
             document.body.appendChild(sound);
-            const playPromise = sound.play();
-            if (playPromise !== null) {
-                playPromise.catch(() => {
-                    sound.play();
-                })
-            }
+            //    const playPromise = sound.play();
+            //    if (playPromise !== null) {
+            //        playPromise.catch(() => {
+            //            sound.play();
+            //        })
+            // }
         }
 
     }
