@@ -291,7 +291,6 @@ input[type="checkbox"].ios8-switch-lg+label:before {
 
 input[type="checkbox"].ios8-switch-lg+label:after {
     width: 30px;
-    /* x*3 */
     height: 30px;
     /* x*3 */
     border-radius: 20px;
@@ -304,5 +303,8 @@ input[type="checkbox"].ios8-switch-lg+label:hover:after {
 
 input[type="checkbox"].ios8-switch-lg:checked+label:after {
     margin-left: 20px;
-    /* x*2 */
+}
+
+.tr-fl {
+    float: left;
 }
