@@ -636,7 +636,7 @@ $(document).ready(function () {
             sm = sm.split("-").join("");
             $(".chat-layout-container .textarea-wrapper textarea").val($(".chat-layout-container .textarea-wrapper textarea").val() + ' *' + sm + '* ');
             if (sm[0] == "8") {
-                Terminator.playSound(Terminator.home + 'sound/' + sm[2] + sm[3] + ".mp3");
+                Terminator.playSound(Terminator.home + 'sound/' + sm[1] + sm[2] + ".mp3");
             }
         });
 
