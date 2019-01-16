@@ -696,6 +696,9 @@ $(document).ready(function () {
 
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             function showfx(name) {
+                if (typeof snowfall != "function") {
+                    return false;
+                }
                 $(document).snowfall();
                 $(document).snowfall('clear');
                 switch (name) {
