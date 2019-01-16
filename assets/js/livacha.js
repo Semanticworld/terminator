@@ -635,6 +635,9 @@ $(document).ready(function () {
             var sm = $(this).data("face");
             sm = sm.split("-").join("");
             $(".chat-layout-container .textarea-wrapper textarea").val($(".chat-layout-container .textarea-wrapper textarea").val() + ' *' + sm + '* ');
+            if (sm[0] == "9") {
+                Terminator.playSound(Terminator.home + 'sound/' + sm[2] + sm[3] + ".mp3");
+            }
         });
 
         $(document).on("click", ".tr-smile", function (e) {
