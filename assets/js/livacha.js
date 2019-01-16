@@ -647,9 +647,11 @@ $(document).ready(function () {
                 if (sm[0] != "8") {
                     $(".tr-tab-content.tr-sm0-block")
                         .prepend('<img src="' + Terminator.home + 'smiles/' + 's' + sm[0] + '/' + sm[1] + sm[2] + '.' + ext + '" class="tr-smile" data-face="' + sm + '">');
+                    lovesmiles.push(sm);
                 }
             }
-            lovesmiles.push(sm);
+
+
             if (lovesmiles.length > 50) {
                 lovesmiles.shift();
                 $('.tr-tab-content.tr-sm0-block img').last().remove();
