@@ -622,7 +622,7 @@ $(document).ready(function () {
             $(".tr-sm" + b + "-block").append(s);
         });
         s = '<div class="tr-pt10"><input data-cmd="snow" type="checkbox" class="ios8-switch" id="tr-ch1"><label for="tr-ch1">Отключить падающие эффекты</label></div>';
-        s += '<div class="tr-pt10"><input data-cmd="sound" type="checkbox" class="ios8-switch" id="tr-ch2"><label for="tr-ch2">Отключить звуковые эффекты</label></div>';
+        s += '<div class="tr-pt10"><input data-cmd="sound" type="checkbox" class="ios8-switch" id="tr-ch2" checked><label for="tr-ch2">Отключить звуковые эффекты</label></div>';
         $(".tr-sm9-block").append(s);
 
 
