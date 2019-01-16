@@ -621,7 +621,7 @@ $(document).ready(function () {
             }
             $(".tr-sm" + b + "-block").append(s);
         });
-        s = '<div><div class="tr-fl"><input type="checkbox" class="ios8-switch" id="checkbox-1"></div><div class="tr-fl"><label for="checkbox-1">iOS8 switch</label></div>';
+        s = '<input type="checkbox" class="ios8-switch" id="checkbox-1"><label for="checkbox-1">iOS8 switch</label>';
         $(".tr-sm9-block").append(s);
 
 
