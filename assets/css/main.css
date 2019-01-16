@@ -305,3 +305,7 @@ input[type="checkbox"].ios8-switch-lg:checked+label:after {
 .tr-pt10 {
     padding-top: 10px;
 }
+
+.tr-pr {
+    float: right;
+}
