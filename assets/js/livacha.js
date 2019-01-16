@@ -621,7 +621,8 @@ $(document).ready(function () {
             }
             $(".tr-sm" + b + "-block").append(s);
         });
-
+        s = '<input type="checkbox" class="ios8-switch" id="checkbox-1"><label for="checkbox-1">iOS8 switch</label>';
+        $(".tr-sm9-block").append(s);
 
 
         $(document).on("click", ".tr-smilex", function (e) {
