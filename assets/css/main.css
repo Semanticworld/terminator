@@ -237,7 +237,6 @@ input[type="checkbox"].ios8-switch-sm {
 input[type="checkbox"].ios8-switch-sm+label {
     position: relative;
     padding-left: 32px
-
 }
 
 input[type="checkbox"].ios8-switch-sm+label:before {
@@ -303,3 +302,6 @@ input[type="checkbox"].ios8-switch-lg:checked+label:after {
     margin-left: 20px;
 }
 
+.tr-pt10 {
+    padding-top: 10px;
+}
