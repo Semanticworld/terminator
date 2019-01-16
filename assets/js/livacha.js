@@ -96,7 +96,7 @@ $(document).ready(function () {
             $(".tr-window .tr-tabs").prepend($("<div/>").addClass("tr-tab-content tr-sm" + i + "-block"));
         }
         $(".tr-sm0-block").addClass("active");
-        $(".tr-tabs")Ы
+        $(".tr-tabs")
             .prepend('<ul class="tr-tab-caption"><li class="active"><img src="' + this.home + 'ico/0.png"></li><li><img src="' + this.home + 'ico/1.png"></li><li>2</li><li><img src="' + this.home + 'ico/3.png"></li><li><img src="' + this.home + 'ico/4.png"></li><li><img src="' + this.home + 'ico/5.png"></li><li><img src="' + this.home + 'ico/6.png"></li><li><img src="' + this.home + 'ico/7.png"></li><li><img src="' + this.home + 'ico/8.png"></li><li><img src="' + this.home + 'ico/9.png"></l></ul>');
         $('.tr-window').tr_drags({
             handle: ".tr-title"
