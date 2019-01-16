@@ -621,7 +621,8 @@ $(document).ready(function () {
             }
             $(".tr-sm" + b + "-block").append(s);
         });
-        s = '<input type="checkbox" class="ios8-switch" id="checkbox-1"><label for="checkbox-1">iOS switch</label>';
+        s = '<input type="checkbox" class="ios8-switch" id="tr-ch1"><label for="tr-ch1">Отключить падающие эффекты</label>';
+        s += '<input type="checkbox" class="ios8-switch" id="tr-ch2"><label for="tr-ch2">Отключить звуковые эффекты</label>';
         $(".tr-sm9-block").append(s);
 
 
