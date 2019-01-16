@@ -178,7 +178,6 @@ input[type="checkbox"].ios8-switch {
 input[type="checkbox"].ios8-switch+label {
     position: relative;
     padding: 5px 0 0 50px;
-    line-height: 2.0em;
 }
 
 input[type="checkbox"].ios8-switch+label:before {
@@ -238,7 +237,7 @@ input[type="checkbox"].ios8-switch-sm {
 input[type="checkbox"].ios8-switch-sm+label {
     position: relative;
     padding: 0 0 0 32px;
-    line-height: 1.3em;
+
 }
 
 input[type="checkbox"].ios8-switch-sm+label:before {
@@ -277,7 +276,6 @@ input[type="checkbox"].ios8-switch-lg {
 input[type="checkbox"].ios8-switch-lg+label {
     position: relative;
     padding: 7px 0 0 60px;
-    line-height: 2.3em;
 }
 
 input[type="checkbox"].ios8-switch-lg+label:before {
