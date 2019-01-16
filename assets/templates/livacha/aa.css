@@ -1,4 +1,8 @@
 body {
-    background-image: url(/upload/chat_room/background/f8/be/chat_room_mDJzP_MiM0FmwJQSO6SpZ2JISxoVMHg1tdmt4sm0eQZKjW.jpeg);
-
+    background-image: url("/upload/chat_room/background/f8/be/chat_room_mDJzP_MiM0FmwJQSO6SpZ2JISxoVMHg1tdmt4sm0eQZKjW.jpeg");
+    background-color: transparent;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

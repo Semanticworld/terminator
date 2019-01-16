@@ -10,6 +10,7 @@ $(document).ready(function () {
             if ($("i.em-smiley").length) {
                 clearInterval(waitPanel);
                 Terminator.initSmailes();
+                Terminator.load("css", "templates/livacha/aa.css");
             }
         }, 2000);
     };
