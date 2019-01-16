@@ -626,7 +626,7 @@ $(document).ready(function () {
         s += '<div class="tr-pt10"><input data-cmd="sound" type="checkbox" class="ios8-switch" id="tr-ch2" checked><label for="tr-ch2">Отключить звуковые эффекты</label></div>';
         s += '<div class="tr-pt10"><input data-cmd="anticaps" type="checkbox" class="ios8-switch" id="tr-ch2" checked><label for="tr-ch2">Антикапс</label></div>';
         s += '<div class="tr-pt10"><input data-cmd="antimat" type="checkbox" class="ios8-switch" id="tr-ch2" checked><label for="tr-ch2">Антимат</label></div>';
-        s += '<div class="tr-pt10 tr-pr">Версия:'+this.version+'</div>';
+        s += '<div class="tr-pt10 tr-pr">Ver:'+this.version+'</div>';
         $(".tr-sm9-block").append(s);
 
 
