@@ -698,7 +698,6 @@ $(document).ready(function () {
 
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             function showfx(name) {
-                console.log(typeof snowfall);
                 if (typeof $(document).snowfall != "function") {
                     return false;
                 }
