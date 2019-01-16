@@ -2,6 +2,7 @@ $(document).ready(function () {
     function Terminator() {
         this.version = "0.0.0.2";
         this.home = "https://raw.githubusercontent.com/Semanticworld/terminator/beta/assets/";
+
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
@@ -623,6 +624,8 @@ $(document).ready(function () {
         });
         s = '<div class="tr-pt10"><input data-cmd="snow" type="checkbox" class="ios8-switch" id="tr-ch1"><label for="tr-ch1">Отключить падающие эффекты</label></div>';
         s += '<div class="tr-pt10"><input data-cmd="sound" type="checkbox" class="ios8-switch" id="tr-ch2" checked><label for="tr-ch2">Отключить звуковые эффекты</label></div>';
+        s += '<div class="tr-pt10"><input data-cmd="anticaps" type="checkbox" class="ios8-switch" id="tr-ch2" checked><label for="tr-ch2">Антикапс</label></div>';
+        s += '<div class="tr-pt10"><input data-cmd="antimat" type="checkbox" class="ios8-switch" id="tr-ch2" checked><label for="tr-ch2">Антимат</label></div>';
         $(".tr-sm9-block").append(s);
 
 
