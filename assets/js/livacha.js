@@ -649,7 +649,7 @@ $(document).ready(function () {
             var f1 = getMemoryValue(cmd);
             var f2 = isChecked(f1);
             var s = '<div class="tr-pt10">';
-            s += '<input value="' + f + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + f2 + '>';
+            s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + f2 + '>';
             s += '<label for="tr-' + id + '">' + title + '</label>';
             s += '</div>';
         }
