@@ -34,7 +34,8 @@ body {
     border-top: none !important;
     background-color: #FCCEA9;
 }
-.app-smiles .wrap-btn-toggle {
+.app-chat .bottom-topper {
     flex-wrap: nowrap;
     visibility: hidden;
+    height: 0;
 }
