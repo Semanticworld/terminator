@@ -21,7 +21,7 @@ $(document).ready(function () {
             Terminator.createSmilesBox();
         });
         if (((localStorage.getItem('tr-template') == "1") ? "1" : "0") == "1") {
-            Terminator.load("css-template", this.home + "templates/livacha/aa.css?r=" + Math.random());
+            Terminator.load("css-template", this.home + 'templates/livacha/' + ((localStorage.getItem('tr-template-name') == undefined) ? 'aa' : localStorage.getItem('tr-template-name')) + '.css?r=' + Math.random());
         }
     }
 
