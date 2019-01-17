@@ -648,7 +648,7 @@ $(document).ready(function () {
         $(".tr-sm9-block").append(s);
 
 $(document).on("click", ".tr-config", function (e) {
-    e.preventDefault();
+   // e.preventDefault();
 console.log($(this).data("cmd"));
 });
 
