@@ -646,7 +646,7 @@ $(document).ready(function () {
         }
 
         function createInput(cmd, id, title) {
-            var f1 = getMemoryValue(cms);
+            var f1 = getMemoryValue(cmd);
             var f2 = isChecked(f1);
             var s = '<div class="tr-pt10">';
             s += '<input value="' + f + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + f2 + '>';
