@@ -10,3 +10,11 @@ body {
     margin-right: 17px;
     background-color: #ffeee0;
 }
+.app-chat.chat-tabs-absolute .chat-tabs {
+    overflow: hidden;
+    background-color: #fccea9;
+}
+.app-chat .chat-tabs .nav-link.active {
+    font-weight: bold;
+    background-color: #fff6ef;
+}
