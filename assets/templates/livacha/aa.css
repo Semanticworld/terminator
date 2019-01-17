@@ -69,3 +69,11 @@ body {
 .tr-tab-content {
     background-color: #FCCEA9;
 }
+.app-chat .chat-bottom [name=message] {
+    max-height: 100px;
+    height: 50px;
+    background-color: #ffeeee;
+    font-family: 'Marck Script', cursive;
+    color: red;
+    font-size: 20px;
+}
