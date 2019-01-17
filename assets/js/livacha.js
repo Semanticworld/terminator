@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function Terminator() {
-        this.version = "0.0.0.4";
+        this.version = "0.0.0.5";
         this.home = "https://raw.githubusercontent.com/Semanticworld/terminator/beta/assets/";
 
     }
@@ -10,7 +10,7 @@ $(document).ready(function () {
             if ($("i.em-smiley").length) {
                 clearInterval(waitPanel);
                 Terminator.initSmailes();
-                Terminator.load("css", "templates/livacha/aa.css");
+                Terminator.load("css", this.home +"templates/livacha/aa.css");
             }
         }, 2000);
     };
