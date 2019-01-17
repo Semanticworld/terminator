@@ -47,12 +47,13 @@ $(document).ready(function () {
                             head = document.head || document.getElementsByTagName('head')[0],
                                 style = document.createElement('style');
                             style.type = 'text/css';
+                            xhr.responseText = xhr.responseText.replace("[BASE_PATH]", Terminator.home);
                             if (style.styleSheet) {
                                 style.styleSheet.cssText = xhr.responseText;
                             } else {
                                 style.appendChild(document.createTextNode(xhr.responseText));
                             }
-                            style = style.replace("[BASE_PATH]", Terminator.home);
+                            
                             head.appendChild(style);
                             break;
                         case "js":
