@@ -814,8 +814,8 @@ $(document).ready(function () {
                         }
                         if (a[1] == "8") {
                             var l = '<img data-face="8-' + a[2] + a[3] + '" class="tr-smilex" src="' + Terminator.home + 'smiles/s8/aa.png">';
-                            if (((localStorage.getItem('tr-sound') == "1") ? "1" : "0") == "1") {
-                                console.log(((localStorage.getItem('tr-sound') == "1") ? "1" : "0") );
+                            var s = (localStorage.getItem('tr-sound') == "1") ? "1" : "0";
+                            if (s == "1") {
                                 Terminator.playSound(Terminator.home + 'sound/' + a[2] + a[3] + ".mp3");
                             }
                         } else {
