@@ -10,7 +10,6 @@ $(document).ready(function () {
             if ($("i.em-smiley").length) {
                 clearInterval(waitPanel);
                 Terminator.initSmailes();
-                Terminator.load("css", Terminator.home +"templates/livacha/aa.css");
             }
         }, 2000);
     };
@@ -21,6 +20,7 @@ $(document).ready(function () {
         Terminator.load("js", this.home + "js/functions.js?r=" + Math.random(), function () {
             Terminator.createSmilesBox();
         });
+        Terminator.load("css", this.home +"templates/livacha/aa.css");
 
     }
 
