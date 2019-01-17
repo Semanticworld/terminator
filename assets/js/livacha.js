@@ -638,14 +638,12 @@ $(document).ready(function () {
         });
 
         function getMemoryValue(name) {
-            console.log(localStorage.getItem('tr-' + name),"====");
-            return (localStorage.getItem('tr-' + name) == "1") ? "0" : "1";
+            return (localStorage.getItem('tr-' + name) == "1") ? "1" : "0";
         }
 
         function isChecked(val) {
-            console.log(val,(val == "1" ? " checked" : ""));
             return (val == "1" ? " checked" : "");
-            
+
         }
 
         function createInput(cmd, id, title) {
