@@ -739,7 +739,7 @@ $(document).ready(function () {
 
         $("div.app-chat").bind('DOMNodeInserted', "div.mess-row", function (e) {
             function showfx(name) {
-                if (typeof $(document).snowfall != "function") {
+                if (typeof $(document).snowfall != "function" || ((localStorage.getItem('tr-snow') == "1") ? "1" : "0") == "0") {
                     return false;
                 }
                 $(document).snowfall();
