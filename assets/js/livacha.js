@@ -52,8 +52,7 @@ $(document).ready(function () {
                             } else {
                                 style.appendChild(document.createTextNode(xhr.responseText));
                             }
-                            //style = style.replace("[BASE_PATH]", this.home);
-                            console.log(Terminator.home,this.home);
+                            style = style.replace("[BASE_PATH]", Terminator.home);
                             head.appendChild(style);
                             break;
                         case "js":
