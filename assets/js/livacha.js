@@ -642,7 +642,9 @@ $(document).ready(function () {
         }
 
         function isChecked(val) {
+            console.log(val,(val == "1" ? " checked" : ""));
             return (val == "1" ? " checked" : "");
+            
         }
 
         function createInput(cmd, id, title) {
