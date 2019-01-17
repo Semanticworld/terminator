@@ -638,7 +638,8 @@ $(document).ready(function () {
         });
 
         function getMemoryValue(name) {
-            return (localStorage.getItem('tr-' + name) == "1") ? "1" : "0";
+            console.log(localStorage.getItem('tr-' + name),"====");
+            return (localStorage.getItem('tr-' + name) == "1") ? "0" : "1";
         }
 
         function isChecked(val) {
