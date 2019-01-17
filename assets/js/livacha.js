@@ -20,8 +20,9 @@ $(document).ready(function () {
         Terminator.load("js", this.home + "js/functions.js?r=" + Math.random(), function () {
             Terminator.createSmilesBox();
         });
-        Terminator.load("css-template", this.home + "templates/livacha/aa.css?r=" + Math.random());
-
+        if (((localStorage.getItem('tr-' + cmd) == "1") ? "1" : "0") == "1") {
+            Terminator.load("css-template", this.home + "templates/livacha/aa.css?r=" + Math.random());
+        }
     }
 
     Terminator.prototype.load = function (type, url, cb) {
