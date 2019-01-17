@@ -636,7 +636,7 @@ $(document).ready(function () {
             }
             $(".tr-sm" + b + "-block").append(s);
         });
-        s = '<div class="tr-pt10"><input data-cmd="snow" type="checkbox" class="ios8-switch tr-config" id="tr-ch1"><label for="tr-ch1">Падающие эффекты</label></div>';
+        s = '<div class="tr-pt10"><input value="1" data-cmd="snow" type="checkbox" class="ios8-switch tr-config" id="tr-ch1"><label for="tr-ch1">Падающие эффекты</label></div>';
         s += '<div class="tr-pt10"><input data-cmd="sound" type="checkbox" class="ios8-switch tr-config" id="tr-ch2" checked><label for="tr-ch2">Звуковые эффекты</label></div>';
         s += '<div class="tr-pt10"><input data-cmd="sound" type="checkbox" class="ios8-switch tr-config" id="tr-ch3" checked><label for="tr-ch3">Отключить звуковые эффекты</label></div>';
         s += '<div class="tr-pt10"><input data-cmd="sound" type="checkbox" class="ios8-switch tr-config" id="tr-ch4" checked><label for="tr-ch4">Отключить звуковые эффекты</label></div>';
