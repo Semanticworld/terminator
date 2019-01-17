@@ -644,7 +644,7 @@ $(document).ready(function () {
         s += '<div class="tr-pt10"><input data-cmd="antimat" type="checkbox" class="ios8-switch" id="tr-ch21" checked><label for="tr-ch21">Антимат</label></div>';
 
 
-        s += '<div class="tr-pt10"><select id="tr-ch21" class="form-control"><option value="1">Стиль 1</option><option value="2">Стиль 2</option><option value="3">Стиль 3</option></select><label for="tr-ch21">Стили</label></div>';
+        s += '<div class="tr-pt10"><select id="tr-ch21" class="form-control tr-w70"><option value="1">Стиль 1</option><option value="2">Стиль 2</option><option value="3">Стиль 3</option></select><label for="tr-ch21">Стили</label></div>';
 
         s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
         $(".tr-sm9-block").append(s);
