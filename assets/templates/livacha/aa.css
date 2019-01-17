@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
 body {
     background-image: url("[BASE_PATH]background/ab.jpg");
     background-color: transparent;
@@ -34,8 +36,30 @@ body {
     border-top: none !important;
     background-color: #FCCEA9;
 }
+
 .app-chat .bottom-topper {
     flex-wrap: nowrap;
     visibility: hidden;
     height: 0;
+}
+
+.app-chat.users-list-overflowed .users-list {
+    overflow-y: scroll;
+    background-color: #F2EDF8;
+}
+
+.app-chat .users-list .user {
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    background-color: #F2EDF8;
+}
+
+
+
+
+.app-chat .chat-messages .mess-row .text {
+    font-family: 'Marck Script', cursive;
 }

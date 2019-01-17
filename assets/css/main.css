@@ -173,6 +173,7 @@
 input[type="checkbox"].ios8-switch {
     position: absolute;
     margin: 8px 0 0 16px;
+    visibility: hidden;
 }
 
 input[type="checkbox"].ios8-switch+label {
@@ -232,6 +233,7 @@ input[type="checkbox"].ios8-switch:checked+label:before {
 
 input[type="checkbox"].ios8-switch-sm {
     margin: 5px 0 0 10px;
+    visibility: hidden;
 }
 
 input[type="checkbox"].ios8-switch-sm+label {
@@ -270,6 +272,7 @@ input[type="checkbox"].ios8-switch-sm:checked+label:after {
 
 input[type="checkbox"].ios8-switch-lg {
     margin: 10px 0 0 20px;
+    visibility: hidden;
 }
 
 input[type="checkbox"].ios8-switch-lg+label {
