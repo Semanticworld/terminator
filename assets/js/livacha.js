@@ -53,6 +53,7 @@ $(document).ready(function () {
                                 style.appendChild(document.createTextNode(xhr.responseText));
                             }
                             style = style.replace("[BASE_PATH]", this.home);
+                            console.log(this.home);
                             head.appendChild(style);
                             break;
                         case "js":
