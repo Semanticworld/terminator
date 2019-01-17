@@ -667,8 +667,9 @@ $(document).ready(function () {
         $(".tr-sm9-block").append(s);
 
         $(document).on("click", ".tr-config", function (e) {
-            var s = ($(this).val() == "1") ? "0" : "1";
+            
             localStorage.setItem('tr-' + $(this).data("cmd"), $(this).val());
+            var s = ($(this).val() == "1") ? "0" : "1";
             $(this).val(s);
             return true;
         });
