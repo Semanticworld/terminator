@@ -648,10 +648,12 @@ $(document).ready(function () {
         $(".tr-sm9-block").append(s);
 
 $(document).on("click", ".tr-config", function (e) {
+    var s=($(this).val()=="1")?"0":"1";
    // e.preventDefault();
 console.log($(this).data("cmd"));
 console.log($(this).val());
 console.log($(this).attr('id'));
+$(this).val(s);
 return true;
 });
 
