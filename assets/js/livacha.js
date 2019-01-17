@@ -640,7 +640,20 @@ $(document).ready(function () {
         function getMemoryValue(name) {
             return (localStorage.getItem('tr-' + name) == "1") ? "1" : "0";
         }
-        s = '<div class="tr-pt10"><input value="' + getMemoryValue("snow") + '" data-cmd="snow" type="checkbox" class="ios8-switch tr-config" id="tr-ch1"><label for="tr-ch1">Падающие эффекты</label></div>';
+
+        function isChecked(val) {
+            return (val == "1" ? " checked" : "");
+        }
+
+        function createInput(cmd, id, title) {
+            var f1 = getMemoryValue(cms);
+            var f2 = isChecked(f1);
+            var s = '<div class="tr-pt10">';
+            s += '<input value="' + f + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + f2 + '>';
+            s += '<label for="tr-' + id + '">' + title + '</label>';
+            s += '</div>';
+        }
+        s = createInput('snow', 'ch1', 'Падающие эффекты'); //'<div class="tr-pt10"><input value="' + getMemoryValue("snow") + '" data-cmd="snow" type="checkbox" class="ios8-switch tr-config" id="tr-ch1"><label for="tr-ch1">Падающие эффекты</label></div>';
         s += '<div class="tr-pt10"><input value="' + getMemoryValue("sound") + '"  data-cmd="sound" type="checkbox" class="ios8-switch tr-config" id="tr-ch2" checked><label for="tr-ch2">Звуковые эффекты</label></div>';
         s += '<div class="tr-pt10"><input value="' + getMemoryValue("snow") + '"  data-cmd="sound2" type="checkbox" class="ios8-switch tr-config" id="tr-ch3" checked><label for="tr-ch3">Отключить звуковые эффекты</label></div>';
         s += '<div class="tr-pt10"><input value="' + getMemoryValue("snow") + '"  data-cmd="sound3" type="checkbox" class="ios8-switch tr-config" id="tr-ch4" checked><label for="tr-ch4">Отключить звуковые эффекты</label></div>';
