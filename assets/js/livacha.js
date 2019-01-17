@@ -651,6 +651,7 @@ $(document).on("click", ".tr-config", function (e) {
    // e.preventDefault();
 console.log($(this).data("cmd"));
 console.log($(this).val());
+console.log($(this).id());
 return false;
 });
 
