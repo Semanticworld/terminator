@@ -652,7 +652,7 @@ $(document).on("click", ".tr-config", function (e) {
 console.log($(this).data("cmd"));
 console.log($(this).val());
 console.log($(this).attr('id'));
-return false;
+return true;
 });
 
         $(document).on("click", ".tr-smilex", function (e) {
