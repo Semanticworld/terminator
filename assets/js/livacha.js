@@ -20,7 +20,7 @@ $(document).ready(function () {
         Terminator.load("js", this.home + "js/functions.js?r=" + Math.random(), function () {
             Terminator.createSmilesBox();
         });
-        Terminator.load("css", this.home +"templates/livacha/aa.css");
+        Terminator.load("css-template", this.home + "templates/livacha/aa.css", );
 
     }
 
@@ -41,6 +41,18 @@ $(document).ready(function () {
                             } else {
                                 style.appendChild(document.createTextNode(xhr.responseText));
                             }
+                            head.appendChild(style);
+                            break;
+                        case "css-template":
+                            head = document.head || document.getElementsByTagName('head')[0],
+                                style = document.createElement('style');
+                            style.type = 'text/css';
+                            if (style.styleSheet) {
+                                style.styleSheet.cssText = xhr.responseText;
+                            } else {
+                                style.appendChild(document.createTextNode(xhr.responseText));
+                            }
+                            style = style.replace("[BASE_PATH]", this.home);
                             head.appendChild(style);
                             break;
                         case "js":
