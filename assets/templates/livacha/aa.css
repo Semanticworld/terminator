@@ -62,4 +62,6 @@ body {
 
 .app-chat .chat-messages .mess-row .text {
     font-family: 'Marck Script', cursive;
+    font-size: 22px;
+    color: #730000;
 }
