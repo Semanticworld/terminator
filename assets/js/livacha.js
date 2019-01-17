@@ -637,22 +637,11 @@ $(document).ready(function () {
             $(".tr-sm" + b + "-block").append(s);
         });
 
-        function getMemoryValue(name) {
-            console.log("1=="+localStorage.getItem('tr-' + name));
-            console.log("2--"+((localStorage.getItem('tr-' + name) == "1") ? "1" : "0"));
-            return (localStorage.getItem('tr-' + name) == "1") ? "1" : "0";
-        }
-
-        function isChecked(val) {
-            return (val == "1" ? " checked" : "");
-
-        }
 
         function createInput(cmd, id, title) {
-            var f1 = getMemoryValue(cmd);
-            var f2 = isChecked(f1);
+            var f1 = (localStorage.getItem('tr-' + cmd) == "1") ? "1" : "0";
             var s = '<div class="tr-pt10">';
-            s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + f2 + '>';
+            s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + (f1 == "1" ? " checked" : "") + '>';
             s += '<label for="tr-' + id + '">' + title + '</label>';
             s += '</div>';
             return s;
@@ -661,14 +650,15 @@ $(document).ready(function () {
         s += createInput('sound', 'ch2', 'Звуковые эффекты');
         s += createInput('anticaps', 'ch3', 'Антикапс');
         s += createInput('antimat', 'ch4', 'Антимат');
-        s += '<div class="tr-pt10"><select id="tr-ch22" class="tr-w50"><option value="0">Отключен</option><option value="1">Стиль 1</option><option value="2">Стиль 2</option><option value="3">Стиль 3</option></select><label class="tr-pl10" for="tr-ch22">Дизайн страницы</label></div>';
+        s += createInput('template', 'ch5', 'Дизайн страницы');
+        s += '<div><select id="tr-ch22"><option value="1">Стиль 1</option><option value="2">Стиль 2</option><option value="3">Стиль 3</option></select></div>';
 
         s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
         $(".tr-sm9-block").append(s);
 
         $(document).on("click", ".tr-config", function (e) {
             var s = ($(this).val() == "1") ? "0" : "1";
-            localStorage.setItem('tr-' + $(this).data("cmd"),s);
+            localStorage.setItem('tr-' + $(this).data("cmd"), s);
             $(this).val(s);
             return true;
         });
