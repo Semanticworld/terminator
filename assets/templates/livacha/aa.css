@@ -77,3 +77,7 @@ body {
     color: red;
     font-size: 20px;
 }
+
+.form-control {
+    background-color: #FFEEEE;
+}
