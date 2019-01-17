@@ -86,3 +86,8 @@ body {
 .modal-content {
     background-color: #FCCEA9;
 }
+
+.app-chat .chat-messages .mess-row.my,
+.app-chat.moder .chat-messages .mess-row:hover {
+    background-color: #ffd5d5;
+}
