@@ -6,3 +6,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.app-chat.users-list-abs .message-tab {
+    margin-right: 17px;
+    background-color: #ffeee0;
+}
