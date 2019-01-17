@@ -69,6 +69,7 @@ body {
 .tr-tab-content {
     background-color: #FCCEA9;
 }
+
 .app-chat .chat-bottom [name=message] {
     max-height: 100px;
     height: 50px;
@@ -80,4 +81,8 @@ body {
 
 .form-control {
     background-color: #FFEEEE;
+}
+
+.modal-content {
+    background-color: #FCCEA9;
 }
