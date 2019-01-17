@@ -636,12 +636,16 @@ $(document).ready(function () {
             }
             $(".tr-sm" + b + "-block").append(s);
         });
-        s = '<div class="tr-pt10"><input value="0" data-cmd="snow" type="checkbox" class="ios8-switch tr-config" id="tr-ch1"><label for="tr-ch1">Падающие эффекты</label></div>';
-        s += '<div class="tr-pt10"><input value="0"  data-cmd="sound" type="checkbox" class="ios8-switch tr-config" id="tr-ch2" checked><label for="tr-ch2">Звуковые эффекты</label></div>';
-        s += '<div class="tr-pt10"><input value="0"  data-cmd="sound" type="checkbox" class="ios8-switch tr-config" id="tr-ch3" checked><label for="tr-ch3">Отключить звуковые эффекты</label></div>';
-        s += '<div class="tr-pt10"><input value="0"  data-cmd="sound" type="checkbox" class="ios8-switch tr-config" id="tr-ch4" checked><label for="tr-ch4">Отключить звуковые эффекты</label></div>';
-        s += '<div class="tr-pt10"><input value="0"  data-cmd="anticaps" type="checkbox" class="ios8-switch tr-config" id="tr-ch20" checked><label for="tr-ch20">Антикапс</label></div>';
-        s += '<div class="tr-pt10"><input value="0"  data-cmd="antimat" type="checkbox" class="ios8-switch tr-config" id="tr-ch21" checked><label for="tr-ch21">Антимат</label></div>';
+
+        function getMemoryValue(name) {
+            return (localStorage.getItem('tr-' + name) == "1") ? "1" : "0";
+        }
+        s = '<div class="tr-pt10"><input value="' + getMemoryValue("snow") + '" data-cmd="snow" type="checkbox" class="ios8-switch tr-config" id="tr-ch1"><label for="tr-ch1">Падающие эффекты</label></div>';
+        s += '<div class="tr-pt10"><input value="' + getMemoryValue("sound") + '"  data-cmd="sound" type="checkbox" class="ios8-switch tr-config" id="tr-ch2" checked><label for="tr-ch2">Звуковые эффекты</label></div>';
+        s += '<div class="tr-pt10"><input value="' + getMemoryValue("snow") + '"  data-cmd="sound2" type="checkbox" class="ios8-switch tr-config" id="tr-ch3" checked><label for="tr-ch3">Отключить звуковые эффекты</label></div>';
+        s += '<div class="tr-pt10"><input value="' + getMemoryValue("snow") + '"  data-cmd="sound3" type="checkbox" class="ios8-switch tr-config" id="tr-ch4" checked><label for="tr-ch4">Отключить звуковые эффекты</label></div>';
+        s += '<div class="tr-pt10"><input value="' + getMemoryValue("anticaps") + '"  data-cmd="anticaps" type="checkbox" class="ios8-switch tr-config" id="tr-ch20" checked><label for="tr-ch20">Антикапс</label></div>';
+        s += '<div class="tr-pt10"><input value="' + getMemoryValue("antimat") + '"  data-cmd="antimat" type="checkbox" class="ios8-switch tr-config" id="tr-ch21" checked><label for="tr-ch21">Антимат</label></div>';
         s += '<div class="tr-pt10"><select id="tr-ch22" class="tr-w50"><option value="0">Отключен</option><option value="1">Стиль 1</option><option value="2">Стиль 2</option><option value="3">Стиль 3</option></select><label class="tr-pl10" for="tr-ch22">Дизайн страницы</label></div>';
 
         s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
