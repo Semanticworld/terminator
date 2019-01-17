@@ -652,6 +652,7 @@ $(document).ready(function () {
             s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + f2 + '>';
             s += '<label for="tr-' + id + '">' + title + '</label>';
             s += '</div>';
+            return s;
         }
         s = createInput('snow', 'ch1', 'Падающие эффекты'); //'<div class="tr-pt10"><input value="' + getMemoryValue("snow") + '" data-cmd="snow" type="checkbox" class="ios8-switch tr-config" id="tr-ch1"><label for="tr-ch1">Падающие эффекты</label></div>';
         s += '<div class="tr-pt10"><input value="' + getMemoryValue("sound") + '"  data-cmd="sound" type="checkbox" class="ios8-switch tr-config" id="tr-ch2" checked><label for="tr-ch2">Звуковые эффекты</label></div>';
