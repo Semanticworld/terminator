@@ -34,8 +34,7 @@ body {
     border-top: none !important;
     background-color: #FCCEA9;
 }
-.app-smile-items {
-    display: flex;
-    align-items: stretch;
+.app-smiles .wrap-btn-toggle {
+    flex-wrap: nowrap;
     visibility: hidden;
 }
