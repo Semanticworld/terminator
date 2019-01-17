@@ -650,6 +650,7 @@ $(document).ready(function () {
 $(document).on("click", ".tr-config", function (e) {
    // e.preventDefault();
 console.log($(this).data("cmd"));
+return true;
 });
 
         $(document).on("click", ".tr-smilex", function (e) {
