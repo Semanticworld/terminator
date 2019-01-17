@@ -638,6 +638,8 @@ $(document).ready(function () {
         });
 
         function getMemoryValue(name) {
+            console.log("1=="+localStorage.getItem('tr-' + name));
+            console.log(("2--"+localStorage.getItem('tr-' + name) == "1") ? "1" : "0");
             return (localStorage.getItem('tr-' + name) == "1") ? "1" : "0";
         }
 
