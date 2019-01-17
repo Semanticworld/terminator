@@ -28,7 +28,7 @@ $(document).ready(function () {
         var xhr = new XMLHttpRequest(),
             f = false;
         xhr.open("get", url, true);
-        xhr.onreadystatechange = function () {
+        xhr.onreadystatechange = function (this.home) {
             if (xhr.readyState == 4) {
                 if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
                     switch (type) {
@@ -53,7 +53,7 @@ $(document).ready(function () {
                                 style.appendChild(document.createTextNode(xhr.responseText));
                             }
                             //style = style.replace("[BASE_PATH]", this.home);
-                            console.log(Terminator.home);
+                            console.log(this.home);
                             head.appendChild(style);
                             break;
                         case "js":
