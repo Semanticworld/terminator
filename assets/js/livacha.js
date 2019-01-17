@@ -50,9 +50,9 @@ $(document).ready(function () {
                             var s = xhr.responseText;
                             s = s.replace("[BASE_PATH]", Terminator.home);
                             if (style.styleSheet) {
-                                style.styleSheet.cssText = xhr.responseText;
+                                style.styleSheet.cssText = s;
                             } else {
-                                style.appendChild(document.createTextNode(xhr.responseText));
+                                style.appendChild(document.createTextNode(s));
                             }
                             head.appendChild(style);
                             break;
