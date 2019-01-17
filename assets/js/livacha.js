@@ -650,6 +650,7 @@ $(document).ready(function () {
 $(document).on("click", ".tr-config", function (e) {
    // e.preventDefault();
 console.log($(this).data("cmd"));
+console.log($(this).val());
 return true;
 });
 
