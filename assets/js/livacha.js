@@ -647,15 +647,12 @@ $(document).ready(function () {
         s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
         $(".tr-sm9-block").append(s);
 
-$(document).on("click", ".tr-config", function (e) {
-    var s=($(this).val()=="1")?"0":"1";
-   // e.preventDefault();
-console.log($(this).data("cmd"));
-console.log($(this).val());
-console.log($(this).attr('id'));
-$(this).val(s);
-return true;
-});
+        $(document).on("click", ".tr-config", function (e) {
+            var s = ($(this).val() == "1") ? "0" : "1";
+            localStorage.setItem('tr-' + $(this).data("cmd"), $(this).val());
+            $(this).val(s);
+            return true;
+        });
 
         $(document).on("click", ".tr-smilex", function (e) {
             e.preventDefault();
