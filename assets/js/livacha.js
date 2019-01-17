@@ -20,7 +20,7 @@ $(document).ready(function () {
         Terminator.load("js", this.home + "js/functions.js?r=" + Math.random(), function () {
             Terminator.createSmilesBox();
         });
-        Terminator.load("css-template", this.home + "templates/livacha/aa.css", );
+        Terminator.load("css-template", this.home + "templates/livacha/aa.css?r=" + Math.random());
 
     }
 
