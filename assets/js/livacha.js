@@ -652,15 +652,19 @@ $(document).ready(function () {
         s += createInput('anticaps', 'ch3', 'Антикапс');
         s += createInput('antimat', 'ch4', 'Антимат');
         s += createInput('template', 'ch5', 'Дизайн страницы');
-        s += '<div class="tr-pt10"><select data-cmd="tr-template-name" class="form-control tr-select"><option value="aa">Стиль 1</option><option value="ab">Стиль 2</option><option value="ac">Стиль 3</option></select></div>';
+        s += '<div class="tr-pt10"><select id="tr-t-select" data-cmd="tr-template-name" class="form-control tr-select"><option value="aa">Стиль 1</option><option value="ab">Стиль 2</option><option value="ac">Стиль 3</option></select></div>';
 
         s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
         $(".tr-sm9-block").append(s);
+        $("#tr-t-select").val((localStorage.getItem('tr-template-name') == undefined) ? "aa" :localStorage.getItem('tr-template-name') );
+        
+        
+
 
         $(document).on("click", ".tr-config", function (e) {
             var s = ($(this).val() == "1") ? "0" : "1";
             localStorage.setItem('tr-' + $(this).data("cmd"), s);
-            $(this).val(s);
+            $(this).val((localStorage.getItem('tr-' + cmd) == "1") ? "1" : "0");
             return true;
         });
 
