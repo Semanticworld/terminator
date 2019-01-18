@@ -100,3 +100,9 @@ h5 {
 a {
     color: #000;
 }
+
+.alert-dark {
+    color: #ffffff;
+    background-color: #276b2c;
+    border-color: #00f923;
+}
