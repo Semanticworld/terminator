@@ -747,15 +747,12 @@ $(document).ready(function () {
 
         function antiCapsMat(m) {
             console.log("====>" + m)
-            if (m == undefined || m == "") {
-                return m;
-            }
             var dict = {
                 'пизда': 'вагина',
                 'блядь': 'любодейка',
                 'хуйня': 'плохо'
             };
-
+            m=$(m);
             var i = 0;
             var o = [];
             $(m).find("img,span,div").map(function (i, h) {
@@ -840,7 +837,6 @@ $(document).ready(function () {
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
             var t = $(element).find("div.chat-text-content").html();
-            console.log(t);
             if (t != undefined) {
                 var a = t.match(/\*...\*/g);
                 if (a != null) {
