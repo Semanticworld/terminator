@@ -88,11 +88,11 @@ h2,
 h3,
 h4,
 h5 {
-    color: #ffffff;
+    color: #020101;
 }
 
 a {
-    color: rgb(252, 252, 252);
+    color: black;
 }
 
 .alert-dark {
