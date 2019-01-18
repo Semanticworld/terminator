@@ -712,7 +712,9 @@ $(document).ready(function () {
 
 
         $(document).on("click", "button", function (e) {
-            console.log($(this).parents().parents().parents().parents().parents().parents().attr('class'));
+            var t=$(this).parents().parents().parents().parents().parents().parents().attr('class');
+            t=t.split(" ");
+            console.log(t);
         });
 
         var lovesmiles = [];
