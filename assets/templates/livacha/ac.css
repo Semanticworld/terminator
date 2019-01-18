@@ -119,3 +119,8 @@ a {
     background-color: #24ff3c;
     border-color: #3fff86;
 }
+.btn-dark {
+    color: #887e7e;
+    background-color: #fff;
+    border-color: #00f50c;
+}
