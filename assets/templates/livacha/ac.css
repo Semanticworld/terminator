@@ -16,7 +16,7 @@ body {
 
 .app-chat.chat-tabs-absolute .chat-tabs {
     overflow: hidden;
-    background-color: #fccea9;
+    background-color: #2da205;
 }
 
 .app-chat .chat-tabs .nav-link.active {
@@ -28,13 +28,13 @@ body {
 .app-form-wrapper .app-form-inner,
 .app-form-wrapper form {
     position: relative;
-    background-color: #FCCEA9;
+    background-color: #2da205;
 }
 
 .app-chat .chat-bottom {
     padding: 0rem 0.5rem 0.5rem 0.5rem;
     border-top: none !important;
-    background-color: #FCCEA9;
+    background-color: #2da205;
 }
 
 .app-chat .bottom-topper {
@@ -64,7 +64,7 @@ body {
 }
 
 .tr-tab-content {
-    background-color: #FCCEA9;
+    background-color: #2da205;
 }
 
 .app-chat .chat-bottom [name=message] {
@@ -81,7 +81,7 @@ body {
 }
 
 .modal-content {
-    background-color: #FCCEA9;
+    background-color: #2da205;
 }
 
 .app-chat .chat-messages .mess-row.my,
