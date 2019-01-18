@@ -113,3 +113,9 @@ a {
 .text-dark {
     color: #ffffff!important;
 }
+
+.btn-secondary {
+    color: #000;
+    background-color: #24ff3c;
+    border-color: #3fff86;
+}
