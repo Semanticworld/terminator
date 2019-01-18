@@ -49,11 +49,7 @@ body {
 }
 
 .app-chat .users-list .user {
-    padding: 0.5rem;
-    cursor: pointer;
     background-color: #fff;
-    position: relative;
-    z-index: 1;
     background-color: #F2EDF8;
 }
 
@@ -68,8 +64,6 @@ body {
 }
 
 .app-chat .chat-bottom [name=message] {
-    max-height: 100px;
-    height: 50px;
     background-color: #ffeeee;
     font-family: 'Marck Script', cursive;
     color: rgb(0, 0, 0);
@@ -123,4 +117,8 @@ a {
     color: #887e7e;
     background-color: #fff;
     border-color: #00f50c;
+}
+.app-site-menu-fix {
+    background: #00bb07;
+    border-right: 1px #000000 solid;
 }
