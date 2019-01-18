@@ -749,6 +749,7 @@ $(document).ready(function () {
             if (m == undefined) {
                 return undefined;
             }
+            m=$("<tag>"+m+"<tag>");
             var dict = {
                 'пизда': 'вагина',
                 'блядь': 'любодейка',
@@ -861,6 +862,7 @@ $(document).ready(function () {
                             showfx(a[2] + a[3]);
                         }
                     });
+                    t=antiCapsMat(t);
                     $($mms).html(t);
                 }
             }
