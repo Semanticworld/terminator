@@ -88,3 +88,8 @@ body {
 .app-chat.moder .chat-messages .mess-row:hover {
     background-color: #ffd5d5;
 }
+
+
+h1, h2, h3, h4, h5 {
+    color: #ffffff;
+}
