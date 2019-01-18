@@ -714,6 +714,7 @@ $(document).ready(function () {
         $(document).on("click", "button", function (e) {
             var t = $(this).parents().parents().parents().parents().parents().parents().attr('class');
             t = t.split(" ");
+            console.log(t);
             if (t[2] == "page_chat") {
                 t = $(this).parents().parents().parents().parents().html();
                 console.log(t);
