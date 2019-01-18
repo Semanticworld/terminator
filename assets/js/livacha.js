@@ -752,7 +752,7 @@ $(document).ready(function () {
                 'блядь': 'любодейка',
                 'хуйня': 'плохо'
             };
-            m=$(m);
+            m=$("<div>"+m+"</div>");
             var i = 0;
             var o = [];
             $(m).find("img,span,div").map(function (i, h) {
