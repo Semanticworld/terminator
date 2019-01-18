@@ -746,7 +746,7 @@ $(document).ready(function () {
         }
 
         function antiCapsMat(m) {
-            console.log("====>" + m)
+            if (m==undefined){return undefined;}
             var dict = {
                 'пизда': 'вагина',
                 'блядь': 'любодейка',
@@ -767,6 +767,7 @@ $(document).ready(function () {
                 m = m.split("[[" + i + "]]").join(h[0].outerHTML);
             });
             //   $("tag").html(m);
+            console.log("====>" + m)
             return m;
         }
 
