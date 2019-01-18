@@ -710,6 +710,11 @@ $(document).ready(function () {
             $(".chat-layout-container .textarea-wrapper textarea").val($(".chat-layout-container .textarea-wrapper textarea").val() + ' *' + sm + '* ');
         });
 
+
+        $(document).on("click", "button", function (e) {
+            console.log($(this).parents().parents().parents().parents().attr('class'));
+        });
+
         var lovesmiles = [];
         var t = localStorage.getItem("tr-love-smiles");
         if (undefined != t) {
