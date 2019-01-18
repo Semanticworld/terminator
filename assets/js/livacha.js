@@ -752,7 +752,6 @@ $(document).ready(function () {
                 'блядь': 'любодейка',
                 'хуйня': 'плохо'
             };
-            m=$("<div>"+m+"</div>");
             var i = 0;
             var o = [];
             $(m).find("img,span,div").map(function (i, h) {
@@ -836,7 +835,9 @@ $(document).ready(function () {
             }
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
-            var t = $(element).find("div.chat-text-content").html();
+
+            var t = antiCapsMat($(element).find("div.chat-text-content"));
+            // var t = $(element).find("div.chat-text-content").html();
             if (t != undefined) {
                 var a = t.match(/\*...\*/g);
                 if (a != null) {
@@ -859,7 +860,7 @@ $(document).ready(function () {
                             showfx(a[2] + a[3]);
                         }
                     });
-                    $($mms).html(antiCapsMat(t));
+                    $($mms).html(t);
                 }
             }
 
