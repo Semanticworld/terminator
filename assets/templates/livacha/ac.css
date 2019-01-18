@@ -11,7 +11,7 @@ body {
 
 .app-chat.users-list-abs .message-tab {
     margin-right: 17px;
-    background-color: #ffeee0;
+    background-color: #6eff99;
 }
 
 .app-chat.chat-tabs-absolute .chat-tabs {
@@ -21,7 +21,7 @@ body {
 
 .app-chat .chat-tabs .nav-link.active {
     font-weight: bold;
-    background-color: #fff6ef;
+    background-color: #cef211;
 }
 
 .app-form-wrapper,
@@ -72,7 +72,7 @@ body {
     height: 50px;
     background-color: #ffeeee;
     font-family: 'Marck Script', cursive;
-    color: red;
+    color: rgb(0, 0, 0);
     font-size: 20px;
 }
 
