@@ -712,7 +712,7 @@ $(document).ready(function () {
 
 
         $(document).on("click", "button", function (e) {
-            console.log(e);
+            console.log(e.target);
 
             var t = $(this).parents().parents().parents().parents().parents().parents().attr('class');
             t = t.split(" ");
