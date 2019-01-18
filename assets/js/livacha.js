@@ -746,7 +746,8 @@ $(document).ready(function () {
         }
 
         function antiCapsMat(m) {
-            if (m == undefined || m=="")  {
+            console.log("====>" + m)
+            if (m == undefined || m == "") {
                 return m;
             }
             var dict = {
