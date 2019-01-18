@@ -122,3 +122,8 @@ a {
     background: #00bb07;
     border-right: 1px #000000 solid;
 }
+
+
+.row.no-gutters.mess-row a{
+    color: rgb(10, 6, 6);
+}
