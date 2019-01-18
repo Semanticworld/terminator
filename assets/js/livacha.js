@@ -838,7 +838,7 @@ $(document).ready(function () {
             var t = $(element).find("div.chat-text-content").html();
             console.log(t);
             if (t != undefined) {
-                t = antiCapsMat($mms).html();
+                t = antiCapsMat($mms);
                 var a = t.match(/\*...\*/g);
                 if (a != null) {
                     a.forEach(function (a) {
