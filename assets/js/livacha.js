@@ -762,15 +762,19 @@ $(document).ready(function () {
                 $(h).after('[[' + i + ']]').detach();
                 i++
             })
-            m = $(m).html().toLowerCase();
-            for (var key in dict) {
-                m = m.replace(key, dict[key])
-            };
+            if (((localStorage.getItem('tr-anticaps') == "1") ? "1" : "0") == "1") {
+                m = $(m).html().toLowerCase();
+            } else {
+                m = $(m).html();
+            }
+            if (((localStorage.getItem('tr-antimat') == "1") ? "1" : "0") == "1") {
+                for (var key in dict) {
+                    m = m.replace(key, dict[key])
+                };
+            }
             o.map(function (h, i) {
                 m = m.split("[[" + i + "]]").join(h[0].outerHTML);
             });
-            //   $("tag").html(m);
-            console.log("====>" + m)
             return m;
         }
 
