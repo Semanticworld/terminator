@@ -746,6 +746,9 @@ $(document).ready(function () {
         }
 
         function antiCapsMat(m) {
+            if (m == undefined) {
+                return m;
+            }
             var dict = {
                 'пизда': 'вагина',
                 'блядь': 'любодейка',
