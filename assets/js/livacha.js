@@ -715,7 +715,7 @@ $(document).ready(function () {
             var t = $(this).parents().parents().parents().parents().parents().parents().attr('class');
             t = t.split(" ");
             if (t[2] == "page_chat") {
-                t = $(this).parents().parents().parents().parents().parents().parents().find("textarea").val();
+                t = $(this).parents().parents().parents().parents().parents().parents().html();
                 console.log(t);
 
             }
