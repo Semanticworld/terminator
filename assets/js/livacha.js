@@ -746,7 +746,9 @@ $(document).ready(function () {
         }
 
         function antiCapsMat(m) {
-            if (m==undefined){return undefined;}
+            if (m == undefined) {
+                return undefined;
+            }
             var dict = {
                 'пизда': 'вагина',
                 'блядь': 'любодейка',
@@ -836,9 +838,7 @@ $(document).ready(function () {
             }
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
-            var t = antiCapsMat($mms);
-           // var t = antiCapsMat($(element).find("div.chat-text-content"));
-            // var t = $(element).find("div.chat-text-content").html();
+            var t = $(element).find("div.chat-text-content").html();
             if (t != undefined) {
                 var a = t.match(/\*...\*/g);
                 if (a != null) {
