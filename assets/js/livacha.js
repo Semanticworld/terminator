@@ -839,7 +839,7 @@ $(document).ready(function () {
             }
             var element = e.target;
             var $mms = $(element).find("div.chat-text-content");
-            var t = antiCapsMat($(element).find("div.chat-text-content").html());
+            var t = $(element).find("div.chat-text-content").html();
             console.log(t);
             if (t != undefined) {
                 var a = t.match(/\*...\*/g);
@@ -863,7 +863,7 @@ $(document).ready(function () {
                             showfx(a[2] + a[3]);
                         }
                     });
-                    $($mms).html(t);
+                    $($mms).html(antiCapsMat(t));
                 }
             }
 
