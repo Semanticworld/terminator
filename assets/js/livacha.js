@@ -757,7 +757,7 @@ $(document).ready(function () {
             };
             var i = 0;
             var o = [];
-            $(m).find("img,span,div").map(function (i, h) {
+            $(m).find("img,span,div,a").map(function (i, h) {
                 o[i] = $(h);
                 $(h).after('[[' + i + ']]').detach();
                 i++
