@@ -664,7 +664,7 @@ $(document).ready(function () {
         $(document).on("click", ".tr-config", function (e) {
             var s = ($(this).val() == "1") ? "0" : "1";
             localStorage.setItem('tr-' + $(this).data("cmd"), s);
-            $(this).val((localStorage.getItem('tr-' + cmd) == "1") ? "1" : "0");
+            $(this).val((localStorage.getItem('tr-' + $(this).data("cmd")) == "1") ? "1" : "0");
             return true;
         });
 
