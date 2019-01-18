@@ -712,9 +712,13 @@ $(document).ready(function () {
 
 
         $(document).on("click", "button", function (e) {
-            var t=$(this).parents().parents().parents().parents().parents().parents().attr('class');
-            t=t.split(" ");
-            console.log(t);
+            var t = $(this).parents().parents().parents().parents().parents().parents().attr('class');
+            t = t.split(" ");
+            if (t[2] == "page_chat") {
+                t = $("div textarea").val();
+                console.log(t);
+
+            }
         });
 
         var lovesmiles = [];
