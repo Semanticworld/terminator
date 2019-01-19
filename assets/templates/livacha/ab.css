@@ -28,3 +28,9 @@ body {
     position: relative;
     font-weight: 500;
 }
+
+.app-chat .chat-bottom {
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
+    border-top: none !important;
+    background-color: #E6EAED;
+}
