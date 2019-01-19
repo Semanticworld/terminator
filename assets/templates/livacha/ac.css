@@ -11,7 +11,7 @@ body {
 
 .app-chat.users-list-abs .message-tab {
     margin-right: 17px;
-    background-color: #6eff99;
+    background-color: #d3f51a5c;
 }
 
 .app-chat.chat-tabs-absolute .chat-tabs {
@@ -168,7 +168,7 @@ a {
 }
 
 .app-chat.users-list-abs .message-tab::-webkit-scrollbar-track {
-    background: white;
+    background: blue;
 }
 
 .app-chat.users-list-abs .message-tab::-webkit-scrollbar-thumb:hover {
