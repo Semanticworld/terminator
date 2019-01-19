@@ -38,3 +38,27 @@ body {
 .app-chat.users-list-abs .message-tab {
     margin-right: 0px;
 }
+.app-chat .users-list-spacer > .row {
+    height: 100%;
+    width: 0px;
+}
+.app-chat .bottom-topper .smiles-col {
+    overflow: hidden;
+    height: 0px;
+    visibility: hidden;
+}
+
+.app-chat.floating {
+    right: 10px;
+    bottom: 10px;
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    min-width: 325px;
+    min-height: 350px;
+}
+.app-chat .chat-messages .mess-row {
+    margin-bottom: 1px;
+    position: relative;
+    overflow-x: hidden;
+}
