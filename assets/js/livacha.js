@@ -648,7 +648,11 @@ $(document).ready(function () {
                     if (b == "6") {
                         ext = 'png';
                     }
-                    s += '<img title="" src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
+                    if (a.length > 2) {
+                        s += '<hr><center>' + a + '</center>';
+                    } else {
+                        s += '<img title="" src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
+                    }
                 });
             }
             $(".tr-sm" + b + "-block").append(s);
@@ -669,13 +673,9 @@ $(document).ready(function () {
         s += createInput('antimat', 'ch4', 'Антимат');
         s += createInput('template', 'ch5', 'Дизайн страницы');
         s += '<div class="tr-pt10"><select id="tr-t-select" data-cmd="template-name" class="form-control tr-select"><option value="aa">Стиль 1</option><option value="ab">Стиль 2</option><option value="ac">Стиль 3</option></select></div>';
-
         s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
         $(".tr-sm9-block").append(s);
         $("#tr-t-select").val((localStorage.getItem('tr-template-name') == undefined) ? "aa" : localStorage.getItem('tr-template-name'));
-
-
-
 
         $(document).on("click", ".tr-config", function (e) {
             var s = ($(this).val() == "1") ? "0" : "1";
@@ -687,7 +687,6 @@ $(document).ready(function () {
         $('.tr-select').change(function () {
             localStorage.setItem('tr-' + $(this).data("cmd"), $(this).val());
         });
-
 
         $(document).on("click", ".tr-smilex", function (e) {
             e.preventDefault();
