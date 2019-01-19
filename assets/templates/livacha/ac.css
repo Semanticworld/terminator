@@ -138,10 +138,7 @@ a {
     color: white;
 }
 
-.tr-window {
-    border: 1px solid #000;
-    background: #e8ffa1;
-}
+
 
 .tr-tab-caption li {
     background: #ddff74;
@@ -149,6 +146,3 @@ a {
     border: solid #0D74B5;
 }
 
-.tr-tab-content {
-    border: 2px solid #9cc716;
-}
