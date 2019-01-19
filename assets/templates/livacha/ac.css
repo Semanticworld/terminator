@@ -23,6 +23,7 @@ body {
     font-weight: bold;
     background-color: #cef211;
     box-shadow: -1px -5px 19px 2px black;
+    border-radius: 10px 10px 0 0!important;
 }
 
 .app-form-wrapper,
