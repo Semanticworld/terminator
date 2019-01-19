@@ -181,6 +181,37 @@ a {
     background: #F3F5F6
 }
 
+
+
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar {
+    width: 10px;
+    height: 50px;
+}
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(left, #fff, #e4e4e4);
+    border: 1px solid #aaa;
+}
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar-track {
+    background: #EFFCAC;
+}
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar-thumb:hover {
+    background: #F3F5F6
+}
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar-thumb:active {
+    background: #F3F5F6
+}
+
+
+
+
+
+
 .app-chat .users-list-spacer>.row {
     height: 100%;
     background-color: #EFFCAC;
