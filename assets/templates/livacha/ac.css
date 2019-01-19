@@ -102,10 +102,11 @@ a {
 }
 
 .text-muted {
-    color: #ffffff!important;
+    color: #ffffff !important;
 }
+
 .text-dark {
-    color: #ffffff!important;
+    color: #ffffff !important;
 }
 
 .btn-secondary {
@@ -113,14 +114,41 @@ a {
     background-color: #24ff3c;
     border-color: #3fff86;
 }
+
 .btn-dark {
     color: #887e7e;
     background-color: #fff;
     border-color: #00f50c;
 }
+
 .app-site-menu-fix {
     background: #00bb07;
     border-right: 1px #000000 solid;
 }
 
 
+.tr-tab-caption .active {
+    background: #E4F7A9;
+    color: #000;
+    border-color: #94ad48;
+}
+
+.tr-title {
+    background: #9cc716;
+    color: white;
+}
+
+.tr-window {
+    border: 1px solid #000;
+    background: #e8ffa1;
+}
+
+.tr-tab-caption li {
+    background: #ddff74;
+    color: black;
+    border: solid #0D74B5;
+}
+
+.tr-tab-content {
+    border: 2px solid #9cc716;
+}
