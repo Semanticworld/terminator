@@ -222,18 +222,33 @@ a {
         background-color: #effcac;
         cursor: pointer;
         box-shadow: -1px 0px 5px 0px #0000008f;
-    }}
+    }
+}
 
-    .app-chat.users-list-overflowed .users-list {
-        overflow-y: scroll;
-        background-color: #e8ff6f;
-    }
-    .app-chat .users-list .user {
-        background-color: #e8ff6f;
-    }
+.app-chat.users-list-overflowed .users-list {
+    overflow-y: scroll;
+    background-color: #e8ff6f;
+}
 
-    .app-flag img {
-        border-radius: 50%!important   
-    
-    ;
-    }
+.app-chat .users-list .user {
+    background-color: #e8ff6f;
+}
+
+.app-flag img {
+    border-radius: 50% !important;
+}
+
+.btn-dark {
+    color: #000000;
+    background-color: #e7f88e;
+    border-color: #0000008a;
+}
+
+.app-complaint-link,
+button,
+.btn,
+.cursor-pointer,
+.custom-control {
+    border-radius: 8px !important;
+    box-shadow: inset -1px -1px 11px 0px black;
+}
