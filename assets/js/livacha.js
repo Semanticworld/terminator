@@ -169,7 +169,8 @@ $(document).ready(function () {
         ];
         smilespack["2"] = [
             "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "ar", "at", "au", "av", "aw", "ax", "ay", "az",
-            "ba", "bb"
+            "ba", "bb",
+            "ca", "cb", "cc", "cd", "ce", "cf", "cg", "ch", "ci", "cj", "ck", "cl", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cv", "cw", "cx", "cy", "cz"
         ];
         smilespack["3"] = [
             "aa", "ab", "ac", "ad", "ae",
