@@ -34,3 +34,7 @@ body {
     border-top: none !important;
     background-color: #E6EAED;
 }
+
+.app-chat.users-list-abs .message-tab {
+    margin-right: 0px;
+}
