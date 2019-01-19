@@ -23,7 +23,7 @@ body {
     font-weight: bold;
     background-color: #cef211;
     box-shadow: -1px -5px 19px 2px black;
-    border-radius: 10px 10px 0 0!important;
+    border-radius: 10px 10px 0 0 !important;
 }
 
 .app-form-wrapper,
@@ -252,4 +252,9 @@ button,
 .custom-control {
     border-radius: 8px !important;
     box-shadow: inset -1px -1px 11px 0px black;
+}
+
+.app-user-line img {
+    height: 30px;
+    border-radius: 50% !important;
 }
