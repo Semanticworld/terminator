@@ -168,7 +168,7 @@ a {
 }
 
 .app-chat.users-list-abs .message-tab::-webkit-scrollbar-track {
-    background: blue;
+    background: #EFFCAC;
 }
 
 .app-chat.users-list-abs .message-tab::-webkit-scrollbar-thumb:hover {
