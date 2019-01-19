@@ -17,6 +17,7 @@ body {
 .app-chat.chat-tabs-absolute .chat-tabs {
     overflow: hidden;
     background-color: #2da205;
+    border-radius: 10px 0 0 0 !important;
 }
 
 .app-chat .chat-tabs .nav-link.active {
@@ -257,4 +258,11 @@ button,
 .app-user-line img {
     height: 30px;
     border-radius: 50% !important;
+}
+
+
+
+.app-chat.floating, .app-stream-playable.fixed, .tr-window {
+    box-shadow: 12px 15px 20px 0px #00000061;
+    border-radius: 10px 10px 0 0 !important;
 }
