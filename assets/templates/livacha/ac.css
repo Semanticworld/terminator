@@ -144,10 +144,7 @@ a {
 }
 
 
-.app-flag img {
-    border: 1px #000 solid;
-    border-radius: 50%;
-}
+
 
 
 .app-chat.floating, .app-stream-playable.fixed {
