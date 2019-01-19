@@ -127,22 +127,4 @@ a {
 }
 
 
-.tr-tab-caption .active {
-    background: #E4F7A9;
-    color: #000;
-    border-color: #94ad48;
-}
-
-.tr-title {
-    background: #9cc716;
-    color: white;
-}
-
-
-
-.tr-tab-caption li {
-    background: #ddff74;
-    color: black;
-    border: solid #0D74B5;
-}
 
