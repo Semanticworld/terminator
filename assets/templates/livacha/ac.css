@@ -233,7 +233,7 @@ a {
     }
 
     .app-flag img {
-        border-radius: 50%   
+        border-radius: 50%!important   
     
     ;
     }
