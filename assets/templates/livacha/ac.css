@@ -129,6 +129,21 @@ a {
 
 
 
+
+
+
+.app-chat.floating {
+    right: 10px;
+    bottom: 10px;
+    position: fixed;
+    height: 70%;
+    width: 400px;
+    min-width: 325px;
+    min-height: 350px;
+    box-shadow: 6px 14px 20px 0px #00000061;
+}
+
+
 .app-flag img {
     border: 1px #000 solid;
     border-radius: 50%;
