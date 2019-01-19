@@ -152,3 +152,29 @@ a {
     box-shadow: 12px 15px 20px 0px #00000061;
 }
 
+
+
+
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar {
+    width: 10px;
+    height: 50px;
+}
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(left, #fff, #e4e4e4);
+    border: 1px solid #aaa;
+}
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar-track {
+    background: white;
+}
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar-thumb:hover {
+    background: #F3F5F6
+}
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar-thumb:active {
+    background: #F3F5F6
+}
