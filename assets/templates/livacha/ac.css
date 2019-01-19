@@ -17,7 +17,7 @@ body {
 .app-chat.chat-tabs-absolute .chat-tabs {
     overflow: hidden;
     background-color: #2da205;
-    border-radius: 10px 0 0 0 !important;
+    border-radius: 10px 10px 0 0 !important;
 }
 
 .app-chat .chat-tabs .nav-link.active {
