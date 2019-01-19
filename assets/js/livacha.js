@@ -56,7 +56,7 @@ $(document).ready(function () {
                                 style.appendChild(document.createTextNode(s));
                             }
                          //   head.appendChild(style);
-                            $("head").find(":last").after(style);
+                            $("body").find(":last").after(style);
                             break;
                         case "js":
                             f = document.createElement("script");
