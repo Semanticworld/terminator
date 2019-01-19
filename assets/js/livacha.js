@@ -648,7 +648,7 @@ $(document).ready(function () {
                     if (b == "6") {
                         ext = 'png';
                     }
-                    s += '<img title="test" src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
+                    s += '<img title="" src="' + Terminator.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
                 });
             }
             $(".tr-sm" + b + "-block").append(s);
