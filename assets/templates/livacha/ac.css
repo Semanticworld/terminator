@@ -140,7 +140,7 @@ a {
     width: 400px;
     min-width: 325px;
     min-height: 350px;
-    box-shadow: 6px 14px 20px 0px #00000061;
+    box-shadow: 12px 15px 20px 0px #00000061;
 }
 
 
@@ -150,3 +150,7 @@ a {
 }
 
 
+.app-chat.floating, .app-stream-playable.fixed {
+    z-index: 20;
+    box-shadow: 12px 15px 20px 0px #00000061;
+}
