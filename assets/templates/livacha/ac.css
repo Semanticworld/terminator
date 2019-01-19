@@ -147,7 +147,8 @@ a {
 
 
 
-.app-chat.floating, .app-stream-playable.fixed {
-    z-index: 20;
+.app-chat.floating, .app-stream-playable.fixed, .tr-window {
+
     box-shadow: 12px 15px 20px 0px #00000061;
 }
+
