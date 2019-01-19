@@ -21,3 +21,10 @@ body {
     padding: 0px;
     font-size: 14px;
 }
+
+.app-chat .chat-tabs .chat-tab[data-id=main] .name {
+    font-size: 15px;
+    top: -10px;
+    position: relative;
+    font-weight: 500;
+}
