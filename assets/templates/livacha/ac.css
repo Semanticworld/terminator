@@ -231,3 +231,9 @@ a {
     .app-chat .users-list .user {
         background-color: #e8ff6f;
     }
+
+    .app-flag img {
+        border-radius: 50%   
+    
+    ;
+    }
