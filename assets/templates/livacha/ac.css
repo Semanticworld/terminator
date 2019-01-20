@@ -260,6 +260,7 @@ body.backgrounded .app-room .room-background-all {
     visibility: visible;
     opacity: 1;
     transition: visibility 0.1s, opacity 0.1s;
+    background-color: #2da205;
 }
 .app-chat .users-list .user .avatar img {
     width: 30px;
