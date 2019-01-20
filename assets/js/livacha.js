@@ -138,12 +138,10 @@ $(document).ready(function () {
 
 
 
-            "Девочка и мальчик",
-            "aw", "dv", "en", "em", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku",
-            "mp", "nj", "rt", "rv","gd","if","ij", "ik",
+            "Девочка и мальчик", "aw", "dv", "en", "em", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku", "mp", "nj", "rt", "rv", "gd", "if", "ij", "ik", "rj",
 
 
-          
+
 
             "Любовь",
             "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "ax", "ay", "az",
@@ -152,9 +150,9 @@ $(document).ready(function () {
             "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do", "dp", "dq", "dr", "ds", "dt", "du", "dw", "dx", "dy", "dz",
             "ea", "eb", "ed", "ee", "eg", "ei", "ej", "ek", "el", "eo", "eu", "ev", "ew", "ex",
             "fa", "fb", "fc", "fd", "fe", "fh", "fk", "fn", "fo", "fq", "fr", "fs", "fu", "fw", "fx",
-            "ga", "gb", "gc",  "ge", "gf", "gg", "gh", "gk", "go", "gv", "gw", "gz",
+            "ga", "gb", "gc", "ge", "gf", "gg", "gh", "gk", "go", "gv", "gw", "gz",
             "hd", "hg", "hl", "hq", "hr", "hv", "hx", "hy", "hz",
-            "ib", "ic", "id", "ie",  "ig", "ih",  "im", "in", "io", "iq", "iu", "iw", "ix", "iy", "iz",
+            "ib", "ic", "id", "ie", "ig", "ih", "im", "in", "io", "iq", "iu", "iw", "ix", "iy", "iz",
             "jb", "jg", "jn", "jp", "jq", "jr", "js", "jt", "ju", "jv", "jw", "jx", "jy", "jz",
             "ka", "kb", "kc", "kd", "ke", "kf", "kg", "km", "kn", "ko", "kp", "kq", "kr", "ks", "kt", "kv", "kw", "kx", "ky", "kz",
 
@@ -163,7 +161,7 @@ $(document).ready(function () {
             "ob", "oc", "oe", "of", "og", "oh", "oj", "ok", "ol", "on", "oo", "op", "oq", "or", "os", "ou", "ow", "oy", "oz",
             "pa", "pb", "pc", "pd", "pe", "pf", "pg", "ph", "pi", "pj", "pk", "pl", "pm", "pn", "po", "pp", "pq", "pr", "ps", "pt", "pu", "pv", "pw", "px", "py", "pz",
             "qa", "qb", "qd", "qe", "qf", "qg", "qh", "qi", "qj", "qk", "ql", "qm", "qn", "qo", "qp", "qq", "qr", "qs", "qt", "qu", "qv", "qw", "qx", "qy", "qz",
-            "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rj", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rs", "rw", "ry", "rz",
+            "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rs", "rw", "ry", "rz",
 
             "xa", "xb", "xf", "xg", "xh", "xi", "xj", "xk", "xl", "xm", "xn", "xp", "xw", "xy",
             "ya", "ye", "yg", "yh", "yk", "yl", "ym", "yn", "yo", "yp", "yq", "ys", "yt", "yu", "yv", "yw", "yz",
