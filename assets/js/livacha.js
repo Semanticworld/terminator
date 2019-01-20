@@ -812,7 +812,7 @@ $(document).ready(function () {
         $(".tr-sm9-block").append(s);
         $("#tr-t-select").val((localStorage.getItem('tr-template-name') == undefined) ? "aa" : localStorage.getItem('tr-template-name'));
 
-
+/*
         window.addEventListener("beforeunload", function (event) {
             if (((localStorage.getItem('tr-antigoto') == "1") ? "1" : "0") == "1") {
                 event.preventDefault();
@@ -821,7 +821,15 @@ $(document).ready(function () {
             }
 
         });
+*/
 
+window.addEventListener("beforeunload", function (e) {
+    var confirmationMessage = 'It looks like you have been editing something. '
+                            + 'If you leave before saving, your changes will be lost.';
+
+    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+});
 
         $(document).on("click", ".tr-config", function (e) {
             var s = ($(this).val() == "1") ? "0" : "1";
