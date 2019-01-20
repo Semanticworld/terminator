@@ -265,3 +265,14 @@ body.backgrounded .app-room .room-background-all {
     width: 30px;
     border-radius: 50%!important;
 }
+.navbar.main {
+    padding: 0;
+    background-color: #2da205!important;
+}
+.app-pickimage {
+    position: relative;
+    max-width: 200px;
+    display: inline-block;
+    border: none;
+    border-radius: 50%!important;
+}
