@@ -139,7 +139,7 @@ $(document).ready(function () {
             "ln", "lo", "lq", "lr", "ls", "lt", "lu", "lv", "lw", "lx", "ly", "lz", "ma", "mb", "mc", "md", "me", "mf", "mg", "mh", "mi", "mj", "mk", "ml", "mm", "ec",
             "mn", "mq", "mr", "ms", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "nb", "nc", "nd", "ne", "nf", "ng", "nh", "ni", "nk", "nl", "nm", "nn", "np", "nq",
             "nr", "ns", "nw", "od", "oi", "om", "ot", "ov", "ox", "ru", "xo", "xt", "xu", "xx", "yb", "yc", "yd", "yf", "yi", "yj", "yr", "yx", "yy", "zg", "zm", "zi",
-            "zn", "zo", "zu", "zw", "zx", "zy",
+            "zn", "zo", "zu", "zw", "zx", "zy", "rr", "rx", "qc", "oa", "nv",
 
             " Он ",
             "Любовь",
@@ -156,11 +156,11 @@ $(document).ready(function () {
             "ka", "kb", "kc", "kd", "ke", "kf", "kg", "kh", "ki", "kj", "kk", "kl", "km", "kn", "ko", "kp", "kq", "kr", "ks", "kt", "ku", "kv", "kw", "kx", "ky", "kz",
 
             "mo", "mp",
-            "nj", "no", "nt", "nu", "nv", "nx", "ny", "nz",
-            "oa", "ob", "oc", "oe", "of", "og", "oh", "oj", "ok", "ol", "on", "oo", "op", "oq", "or", "os", "ou", "ow", "oy", "oz",
+            "nj", "no", "nt", "nu", "nx", "ny", "nz",
+            "ob", "oc", "oe", "of", "og", "oh", "oj", "ok", "ol", "on", "oo", "op", "oq", "or", "os", "ou", "ow", "oy", "oz",
             "pa", "pb", "pc", "pd", "pe", "pf", "pg", "ph", "pi", "pj", "pk", "pl", "pm", "pn", "po", "pp", "pq", "pr", "ps", "pt", "pu", "pv", "pw", "px", "py", "pz",
-            "qa", "qb", "qc", "qd", "qe", "qf", "qg", "qh", "qi", "qj", "qk", "ql", "qm", "qn", "qo", "qp", "qq", "qr", "qs", "qt", "qu", "qv", "qw", "qx", "qy", "qz",
-            "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rj", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rr", "rs", "rt", "rv", "rw", "rx", "ry", "rz",
+            "qa", "qb", "qd", "qe", "qf", "qg", "qh", "qi", "qj", "qk", "ql", "qm", "qn", "qo", "qp", "qq", "qr", "qs", "qt", "qu", "qv", "qw", "qx", "qy", "qz",
+            "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rj", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rs", "rt", "rv", "rw", "ry", "rz",
 
             "xa", "xb", "xf", "xg", "xh", "xi", "xj", "xk", "xl", "xm", "xn", "xp", "xw", "xy",
             "ya", "ye", "yg", "yh", "yk", "yl", "ym", "yn", "yo", "yp", "yq", "ys", "yt", "yu", "yv", "yw", "yz",
