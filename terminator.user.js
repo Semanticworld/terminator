@@ -7,7 +7,7 @@
 // @icon        https://github.com/Semanticworld/terminator/raw/master/assets/ico/ico128.png
 // @icon64      https://github.com/Semanticworld/terminator/raw/master/assets/ico/ico64.png
 // @namespace   https://livacha.com/
-// @match       https://livacha.com/chat/*
+// @match       https://livacha.com/*
 // @match       https://dropmefiles.com/*
 // @connect     livacha.com
 // @connect     dropmefiles.com
