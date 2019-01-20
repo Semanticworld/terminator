@@ -341,7 +341,7 @@ body.backgrounded .app-room .room-background-all {
 .tr-tab-caption .active {
     background: #e4f7a9;
     color: #000;
-    border-color: #2da205;
+    border-color: #effcac;
 }
 
 .tr-tab-content {
@@ -352,4 +352,16 @@ body.backgrounded .app-room .room-background-all {
     height: 245px;
     box-sizing: border-box;
     padding: 10px;
+}
+
+
+
+.tr-tab-caption .active:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #effcac;
 }
