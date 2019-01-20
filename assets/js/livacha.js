@@ -805,7 +805,7 @@ $(document).ready(function () {
         s += createInput('sound', 'ch2', 'Звуковые эффекты');
         s += createInput('anticaps', 'ch3', 'Антикапс');
         s += createInput('antimat', 'ch4', 'Антимат');
-        s += createInput('template', 'ch5', 'Переход только при подтверждении');
+        s += createInput('template', 'ch5', 'Стиль страницы');
         s += '<div class="tr-pt10"><select id="tr-t-select" data-cmd="template-name" class="form-control tr-select"><option value="aa">Стиль 1</option><option value="ab">Стиль 2</option><option value="ac">Стиль 3</option></select></div>';
         s += createInput('antigoto', 'ch6', 'Авто переходы');
         s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
