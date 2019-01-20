@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Marck+Script');
 
 body {
-    background-image: url("[BASE_PATH]background/ac.jpg");
+    background-image: url("[BASE_PATH]background/ac.jpg") !important;;
     background-color: transparent;
     height: 100%;
     background-position: center;
@@ -129,12 +129,6 @@ a {
     border-right: 1px #000000 solid;
 }
 
-
-
-
-
-
-
 .app-chat.floating {
     right: 10px;
     bottom: 10px;
@@ -145,21 +139,12 @@ a {
     min-height: 350px;
     box-shadow: 12px 15px 20px 0px #00000061;
 }
-
-
-
-
-
 .app-chat.floating,
 .app-stream-playable.fixed,
 .tr-window {
 
     box-shadow: 12px 15px 20px 0px #00000061;
 }
-
-
-
-
 
 .app-chat.users-list-abs .message-tab::-webkit-scrollbar {
     width: 10px;
@@ -184,9 +169,6 @@ a {
     background: #F3F5F6
 }
 
-
-
-
 .app-chat.users-list-overflowed .users-list::-webkit-scrollbar {
     width: 10px;
     height: 50px;
@@ -209,11 +191,6 @@ a {
 .app-chat.users-list-overflowed .users-list::-webkit-scrollbar-thumb:active {
     background: #F3F5F6
 }
-
-
-
-
-
 
 .app-chat .users-list-spacer>.row {
     height: 100%;
@@ -259,8 +236,6 @@ button,
     height: 30px;
     border-radius: 50% !important;
 }
-
-
 
 .app-chat.floating, .app-stream-playable.fixed, .tr-window {
     box-shadow: 12px 15px 20px 0px #00000061;
