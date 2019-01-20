@@ -801,7 +801,7 @@ $(document).ready(function () {
             s += '</div>';
             return s;
         }
-        s = createInput('snow', 'ch1', 'Падающие эффекты');
+        s =  createInput('snow', 'ch1', 'Падающие эффекты');
         s += createInput('sound', 'ch2', 'Звуковые эффекты');
         s += createInput('anticaps', 'ch3', 'Антикапс');
         s += createInput('antimat', 'ch4', 'Антимат');
@@ -820,6 +820,8 @@ $(document).ready(function () {
 
         $('.tr-select').change(function () {
             localStorage.setItem('tr-' + $(this).data("cmd"), $(this).val());
+            Terminator.load("css-template", this.home + 'templates/livacha/' + ((localStorage.getItem('tr-template-name') == undefined) ? 'aa' : localStorage.getItem('tr-template-name')) + '.css?r=' + Math.random());
+
         });
 
         $(document).on("click", ".tr-smilex", function (e) {
