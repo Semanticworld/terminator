@@ -814,7 +814,7 @@ $(document).ready(function () {
 
 
         window.addEventListener("beforeunload", function (event) {
-            if (((localStorage.getItem('tr-antigoto' + $(this).data("cmd")) == "1") ? "1" : "0") == "1") {
+            if (((localStorage.getItem('tr-antigoto') == "1") ? "1" : "0") == "1") {
                 event.preventDefault();
                 event.returnValue = '';
                 alert("1");
