@@ -316,3 +316,19 @@ body.backgrounded .app-room .room-background-all {
     overflow: auto;
     resize: horizontal;
 }
+.tr-tab-caption li {
+    padding: 9px 8px;
+    margin: 1px 0 0 1px;
+    background: #f1ffab;
+    color: black;
+    position: relative;
+    border: solid #2da205;
+    border-width: 2px 2px 0;
+    border-radius: 5px 5px 0 0!important;
+    text-align: center;
+}
+.tr-tab-caption .active {
+    background: #e4f7a9;
+    color: #000;
+    border-color: #0D74B5;
+}
