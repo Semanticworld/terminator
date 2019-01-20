@@ -134,19 +134,19 @@ $(document).ready(function () {
         smilespack["1"] = [
 
 
-
             "Она",
-            "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db",
+            "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db", "ec", "ef", "eh", "ey", "ez", "ff", "fg", "fi", "fj",
+            "fl", "fm", "fp", "ft", "fv", "fy", "ha", "hb", "hc", "he", "hf", "hh", "hi", "hj", "hk", "hm", "ho", "hp", "hs", "ht", "hu",
             " Он ",
             "Любовь",
             "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "aw", "ax", "ay", "az",
             "ba", "bb", "bc", "bd", "be", "bf", "bg", "bh", "bi", "bj", "bk", "bl", "bm", "bn", "bo", "bp", "bq", "br", "bs", "bt", "bu", "bv", "bw", "bx", "by", "bz",
             "ca", "cb", "cc", "cd", "ce", "cf", "cg", "ch", "ci", "cj", "ck", "cl", "cv",
             "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do", "dp", "dq", "dr", "ds", "dt", "du", "dv", "dw", "dx", "dy", "dz",
-            "ea", "eb", "ec", "ed", "ee", "ef", "eg", "eh", "ei", "ej", "ek", "el", "em", "en", "eo", "ep", "eq", "er", "es", "et", "eu", "ev", "ew", "ex", "ey", "ez",
-            "fa", "fb", "fc", "fd", "fe", "ff", "fg", "fh", "fi", "fj", "fk", "fl", "fm", "fn", "fo", "fp", "fq", "fr", "fs", "ft", "fu", "fv", "fw", "fx", "fy", "fz",
+            "ea", "eb", "ed", "ee", "eg", "ei", "ej", "ek", "el", "em", "en", "eo", "ep", "eq", "er", "es", "et", "eu", "ev", "ew", "ex",
+            "fa", "fb", "fc", "fd", "fe", "fh", "fk", "fn", "fo", "fq", "fr", "fs", "fu", "fw", "fx", "fz",
             "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gi", "gj", "gk", "gl", "gm", "gn", "go", "gp", "gq", "gr", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
-            "ha", "hb", "hc", "hd", "he", "hf", "hg", "hh", "hi", "hj", "hk", "hl", "hm", "hn", "ho", "hp", "hq", "hr", "hs", "ht", "hu", "hv", "hw", "hx", "hy", "hz",
+            "hd", "hg", "hl", "hn", "hq", "hr", "hv", "hw", "hx", "hy", "hz",
             "ia", "ib", "ic", "id", "ie", "if", "ig", "ih", "ii", "ij", "ik", "il", "im", "in", "io", "ip", "iq", "ir", "is", "it", "iu", "iv", "iw", "ix", "iy", "iz",
             "ja", "jb", "jc", "jd", "je", "jf", "jg", "jh", "ji", "jj", "jk", "jl", "jm", "jn", "jo", "jp", "jq", "jr", "js", "jt", "ju", "jv", "jw", "jx", "jy", "jz",
             "ka", "kb", "kc", "kd", "ke", "kf", "kg", "kh", "ki", "kj", "kk", "kl", "km", "kn", "ko", "kp", "kq", "kr", "ks", "kt", "ku", "kv", "kw", "kx", "ky", "kz",
