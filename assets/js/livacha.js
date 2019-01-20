@@ -132,16 +132,10 @@ $(document).ready(function () {
         });
         var smilespack = [];
         smilespack["1"] = [
-            "Она",
-            "xe", "lm", "he", "hk", "lp", "hp", "iv", "fi", "jh", "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db",
-            "ef", "eh", "ey", "ez", "ff", "fg", "fj", "fl", "fm", "fp", "ft", "fv", "fy", "ha", "hb", "hc", "hf", "hh", "hi", "hj", "hm", "ho", "hs", "ht", "hu", "hn",
-            "hw", "ia", "ii", "il", "it", "ja", "je", "jf", "ji", "jj", "jk", "jl", "jm", "jo", "la", "lb", "lc", "ld", "le", "lf", "lg", "lh", "li", "lj", "lk", "ll",
-            "ln", "lo", "lq", "lr", "ls", "lt", "lu", "lv", "lw", "lx", "ly", "lz", "ma", "mb", "mc", "md", "me", "mf", "mg", "mh", "mi", "mj", "mk", "ml", "mm", "ec",
-            "mn", "mq", "mr", "ms", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "nb", "nc", "nd", "ne", "nf", "ng", "nh", "ni", "nk", "nl", "nm", "nn", "np", "nq",
-            "nr", "ns", "nw", "od", "oi", "om", "ot", "ov", "ox", "ru", "xo", "xt", "xu", "xx", "yb", "yc", "yd", "yf", "yi", "yj", "yr", "yx", "yy", "zg", "zm", "zi",
-            "zn", "zo", "zu", "zw", "zx", "zy", "rr", "rx", "qc", "oa", "nv",
+            "Девочка", "xe", "lm", "he", "hk", "lp", "hp", "iv", "fi", "jh", "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db", "ef", "eh", "ey", "ez", "ff", "fg", "fj", "fl", "fm", "fp", "ft", "fv", "fy", "ha", "hb", "hc", "hf", "hh", "hi", "hj", "hm", "ho", "hs", "ht", "hu", "hn", "hw", "ia", "ii", "il", "it", "ja", "je", "jf", "ji", "jj", "jk", "jl", "jm", "jo", "la", "lb", "lc", "ld", "le", "lf", "lg", "lh", "li", "lj", "lk", "ll", "ln", "lo", "lq", "lr", "ls", "lt", "lu", "lv", "lw", "lx", "ly", "lz", "ma", "mb", "mc", "md", "me", "mf", "mg", "mh", "mi", "mj", "mk", "ml", "mm", "ec", "mn", "mq", "mr", "ms", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "nb", "nc", "nd", "ne", "nf", "ng", "nh", "ni", "nk", "nl", "nm", "nn", "np", "nq", "nr", "ns", "nw", "od", "oi", "om", "ot", "ov", "ox", "ru", "xo", "xt", "xu", "xx", "yb", "yc", "yd", "yf", "yi", "yj", "yr", "yx", "yy", "zg", "zm", "zi", "zn", "zo", "zu", "zw", "zx", "zy", "rr", "rx", "qc", "oa", "nv",
 
-            " Он ",
+            "Мальчик",
+            "Девочка и мальчик",
             "Любовь",
             "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "aw", "ax", "ay", "az",
             "ba", "bb", "bc", "bd", "be", "bf", "bg", "bh", "bi", "bj", "bk", "bl", "bm", "bn", "bo", "bp", "bq", "br", "bs", "bt", "bu", "bv", "bw", "bx", "by", "bz",
