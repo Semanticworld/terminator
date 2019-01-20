@@ -136,7 +136,7 @@ $(document).ready(function () {
 
 
             "Она",
-            "fi", "hk", "hp", "iv", "jh", "xe", "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db", "ec", "ef", "eh",
+            "hk", "hp", "iv", "fi", "jh", "xe", "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db", "ec", "ef", "eh",
             "ey", "ez", "ff", "fg", "fj", "fl", "fm", "fp", "ft", "fv", "fy", "ha", "hb", "hc", "he", "hf", "hh", "hi", "hj", "hm", "ho", "hs", "ht", "hu", "hn", "hw",
             "ia", "ii", "il", "it", "ja", "je", "jf", "ji", "jj", "jk", "jl", "jm", "jo", "la", "lb", "lc", "ld", "le", "lf", "lg", "lh", "li", "lj", "lk", "ll", "lm",
             "ln", "lo", "lp", "lq", "lr", "ls", "lt", "lu", "lv", "lw", "lx", "ly", "lz", "ma", "mb", "mc", "md", "me", "mf", "mg", "mh", "mi", "mj", "mk", "ml", "mm",
