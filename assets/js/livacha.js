@@ -820,7 +820,7 @@ $(document).ready(function () {
 
         $('.tr-select').change(function () {
             localStorage.setItem('tr-' + $(this).data("cmd"), $(this).val());
-            Terminator.load("css-template", this.home + 'templates/livacha/' + ((localStorage.getItem('tr-template-name') == undefined) ? 'aa' : localStorage.getItem('tr-template-name')) + '.css?r=' + Math.random());
+            Terminator.load("css-template", Terminator.home + 'templates/livacha/' + ((localStorage.getItem('tr-template-name') == undefined) ? 'aa' : localStorage.getItem('tr-template-name')) + '.css?r=' + Math.random());
 
         });
 
