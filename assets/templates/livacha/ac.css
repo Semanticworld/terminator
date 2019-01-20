@@ -215,6 +215,8 @@ a {
 
 .app-flag img {
     border-radius: 50% !important;
+    height: 20px;
+    width: 20px;
 }
 
 .btn-dark {
