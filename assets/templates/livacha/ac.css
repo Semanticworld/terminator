@@ -277,3 +277,42 @@ body.backgrounded .app-room .room-background-all {
     border: none;
     border-radius: 50%!important;
 }
+.tr-title {
+    background: #2da205;
+    cursor: move;
+    font-size: 14px;
+    line-height: 10px;
+    padding: 4px;
+    text-align: center;
+    color: white;
+}
+.tr-tab-caption {
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+     -webkit-flex-wrap: wrap; 
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+    margin: -1px 0 0 -1px;
+    background-color: #effcac;
+}
+
+.tr-window {
+    position: absolute;
+    border: 1px solid #89B;
+    background: #effcac;
+    height: 320px;
+    width: 380px;
+    z-index: 100;
+    visibility: hidden;
+    top: 300px;
+    left: 300px;
+    min-height: 320px;
+    min-width: 330px;
+    overflow: auto;
+    resize: horizontal;
+}
