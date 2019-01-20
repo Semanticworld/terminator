@@ -135,26 +135,35 @@ $(document).ready(function () {
             "Девочка", "xe", "lm", "he", "hk", "lp", "hp", "iv", "fi", "jh", "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db", "ef", "eh", "ey", "ez", "ff", "fg", "fj", "fl", "fm", "fp", "ft", "fv", "fy", "ha", "hb", "hc", "hf", "hh", "hi", "hj", "hm", "ho", "hs", "ht", "hu", "hn", "hw", "ia", "ii", "il", "it", "ja", "je", "jf", "ji", "jj", "jk", "jl", "jm", "jo", "la", "lb", "lc", "ld", "le", "lf", "lg", "lh", "li", "lj", "lk", "ll", "ln", "lo", "lq", "lr", "ls", "lt", "lu", "lv", "lw", "lx", "ly", "lz", "ma", "mb", "mc", "md", "me", "mf", "mg", "mh", "mi", "mj", "mk", "ml", "mm", "ec", "mn", "mq", "mr", "ms", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "nb", "nc", "nd", "ne", "nf", "ng", "nh", "ni", "nk", "nl", "nm", "nn", "np", "nq", "nr", "ns", "nw", "od", "oi", "om", "ot", "ov", "ox", "ru", "xo", "xt", "xu", "xx", "yb", "yc", "yd", "yf", "yi", "yj", "yr", "yx", "yy", "zg", "zm", "zi", "zn", "zo", "zu", "zw", "zx", "zy", "rr", "rx", "qc", "oa", "nv",
 
             "Мальчик",
+
+
+
             "Девочка и мальчик",
+            "aw", "dv", "en", "em", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku",
+            "mp", "nj", "rt", "rv",
+
+
+
+
             "Любовь",
-            "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "aw", "ax", "ay", "az",
+            "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "ax", "ay", "az",
             "ba", "bb", "bc", "bd", "be", "bf", "bg", "bh", "bi", "bj", "bk", "bl", "bm", "bn", "bo", "bp", "bq", "br", "bs", "bt", "bu", "bv", "bw", "bx", "by", "bz",
             "ca", "cb", "cc", "cd", "ce", "cf", "cg", "ch", "ci", "cj", "ck", "cl", "cv",
-            "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do", "dp", "dq", "dr", "ds", "dt", "du", "dv", "dw", "dx", "dy", "dz",
-            "ea", "eb", "ed", "ee", "eg", "ei", "ej", "ek", "el", "em", "en", "eo", "ep", "eq", "er", "es", "et", "eu", "ev", "ew", "ex",
-            "fa", "fb", "fc", "fd", "fe", "fh", "fk", "fn", "fo", "fq", "fr", "fs", "fu", "fw", "fx", "fz",
-            "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gk", "go", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
+            "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do", "dp", "dq", "dr", "ds", "dt", "du", "dw", "dx", "dy", "dz",
+            "ea", "eb", "ed", "ee", "eg", "ei", "ej", "ek", "el", "eo", "eu", "ev", "ew", "ex",
+            "fa", "fb", "fc", "fd", "fe", "fh", "fk", "fn", "fo", "fq", "fr", "fs", "fu", "fw", "fx",
+            "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gk", "go", "gv", "gw", "gz",
             "hd", "hg", "hl", "hq", "hr", "hv", "hx", "hy", "hz",
-            "ib", "ic", "id", "ie", "if", "ig", "ih", "ij", "ik", "im", "in", "io", "ip", "iq", "ir", "is", "iu", "iw", "ix", "iy", "iz",
-            "jb", "jc", "jd", "jg", "jn", "jp", "jq", "jr", "js", "jt", "ju", "jv", "jw", "jx", "jy", "jz",
-            "ka", "kb", "kc", "kd", "ke", "kf", "kg", "kh", "ki", "kj", "kk", "kl", "km", "kn", "ko", "kp", "kq", "kr", "ks", "kt", "ku", "kv", "kw", "kx", "ky", "kz",
+            "ib", "ic", "id", "ie", "if", "ig", "ih", "ij", "ik", "im", "in", "io", "iq", "iu", "iw", "ix", "iy", "iz",
+            "jb", "jg", "jn", "jp", "jq", "jr", "js", "jt", "ju", "jv", "jw", "jx", "jy", "jz",
+            "ka", "kb", "kc", "kd", "ke", "kf", "kg", "km", "kn", "ko", "kp", "kq", "kr", "ks", "kt", "kv", "kw", "kx", "ky", "kz",
 
-            "mo", "mp",
-            "nj", "no", "nt", "nu", "nx", "ny", "nz",
+            "mo",
+            "no", "nt", "nu", "nx", "ny", "nz",
             "ob", "oc", "oe", "of", "og", "oh", "oj", "ok", "ol", "on", "oo", "op", "oq", "or", "os", "ou", "ow", "oy", "oz",
             "pa", "pb", "pc", "pd", "pe", "pf", "pg", "ph", "pi", "pj", "pk", "pl", "pm", "pn", "po", "pp", "pq", "pr", "ps", "pt", "pu", "pv", "pw", "px", "py", "pz",
             "qa", "qb", "qd", "qe", "qf", "qg", "qh", "qi", "qj", "qk", "ql", "qm", "qn", "qo", "qp", "qq", "qr", "qs", "qt", "qu", "qv", "qw", "qx", "qy", "qz",
-            "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rj", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rs", "rt", "rv", "rw", "ry", "rz",
+            "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rj", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rs", "rw", "ry", "rz",
 
             "xa", "xb", "xf", "xg", "xh", "xi", "xj", "xk", "xl", "xm", "xn", "xp", "xw", "xy",
             "ya", "ye", "yg", "yh", "yk", "yl", "ym", "yn", "yo", "yp", "yq", "ys", "yt", "yu", "yv", "yw", "yz",
