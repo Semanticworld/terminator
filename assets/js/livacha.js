@@ -55,7 +55,7 @@ $(document).ready(function () {
                             } else {
                                 style.appendChild(document.createTextNode(s));
                             }
-                         //   head.appendChild(style);
+                            //   head.appendChild(style);
                             $("body").find(":last").after(style);
                             break;
                         case "js":
@@ -801,15 +801,27 @@ $(document).ready(function () {
             s += '</div>';
             return s;
         }
-        s =  createInput('snow', 'ch1', 'Падающие эффекты');
+        s = createInput('snow', 'ch1', 'Падающие эффекты');
         s += createInput('sound', 'ch2', 'Звуковые эффекты');
         s += createInput('anticaps', 'ch3', 'Антикапс');
         s += createInput('antimat', 'ch4', 'Антимат');
-        s += createInput('template', 'ch5', 'Дизайн страницы');
+        s += createInput('template', 'ch5', 'Переход только при подтверждении');
         s += '<div class="tr-pt10"><select id="tr-t-select" data-cmd="template-name" class="form-control tr-select"><option value="aa">Стиль 1</option><option value="ab">Стиль 2</option><option value="ac">Стиль 3</option></select></div>';
+        s += createInput('antigoto', 'ch6', 'Авто переходы');
         s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
         $(".tr-sm9-block").append(s);
         $("#tr-t-select").val((localStorage.getItem('tr-template-name') == undefined) ? "aa" : localStorage.getItem('tr-template-name'));
+
+
+        window.addEventListener("beforeunload", function (event) {
+            if (((localStorage.getItem('tr-antigoto' + $(this).data("cmd")) == "1") ? "1" : "0") == "1") {
+                event.preventDefault();
+                event.returnValue = '';
+                alert("1");
+            }
+
+        });
+
 
         $(document).on("click", ".tr-config", function (e) {
             var s = ($(this).val() == "1") ? "0" : "1";
