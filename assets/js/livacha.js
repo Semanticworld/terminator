@@ -139,9 +139,7 @@ $(document).ready(function () {
 
 
             "Девочка и мальчик", "aw", "dv", "en", "em", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku", "mp", "nj", "rt", "rv", "gd", "if", "ij", "ik", "rj",
-
-
-
+            "Мишки", "kv", "kw", "kx", "ky", "kz", "xi", "xn",
 
             "Любовь",
             "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "ax", "ay", "az",
@@ -154,7 +152,7 @@ $(document).ready(function () {
             "hd", "hg", "hl", "hq", "hr", "hv", "hx", "hy", "hz",
             "ib", "ic", "id", "ie", "ig", "ih", "im", "in", "io", "iq", "iu", "iw", "ix", "iy", "iz",
             "jb", "jg", "jn", "jp", "jq", "jr", "js", "jt", "ju", "jv", "jw", "jx", "jy", "jz",
-            "ka", "kb", "kc", "kd", "ke", "kf", "kg", "km", "kn", "ko", "kp", "kq", "kr", "ks", "kt", "kv", "kw", "kx", "ky", "kz",
+            "ka", "kb", "kc", "kd", "ke", "kf", "kg", "km", "kn", "ko", "kp", "kq", "kr", "ks", "kt",
 
             "mo",
             "no", "nt", "nu", "nx", "ny", "nz",
@@ -163,7 +161,7 @@ $(document).ready(function () {
             "qa", "qb", "qd", "qe", "qf", "qg", "qh", "qi", "qj", "qk", "ql", "qm", "qn", "qo", "qp", "qq", "qr", "qs", "qt", "qu", "qv", "qw", "qx", "qy", "qz",
             "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rs", "rw", "ry", "rz",
 
-            "xa", "xb", "xf", "xg", "xh", "xi", "xj", "xk", "xl", "xm", "xn", "xp", "xw", "xy",
+            "xa", "xb", "xf", "xg", "xh", "xj", "xk", "xl", "xm", "xp", "xw", "xy",
             "ya", "ye", "yg", "yh", "yk", "yl", "ym", "yn", "yo", "yp", "yq", "ys", "yt", "yu", "yv", "yw", "yz",
             "za", "zb", "zc", "zd", "ze", "zf", "zh", "zj", "zk", "zl", "zp", "zq", "zr", "zs", "zt", "zv", "zz",
 
