@@ -816,7 +816,8 @@ $(document).ready(function () {
         window.addEventListener("beforeunload", function (event) {
             if (((localStorage.getItem('tr-antigoto') == "1") ? "1" : "0") == "1") {
                 event.preventDefault();
-                event.returnValue = 'Вы уверены что хотите закрыть этот чат?';
+                event.returnValue = '';
+                return 'Вы уверены что хотите закрыть этот чат?';
             }
 
         });
