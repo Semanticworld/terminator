@@ -132,7 +132,7 @@ $(document).ready(function () {
         });
         var smilespack = [];
         smilespack["1"] = [
-            "Девочка", "xe", "lm", "he", "hk", "lp", "hp", "iv", "fi", "jh", "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db", "go", "ef", "eh", "ey", "ez", "ff", "fg", "fj", "fl", "fm", "fp", "ft", "fv", "fy", "ha", "hb", "hc", "hf", "hh", "hi", "hj", "hm", "ho", "hs", "ht", "hu", "hn", "hw", "ia", "ii", "il", "it", "ja", "je", "jf", "ji", "jj", "jk", "jl", "jm", "jo", "la", "lb", "lc", "ld", "le", "lf", "lg", "lh", "li", "lj", "lk", "ll", "ln", "lo", "lq", "lr", "ls", "lt", "lu", "lv", "lw", "lx", "ly", "lz", "ma", "mb", "mc", "md", "me", "mf", "mg", "mh", "mi", "mj", "mk", "ml", "mm", "ec", "mn", "mq", "mr", "ms", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "nb", "nc", "nd", "ne", "nf", "ng", "nh", "ni", "nk", "nl", "nm", "nn", "np", "nq", "nr", "ns", "nw", "od", "oi", "om", "ot", "ov", "ox", "ru", "xo", "xt", "xu", "xx", "yb", "yc", "yd", "yf", "yi", "yj", "yr", "yx", "yy", "zg", "zm", "zi", "zn", "zo", "zu", "zw", "zx", "zy", "rr", "rx", "qc", "oa", "nv",
+            "Девочка", "xe", "lm", "he", "hk", "lp", "hp", "iv", "fi", "jh", "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db", "go", "qe", "ef", "eh", "ey", "ez", "ff", "fg", "fj", "fl", "fm", "fp", "ft", "fv", "fy", "ha", "hb", "hc", "hf", "hh", "hi", "hj", "hm", "ho", "hs", "ht", "hu", "hn", "hw", "ia", "ii", "il", "it", "ja", "je", "jf", "ji", "jj", "jk", "jl", "jm", "jo", "la", "lb", "lc", "ld", "le", "lf", "lg", "lh", "li", "lj", "lk", "ll", "ln", "lo", "lq", "lr", "ls", "lt", "lu", "lv", "lw", "lx", "ly", "lz", "ma", "mb", "mc", "md", "me", "mf", "mg", "mh", "mi", "mj", "mk", "ml", "mm", "ec", "mn", "mq", "mr", "ms", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "nb", "nc", "nd", "ne", "nf", "ng", "nh", "ni", "nk", "nl", "nm", "nn", "np", "nq", "nr", "ns", "nw", "od", "oi", "om", "ot", "ov", "ox", "ru", "xo", "xt", "xu", "xx", "yb", "yc", "yd", "yf", "yi", "yj", "yr", "yx", "yy", "zg", "zm", "zi", "zn", "zo", "zu", "zw", "zx", "zy", "rr", "rx", "qc", "oa", "nv",
 
             "Мальчик",
             "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "ax", "ay",
@@ -150,15 +150,15 @@ $(document).ready(function () {
             "no", "nt", "nu", "nx", "ny", "nz",
             "ob", "oc", "oe", "of", "og", "oh", "oj", "ok", "ol", "on", "oo", "op", "oq", "or", "os", "ou", "ow", "oy", "oz",
             "pa", "pb", "pc", "pd", "pe", "pf", "pg", "ph", "pi", "pj", "pk", "pl", "pm", "pn", "po", "pp", "pq", "pr", "ps", "pt", "pu", "pv", "pw", "px", "py", "pz",
-            "qa", "qb", "qd", "qe", "qf", "qg", "qh", "qi", "qj", "qk", "ql", "qm", "qn", "qo", "qp", "qq", "qr", "qs", "qt", "qu", "qv", "qw", "qx", "qz",
+            "qa", "qb", "qd", "qf", "qg", "qh", "qi", "qj", "qk", "ql", "qm", "qn", "qo", "qp", "qq", "qr", "qs", "qt", "qu", "qv", "qw", "qx", "qz",
             "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rs", "rw", "ry",
             "xa", "xb", "xh", "xk", "xl", "xm", "xp", "xw", "xy",
-            "ya", "ye", "yh", "yk", "yn", "yo", "yp", "ys", "yt", "yu", "yw", "yz",
+            "ye", "yh", "yk", "yn", "yo", "yp", "ys", "yt", "yu", "yw", "yz",
             "za", "zb", "zc", "zf", "zh", "zj", "zk", "zl", "zp", "zq", "zr", "zs", "zv", "zz",
 
 
             "Девочка и мальчик", "aw", "dv", "en", "em", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku", "mp", "nj", "rt", "rv", "gd", "if", "ij", "ik", "rj",
-            "Пьющие", "az", "ed", "hd", "hv", "qy", "rz", "xf", "xg", "xj", "yg", "ym", "yl", "yq", "yv", "zd", "ze", "zt",
+            "Пьющие", "az", "ed", "hd", "hv", "qy", "rz", "xf", "xg", "xj", "yg", "ym", "yl", "yq", "yv", "zd", "ze", "zt", "ya",
             "Мишки", "kv", "kw", "kx", "ky", "kz", "xi", "xn",
             "Любовь",
             "С табличками", "gi", "gj", "gn", "gm", "gl", "gp", "gq", "gr", "xc", "xd", "xz", "xv",
