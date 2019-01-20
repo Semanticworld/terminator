@@ -356,12 +356,3 @@ body.backgrounded .app-room .room-background-all {
 
 
 
-.tr-tab-caption .active:after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: #effcac;
-}
