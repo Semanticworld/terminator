@@ -812,18 +812,12 @@ $(document).ready(function () {
         $(".tr-sm9-block").append(s);
         $("#tr-t-select").val((localStorage.getItem('tr-template-name') == undefined) ? "aa" : localStorage.getItem('tr-template-name'));
 
-
         window.addEventListener("beforeunload", function (event) {
             if (((localStorage.getItem('tr-antigoto') == "1") ? "1" : "0") == "1") {
-                var y = confirm('Вы уверены что хотите закрыть этот чат?');
-                if (y == false) {
-                    event.preventDefault();
-                    event.returnValue = '';
-                }
+                event.preventDefault();
+                event.returnValue = '';
             }
-
         });
-
 
         $(document).on("click", ".tr-config", function (e) {
             var s = ($(this).val() == "1") ? "0" : "1";
