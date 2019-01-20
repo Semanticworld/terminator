@@ -152,9 +152,10 @@ $(document).ready(function () {
             "xa", "xb", "xh", "xk", "xl", "xm", "xp", "xw", "xy",
             "ye", "yh", "yk", "yn", "yo", "yp", "ys", "yt", "yu", "yw", "yz",
             "za", "zb", "zc", "zf", "zl", "zp", "zq", "zz",
+            "ik",
 
 
-            "Девочка и мальчик", "aw", "dv", "en", "em", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku", "mp", "nj", "rt", "rv", "gd", "if", "ij", "ik", "rj",
+            "Девочка и мальчик", "aw", "dv", "en", "em", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku", "mp", "nj", "rt", "rv", "gd", "if", "ij",  "rj",
             "Пьющие", "az", "ed", "hd", "hv", "qy", "rz", "xf", "xg", "xj", "yg", "ym", "yl", "yq", "yv", "zd", "ze", "zt", "ya",
             "Мишки", "kv", "kw", "kx", "ky", "kz", "xi", "xn",
             "Любовь",
