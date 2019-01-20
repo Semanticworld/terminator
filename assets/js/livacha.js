@@ -164,14 +164,18 @@ $(document).ready(function () {
             "pa", "pb", "pc", "pd", "pe", "pf", "pg", "ph", "pi", "pj", "pk", "pl", "pm", "pn", "po", "pp", "pq", "pr", "ps", "pt", "pu", "pv", "pw", "px", "py", "pz",
             "qa", "qb", "qc", "qd", "qe", "qf", "qg", "qh", "qi", "qj", "qk", "ql", "qm", "qn", "qo", "qp", "qq", "qr", "qs", "qt", "qu", "qv", "qw", "qx", "qy", "qz",
             "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rj", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rr", "rs", "rt", "rv", "rw", "rx", "ry", "rz",
+
+            "xa", "xb", "xc", "xd", "xf", "xg", "xh", "xi", "xj", "xk", "xl", "xm", "xn", "xp", "xv", "xw", "xy", "xz",
+            "ya", "ye", "yg", "yh", "yk", "yl", "ym", "yn", "yo", "yp", "yq", "ys", "yt", "yu", "yv", "yw", "yz",
+            "za", "zb", "zc", "zd", "ze", "zf", "zh", "zj", "zk", "zl", "zp", "zq", "zr", "zs", "zt", "zv", "zz",
+            "Флаги стран",
             "sa", "sb", "sc", "sd", "se", "sf", "sg", "sh", "si", "sj", "sk", "sl", "sm", "sn", "so", "sp", "sq", "sr", "ss", "st", "su", "sv", "sw", "sx", "sy", "sz",
             "ta", "tb", "tc", "td", "te", "tf", "tg", "th", "ti", "tj", "tk", "tl", "tm", "tn", "to", "tp", "tq", "tr", "ts", "tt", "tu", "tv", "tw", "tx", "ty", "tz",
             "ua", "ub", "uc", "ud", "ue", "uf", "ug", "uh", "ui", "uj", "uk", "ul", "um", "un", "uo", "up", "uq", "ur", "us", "ut", "uu", "uv", "uw", "ux", "uy", "uz",
             "va", "vb", "vc", "vd", "ve", "vf", "vg", "vh", "vi", "vj", "vk", "vl", "vm", "vn", "vo", "vp", "vq", "vr", "vs", "vt", "vu", "vv", "vw", "vx", "vy", "vz",
             "wa", "wb", "wc", "wd", "we", "wf", "wg", "wh", "wi", "wj", "wk", "wl", "wm", "wn", "wo", "wp", "wq", "wr", "ws", "wt", "wu", "wv", "ww", "wx", "wy", "wz",
-            "xa", "xb", "xc", "xd", "xf", "xg", "xh", "xi", "xj", "xk", "xl", "xm", "xn", "xp", "xq", "xr", "xs", "xv", "xw", "xy", "xz",
-            "ya", "ye", "yg", "yh", "yk", "yl", "ym", "yn", "yo", "yp", "yq", "ys", "yt", "yu", "yv", "yw", "yz",
-            "za", "zb", "zc", "zd", "ze", "zf", "zh", "zj", "zk", "zl", "zp", "zq", "zr", "zs", "zt", "zv", "zz"
+            "xq", "xr", "xs",
+
 
         ];
         smilespack["4"] = [
