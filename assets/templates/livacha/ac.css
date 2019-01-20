@@ -356,3 +356,6 @@ body.backgrounded .app-room .room-background-all {
 
 
 
+.tr-tab-caption .active:after {
+    background: #effcac;
+}
