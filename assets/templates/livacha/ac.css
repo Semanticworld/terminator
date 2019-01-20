@@ -253,3 +253,9 @@ body.backgrounded .app-room .room-background-all {
     background-color: #ccf14e;
     box-shadow: 0px 1px 7px 2px #8dad28;
 }
+.vjs-has-started .vjs-control-bar {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.1s, opacity 0.1s;
+}
