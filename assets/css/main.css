@@ -141,15 +141,7 @@
     border-color: #0D74B5;
 }
 
-.tr-tab-caption .active:after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: #FFF;
-}
+
 
 .tr-tab-content {
     display: none;
