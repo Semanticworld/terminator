@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Marck+Script');
 
 body {
-    background-image: url("[BASE_PATH]background/ac.jpg") !important;;
+    background-image: url("[BASE_PATH]background/ac.jpg") !important;
+    ;
     background-color: transparent;
     height: 100%;
     background-position: center;
@@ -139,6 +140,7 @@ a {
     min-height: 350px;
     box-shadow: 12px 15px 20px 0px #00000061;
 }
+
 .app-chat.floating,
 .app-stream-playable.fixed,
 .tr-window {
@@ -239,7 +241,9 @@ button,
     border-radius: 50% !important;
 }
 
-.app-chat.floating, .app-stream-playable.fixed, .tr-window {
+.app-chat.floating,
+.app-stream-playable.fixed,
+.tr-window {
     box-shadow: 12px 15px 20px 0px #00000061;
     border-radius: 10px 10px 0 0 !important;
 }
@@ -247,7 +251,7 @@ button,
 .app-chat .chat-messages .mess-row .avatar img {
     width: 30px;
     height: 30px;
-    border-radius: 50%!important;
+    border-radius: 50% !important;
     box-shadow: 0px 0px 4px black;
 }
 
@@ -255,6 +259,7 @@ body.backgrounded .app-room .room-background-all {
     background-color: #ccf14e;
     box-shadow: 0px 1px 7px 2px #8dad28;
 }
+
 .vjs-has-started .vjs-control-bar {
     display: flex;
     visibility: visible;
@@ -262,21 +267,25 @@ body.backgrounded .app-room .room-background-all {
     transition: visibility 0.1s, opacity 0.1s;
     background-color: #2da205;
 }
+
 .app-chat .users-list .user .avatar img {
     width: 30px;
-    border-radius: 50%!important;
+    border-radius: 50% !important;
 }
+
 .navbar.main {
     padding: 0;
-    background-color: #2da205!important;
+    background-color: #2da205 !important;
 }
+
 .app-pickimage {
     position: relative;
     max-width: 200px;
     display: inline-block;
     border: none;
-    border-radius: 50%!important;
+    border-radius: 50% !important;
 }
+
 .tr-title {
     background: #2da205;
     cursor: move;
@@ -286,13 +295,14 @@ body.backgrounded .app-room .room-background-all {
     text-align: center;
     color: white;
 }
+
 .tr-tab-caption {
     margin: 0;
     padding: 0;
-    display: -webkit-flex!important;
-    display: -ms-flexbox!important;
-    display: flex!important;
-     -webkit-flex-wrap: wrap; 
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     list-style: none;
@@ -316,6 +326,7 @@ body.backgrounded .app-room .room-background-all {
     overflow: auto;
     resize: horizontal;
 }
+
 .tr-tab-caption li {
     padding: 9px 8px;
     margin: 1px 0 0 1px;
@@ -324,17 +335,18 @@ body.backgrounded .app-room .room-background-all {
     position: relative;
     border: solid #2da205;
     border-width: 2px 2px 0;
-    border-radius: 5px 5px 0 0!important;
+    border-radius: 5px 5px 0 0 !important;
     text-align: center;
 }
+
 .tr-tab-caption .active {
     background: #e4f7a9;
     color: #000;
     border-color: #0D74B5;
 }
+
 .tr-tab-content {
-    display: none;
-    background: white;
+    background: #effcac;
     border: 2px solid #2da205;
     padding: 7px 10px;
     overflow-y: scroll;
