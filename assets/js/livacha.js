@@ -137,9 +137,10 @@ $(document).ready(function () {
             "Мальчик",
             "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "ak", "al", "am", "an", "ao", "ap", "ar", "as", "at", "au", "av", "ax", "ay",
             "ba", "bc", "bd", "be", "bf", "bh", "bi", "bj", "bk", "bl", "bm", "bn", "bo", "bp", "bq", "br", "bs", "bt", "bu", "bv", "bw", "bx", "by", "bz",
-            "ca",
-            "Разные", "cb", "cc", "cd", "ce", "cf", "cg", "ch", "ci", "cj", "ck", "cl", "cv", "aq", "bb", "bg",
-            "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do", "dp", "dq", "dr", "ds", "dt", "du", "dw", "dx", "dy", "dz",
+            "ca", "cb", "cc", "cd", "ce", "cf", "cg", "ch", "ci", "cj", "ck", "cl", "cv", "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do", "dp", "dq",
+            "dr", "ds", "dt", "du", "dw", "dx", "dy", "dz",
+
+            "Разные", "aq", "bb", "bg",
             "ea", "eb", "ee", "eg", "ei", "ej", "ek", "el", "eo", "eu", "ev", "ew", "ex",
             "fa", "fb", "fc", "fd", "fe", "fh", "fk", "fn", "fo", "fq", "fr", "fs", "fu", "fw", "fx",
             "ga", "gb", "gc", "ge", "gf", "gg", "gh", "gk", "gv", "gw", "gz",
