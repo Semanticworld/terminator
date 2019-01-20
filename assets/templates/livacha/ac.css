@@ -67,14 +67,14 @@ body {
 }
 
 .app-chat .chat-bottom [name=message] {
-    background-color: #ffeeee;
+    background-color: #faffe0;
     font-family: 'Marck Script', cursive;
     color: rgb(0, 0, 0);
     font-size: 20px;
 }
 
 .form-control {
-    background-color: #FFEEEE;
+    background-color: #faffe0;
 }
 
 .modal-content {
@@ -343,8 +343,6 @@ body.backgrounded .app-room .room-background-all {
     box-sizing: border-box;
     padding: 10px;
 }
-
-
 
 .tr-tab-caption .active:after {
     background: #effcac;
