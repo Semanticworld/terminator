@@ -88,3 +88,14 @@ body {
 .app-chat.moder .chat-messages .mess-row:hover {
     background-color: #ffd5d5;
 }
+
+
+.tr-tab-caption .active {
+    background: #fccea9;
+    color: #000;
+    border-color: #2da205;
+}
+
+.tr-tab-caption .active:after {
+    background: #fccea9;
+}
