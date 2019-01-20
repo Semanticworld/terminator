@@ -149,7 +149,7 @@ $(document).ready(function () {
             "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dk", "dl", "dm", "dn", "do", "dp", "dq", "dr", "ds", "dt", "du", "dv", "dw", "dx", "dy", "dz",
             "ea", "eb", "ed", "ee", "eg", "ei", "ej", "ek", "el", "em", "en", "eo", "ep", "eq", "er", "es", "et", "eu", "ev", "ew", "ex",
             "fa", "fb", "fc", "fd", "fe", "fh", "fk", "fn", "fo", "fq", "fr", "fs", "fu", "fw", "fx", "fz",
-            "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gi", "gj", "gk", "gl", "gm", "gn", "go", "gp", "gq", "gr", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
+            "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gk", "go", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
             "hd", "hg", "hl", "hq", "hr", "hv", "hx", "hy", "hz",
             "ib", "ic", "id", "ie", "if", "ig", "ih", "ij", "ik", "im", "in", "io", "ip", "iq", "ir", "is", "iu", "iw", "ix", "iy", "iz",
             "jb", "jc", "jd", "jg", "jn", "jp", "jq", "jr", "js", "jt", "ju", "jv", "jw", "jx", "jy", "jz",
@@ -162,16 +162,13 @@ $(document).ready(function () {
             "qa", "qb", "qc", "qd", "qe", "qf", "qg", "qh", "qi", "qj", "qk", "ql", "qm", "qn", "qo", "qp", "qq", "qr", "qs", "qt", "qu", "qv", "qw", "qx", "qy", "qz",
             "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "ri", "rj", "rk", "rl", "rm", "rn", "ro", "rp", "rq", "rr", "rs", "rt", "rv", "rw", "rx", "ry", "rz",
 
-            "xa", "xb", "xc", "xd", "xf", "xg", "xh", "xi", "xj", "xk", "xl", "xm", "xn", "xp", "xv", "xw", "xy", "xz",
+            "xa", "xb", "xf", "xg", "xh", "xi", "xj", "xk", "xl", "xm", "xn", "xp", "xw", "xy",
             "ya", "ye", "yg", "yh", "yk", "yl", "ym", "yn", "yo", "yp", "yq", "ys", "yt", "yu", "yv", "yw", "yz",
             "za", "zb", "zc", "zd", "ze", "zf", "zh", "zj", "zk", "zl", "zp", "zq", "zr", "zs", "zt", "zv", "zz",
-            "Флаги стран",
-            "sv", "sy", "we", "vl", "sz", "ss", "sc", "sr", "xr", "wx", "sa", "sb", "sd", "se", "sf", "sg", "sh", "si", "sj", "sk", "sl", "sm", "sn", "so", "sp", "sq",
-            "st", "su", "sw", "ta", "tb", "tc", "td", "te", "tf", "tg", "th", "ti", "tj", "tk", "tl", "tm", "tn", "to", "tp", "tq", "tr", "ts", "tt", "tu", "tv", "tw",
-            "tx", "ty", "tz", "ua", "ub", "uc", "ud", "ue", "uf", "ug", "uh", "ui", "uj", "uk", "ul", "um", "un", "uo", "up", "uq", "ur", "us", "ut", "uu", "uv", "uw",
-            "ux", "uy", "uz", "va", "vb", "vc", "vd", "ve", "vf", "vg", "vh", "vi", "vj", "vk", "vm", "vn", "vo", "vp", "vq", "vr", "vs", "vt", "vu", "vv", "vw", "vx",
-            "vy", "vz", "wa", "wb", "wc", "wd", "wf", "wg", "wh", "wi", "wj", "wk", "wl", "wm", "wn", "wo", "wp", "wq", "wr", "ws", "wt", "wu", "wv", "ww", "wy", "wz",
-            "sx", "xq", "xs"
+
+
+            "С табличками", "gi", "gj", "gn", "gm", "gl", "gp", "gq", "gr", "xc", "xd", "xz", "xv",
+            "Флаги стран", "sv", "sy", "we", "vl", "sz", "ss", "sc", "sr", "xr", "wx", "sa", "sb", "sd", "se", "sf", "sg", "sh", "si", "sj", "sk", "sl", "sm", "sn", "so", "sp", "sq", "st", "su", "sw", "ta", "tb", "tc", "td", "te", "tf", "tg", "th", "ti", "tj", "tk", "tl", "tm", "tn", "to", "tp", "tq", "tr", "ts", "tt", "tu", "tv", "tw", "tx", "ty", "tz", "ua", "ub", "uc", "ud", "ue", "uf", "ug", "uh", "ui", "uj", "uk", "ul", "um", "un", "uo", "up", "uq", "ur", "us", "ut", "uu", "uv", "uw", "ux", "uy", "uz", "va", "vb", "vc", "vd", "ve", "vf", "vg", "vh", "vi", "vj", "vk", "vm", "vn", "vo", "vp", "vq", "vr", "vs", "vt", "vu", "vv", "vw", "vx", "vy", "vz", "wa", "wb", "wc", "wd", "wf", "wg", "wh", "wi", "wj", "wk", "wl", "wm", "wn", "wo", "wp", "wq", "wr", "ws", "wt", "wu", "wv", "ww", "wy", "wz", "sx", "xq", "xs"
 
 
         ];
