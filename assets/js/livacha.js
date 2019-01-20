@@ -169,15 +169,14 @@ $(document).ready(function () {
             "ya", "ye", "yg", "yh", "yk", "yl", "ym", "yn", "yo", "yp", "yq", "ys", "yt", "yu", "yv", "yw", "yz",
             "za", "zb", "zc", "zd", "ze", "zf", "zh", "zj", "zk", "zl", "zp", "zq", "zr", "zs", "zt", "zv", "zz",
             "Флаги стран",
-            "we","sz","ss","sc",
-            "sy", "sr", "xr", "wx", "sa", "sb",  "sd", "se", "sf", "sg", "sh", "si", "sj", "sk", "sl", "sm", "sn", "so", "sp", "sq",  "st", "su", "sv", "sw",
-            "ta", "tb", "tc", "td", "te", "tf", "tg", "th", "ti", "tj", "tk", "tl", "tm", "tn", "to", "tp", "tq", "tr", "ts", "tt", "tu", "tv", "tw", "tx", "ty", "tz",
-            "ua", "ub", "uc", "ud", "ue", "uf", "ug", "uh", "ui", "uj", "uk", "ul", "um", "un", "uo", "up", "uq", "ur", "us", "ut", "uu", "uv", "uw", "ux", "uy", "uz",
-            "va", "vb", "vc", "vd", "ve", "vf", "vg", "vh", "vi", "vj", "vk", "vl", "vm", "vn", "vo", "vp", "vq", "vr", "vs", "vt", "vu", "vv", "vw", "vx", "vy", "vz",
-            "wa", "wb", "wc", "wd",  "wf", "wg", "wh", "wi", "wj", "wk", "wl", "wm", "wn", "wo", "wp", "wq", "wr", "ws", "wt", "wu", "wv", "ww", "wy", "wz", "sx",
-             "xq", "xs"
+            "sv", "sy", "we", "vl", "sz", "ss", "sc", "sr", "xr", "wx", "sa", "sb", "sd", "se", "sf", "sg", "sh", "si", "sj", "sk", "sl", "sm", "sn", "so", "sp", "sq",
+            "st", "su", "sw", "ta", "tb", "tc", "td", "te", "tf", "tg", "th", "ti", "tj", "tk", "tl", "tm", "tn", "to", "tp", "tq", "tr", "ts", "tt", "tu", "tv", "tw",
+            "tx", "ty", "tz", "ua", "ub", "uc", "ud", "ue", "uf", "ug", "uh", "ui", "uj", "uk", "ul", "um", "un", "uo", "up", "uq", "ur", "us", "ut", "uu", "uv", "uw",
+            "ux", "uy", "uz", "va", "vb", "vc", "vd", "ve", "vf", "vg", "vh", "vi", "vj", "vk", "vm", "vn", "vo", "vp", "vq", "vr", "vs", "vt", "vu", "vv", "vw", "vx",
+            "vy", "vz", "wa", "wb", "wc", "wd", "wf", "wg", "wh", "wi", "wj", "wk", "wl", "wm", "wn", "wo", "wp", "wq", "wr", "ws", "wt", "wu", "wv", "ww", "wy", "wz",
+            "sx", "xq", "xs"
 
-            
+
         ];
         smilespack["4"] = [
             "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq", "ar", "as", "at", "au", "av", "aw", "ax", "ay", "az",
