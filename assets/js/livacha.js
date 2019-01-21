@@ -1,9 +1,7 @@
 $(document).ready(function () {
     function Terminator() {
         this.version = "0.0.0.18";
-        // this.home = "https://semanticworld.github.io/terminator/assets/";
         this.home = localStorage.getItem('tr-home') != undefined ? localStorage.getItem('tr-home') : "";
-        console.log(this.home);
     }
     Terminator.prototype.run = function () {
         console.log(this.version);
