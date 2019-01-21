@@ -1,64 +1,349 @@
 @import url('https://fonts.googleapis.com/css?family=Marck+Script');
 
 body {
-    background-image: url("[BASE_PATH]background/ab.jpg");
+    background-image: url("[BASE_PATH]background/ac.jpg") !important;
     background-color: transparent;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.app-chat.users-list-abs .message-tab {
+    margin-right: 17px;
+    background-color: #d3f51a5c;
+}
+
 .app-chat.chat-tabs-absolute .chat-tabs {
     overflow: hidden;
-    background-color: #E5EAF0;
-    height: 25px;
+    background-color: #2da205;
+    border-radius: 10px 10px 0 0 !important;
 }
 
 .app-chat .chat-tabs .nav-link.active {
-    font-weight: 500;
-    background-color: #E5EAF0;
-    height: 20px;
-    padding: 0px;
-    font-size: 14px;
+    font-weight: bold;
+    background-color: #cef211;
+    box-shadow: -1px -5px 19px 2px black;
+    border-radius: 10px 10px 0 0 !important;
 }
 
-.app-chat .chat-tabs .chat-tab[data-id=main] .name {
-    font-size: 15px;
-    top: -10px;
+.app-form-wrapper,
+.app-form-wrapper .app-form-inner,
+.app-form-wrapper form {
     position: relative;
-    font-weight: 500;
+    background-color: #2da205;
 }
 
 .app-chat .chat-bottom {
     padding: 0rem 0.5rem 0.5rem 0.5rem;
     border-top: none !important;
-    background-color: #E6EAED;
+    background-color: #2da205;
 }
 
-.app-chat.users-list-abs .message-tab {
-    margin-right: 0px;
-}
-.app-chat .users-list-spacer > .row {
-    height: 100%;
-    width: 0px;
-}
-.app-chat .bottom-topper .smiles-col {
-    overflow: hidden;
-    height: 0px;
+.app-chat .bottom-topper {
+    flex-wrap: nowrap;
     visibility: hidden;
+    height: 0;
+}
+
+.app-chat.users-list-overflowed .users-list {
+    overflow-y: scroll;
+    background-color: #F2EDF8;
+}
+
+.app-chat .users-list .user {
+    background-color: #fff;
+    background-color: #F2EDF8;
+}
+
+.app-chat .chat-messages .mess-row .text {
+    font-family: 'Marck Script', cursive;
+    font-size: 22px;
+    color: #730000;
+}
+
+.tr-tab-content {
+    background-color: #e4f7a9;
+}
+
+.app-chat .chat-bottom [name=message] {
+    background-color: #faffe0;
+    font-family: 'Marck Script', cursive;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.form-control {
+    background-color: #faffe0;
+}
+
+.modal-content {
+    background-color: #2da205;
+}
+
+.app-chat .chat-messages .mess-row.my,
+.app-chat.moder .chat-messages .mess-row:hover {
+    background-color: #98f872;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #020101;
+}
+
+a {
+    color: black;
+}
+
+.alert-dark {
+    color: #ffffff;
+    background-color: #276b2c;
+    border-color: #00f923;
+}
+
+.text-muted {
+    color: #ffffff !important;
+}
+
+.text-dark {
+    color: #ffffff !important;
+}
+
+.btn-secondary {
+    color: #000;
+    background-color: #ffd6d6;
+    border-color: #ff7f7f;
+}
+
+.btn-dark {
+    color: #887e7e;
+    background-color: #fff;
+    border-color: #00f50c;
+}
+
+.app-site-menu-fix {
+    background: #00bb07;
+    border-right: 1px #000000 solid;
 }
 
 .app-chat.floating {
     right: 10px;
     bottom: 10px;
     position: fixed;
-    height: 400px;
+    height: 70%;
     width: 400px;
     min-width: 325px;
     min-height: 350px;
+    box-shadow: 12px 15px 20px 0px #00000061;
 }
-.app-chat .chat-messages .mess-row {
-    margin-bottom: 1px;
+
+.app-chat.floating,
+.app-stream-playable.fixed,
+.tr-window {
+
+    box-shadow: 12px 15px 20px 0px #00000061;
+}
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar {
+    width: 10px;
+    height: 50px;
+}
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(left, #fff, #e4e4e4);
+    border: 1px solid #aaa;
+}
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar-track {
+    background: #EFFCAC;
+}
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar-thumb:hover {
+    background: #F3F5F6
+}
+
+.app-chat.users-list-abs .message-tab::-webkit-scrollbar-thumb:active {
+    background: #F3F5F6
+}
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar {
+    width: 10px;
+    height: 50px;
+}
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(left, #fff, #e4e4e4);
+    border: 1px solid #aaa;
+}
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar-track {
+    background: #EFFCAC;
+}
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar-thumb:hover {
+    background: #F3F5F6
+}
+
+.app-chat.users-list-overflowed .users-list::-webkit-scrollbar-thumb:active {
+    background: #F3F5F6
+}
+
+.app-chat .users-list-spacer>.row {
+    height: 100%;
+    background-color: #EFFCAC;
+}
+
+.app-chat .users-list-spacer {
+    padding: 0 3px;
+    background-color: #effcac;
+    cursor: pointer;
+    box-shadow: -1px 0px 5px 0px #0000008f;
+}
+
+
+.app-chat.users-list-overflowed .users-list {
+    overflow-y: scroll;
+    background-color: #e8ff6f;
+}
+
+.app-chat .users-list .user {
+    background-color: #e8ff6f;
+}
+
+.app-flag img {
+    border-radius: 50% !important;
+    height: 20px;
+    width: 20px;
+}
+
+.btn-dark {
+    color: #000000;
+    background-color: #e7f88e;
+    border-color: #0000008a;
+}
+
+.app-complaint-link,
+button,
+.btn,
+.cursor-pointer,
+.custom-control {
+    border-radius: 8px !important;
+    box-shadow: inset -1px -1px 11px 0px black;
+}
+
+.app-user-line img {
+    height: 30px;
+    border-radius: 50% !important;
+}
+
+.app-chat.floating,
+.app-stream-playable.fixed,
+.tr-window {
+    box-shadow: 12px 15px 20px 0px #00000061;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.app-chat .chat-messages .mess-row .avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% !important;
+    box-shadow: 0px 0px 4px black;
+}
+
+body.backgrounded .app-room .room-background-all {
+    background-color: #ccf14e;
+    box-shadow: 0px 1px 7px 2px #8dad28;
+}
+
+.vjs-has-started .vjs-control-bar {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.1s, opacity 0.1s;
+    background-color: #2da205;
+}
+
+.app-chat .users-list .user .avatar img {
+    width: 30px;
+    border-radius: 50% !important;
+}
+
+.navbar.main {
+    padding: 0;
+    background-color: #2da205 !important;
+}
+
+.app-pickimage {
     position: relative;
-    overflow-x: hidden;
+    max-width: 200px;
+    display: inline-block;
+    border: none;
+    border-radius: 50% !important;
+}
+
+.tr-title {
+    background: #2da205;
+    cursor: move;
+    font-size: 14px;
+    line-height: 10px;
+    padding: 4px;
+    text-align: center;
+    color: white;
+}
+
+.tr-tab-caption {
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+    margin: -1px 0 0 -1px;
+    background-color: #effcac;
+}
+
+.tr-window {
+    border: 1px solid #89B;
+    background: #effcac;
+}
+
+.tr-tab-caption li {
+    padding: 9px 8px;
+    margin: 1px 0 0 1px;
+    background: #f1ffab;
+    color: black;
+    position: relative;
+    border: solid #2da205;
+    border-width: 2px 2px 0;
+    border-radius: 5px 5px 0 0 !important;
+    text-align: center;
+}
+
+.tr-tab-caption .active {
+    background: #effcac;
+    color: #000;
+    border-color: #2da205;
+}
+
+.tr-tab-content {
+    background: #effcac;
+    border: 2px solid #2da205;
+    padding: 7px 10px;
+    overflow-y: scroll;
+    height: 245px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.tr-tab-caption .active:after {
+    background: #effcac;
 }
