@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+body {
+    background-image: url("[BASE_PATH]background/ab.jpg");
+    background-color: transparent;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.app-chat.chat-tabs-absolute .chat-tabs {
+    overflow: hidden;
+    background-color: #E5EAF0;
+    height: 25px;
+}
+
+.app-chat .chat-tabs .nav-link.active {
+    font-weight: 500;
+    background-color: #E5EAF0;
+    height: 20px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+.app-chat .chat-tabs .chat-tab[data-id=main] .name {
+    font-size: 15px;
+    top: -10px;
+    position: relative;
+    font-weight: 500;
+}
+
+.app-chat .chat-bottom {
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
+    border-top: none !important;
+    background-color: #E6EAED;
+}
+
+.app-chat.users-list-abs .message-tab {
+    margin-right: 0px;
+}
+.app-chat .users-list-spacer > .row {
+    height: 100%;
+    width: 0px;
+}
+.app-chat .bottom-topper .smiles-col {
+    overflow: hidden;
+    height: 0px;
+    visibility: hidden;
+}
+
+.app-chat.floating {
+    right: 10px;
+    bottom: 10px;
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    min-width: 325px;
+    min-height: 350px;
+}
+.app-chat .chat-messages .mess-row {
+    margin-bottom: 1px;
+    position: relative;
+    overflow-x: hidden;
+}

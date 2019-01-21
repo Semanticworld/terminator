@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+body {
+    background-image: url("[BASE_PATH]background/ab.jpg") !important;
+    background-color: transparent;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app-chat.users-list-abs .message-tab {
+    margin-right: 17px;
+    background-color: #ffeee0;
+}
+
+.app-chat.chat-tabs-absolute .chat-tabs {
+    overflow: hidden;
+    background-color: #fccea9;
+}
+
+.app-chat .chat-tabs .nav-link.active {
+    font-weight: bold;
+    background-color: #fff6ef;
+}
+
+.app-form-wrapper,
+.app-form-wrapper .app-form-inner,
+.app-form-wrapper form {
+    position: relative;
+    background-color: #FCCEA9;
+}
+
+.app-chat .chat-bottom {
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
+    border-top: none !important;
+    background-color: #FCCEA9;
+}
+
+.app-chat .bottom-topper {
+    flex-wrap: nowrap;
+    visibility: hidden;
+    height: 0;
+}
+
+.app-chat.users-list-overflowed .users-list {
+    overflow-y: scroll;
+    background-color: #F2EDF8;
+}
+
+.app-chat .users-list .user {
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    background-color: #F2EDF8;
+}
+
+.app-chat .chat-messages .mess-row .text {
+    font-family: 'Marck Script', cursive;
+    font-size: 22px;
+    color: #730000;
+}
+
+.tr-tab-content {
+    background-color: #FCCEA9;
+}
+
+.app-chat .chat-bottom [name=message] {
+    max-height: 100px;
+    height: 50px;
+    background-color: #ffeeee;
+    font-family: 'Marck Script', cursive;
+    color: red;
+    font-size: 20px;
+}
+
+.form-control {
+    background-color: #FFEEEE;
+}
+
+.modal-content {
+    background-color: #FCCEA9;
+}
+
+.app-chat .chat-messages .mess-row.my,
+.app-chat.moder .chat-messages .mess-row:hover {
+    background-color: #ffd5d5;
+}
+
+
+.tr-tab-caption .active {
+    background: #fccea9;
+    color: #000;
+    border-color: #2da205;
+}
+
+.tr-tab-caption .active:after {
+    background: #fccea9;
+}
