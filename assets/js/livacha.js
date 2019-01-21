@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function Terminator() {
-        this.version = "0.0.0.15";
+        this.version = "0.0.0.16";
         this.home = "https://semanticworld.github.io/terminator/assets/";
 
     }
@@ -55,8 +55,8 @@ $(document).ready(function () {
                             } else {
                                 style.appendChild(document.createTextNode(s));
                             }
-                            //   head.appendChild(style);
-                            $("body").find(":last").after(style);
+                            head.appendChild(style);
+                            //$("body").find(":last").after(style);
                             break;
                         case "js":
                             f = document.createElement("script");
