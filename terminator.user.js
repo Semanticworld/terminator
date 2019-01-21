@@ -2,7 +2,7 @@
 // @name        Terminator
 // @description Terminator - Chat optimizator
 // @author      Semanticworld
-// @version     0.0.0.14
+// @version     0.0.0.15
 // @updateURL   https://semanticworld.github.io/terminator/terminator.user.js
 // @icon        https://semanticworld.github.io/terminator/assets/ico/ico128.png
 // @icon64      https://semanticworld.github.io/terminator/assets/ico/ico64.png
