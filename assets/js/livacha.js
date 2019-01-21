@@ -158,7 +158,6 @@ $(document).ready(function () {
             "Девочка и мальчик", "aw", "dv", "en", "iw", "ix", "iy", "ok", "iu", "em", "px", "ei", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku", "mp", "nj", "rt", "rv", "gd", "if", "ij", "rj",
             "Пьющие", "az", "ed", "hd", "hv", "qy", "rz", "xf", "xg", "xj", "yg", "ym", "yl", "yq", "yv", "zd", "ze", "zt", "ya",
             "Мишки", "kv", "kw", "kx", "ky", "kz", "xi", "xn",
-            "Любовь",
             "С табличками", "gi", "gj", "gn", "gm", "gl", "gp", "gq", "gr", "xc", "xd", "xz", "xv",
             "Флаги стран", "sv", "sy", "we", "vl", "sz", "ss", "sc", "sr", "xr", "wx", "sa", "sb", "sd", "se", "sf", "sg", "sh", "si", "sj", "sk", "sl", "sm", "sn", "so", "sp", "sq", "st", "su", "sw", "ta", "tb", "tc", "td", "te", "tf", "tg", "th", "ti", "tj", "tk", "tl", "tm", "tn", "to", "tp", "tq", "tr", "ts", "tt", "tu", "tv", "tw", "tx", "ty", "tz", "ua", "ub", "uc", "ud", "ue", "uf", "ug", "uh", "ui", "uj", "uk", "ul", "um", "un", "uo", "up", "uq", "ur", "us", "ut", "uu", "uv", "uw", "ux", "uy", "uz", "va", "vb", "vc", "vd", "ve", "vf", "vg", "vh", "vi", "vj", "vk", "vm", "vn", "vo", "vp", "vq", "vr", "vs", "vt", "vu", "vv", "vw", "vx", "vy", "vz", "wa", "wb", "wc", "wd", "wf", "wg", "wh", "wi", "wj", "wk", "wl", "wm", "wn", "wo", "wp", "wq", "wr", "ws", "wt", "wu", "wv", "ww", "wy", "wz", "sx", "xq", "xs"
 
