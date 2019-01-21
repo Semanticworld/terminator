@@ -2,7 +2,7 @@
 // @name        Terminator
 // @description Terminator - Chat optimizator
 // @author      Semanticworld
-// @version     0.0.0.17
+// @version     0.0.0.18
 // @updateURL   https://semanticworld.github.io/terminator/terminator.user.js
 // @icon        https://semanticworld.github.io/terminator/assets/ico/ico128.png
 // @icon64      https://semanticworld.github.io/terminator/assets/ico/ico64.png
@@ -17,7 +17,8 @@
 // ==/UserScript==
 (function () {
     'use strict';
-    window.tr_home = 'https://semanticworld.github.io/terminator/assets/';
+    var home = 'https://semanticworld.github.io/terminator/assets/';
+    localStorage.setItem('tr-home', home);
 
     function getHostName(url) {
         var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
@@ -45,10 +46,10 @@
     }
     switch (getHostName(document.location.href)) {
         case 'livacha.com':
-            LoadSelectedTerminator(window.tr_home + 'js/livacha.js?r=' + Math.random());
+            LoadSelectedTerminator(home + 'js/livacha.js?r=' + Math.random());
             break;
         case 'marshat.com':
-            LoadSelectedTerminator(window.tr_home + 'js/marshat.js?r=' + Math.random());
+            LoadSelectedTerminator(home + 'js/marshat.js?r=' + Math.random());
             break;
     }
 })();
