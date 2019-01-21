@@ -1,7 +1,7 @@
 $(document).ready(function () {
     function Terminator() {
-        this.version = "0.0.0.6";
-        this.home = "https://raw.githubusercontent.com/Semanticworld/terminator/beta/assets/";
+        this.version = "0.0.0.7";
+        this.home = "https://semanticworld.github.io/terminator/assets/";
 
     }
     Terminator.prototype.run = function () {
