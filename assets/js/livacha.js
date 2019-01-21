@@ -788,7 +788,7 @@ $(document).ready(function () {
                     if (a.length > 2) {
                         s += '<hr><center>' + a + '</center>';
                     } else {
-                        s += '<img title="" src="' + ti + '" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
+                        s += '<img src="' + ti + '" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + Terminator.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
                     }
                 });
             }
