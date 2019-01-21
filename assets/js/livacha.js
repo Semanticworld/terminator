@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function Terminator() {
-        this.version = localStorage.getItem('tr-ver') != undefined ? localStorage.getItem('tr-home') : "";
+        this.version = localStorage.getItem('tr-ver') != undefined ? localStorage.getItem('tr-ver') : "";
         this.home = localStorage.getItem('tr-home') != undefined ? localStorage.getItem('tr-home') : "";
     }
     Terminator.prototype.run = function () {
