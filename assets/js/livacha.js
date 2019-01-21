@@ -44,8 +44,8 @@ $(document).ready(function () {
                             head.appendChild(style);
                             break;
                         case "css-template":
-                            head = document.head || document.getElementsByTagName('head')[0],
-                                style = document.createElement('style');
+                            head = document.head || document.getElementsByTagName('head')[0];
+                            style = document.createElement('style');
                             style.type = 'text/css';
                             var s = xhr.responseText;
                             s = s.replace("[BASE_PATH]", Terminator.home);
