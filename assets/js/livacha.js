@@ -7,7 +7,13 @@ $(document).ready(function () {
         console.log(this.version);
         var waitPanel = setInterval(function () {
             if ($(".stream-starter").length){
-                return true;
+             
+                if ($(".vjs-live-control").length) {
+                    clearInterval(waitPanel);
+                    Terminator.initSmailes();
+                } else {
+                    return true;
+                }                
             }
             if ($("i.em-smiley").length) {
                 clearInterval(waitPanel);
