@@ -26,7 +26,6 @@
     height: 330px;
     width: 390px;
     z-index: 100;
-    visibility: hidden;
     top: 300px;
     left: 300px;
 
@@ -336,9 +335,11 @@ input[type="checkbox"].ios8-switch-lg:checked+label:after {
 .tr-pr {
     float: right;
 }
-.tr-w50{
+
+.tr-w50 {
     width: 50%;
 }
-.tr-pl10{
+
+.tr-pl10 {
     padding-left: 10px;
 }
