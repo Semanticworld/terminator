@@ -16,6 +16,30 @@
     resize: horizontal;
 }
 
+
+
+
+.tr-tempchat {
+    position: absolute;
+    border: 1px solid #89B;
+    background: #BCE;
+    height: 330px;
+    width: 390px;
+    z-index: 100;
+    visibility: hidden;
+    top: 300px;
+    left: 300px;
+
+    min-height: 320px;
+    min-width: 330px;
+
+    overflow: auto;
+    resize: horizontal;
+}
+
+
+
+
 .tr-title {
     background: #F3F5F6;
     cursor: move;
