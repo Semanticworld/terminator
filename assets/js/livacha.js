@@ -119,6 +119,11 @@ $(document).ready(function () {
             $('.tr-tempchat').tr_drags({
                 handle: ".tr-tempchat-title"
             });
+
+            $($("<div/>").addClass("tr-chatovod")).insertAfter($(".tr-tempchat-title"));
+            $(".tr-chatovod).prepend('<iframe src="//semantic.chatovod.ru/" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="300"></iframe>');
+
+
         }
     }
     Terminator.prototype.createSmilesBox = function () {
