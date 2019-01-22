@@ -18,7 +18,7 @@ $(document).ready(function () {
                 clearInterval(waitPanel);
                 Terminator.initSmailes();
             }
-        }, 1000);
+        }, 3000);
     };
 
     Terminator.prototype.initSmailes = function () {
