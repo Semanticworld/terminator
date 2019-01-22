@@ -7,7 +7,7 @@ $(document).ready(function () {
         console.log(this.version);
         var waitPanel = setInterval(function () {
             if ($(".stream-starter").length) {
-                if ($(".vjs-live-control").length) {
+                if ($(".video-output-container").length) {
                     clearInterval(waitPanel);
                     Terminator.initSmailes();
                 } else {
