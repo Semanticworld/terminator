@@ -35,6 +35,16 @@
     overflow: auto;
     resize: horizontal;
 }
+.tr-tempchat-title {
+    background: #F3F5F6;
+    cursor: move;
+    font-size: 14px;
+    line-height: 10px;
+    padding: 4px;
+    text-align: center;
+    color: black;
+}
+
 
 
 

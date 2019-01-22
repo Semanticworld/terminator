@@ -116,6 +116,9 @@ $(document).ready(function () {
                 return true;
             }
             $("#page").append($("<div/>").addClass("tr-tempchat").prepend($("<div/>").addClass("tr-tempchat-title").prepend('<span>Резервный чат</span><span class="tr-tempchat-close"></span>')));
+            $('.tr-tempchat').tr_drags({
+                handle: ".tr-tempchat-title"
+            });
         }
     }
     Terminator.prototype.createSmilesBox = function () {
