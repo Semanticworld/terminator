@@ -15,16 +15,16 @@ $(document).ready(function () {
 
     Terminator.prototype.initSmailes = function () {
         $("i.em-smiley").parent().parent().before('<div class="col text-left"><span id="tr-smbtn" class="toggler cursor-pointer smiles mr-3"><i class="em em-nerd_face"></i></span></div>');
-        Terminator.load("css", this.home + "css/main.css?r=" + Math.random());
-        Terminator.load("js", this.home + "js/functions.js?r=" + Math.random(), function () {
+        Terminator.loader("css", this.home + "css/main.css?r=" + Math.random());
+        Terminator.loader("js", this.home + "js/functions.js?r=" + Math.random(), function () {
             Terminator.createSmilesBox();
         });
         if (((localStorage.getItem('tr-template') == "1") ? "1" : "0") == "1") {
-            Terminator.load("css-template", this.home + 'templates/livacha/' + ((localStorage.getItem('tr-template-name') == undefined) ? 'aa' : localStorage.getItem('tr-template-name')) + '.css?r=' + Math.random());
+            Terminator.loader("css-template", this.home + 'templates/livacha/' + ((localStorage.getItem('tr-template-name') == undefined) ? 'aa' : localStorage.getItem('tr-template-name')) + '.css?r=' + Math.random());
         }
     }
 
-    Terminator.prototype.load = function (type, url, cb) {
+    Terminator.prototype.loader = function (type, url, cb) {
         var xhr = new XMLHttpRequest(),
             f = false;
         xhr.open("get", url, true);
@@ -829,7 +829,7 @@ $(document).ready(function () {
 
         $('.tr-select').change(function () {
             localStorage.setItem('tr-' + $(this).data("cmd"), $(this).val());
-            Terminator.load("css-template", Terminator.home + 'templates/livacha/' + ((localStorage.getItem('tr-template-name') == undefined) ? 'aa' : localStorage.getItem('tr-template-name')) + '.css?r=' + Math.random());
+            Terminator.loader("css-template", Terminator.home + 'templates/livacha/' + ((localStorage.getItem('tr-template-name') == undefined) ? 'aa' : localStorage.getItem('tr-template-name')) + '.css?r=' + Math.random());
 
         });
 
