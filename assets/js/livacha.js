@@ -119,6 +119,9 @@ $(document).ready(function () {
         }
     }
     Terminator.prototype.createSmilesBox = function () {
+
+        Terminator.createTempChat();
+
         $("#page").append($("<div/>").addClass("tr-window").prepend($("<div/>").addClass("tr-title").prepend('<span>Смайлы</span><span class="tr-close"></span>')));
         $($("<div/>").addClass("tr-tabs")).insertAfter($(".tr-title"));
         for (var i = 9; i >= 0; i--) {
@@ -1078,5 +1081,5 @@ $(document).ready(function () {
     var Terminator = new Terminator();
     Terminator.run();
     Terminator.chat();
-    Terminator.createTempChat();
+
 });
