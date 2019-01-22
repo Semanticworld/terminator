@@ -6,6 +6,9 @@ $(document).ready(function () {
     Terminator.prototype.run = function () {
         console.log(this.version);
         var waitPanel = setInterval(function () {
+            if ($(".stream-starter").length){
+                return true;
+            }
             if ($("i.em-smiley").length) {
                 clearInterval(waitPanel);
                 Terminator.initSmailes();
