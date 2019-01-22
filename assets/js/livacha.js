@@ -112,10 +112,11 @@ $(document).ready(function () {
     }
     Terminator.prototype.createTempChat = function () {
         if (((localStorage.getItem('tr-tempchat') == "1") ? "1" : "0") == "1") {
-        if ($(".tr-tempchat").length) {
-            return true;
+            if ($(".tr-tempchat").length) {
+                return true;
+            }
+            $("#page").append($("<div/>").addClass("tr-tempchat").prepend($("<div/>").addClass("tr-tempchat-title").prepend('<span>Резервный чат</span><span class="tr-tempchat-close"></span>')));
         }
-        $("#page").append($("<div/>").addClass("tr-tempchat").prepend($("<div/>").addClass("tr-tempchat-title").prepend('<span>Резервный чат</span><span class="tr-tempchat-close"></span>')));
     }
     Terminator.prototype.createSmilesBox = function () {
         $("#page").append($("<div/>").addClass("tr-window").prepend($("<div/>").addClass("tr-title").prepend('<span>Смайлы</span><span class="tr-close"></span>')));
