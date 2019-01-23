@@ -846,6 +846,7 @@ $(document).ready(function () {
         s += '<div class="tr-pt10"><select id="tr-t-select" data-cmd="template-name" class="form-control tr-select"><option value="aa">Стиль 1</option><option value="ab">Стиль 2</option><option value="ac">Стиль 3</option></select></div>';
         s += createInput('antigoto', 'ch6', 'Без редиректов');
         s += createInput('tempchat', 'ch7', 'Резервный чат');
+        s += createInput('antimainchat', 'ch8', 'Отключить чат на главной');
         s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
         $(".tr-sm9-block").append(s);
         $("#tr-t-select").val((localStorage.getItem('tr-template-name') == undefined) ? "aa" : localStorage.getItem('tr-template-name'));
