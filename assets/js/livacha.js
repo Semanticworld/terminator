@@ -125,7 +125,7 @@ $(document).ready(function () {
 
 
             $('.tr-tempchat').sizeChanged(function(){
-                console.log(lastHeight);
+                console.log(height);
             })
 
 
