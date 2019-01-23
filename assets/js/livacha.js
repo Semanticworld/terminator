@@ -1,6 +1,7 @@
 var trdiv = document.getElementById("chat-global");
-trdiv.parentNode.removeChild(trdiv);
-
+if (trdiv != null) {
+    trdiv.parentNode.removeChild(trdiv);
+}
 
 $(document).ready(function () {
     function Terminator() {
