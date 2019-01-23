@@ -72,6 +72,17 @@
     content: "\00274C";
 }
 
+
+
+.tr-tempchat-close {
+    float: right;
+    cursor: pointer;
+}
+
+.tr-tempchat-close:after {
+    content: "\00274C";
+}
+
 .tr-smile {
     padding: 10px;
 }
