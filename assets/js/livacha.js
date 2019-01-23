@@ -127,7 +127,11 @@ $(document).ready(function () {
             $('.tr-tempchat').sizeChanged(function (size) {
                 $('.chatovodframe').css('height', size.height - 55);
                 $('.chatovodframe').css('width', size.width - 25);
-            })
+            });
+            $(".tr-tempchat-close").on("click", function (e) {
+                e.preventDefault();
+                $(".tr-tempchat").remove();
+            });
 
 
         }
