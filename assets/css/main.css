@@ -12,7 +12,7 @@
     min-height: 320px;
     min-width: 330px;
 
-    overflow: auto;
+    overflow: hidden;
     resize: horizontal;
 }
 
