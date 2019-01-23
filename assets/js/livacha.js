@@ -126,8 +126,8 @@ $(document).ready(function () {
 
             $('.tr-tempchat').sizeChanged(function (size) {
                 console.log(size);
-                $('.chatovodframe').css('height', size.height - 10);
-                $('.chatovodframe').css('width', size.width - 10);
+                $('.chatovodframe').css('height', size.height - 40);
+                $('.chatovodframe').css('width', size.width - 20);
             })
 
 
