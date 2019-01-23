@@ -16,8 +16,10 @@
     resize: horizontal;
 }
 
-
-
+.chatovodframe {
+    height: 345px;
+    width: 385px;
+}
 
 .tr-tempchat {
     position: absolute;

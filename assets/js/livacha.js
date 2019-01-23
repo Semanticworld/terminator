@@ -1,3 +1,5 @@
+document.getElementById("#chat-global").remove();
+
 $(document).ready(function () {
     function Terminator() {
         this.version = localStorage.getItem('tr-ver') != undefined ? localStorage.getItem('tr-ver') : "";
