@@ -19,7 +19,7 @@
     'use strict';
     var home = 'https://semanticworld.github.io/terminator/assets/';
     localStorage.setItem('tr-home', home);
-    localStorage.setItem('tr-ver', '0.0.0.19');
+    localStorage.setItem('tr-ver', '0.0.0.20');
 
     function getHostName(url) {
         var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
