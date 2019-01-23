@@ -1,6 +1,8 @@
-var trdiv = document.getElementById("chat-global");
-if (trdiv != null) {
-    trdiv.parentNode.removeChild(trdiv);
+if (((localStorage.getItem('tr-antimainchat') == "1") ? "1" : "0") == "1") {
+    var trdiv = document.getElementById("chat-global");
+    if (trdiv != null) {
+        trdiv.parentNode.removeChild(trdiv);
+    }
 }
 
 $(document).ready(function () {
