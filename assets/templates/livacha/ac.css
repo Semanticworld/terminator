@@ -371,6 +371,6 @@ body.backgrounded .app-room .room-background-all {
     min-height: 350px;
     min-width: 400px;
     overflow: auto;
-    resize: horizontal;
+    resize: both;
     box-shadow: 8px 4px 20px #00000099;
 }
