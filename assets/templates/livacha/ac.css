@@ -243,7 +243,7 @@ button,
 
 .app-chat.floating,
 .app-stream-playable.fixed,
-.tr-window {
+.tr-window, .tr-tempchat {
     box-shadow: 12px 15px 20px 0px #00000061;
     border-radius: 10px 10px 0 0 !important;
 }
