@@ -121,11 +121,10 @@ $(document).ready(function () {
             });
 
             $($("<div/>").addClass("tr-chatovod")).insertAfter($(".tr-tempchat-title"));
-            $(".tr-chatovod").prepend('<iframe class="chatovodframe" src="//semantic.chatovod.ru/" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="360"></iframe>');
+            $(".tr-chatovod").prepend('<center><iframe class="chatovodframe" src="//semantic.chatovod.ru/" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="360"></iframe></center>');
 
 
             $('.tr-tempchat').sizeChanged(function (size) {
-                console.log(size);
                 $('.chatovodframe').css('height', size.height - 55);
                 $('.chatovodframe').css('width', size.width - 25);
             })
