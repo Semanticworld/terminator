@@ -33,7 +33,7 @@
     min-width: 400px;
 
     overflow: auto;
-    resize: horizontal;
+    resize: both;
 }
 .tr-tempchat-title {
     background: #F3F5F6;
