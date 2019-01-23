@@ -35,6 +35,7 @@
     overflow: auto;
     resize: both;
 }
+
 .tr-tempchat-title {
     background: #F3F5F6;
     cursor: move;
@@ -45,6 +46,9 @@
     color: black;
 }
 
+.tr-chatovod {
+    padding: 5px;
+}
 
 
 
