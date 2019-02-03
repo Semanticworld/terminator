@@ -1046,6 +1046,8 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
             flex["flex-wrap"]       = (_minimizedArea.position.indexOf("left") >= 0) ? "wrap" : "wrap-reverse";
         }
         _mainContainer.css(flex);
+        _mainContainer.css('position', 'relative');
+        _mainContainer.css('z-index', 3000);
     }
     
     
