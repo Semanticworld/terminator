@@ -4,7 +4,7 @@ t.loadjs = function (url, fn) {
     var script = document.createElement("SCRIPT");
     script.src = url;
     script.type = 'text/javascript';
-    script.onload = function () {
+    script.onload = function (fn) {
         console.log(typeof fn);
         if (typeof fn === "function") {
             fn();
