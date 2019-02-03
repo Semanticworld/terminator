@@ -74,6 +74,20 @@ t.wininit = function () {
                 .on('click', function () {
                     $("#trwin").PopupWindow("open");
                 });
+
+                var tabsData = [
+                    { paneId: 'tab01', title: 'Tab <em>1</em> of 12', content: 'Tab Number 1 Content', active: true, disabled: false },
+                    { paneId: 'tab02', title: 'Tab 2 of 12', content: 'Tab Number 2 Content', active: false, disabled: false },
+                    { paneId: 'tab03', title: 'Tab 3 of 12', content: 'Tab Number 3 Content', active: false, disabled: false },
+                    { paneId: 'tab04', title: 'Tab 4 of 12', content: 'Tab Number 4 Content', active: false, disabled: false },
+                    { paneId: 'tab05', title: 'Tab 5 of 12', content: 'Tab Number 5 Content', active: false, disabled: false }
+                  ];
+                  
+                  $('.trbody').scrollingTabs({
+                    tabs: tabsData
+                  });
+
+
         } else {
             setTimeout(wait, 100);
         }
@@ -96,6 +110,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run31")
+        console.log("run32")
     });
 }
