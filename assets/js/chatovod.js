@@ -5,19 +5,16 @@ t.loadjs = function (url) {
     script.src = url;
     script.type = 'text/javascript';
     script.onload = function () {
-     //   var $ = window.jQuery;
         t.run();
     };
     document.getElementsByTagName("head")[0].appendChild(script);
 }
 t.loadjs("https://code.jquery.com/jquery-3.3.1.min.js");
-
 t.repl = function (str, f, r) {
     var regex = new RegExp(f, "g");
     var l = str.replace(regex, r);
     return l.split("*").join("");
 }
-
 t.messages = function (o) {
     var $m = $(o);
     var h = $(o).html();
@@ -33,7 +30,6 @@ t.messages = function (o) {
         }
     }
 }
-
 t.run = function () {
     $(document).ready(function () {
         $('div.chatMessage').each(function () {
