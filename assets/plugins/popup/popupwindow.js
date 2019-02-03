@@ -197,7 +197,7 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
     
     // Minimized Area
     var _minimizedArea = {
-        position    : "top left",
+        position    : "bottom left",
         direction   : "vertical"
     };
     
