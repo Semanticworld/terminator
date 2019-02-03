@@ -52,7 +52,7 @@ t.messages = function (o) {
 
 t.wininit = function () {
     function wait() {
-    console.log(typeof(PopupWindow));
+    console.log(typeof(jQuery.PopupWindow));
         $("#trwin").PopupWindow({
         autoOpen: false,
         modal: false,
