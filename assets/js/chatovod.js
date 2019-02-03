@@ -1,15 +1,17 @@
 var t = {};
 t.home = localStorage.getItem('tr-home');
-t.loadjs = function (url) {
+t.loadjs = function (url, fn) {
     var script = document.createElement("SCRIPT");
     script.src = url;
     script.type = 'text/javascript';
     script.onload = function () {
-        t.run();
+        if (typeof fn === "function") {
+            fn();
+        }
     };
     document.getElementsByTagName("head")[0].appendChild(script);
 }
-t.loadjs("https://code.jquery.com/jquery-3.3.1.min.js");
+t.loadjs("https://code.jquery.com/jquery-3.3.1.min.js", t.run);
 t.repl = function (str, f, r) {
     var regex = new RegExp(f, "g");
     var l = str.replace(regex, r);
