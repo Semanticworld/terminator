@@ -93,6 +93,6 @@ t.run = function () {
             .on('click', function () {
                 $("#trwin").PopupWindow("open");
             });
-        console.log("run13")
+        console.log("run14")
     });
 }
