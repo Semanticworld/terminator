@@ -1037,6 +1037,7 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
     
     function _SetMinimizedArea(){
         var flex = {};
+        console.log(_minimizedArea.direction);
         if (_minimizedArea.direction == "horizontal") {
             flex["flex-direction"]  = (_minimizedArea.position.indexOf("left") >= 0) ? "row" : "row-reverse";
             flex["flex-wrap"]       = (_minimizedArea.position.indexOf("top") >= 0) ? "wrap" : "wrap-reverse";
