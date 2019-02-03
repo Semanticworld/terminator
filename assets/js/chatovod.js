@@ -87,6 +87,7 @@ t.wininit = function () {
             setTimeout(wait, 100);
         }
     }
+    setTimeout(wait, 100);
 }
 
 t.run = function () {
