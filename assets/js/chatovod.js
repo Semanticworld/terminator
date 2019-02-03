@@ -71,6 +71,11 @@ t.wininit = function () {
         width: 400,
         keepInViewport: true
     });
+    $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
+    .insertBefore($(".chatLinkSmiles"))
+    .on('click', function () {
+        $("#trwin").PopupWindow("open");
+    });
     console.log("++")
 }
 
@@ -86,11 +91,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
-            .insertBefore($(".chatLinkSmiles"))
-            .on('click', function () {
-                $("#trwin").PopupWindow("open");
-            });
-        console.log("run21")
+        console.log("run22")
     });
 }
