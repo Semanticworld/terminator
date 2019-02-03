@@ -45,37 +45,42 @@ t.messages = function (o) {
         }
     }
 }
-t.initwin = function () {
-    $('<div />').appendTo('body').attr('id', 'trwin');
-    $('<div class="trbody">Проверка</div>').appendTo('#trwin');
-    $("#trwin").PopupWindow({
-        autoOpen: false,
-        modal: false,
-        buttons: {
-            close: true,
-            maximize: false,
-            collapse: true,
-            minimize: true
-        },
-        buttonsTexts: {
-            close: "Закрыть",
-            unmaximize: "Восстановить",
-            minimize: "Минимизировать",
-            unminimize: "Показать",
-            collapse: "Скрыть",
-            uncollapse: "Раскрыть"
-        },
-        title: "Терминатор",
-        height: 200,
-        width: 400,
-        keepInViewport: true
-    });
 
-}
+t.window=false;
 t.run = function () {
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
-    t.loadjs("js", t.home + "plugins/popup/popupwindow", "initwin");
+    t.loadjs("js", t.home + "plugins/popup/popupwindow");
     $(document).ready(function () {
+
+        $('<div />').appendTo('body').attr('id', 'trwin');
+        $('<div class="trbody">Проверка</div>').appendTo('#trwin');
+        $("#trwin").PopupWindow({
+            autoOpen: false,
+            modal: false,
+            buttons: {
+                close: true,
+                maximize: false,
+                collapse: true,
+                minimize: true
+            },
+            buttonsTexts: {
+                close: "Закрыть",
+                unmaximize: "Восстановить",
+                minimize: "Минимизировать",
+                unminimize: "Показать",
+                collapse: "Скрыть",
+                uncollapse: "Раскрыть"
+            },
+            title: "Терминатор",
+            height: 200,
+            width: 400,
+            keepInViewport: true
+        });
+
+
+
+
+
         $('div.chatMessage').each(function () {
             t.messages(this);
         })
@@ -87,6 +92,6 @@ t.run = function () {
             .on('click', function () {
                 $("#trwin").PopupWindow("open");
             });
-        console.log("run18")
+        console.log("run19")
     });
 }
