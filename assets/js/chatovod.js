@@ -47,10 +47,7 @@ t.messages = function (o) {
 }
 
 
-function func() {
-    alert( 'Привет' );
-  }
-  
+
   
 
 t.wininit = function () {
