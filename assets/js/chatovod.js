@@ -1,16 +1,30 @@
 var t = {};
 t.home = localStorage.getItem('tr-home');
-t.loadjs = function (url, fn=false) {
-    var script = document.createElement("SCRIPT");
-    script.src = url;
-    script.type = 'text/javascript';
-    script.onload = function () {
-        console.log(typeof fn);
-        if (fn) t[fn]();
-    };
-    document.getElementsByTagName("head")[0].appendChild(script);
+t.loadjs = function (type, url, fn = false) {
+    switch (type) {
+        case "css":
+            var s = document.createElement("link");
+            s.rel = 'stylesheet';
+            s.href = url + ".css";
+            s.type = 'text/css';
+            s.media = 'all';
+            s.onload = function () {
+                if (fn) t[fn]();
+            };
+            break;
+        case "js":
+            var s = document.createElement("SCRIPT");
+            s.src = url + ".js";
+            s.type = 'text/javascript';
+            s.onload = function () {
+                if (fn) t[fn]();
+            };
+            break;
+    }
+    document.getElementsByTagName("head")[0].appendChild(s);
 }
-t.loadjs("https://code.jquery.com/jquery-3.3.1.min.js", 'run');
+
+t.loadjs("js", "https://code.jquery.com/jquery-3.3.1.min.js", "run");
 t.repl = function (str, f, r) {
     var regex = new RegExp(f, "g");
     var l = str.replace(regex, r);
@@ -32,6 +46,8 @@ t.messages = function (o) {
     }
 }
 t.run = function () {
+    t.loadjs("js", t.home + "plugins/popup/popupwindow.min");
+    t.loadjs("css", t.home + "plugins/popup/popupwindow");
     $(document).ready(function () {
         $('div.chatMessage').each(function () {
             t.messages(this);
