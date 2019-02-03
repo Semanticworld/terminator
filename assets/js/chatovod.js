@@ -1,1 +1,41 @@
-console.log("runed");
+var t = {};
+t.loadjs = function (url) {
+    t.home = 'https://semanticworld.github.io/terminator/assets/';
+    var script = document.createElement("SCRIPT");
+    script.src = url;
+    script.type = 'text/javascript';
+    script.onload = function () {
+        var $ = window.jQuery;
+        t.run();
+    };
+    document.getElementsByTagName("head")[0].appendChild(script);
+}
+t.loadjs("https://code.jquery.com/jquery-3.3.1.min.js");
+
+t.repl = function (str, f, r) {
+    var regex = new RegExp(f, "g");
+    var l = str.replace(regex, r);
+    return l.split("*").join("");
+}
+
+t.run = function () {
+    $(document).ready(function () {
+        $(document).on('DOMNodeInserted', "div.chatMessage", function (e) {
+            var $mms = $(this);
+            var h = $(this).html();
+            if (h != undefined) {
+                var a = h.match(/\*...\*/g);
+                if (a != null) {
+                    a.forEach(function (a) {
+                        var z = a.split("*").join("/*");
+                        console.log(a);
+                        var ext = 'gif';
+                        var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
+                        h = t.repl(h, z, l);
+                    });
+                    $($mms).html(h);
+                }
+            }
+        });
+    });
+}
