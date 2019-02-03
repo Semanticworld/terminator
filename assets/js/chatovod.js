@@ -55,12 +55,13 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
+        $('<div id="tr-win" style="display:none;">Это смайлы</div>').insertBefore($("body"));
         $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
             .insertBefore($(".chatLinkSmiles"))
             .on('click', function () {
                 $("#tr-win").PopupWindow("open");
             });
-        $('<div id="tr-win" style="display:none;">Это смайлы</div>').insertBefore($("body"));
-        console.log("run")
+
+        console.log("run2")
     });
 }
