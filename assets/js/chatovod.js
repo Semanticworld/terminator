@@ -25,10 +25,9 @@ t.messages = function (o) {
         var a = h.match(/\*...\*/g);
         if (a != null) {
             a.forEach(function (a) {
-                var z = a.split("*").join("/*");
                 var ext = 'gif';
                 var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
-                h = t.repl(h, z, l);
+                h = t.repl(h, a.split("*").join("/*"), l);
             });
             $($m).html(h);
         }
