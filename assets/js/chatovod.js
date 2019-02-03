@@ -5,7 +5,7 @@ t.loadjs = function (url) {
     script.src = url;
     script.type = 'text/javascript';
     script.onload = function () {
-        var $ = window.jQuery;
+     //   var $ = window.jQuery;
         t.run();
     };
     document.getElementsByTagName("head")[0].appendChild(script);
