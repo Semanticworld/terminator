@@ -158,7 +158,8 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
         },
         resizer_topleft : {
             "position"          : "absolute",
-            "cursor"            : "nw-resize"
+            "cursor"            : "nw-resize",
+            "top"               :"100",
         },
         resizer_topright : {
             "position"          : "absolute",
