@@ -47,9 +47,16 @@ t.messages = function (o) {
 }
 
 
+function func() {
+    alert( 'Привет' );
+  }
+  
+  
 
 t.wininit = function () {
-    $("#trwin").PopupWindow({
+    function wait() {
+    console.log(typeof($.PopupWindow));
+        $("#trwin").PopupWindow({
         autoOpen: false,
         modal: false,
         buttons: {
@@ -76,7 +83,9 @@ t.wininit = function () {
         .on('click', function () {
             $("#trwin").PopupWindow("open");
         });
-    console.log("++")
+    console.log("++");
+    }
+    setTimeout(wait, 1000);
 }
 
 t.run = function () {
@@ -91,6 +100,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run23")
+        console.log("run24")
     });
 }
