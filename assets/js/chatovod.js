@@ -67,7 +67,6 @@ t.run = function () {
                     modal: false,
                     buttonsTexts: {
                         close: "Закрыть",
-                        maximize: "На весь экран",
                         unmaximize: "Восстановить",
                         minimize: "Минимизировать",
                         unminimize: "Показать",
@@ -77,7 +76,9 @@ t.run = function () {
                     title: "Терминатор",
                     height: 200,
                     width: 400,
-                    keepInViewport: true
+                    keepInViewport: true,
+                    maximize: false,
+
                 });
             }
         }
@@ -86,12 +87,8 @@ t.run = function () {
         $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
             .insertBefore($(".chatLinkSmiles"))
             .on('click', function () {
-
-
-
                 $("#trwin").PopupWindow("open");
             });
-
-        console.log("run10")
+        console.log("run11")
     });
 }
