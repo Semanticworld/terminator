@@ -59,13 +59,16 @@ t.run = function () {
 
         $('<div />').appendTo('body').attr('id', 'trwin');
         $('<div class="trbody">Проверка</div>').appendTo('#trwin');
-        $("#trwin").PopupWindow({
-            autoOpen    : false
-        });
+
 
         $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
             .insertBefore($(".chatLinkSmiles"))
             .on('click', function () {
+
+                $("#trwin").PopupWindow({
+                    autoOpen    : false
+                });
+
                 $("#trwin").PopupWindow("open");
             });
 
