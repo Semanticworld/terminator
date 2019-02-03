@@ -55,11 +55,15 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        $('<div id="tr-win" style="display:none;">Это смайлы</div>').insertBefore($("body"));
+        //  $('<div id="tr-win" style="display:none;">Это смайлы</div>').insertBefore($("body"));
+
+        $('<div />').appendTo('body').attr('id', 'trwin');
+
+
         $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
             .insertBefore($(".chatLinkSmiles"))
             .on('click', function () {
-                $("#tr-win").PopupWindow("open");
+                $("#trwin").PopupWindow("open");
             });
 
         console.log("run2")
