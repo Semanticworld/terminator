@@ -6,13 +6,14 @@ t.loadjs = function (url, fn) {
     script.type = 'text/javascript';
     script.onload = function (fn) {
         console.log(typeof fn);
-        if (typeof fn == "object") {
-            fn();
+        if (fn) {
+            t[fn]();
+            console.log("start");
         }
     };
     document.getElementsByTagName("head")[0].appendChild(script);
 }
-t.loadjs("https://code.jquery.com/jquery-3.3.1.min.js", t.run);
+t.loadjs("https://code.jquery.com/jquery-3.3.1.min.js", 'run');
 t.repl = function (str, f, r) {
     var regex = new RegExp(f, "g");
     var l = str.replace(regex, r);
