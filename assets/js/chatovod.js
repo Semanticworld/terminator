@@ -65,6 +65,12 @@ t.run = function () {
                 $("#trwin").PopupWindow({
                     autoOpen: false,
                     modal: false,
+                    buttons: {
+                        close: true,
+                        maximize: false,
+                        collapse: true,
+                        minimize: true
+                    },
                     buttonsTexts: {
                         close: "Закрыть",
                         unmaximize: "Восстановить",
@@ -76,9 +82,7 @@ t.run = function () {
                     title: "Терминатор",
                     height: 200,
                     width: 400,
-                    keepInViewport: true,
-                    maximize: false,
-
+                    keepInViewport: true
                 });
             }
         }
@@ -89,6 +93,6 @@ t.run = function () {
             .on('click', function () {
                 $("#trwin").PopupWindow("open");
             });
-        console.log("run12")
+        console.log("run13")
     });
 }
