@@ -6,7 +6,7 @@ t.loadjs = function (url, fn) {
     script.type = 'text/javascript';
     script.onload = function (fn) {
         console.log(typeof fn);
-        if (typeof fn === "function") {
+        if (typeof fn == "object") {
             fn();
         }
     };
