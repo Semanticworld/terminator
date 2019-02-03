@@ -58,7 +58,7 @@ t.run = function () {
         $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
             .insertBefore($(".chatLinkSmiles"))
             .on('click', function () {
-                $("#id").PopupWindow("open");
+                $("#tr-win").PopupWindow("open");
             });
         $('<div id="tr-win" style="display:none;">Это смайлы</div>').insertBefore($("body"));
         console.log("run")
