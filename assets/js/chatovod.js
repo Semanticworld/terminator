@@ -51,54 +51,55 @@ t.messages = function (o) {
 
 
 t.wininit = function () {
-        function wait() {
-            if (typeof (jQuery().PopupWindow) == "function") {
-                $("#trwin").PopupWindow({
-                    autoOpen: false,
-                    modal: false,
-                    buttons: {
-                        close: true,
-                        maximize: false,
-                        collapse: true,
-                        minimize: true
-                    },
-                    buttonsTexts: {
-                        close: "Закрыть",
-                        unmaximize: "Восстановить",
-                        minimize: "Минимизировать",
-                        unminimize: "Показать",
-                        collapse: "Скрыть",
-                        uncollapse: "Раскрыть"
-                    },
-                    title: "Терминатор",
-                    height: 200,
-                    width: 400,
-                    keepInViewport: true
-                });
-                $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
-                    .insertBefore($(".chatLinkSmiles"))
-                    .on('click', function () {
-                        $("#trwin").PopupWindow("open");
-                    });
-
-
-            } else {
-                 setTimeout(wait, 100);
-            }
-        }
-
-        t.run = function () {
-            $('<div />').appendTo('body').attr('id', 'trwin');
-            $('<div class="trbody">Проверка</div>').appendTo('#trwin');
-            t.loadjs("css", t.home + "plugins/popup/popupwindow");
-            t.loadjs("js", t.home + "plugins/popup/popupwindow", "wininit");
-            $(document).ready(function () {
-                $('div.chatMessage').each(function () {
-                    t.messages(this);
-                })
-                $(document).on('DOMNodeInserted', "div.chatMessage", function () {
-                    t.messages(this);
-                });
-                console.log("run27")
+    function wait() {
+        if (typeof jQuery().PopupWindow == "function") {
+            $("#trwin").PopupWindow({
+                autoOpen: false,
+                modal: false,
+                buttons: {
+                    close: true,
+                    maximize: false,
+                    collapse: true,
+                    minimize: true
+                },
+                buttonsTexts: {
+                    close: "Закрыть",
+                    unmaximize: "Восстановить",
+                    minimize: "Минимизировать",
+                    unminimize: "Показать",
+                    collapse: "Скрыть",
+                    uncollapse: "Раскрыть"
+                },
+                title: "Терминатор",
+                height: 200,
+                width: 400,
+                keepInViewport: true
             });
+            $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
+                .insertBefore($(".chatLinkSmiles"))
+                .on('click', function () {
+                    $("#trwin").PopupWindow("open");
+                });
+
+
+        } else {
+            setTimeout(wait, 100);
         }
+    }
+}
+
+t.run = function () {
+    $('<div />').appendTo('body').attr('id', 'trwin');
+    $('<div class="trbody">Проверка</div>').appendTo('#trwin');
+    t.loadjs("css", t.home + "plugins/popup/popupwindow");
+    t.loadjs("js", t.home + "plugins/popup/popupwindow", "wininit");
+    $(document).ready(function () {
+        $('div.chatMessage').each(function () {
+            t.messages(this);
+        })
+        $(document).on('DOMNodeInserted', "div.chatMessage", function () {
+            t.messages(this);
+        });
+        console.log("run28")
+    });
+}
