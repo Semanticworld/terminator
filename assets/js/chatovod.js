@@ -18,8 +18,25 @@ t.repl = function (str, f, r) {
     return l.split("*").join("");
 }
 
-t.run = function () {
+
+
+t.start=function(){
     $(document).ready(function () {
+    $('div.chatMessage').each(function(i, ele) {
+        console.log(i + ': ' + ele);  
+        // 0: <div id="outer"><div id="inner"></div></div>
+        // 1: <div id="inner"></div>
+    })
+
+});
+}
+
+t.run = function () {
+    t.start();
+    $(document).ready(function () {
+        $(document).on('DOMNodeInserted', "div.chatMessages", function (e) {
+            console.log(this);
+        });
         $(document).on('DOMNodeInserted', "div.chatMessage", function (e) {
             var $m = $(this);
             var h = $(this).html();
