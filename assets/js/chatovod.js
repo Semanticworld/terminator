@@ -46,7 +46,7 @@ t.messages = function (o) {
     }
 }
 t.run = function () {
-    t.loadjs("js", t.home + "plugins/popup/popupwindow.min");
+    t.loadjs("js", t.home + "plugins/popup/popupwindow");
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
     $(document).ready(function () {
         $('div.chatMessage').each(function () {
@@ -59,14 +59,14 @@ t.run = function () {
 
         $('<div />').appendTo('body').attr('id', 'trwin');
         $('<div class="trbody">Проверка</div>').appendTo('#trwin');
-        $("#trwin").PopupWindow({
+        $("#trwin").PopupWindow2({
             autoOpen    : false
         });
 
         $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
             .insertBefore($(".chatLinkSmiles"))
             .on('click', function () {
-                $("#trwin").PopupWindow("open");
+                $("#trwin").PopupWindow2("open");
             });
 
         console.log("run5")
