@@ -31,7 +31,7 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
 .popupwindow_titlebar {
     background-color    : #e9e9e9;
     padding             : 4px;
-    z-index: 9999;
+    top: 50px;
 }
 .popupwindow_titlebar_draggable {
     cursor              : move;
