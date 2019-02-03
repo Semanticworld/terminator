@@ -69,6 +69,6 @@ t.run = function () {
                 $("#trwin").PopupWindow2("open");
             });
 
-        console.log("run5")
+        console.log("run6")
     });
 }
