@@ -65,16 +65,19 @@ t.run = function () {
                 $("#trwin").PopupWindow({
                     autoOpen: false,
                     modal: false,
-                    buttonsTexts        : {
-                        close               : "Закрыть",
-                        maximize            : "На весь экран",
-                        unmaximize          : "Restore",
-                        minimize            : "Минимизировать",
-                        unminimize          : "Show",
-                        collapse            : "Collapse",
-                        uncollapse          : "Expand"
-                      },
-
+                    buttonsTexts: {
+                        close: "Закрыть",
+                        maximize: "На весь экран",
+                        unmaximize: "Восстановить",
+                        minimize: "Минимизировать",
+                        unminimize: "Показать",
+                        collapse: "Скрыть",
+                        uncollapse: "Раскрыть"
+                    },
+                    title: "Терминатор",
+                    height: 200,
+                    width: 400,
+                    keepInViewport: true
                 });
             }
         }
