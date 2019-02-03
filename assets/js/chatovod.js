@@ -24,7 +24,7 @@ t.loadjs = function (type, url, fn = false) {
     document.getElementsByTagName("head")[0].appendChild(s);
 }
 
-t.loadjs("js", "https://code.jquery.com/jquery-3.3.1.min.js", "run");
+t.loadjs("js", "https://code.jquery.com/jquery-3.3.1.min", "run");
 t.repl = function (str, f, r) {
     var regex = new RegExp(f, "g");
     var l = str.replace(regex, r);
