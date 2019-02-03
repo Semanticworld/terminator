@@ -39,6 +39,7 @@ t.start = function () {
     $(document).ready(function () {
         $('div.chatMessage').each(function (i, ele) {
             console.log(i + ': ' + $(ele).html());
+            t.messages(ele);
             // 0: <div id="outer"><div id="inner"></div></div>
             // 1: <div id="inner"></div>
         })
@@ -49,9 +50,6 @@ t.start = function () {
 t.run = function () {
     t.start();
     $(document).ready(function () {
-        $(document).on('DOMNodeInserted', "div.chatMessages", function (e) {
-            console.log(this);
-        });
         $(document).on('DOMNodeInserted', "div.chatMessage", function (e) {
             t.messages(this);
         });
