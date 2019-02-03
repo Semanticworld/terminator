@@ -38,6 +38,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        $(".chatLinkSmiles").appendChild('<a href="#" class="chatLinkSmiles"><span>смайлы</span></a>');
+        $(".chatSendLinksPanel").appendChild('<a href="#" class="chatLinkSmiles"><span>смайлы</span></a>');
     });
 }
