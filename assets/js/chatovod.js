@@ -55,6 +55,9 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        $('<a href="#" class="chatLinkSmiles"><span>смайлы</span></a>').insertBefore($(".chatLinkSmiles"));
+        $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
+            .insertBefore($(".chatLinkSmiles")).on('click', function () {
+                console.log("clicked");
+            });
     });
 }
