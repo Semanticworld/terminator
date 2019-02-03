@@ -46,41 +46,39 @@ t.messages = function (o) {
     }
 }
 
-t.window=false;
+
+
+t.wininit = function () {
+    $("#trwin").PopupWindow({
+        autoOpen: false,
+        modal: false,
+        buttons: {
+            close: true,
+            maximize: false,
+            collapse: true,
+            minimize: true
+        },
+        buttonsTexts: {
+            close: "Закрыть",
+            unmaximize: "Восстановить",
+            minimize: "Минимизировать",
+            unminimize: "Показать",
+            collapse: "Скрыть",
+            uncollapse: "Раскрыть"
+        },
+        title: "Терминатор",
+        height: 200,
+        width: 400,
+        keepInViewport: true
+    });
+}
+
 t.run = function () {
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
-    t.loadjs("js", t.home + "plugins/popup/popupwindow");
+    $('<div />').appendTo('body').attr('id', 'trwin');
+    $('<div class="trbody">Проверка</div>').appendTo('#trwin');
+    t.loadjs("js", t.home + "plugins/popup/popupwindow", "wininit");
     $(document).ready(function () {
-
-        $('<div />').appendTo('body').attr('id', 'trwin');
-        $('<div class="trbody">Проверка</div>').appendTo('#trwin');
-        $("#trwin").PopupWindow({
-            autoOpen: false,
-            modal: false,
-            buttons: {
-                close: true,
-                maximize: false,
-                collapse: true,
-                minimize: true
-            },
-            buttonsTexts: {
-                close: "Закрыть",
-                unmaximize: "Восстановить",
-                minimize: "Минимизировать",
-                unminimize: "Показать",
-                collapse: "Скрыть",
-                uncollapse: "Раскрыть"
-            },
-            title: "Терминатор",
-            height: 200,
-            width: 400,
-            keepInViewport: true
-        });
-
-
-
-
-
         $('div.chatMessage').each(function () {
             t.messages(this);
         })
