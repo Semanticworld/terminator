@@ -1,5 +1,5 @@
 /***************************************************************************************************
-PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
+PopupWindow - The ultimate popup/dialog/modal jQuery plugin
     Author          : Gaspare Sganga
     Version         : 1.0.3
     License         : MIT
@@ -81,7 +81,7 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
             "background"        : "transparent",
             "border"            : "none"
         },
-        PopupWindow2 : {
+        popupwindow : {
             "box-sizing"        : "border-box",
             "display"           : "flex",
             "flex-flow"         : "column nowrap",
@@ -204,18 +204,18 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
     // **************************************************
     //  METHODS
     // **************************************************
-    $.PopupWindow2Setup = function(options){
+    $.PopupWindowSetup = function(options){
         $.extend(true, _defaults, options);
     };
     
-    $.PopupWindow2MinimizedArea = function(options){
+    $.PopupWindowMinimizedArea = function(options){
         if (options === undefined) return $.extend({}, _minimizedArea);
         if (options.position) _minimizedArea.position = ((options.position.toLowerCase().indexOf("b") >= 0) ? "bottom" : "top") + " " + ((options.position.toLowerCase().indexOf("l") >= 0) ? "left" : "right");
         if (options.direction) _minimizedArea.direction = (options.direction.toLowerCase().indexOf("h") >= 0) ? "horizontal" : "vertical";
         _SetMinimizedArea();
     };
 
-    $.fn.PopupWindow2 = function(opt1, opt2){
+    $.fn.PopupWindow = function(opt1, opt2){
         if (typeof opt1 == "string") {
             switch (opt1.toLowerCase()) {
                 case "init":
@@ -224,52 +224,52 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                     });
                 case "open":
                     return this.each(function(){
-                        _Open($(this).closest(".PopupWindow2"));
+                        _Open($(this).closest(".popupwindow"));
                     });
                 case "close":
                     return this.each(function(){
-                        _Close($(this).closest(".PopupWindow2"));
+                        _Close($(this).closest(".popupwindow"));
                     });
                 case "maximize":
                     return this.each(function(){
-                        _Maximize($(this).closest(".PopupWindow2"));
+                        _Maximize($(this).closest(".popupwindow"));
                     });
                 case "unmaximize":
                     return this.each(function(){
-                        _Unmaximize($(this).closest(".PopupWindow2"));
+                        _Unmaximize($(this).closest(".popupwindow"));
                     });
                 case "collapse":
                     return this.each(function(){
-                        _Collapse($(this).closest(".PopupWindow2"));
+                        _Collapse($(this).closest(".popupwindow"));
                     });
                 case "uncollapse":
                     return this.each(function(){
-                        _Uncollapse($(this).closest(".PopupWindow2"));
+                        _Uncollapse($(this).closest(".popupwindow"));
                     });
                 case "minimize":
                     return this.each(function(){
-                        _Minimize($(this).closest(".PopupWindow2"));
+                        _Minimize($(this).closest(".popupwindow"));
                     });
                 case "unminimize":
                     return this.each(function(){
-                        _Unminimize($(this).closest(".PopupWindow2"));
+                        _Unminimize($(this).closest(".popupwindow"));
                     });
                 case "getposition":
                     if (!this[0]) return undefined;
-                    return _GetCurrentPosition($(this[0]).closest(".PopupWindow2"));
+                    return _GetCurrentPosition($(this[0]).closest(".popupwindow"));
                 case "setposition":
                    return this.each(function(){
-                        _ChangePosition($(this).closest(".PopupWindow2"), $.extend({}, opt2, {
+                        _ChangePosition($(this).closest(".popupwindow"), $.extend({}, opt2, {
                             check   : true,
                             event   : true
                         }), true);
                     });
                 case "getsize":
                     if (!this[0]) return undefined;
-                    return _GetCurrentSize($(this[0]).closest(".PopupWindow2"));
+                    return _GetCurrentSize($(this[0]).closest(".popupwindow"));
                 case "setsize":
                     return this.each(function(){
-                        _ChangeSize($(this).closest(".PopupWindow2"), $.extend({}, opt2, {
+                        _ChangeSize($(this).closest(".popupwindow"), $.extend({}, opt2, {
                             checkSize       : true,
                             checkPosition   : true,
                             event           : true
@@ -277,22 +277,22 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                     });
                 case "getstate":
                     if (!this[0]) return undefined;
-                    return _GetState($(this[0]).closest(".PopupWindow2"));
+                    return _GetState($(this[0]).closest(".popupwindow"));
                 case "setstate":
                     return this.each(function(){
-                        _SetState($(this).closest(".PopupWindow2"), opt2);
+                        _SetState($(this).closest(".popupwindow"), opt2);
                     });
                 case "settitle":
                     return this.each(function(){
-                        _SetTitle($(this).closest(".PopupWindow2"), opt2);
+                        _SetTitle($(this).closest(".popupwindow"), opt2);
                     });
                 case "statusbar":
                     return this.each(function(){
-                        _StatusBar($(this).closest(".PopupWindow2"), opt2);
+                        _StatusBar($(this).closest(".popupwindow"), opt2);
                     });
                 case "destroy":
                     return this.each(function(){
-                        _Destroy($(this).closest(".PopupWindow2"));
+                        _Destroy($(this).closest(".popupwindow"));
                     }); 
             }
         } else {
@@ -307,8 +307,8 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
     //  FUNCTIONS
     // **************************************************
     function _Init(originalTarget, options){
-        if (originalTarget.closest(".PopupWindow2").length) {
-            _Warning("jQuery PopupWindow2 is already initialized on this element");
+        if (originalTarget.closest(".popupwindow").length) {
+            _Warning("jQuery PopupWindow is already initialized on this element");
             return;
         }
         var settings = $.extend(true, {}, _defaults, options);
@@ -322,7 +322,7 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         
         // Overlay
         var overlay = $("<div>", {
-            class   : "PopupWindow2_overlay"
+            class   : "popupwindow_overlay"
         })
         .css(_css.overlay)
         .appendTo(_mainContainer);
@@ -330,7 +330,7 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         
         // Minimized Placeholder
         var minPlaceholder = $("<div>", {
-            class   : "PopupWindow2_minplaceholder"
+            class   : "popupwindow_minplaceholder"
         })
         .css(_css.minplaceholder)
         .hide()
@@ -341,8 +341,8 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
             left    : (settings.left == "auto") ? ((overlay.width() - settings.width) / 2) : parseInt(settings.left, 10),
             top     : (settings.top == "auto") ? ((overlay.height() - settings.height) / 2) : parseInt(settings.top, 10)
         };
-        var PopupWindow2 = $("<div>", {
-            class   : "PopupWindow2",
+        var popupWindow = $("<div>", {
+            class   : "popupwindow",
             css     : {
                 height  : settings.height,
                 left    : position.left,
@@ -350,7 +350,7 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 width   : settings.width
             }
         })
-        .css(_css.PopupWindow2)
+        .css(_css.popupwindow)
         .addClass(settings.customClass)
         .data({
             originalTarget      : originalTarget,
@@ -370,21 +370,21 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
             savedPosition       : undefined,
             savedSize           : undefined
         })
-        .on("mousedown", ".PopupWindow2_titlebar_draggable", _Titlebar_MouseDown)
+        .on("mousedown", ".popupwindow_titlebar_draggable", _Titlebar_MouseDown)
         .appendTo(overlay);
         
         // Titlebar
         var leftToRight = (settings.buttonsPosition.toLowerCase().indexOf("l") < 0);
         var titlebar = $("<div>", {
-            class   : "PopupWindow2_titlebar"
+            class   : "popupwindow_titlebar"
         })
         .css(_css.titlebar)
-        .appendTo(PopupWindow2);
-        if (settings.draggable) titlebar.addClass("PopupWindow2_titlebar_draggable");
+        .appendTo(popupWindow);
+        if (settings.draggable) titlebar.addClass("popupwindow_titlebar_draggable");
         
         // Text
         $("<div>", {
-            class   : "PopupWindow2_titlebar_text",
+            class   : "popupwindow_titlebar_text",
             text    : settings.title
         })
         .css(_css.titlebar_text)
@@ -394,7 +394,7 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         // Buttons
         if (settings.buttons.close) {
             $("<div>", {
-                class   : "PopupWindow2_titlebar_button PopupWindow2_titlebar_button_close"
+                class   : "popupwindow_titlebar_button popupwindow_titlebar_button_close"
             })
             .css(_css.titlebar_button)
             .css("order", leftToRight ? 5 : 1)
@@ -405,7 +405,7 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         }
         if (settings.buttons.maximize) {
             $("<div>", {
-                class   : "PopupWindow2_titlebar_button PopupWindow2_titlebar_button_maximize"
+                class   : "popupwindow_titlebar_button popupwindow_titlebar_button_maximize"
             })
             .css(_css.titlebar_button)
             .css("order", leftToRight ? 4 : 2)
@@ -416,7 +416,7 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         }
         if (settings.buttons.collapse) {
             $("<div>", {
-                class   : "PopupWindow2_titlebar_button PopupWindow2_titlebar_button_collapse"
+                class   : "popupwindow_titlebar_button popupwindow_titlebar_button_collapse"
             })
             .css(_css.titlebar_button)
             .css("order", leftToRight ? 3 : 3)
@@ -427,7 +427,7 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         }
         if (settings.buttons.minimize) {
             $("<div>", {
-                class   : "PopupWindow2_titlebar_button PopupWindow2_titlebar_button_minimize"
+                class   : "popupwindow_titlebar_button popupwindow_titlebar_button_minimize"
             })
             .css(_css.titlebar_button)
             .css("order", leftToRight ? 2 : 4)
@@ -439,28 +439,28 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         
         // Content
         var content = $("<div>", {
-            class   : "PopupWindow2_content"
+            class   : "popupwindow_content"
         })
         .css(_css.content)
-        .appendTo(PopupWindow2);
+        .appendTo(popupWindow);
         originalTarget.show().appendTo(content);
         
         // StatusBar
         if (settings.statusBar) {
             var statusBar = $("<div>", {
-                class   : "PopupWindow2_statusbar"
+                class   : "popupwindow_statusbar"
             })
             .css(_css.statusbar)
-            .appendTo(PopupWindow2);
+            .appendTo(popupWindow);
             
             $("<div>", {
-                class   : "PopupWindow2_statusbar_content"
+                class   : "popupwindow_statusbar_content"
             })
             .css(_css.statusbar_content)
             .appendTo(statusBar);
             
             var resizeHandle = $("<div>", {
-                class   : "PopupWindow2_statusbar_handle"
+                class   : "popupwindow_statusbar_handle"
             })
             .css(_css.statusbar_handle)
             .appendTo(statusBar);
@@ -478,10 +478,10 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         
         // Resizing
         if (settings.resizable) {
-            var bordersWidth = _GetBordersWidth(PopupWindow2);
+            var bordersWidth = _GetBordersWidth(popupWindow);
             // Top
             $("<div>", {
-                class   : "PopupWindow2_resizer PopupWindow2_resizer_top",
+                class   : "popupwindow_resizer popupwindow_resizer_top",
                 css     : {
                     top     : 0 - bordersWidth.top - (_constants.resizersWidth / 2),
                     height  : bordersWidth.top + _constants.resizersWidth
@@ -492,10 +492,10 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 dimension   : "height",
                 directionY  : "top"
             }, _Resizer_MouseDown)
-            .appendTo(PopupWindow2);
+            .appendTo(popupWindow);
             // Bottom
             $("<div>", {
-                class   : "PopupWindow2_resizer PopupWindow2_resizer_bottom",
+                class   : "popupwindow_resizer popupwindow_resizer_bottom",
                 css     : {
                     bottom  : 0 - bordersWidth.bottom - (_constants.resizersWidth / 2),
                     height  : bordersWidth.bottom + _constants.resizersWidth
@@ -506,10 +506,10 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 dimension   : "height",
                 directionY  : "bottom",
             }, _Resizer_MouseDown)
-            .appendTo(PopupWindow2);
+            .appendTo(popupWindow);
             // Left
             $("<div>", {
-                class   : "PopupWindow2_resizer PopupWindow2_resizer_left",
+                class   : "popupwindow_resizer popupwindow_resizer_left",
                 css     : {
                     left    : 0 - bordersWidth.left - (_constants.resizersWidth / 2),
                     width   : bordersWidth.left + _constants.resizersWidth
@@ -520,10 +520,10 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 dimension   : "width",
                 directionX  : "left"
             }, _Resizer_MouseDown)
-            .appendTo(PopupWindow2);
+            .appendTo(popupWindow);
             // Right
             $("<div>", {
-                class   : "PopupWindow2_resizer PopupWindow2_resizer_right",
+                class   : "popupwindow_resizer popupwindow_resizer_right",
                 css     : {
                     right   : 0 - bordersWidth.right - (_constants.resizersWidth / 2),
                     width   : bordersWidth.right + _constants.resizersWidth
@@ -534,10 +534,10 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 dimension   : "width",
                 directionX  : "right",
             }, _Resizer_MouseDown)
-            .appendTo(PopupWindow2);
+            .appendTo(popupWindow);
             // Top Left
             $("<div>", {
-                class   : "PopupWindow2_resizer PopupWindow2_resizer_topleft",
+                class   : "popupwindow_resizer popupwindow_resizer_topleft",
                 css     : {
                     top     : 0 - bordersWidth.top - (_constants.resizersWidth / 2),
                     left    : 0 - bordersWidth.left - (_constants.resizersWidth / 2),
@@ -551,10 +551,10 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 directionX  : "left",
                 directionY  : "top"
             }, _Resizer_MouseDown)
-            .appendTo(PopupWindow2);
+            .appendTo(popupWindow);
             // Top Right
             $("<div>", {
-                class   : "PopupWindow2_resizer PopupWindow2_resizer_topright",
+                class   : "popupwindow_resizer popupwindow_resizer_topright",
                 css     : {
                     top     : 0 - bordersWidth.top - (_constants.resizersWidth / 2),
                     right   : 0 - bordersWidth.right - (_constants.resizersWidth / 2),
@@ -568,10 +568,10 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 directionX  : "right",
                 directionY  : "top"
             }, _Resizer_MouseDown)
-            .appendTo(PopupWindow2);
+            .appendTo(popupWindow);
             // Bottom Left
             $("<div>", {
-                class   : "PopupWindow2_resizer PopupWindow2_resizer_bottomleft",
+                class   : "popupwindow_resizer popupwindow_resizer_bottomleft",
                 css     : {
                     bottom  : 0 - bordersWidth.bottom - (_constants.resizersWidth / 2),
                     left    : 0 - bordersWidth.left - (_constants.resizersWidth / 2),
@@ -585,10 +585,10 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 directionX  : "left",
                 directionY  : "bottom"
             }, _Resizer_MouseDown)
-            .appendTo(PopupWindow2);
+            .appendTo(popupWindow);
             // Bottom Right
             $("<div>", {
-                class   : "PopupWindow2_resizer PopupWindow2_resizer_bottomright",
+                class   : "popupwindow_resizer popupwindow_resizer_bottomright",
                 css     : {
                     bottom  : 0 - bordersWidth.bottom - (_constants.resizersWidth / 2),
                     right   : 0 - bordersWidth.right - (_constants.resizersWidth / 2),
@@ -602,141 +602,141 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 directionX  : "right",
                 directionY  : "bottom"
             }, _Resizer_MouseDown)
-            .appendTo(PopupWindow2);
+            .appendTo(popupWindow);
         }
         
         // Final Settings
         if (!settings.modal) overlay.width(0).height(0);
         overlay.hide();
-        if (settings.autoOpen) _Open(PopupWindow2);
+        if (settings.autoOpen) _Open(popupWindow);
     }
     
-    function _Open(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2) || PopupWindow2.data("opened")) return;
-        PopupWindow2.data("overlay").show();
-        PopupWindow2.data("opened", true);
-        _TriggerEvent(PopupWindow2, "open");
-        _Uncollapse(PopupWindow2);
-        _Unminimize(PopupWindow2)
+    function _Open(popupWindow){
+        if (!_CheckPopupWindow(popupWindow) || popupWindow.data("opened")) return;
+        popupWindow.data("overlay").show();
+        popupWindow.data("opened", true);
+        _TriggerEvent(popupWindow, "open");
+        _Uncollapse(popupWindow);
+        _Unminimize(popupWindow)
     }
-    function _Close(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2) || !PopupWindow2.data("opened")) return;
-        if (PopupWindow2.data("minimized")) _Unminimize(PopupWindow2);
-        PopupWindow2.data("overlay").hide();
-        PopupWindow2.data("opened", false);
-        _TriggerEvent(PopupWindow2, "close");
+    function _Close(popupWindow){
+        if (!_CheckPopupWindow(popupWindow) || !popupWindow.data("opened")) return;
+        if (popupWindow.data("minimized")) _Unminimize(popupWindow);
+        popupWindow.data("overlay").hide();
+        popupWindow.data("opened", false);
+        _TriggerEvent(popupWindow, "close");
     }
     
-    function _Maximize(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2) || !PopupWindow2.data("opened") || PopupWindow2.data("maximized") || PopupWindow2.data("collapsed") || PopupWindow2.data("minimized")) return;
-        var settings = PopupWindow2.data("settings");
+    function _Maximize(popupWindow){
+        if (!_CheckPopupWindow(popupWindow) || !popupWindow.data("opened") || popupWindow.data("maximized") || popupWindow.data("collapsed") || popupWindow.data("minimized")) return;
+        var settings = popupWindow.data("settings");
         
-        PopupWindow2.find(".PopupWindow2_titlebar_button_maximize")
+        popupWindow.find(".popupwindow_titlebar_button_maximize")
             .empty()
             .append(_icons.unmaximize)
             .attr("title", settings.buttonsTexts.unmaximize);
-        PopupWindow2.find(".PopupWindow2_statusbar_handle *, .PopupWindow2_resizer, .PopupWindow2_titlebar_button_collapse").hide();
-        if (settings.draggable) PopupWindow2.find(".PopupWindow2_titlebar").removeClass("PopupWindow2_titlebar_draggable");
-        if (!settings.modal) PopupWindow2.data("overlay").css("background-color", "transparent").width("100%").height("100%");
+        popupWindow.find(".popupwindow_statusbar_handle *, .popupwindow_resizer, .popupwindow_titlebar_button_collapse").hide();
+        if (settings.draggable) popupWindow.find(".popupwindow_titlebar").removeClass("popupwindow_titlebar_draggable");
+        if (!settings.modal) popupWindow.data("overlay").css("background-color", "transparent").width("100%").height("100%");
         
-        _SaveCurrentPosition(PopupWindow2);
-        _SaveCurrentSize(PopupWindow2);
-        var defPosition = _ChangePosition(PopupWindow2, {
+        _SaveCurrentPosition(popupWindow);
+        _SaveCurrentSize(popupWindow);
+        var defPosition = _ChangePosition(popupWindow, {
             top     : 0,
             left    : 0
         });
-        var defSize = _ChangeSize(PopupWindow2, {
+        var defSize = _ChangeSize(popupWindow, {
             width   : "100%",
             height  : "100%"
         });
         
         return $.when(defPosition, defSize).then(function(){
-            PopupWindow2.data("maximized", true);
-            _TriggerEvent(PopupWindow2, "maximize");
+            popupWindow.data("maximized", true);
+            _TriggerEvent(popupWindow, "maximize");
         });
     }
-    function _Unmaximize(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2) || !PopupWindow2.data("opened") || !PopupWindow2.data("maximized")) return;
-        var settings    = PopupWindow2.data("settings");
-        var defPosition = _RestoreSavedPosition(PopupWindow2);
-        var defSize     = _RestoreSavedSize(PopupWindow2);
+    function _Unmaximize(popupWindow){
+        if (!_CheckPopupWindow(popupWindow) || !popupWindow.data("opened") || !popupWindow.data("maximized")) return;
+        var settings    = popupWindow.data("settings");
+        var defPosition = _RestoreSavedPosition(popupWindow);
+        var defSize     = _RestoreSavedSize(popupWindow);
         
-        PopupWindow2.find(".PopupWindow2_titlebar_button_maximize")
+        popupWindow.find(".popupwindow_titlebar_button_maximize")
             .empty()
             .append(_icons.maximize)
             .attr("title", settings.buttonsTexts.maximize);
-        PopupWindow2.find(".PopupWindow2_statusbar_handle *, .PopupWindow2_resizer, .PopupWindow2_titlebar_button_collapse").show();
-        if (settings.draggable) PopupWindow2.find(".PopupWindow2_titlebar").addClass("PopupWindow2_titlebar_draggable");
-        if (!settings.modal) PopupWindow2.data("overlay").width(0).height(0).css("background-color", "");
+        popupWindow.find(".popupwindow_statusbar_handle *, .popupwindow_resizer, .popupwindow_titlebar_button_collapse").show();
+        if (settings.draggable) popupWindow.find(".popupwindow_titlebar").addClass("popupwindow_titlebar_draggable");
+        if (!settings.modal) popupWindow.data("overlay").width(0).height(0).css("background-color", "");
         
         return $.when(defPosition, defSize).then(function(){
-            PopupWindow2.data("maximized", false);
-            _TriggerEvent(PopupWindow2, "unmaximize");
+            popupWindow.data("maximized", false);
+            _TriggerEvent(popupWindow, "unmaximize");
         });
     }
     
-    function _Collapse(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2) || !PopupWindow2.data("opened") || PopupWindow2.data("maximized") || PopupWindow2.data("collapsed") || PopupWindow2.data("minimized")) return;
-        var settings = PopupWindow2.data("settings");
+    function _Collapse(popupWindow){
+        if (!_CheckPopupWindow(popupWindow) || !popupWindow.data("opened") || popupWindow.data("maximized") || popupWindow.data("collapsed") || popupWindow.data("minimized")) return;
+        var settings = popupWindow.data("settings");
         
-        PopupWindow2.find(".PopupWindow2_titlebar_button_collapse")
+        popupWindow.find(".popupwindow_titlebar_button_collapse")
             .empty()
             .append(_icons.uncollapse)
             .attr("title", settings.buttonsTexts.uncollapse);
-        PopupWindow2.find(".PopupWindow2_content, .PopupWindow2_statusbar, .PopupWindow2_resizer, .PopupWindow2_titlebar_button_maximize, .PopupWindow2_titlebar_button_minimize").hide();
+        popupWindow.find(".popupwindow_content, .popupwindow_statusbar, .popupwindow_resizer, .popupwindow_titlebar_button_maximize, .popupwindow_titlebar_button_minimize").hide();
         
-        _SaveCurrentSize(PopupWindow2);
-        var defSize = _ChangeSize(PopupWindow2, {
+        _SaveCurrentSize(popupWindow);
+        var defSize = _ChangeSize(popupWindow, {
             width   : settings.collapsedWidth,
-            height  : _GetBordersWidth(PopupWindow2, "top") + _GetBordersWidth(PopupWindow2, "bottom") + PopupWindow2.find(".PopupWindow2_titlebar").outerHeight()
+            height  : _GetBordersWidth(popupWindow, "top") + _GetBordersWidth(popupWindow, "bottom") + popupWindow.find(".popupwindow_titlebar").outerHeight()
         });
         
         return $.when(defSize).then(function(){
-            PopupWindow2.data("collapsed", true);
-            _TriggerEvent(PopupWindow2, "collapse");
+            popupWindow.data("collapsed", true);
+            _TriggerEvent(popupWindow, "collapse");
         });
     }
-    function _Uncollapse(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2) || !PopupWindow2.data("opened") || !PopupWindow2.data("collapsed")) return;
-        var settings    = PopupWindow2.data("settings");
-        var defSize     = _RestoreSavedSize(PopupWindow2);
+    function _Uncollapse(popupWindow){
+        if (!_CheckPopupWindow(popupWindow) || !popupWindow.data("opened") || !popupWindow.data("collapsed")) return;
+        var settings    = popupWindow.data("settings");
+        var defSize     = _RestoreSavedSize(popupWindow);
         
-        PopupWindow2.find(".PopupWindow2_titlebar_button_collapse")
+        popupWindow.find(".popupwindow_titlebar_button_collapse")
             .empty()
             .append(_icons.collapse)
             .attr("title", settings.buttonsTexts.collapse);
-        PopupWindow2.find(".PopupWindow2_content, .PopupWindow2_statusbar, .PopupWindow2_resizer, .PopupWindow2_titlebar_button_maximize, .PopupWindow2_titlebar_button_minimize").show();
+        popupWindow.find(".popupwindow_content, .popupwindow_statusbar, .popupwindow_resizer, .popupwindow_titlebar_button_maximize, .popupwindow_titlebar_button_minimize").show();
         
         return $.when(defSize).then(function(){
-            PopupWindow2.data("collapsed", false);
-            _TriggerEvent(PopupWindow2, "uncollapse");
+            popupWindow.data("collapsed", false);
+            _TriggerEvent(popupWindow, "uncollapse");
         });
     }
     
-    function _Minimize(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2) || !PopupWindow2.data("opened") || PopupWindow2.data("collapsed") || PopupWindow2.data("minimized")) return;
+    function _Minimize(popupWindow){
+        if (!_CheckPopupWindow(popupWindow) || !popupWindow.data("opened") || popupWindow.data("collapsed") || popupWindow.data("minimized")) return;
         var defRet      = $.Deferred();
-        var settings    = PopupWindow2.data("settings");
+        var settings    = popupWindow.data("settings");
         var defUnmaximize;
-        if (PopupWindow2.data("maximized")) {
+        if (popupWindow.data("maximized")) {
             var savedAnimationTime = settings.animationTime;
             settings.animationTime = settings.animationTime / _constants.secondaryAnimationTimeFactor;
-            defUnmaximize = _Unmaximize(PopupWindow2);
+            defUnmaximize = _Unmaximize(popupWindow);
             settings.animationTime = savedAnimationTime;
         } else {
-            _SaveCurrentPosition(PopupWindow2);
-            _SaveCurrentSize(PopupWindow2);
+            _SaveCurrentPosition(popupWindow);
+            _SaveCurrentSize(popupWindow);
             defUnmaximize = $.Deferred().resolve();
         }
         $.when(defUnmaximize).then(function(){
-            PopupWindow2.addClass("PopupWindow2_minimized").width("");
-            PopupWindow2.find(".PopupWindow2_titlebar_button_minimize").attr("title", settings.buttonsTexts.unminimize);
-            PopupWindow2.find(".PopupWindow2_content, .PopupWindow2_statusbar, .PopupWindow2_resizer, .PopupWindow2_titlebar_button_maximize, .PopupWindow2_titlebar_button_collapse").hide();
-            if (settings.draggable) PopupWindow2.find(".PopupWindow2_titlebar").removeClass("PopupWindow2_titlebar_draggable");
-            var minPlaceholder  = PopupWindow2.data("minPlaceholder");
+            popupWindow.addClass("popupwindow_minimized").width("");
+            popupWindow.find(".popupwindow_titlebar_button_minimize").attr("title", settings.buttonsTexts.unminimize);
+            popupWindow.find(".popupwindow_content, .popupwindow_statusbar, .popupwindow_resizer, .popupwindow_titlebar_button_maximize, .popupwindow_titlebar_button_collapse").hide();
+            if (settings.draggable) popupWindow.find(".popupwindow_titlebar").removeClass("popupwindow_titlebar_draggable");
+            var minPlaceholder  = popupWindow.data("minPlaceholder");
             var minimizedSize   = {
-                width   : PopupWindow2.outerWidth(),
-                height  : _GetBordersWidth(PopupWindow2, "top") + _GetBordersWidth(PopupWindow2, "bottom") + PopupWindow2.find(".PopupWindow2_titlebar").outerHeight()
+                width   : popupWindow.outerWidth(),
+                height  : _GetBordersWidth(popupWindow, "top") + _GetBordersWidth(popupWindow, "bottom") + popupWindow.find(".popupwindow_titlebar").outerHeight()
             };
             minPlaceholder
                 .outerWidth(minimizedSize.width)
@@ -752,8 +752,8 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 minPlaceholderAnimation.height = minimizedSize.height;
                 minPlaceholder.height(0);
             }
-            var defPosition = _ChangePosition(PopupWindow2, newPosition);
-            var defSize     = _ChangeSize(PopupWindow2, {
+            var defPosition = _ChangePosition(popupWindow, newPosition);
+            var defSize     = _ChangeSize(popupWindow, {
                 height  : minimizedSize.height
             });
             minPlaceholder.animate(minPlaceholderAnimation, {
@@ -761,32 +761,32 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 queue       : false,
                 complete    : function(){
                     $(this).hide();
-                    PopupWindow2.css({
+                    popupWindow.css({
                         position    : "relative",
                         top         : "",
                         left        : ""
-                    }).insertAfter(PopupWindow2.data("overlay"));
+                    }).insertAfter(popupWindow.data("overlay"));
                 }
             });
             $.when(defPosition, defSize).then(function(){
-                PopupWindow2.data("minimized", true);
-                _TriggerEvent(PopupWindow2, "minimize");
+                popupWindow.data("minimized", true);
+                _TriggerEvent(popupWindow, "minimize");
                 defRet.resolve();
             });
         });
         return defRet.promise();
     }
-    function _Unminimize(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2) || !PopupWindow2.data("opened") || !PopupWindow2.data("minimized")) return;
-        var settings        = PopupWindow2.data("settings");
-        var minPlaceholder  = PopupWindow2.data("minPlaceholder");
+    function _Unminimize(popupWindow){
+        if (!_CheckPopupWindow(popupWindow) || !popupWindow.data("opened") || !popupWindow.data("minimized")) return;
+        var settings        = popupWindow.data("settings");
+        var minPlaceholder  = popupWindow.data("minPlaceholder");
         
-        PopupWindow2.removeClass("PopupWindow2_minimized");
-        PopupWindow2.find(".PopupWindow2_titlebar_button_minimize").attr("title", settings.buttonsTexts.minimize);
-        PopupWindow2.find(".PopupWindow2_content, .PopupWindow2_statusbar, .PopupWindow2_resizer, .PopupWindow2_titlebar_button_maximize, .PopupWindow2_titlebar_button_collapse").show();
-        if (settings.draggable) PopupWindow2.find(".PopupWindow2_titlebar").addClass("PopupWindow2_titlebar_draggable");
+        popupWindow.removeClass("popupwindow_minimized");
+        popupWindow.find(".popupwindow_titlebar_button_minimize").attr("title", settings.buttonsTexts.minimize);
+        popupWindow.find(".popupwindow_content, .popupwindow_statusbar, .popupwindow_resizer, .popupwindow_titlebar_button_maximize, .popupwindow_titlebar_button_collapse").show();
+        if (settings.draggable) popupWindow.find(".popupwindow_titlebar").addClass("popupwindow_titlebar_draggable");
         
-        minPlaceholder.show().insertAfter(PopupWindow2.data("overlay"));
+        minPlaceholder.show().insertAfter(popupWindow.data("overlay"));
         var minimizedSize           = {
             width   : minPlaceholder.outerWidth(),
             height  : minPlaceholder.outerHeight()
@@ -800,15 +800,15 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
             minPlaceholderAnimation.height = 0;
             minPlaceholder.height(minimizedSize.height);
         }
-        PopupWindow2.css({
+        popupWindow.css({
             position    : "absolute",
             top         : newPosition.top,
             left        : newPosition.left,
             width       : minimizedSize.width
-        }).appendTo(PopupWindow2.data("overlay"));
+        }).appendTo(popupWindow.data("overlay"));
         
-        var defPosition = _RestoreSavedPosition(PopupWindow2);
-        var defSize     = _RestoreSavedSize(PopupWindow2);
+        var defPosition = _RestoreSavedPosition(popupWindow);
+        var defSize     = _RestoreSavedSize(popupWindow);
         minPlaceholder.animate(minPlaceholderAnimation, {
             duration    : settings.animationTime,
             queue       : false,
@@ -818,49 +818,49 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         });
         
         return $.when(defPosition, defSize).then(function(){
-            PopupWindow2.data("minimized", false);
-            _TriggerEvent(PopupWindow2, "unminimize");
+            popupWindow.data("minimized", false);
+            _TriggerEvent(popupWindow, "unminimize");
         });
     }
     
-    function _Destroy(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2)) return;
-        var originalTarget = PopupWindow2.data("originalTarget");
-        originalTarget.appendTo(PopupWindow2.data("originalParent"));
-        if (PopupWindow2.data("minimized")) {
-            PopupWindow2.remove();
+    function _Destroy(popupWindow){
+        if (!_CheckPopupWindow(popupWindow)) return;
+        var originalTarget = popupWindow.data("originalTarget");
+        originalTarget.appendTo(popupWindow.data("originalParent"));
+        if (popupWindow.data("minimized")) {
+            popupWindow.remove();
         } else {
-            PopupWindow2.data("overlay").remove();
+            popupWindow.data("overlay").remove();
         }
-        originalTarget.trigger("destroy.PopupWindow2");
+        originalTarget.trigger("destroy.popupwindow");
     }
     
-    function _GetCurrentPosition(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2)) return undefined;
-        return $.extend({}, PopupWindow2.data("currentPosition"));
+    function _GetCurrentPosition(popupWindow){
+        if (!_CheckPopupWindow(popupWindow)) return undefined;
+        return $.extend({}, popupWindow.data("currentPosition"));
     }
-    function _SetCurrentPosition(PopupWindow2, position){
-        $.extend(PopupWindow2.data("currentPosition"), position);
+    function _SetCurrentPosition(popupWindow, position){
+        $.extend(popupWindow.data("currentPosition"), position);
     }
-    function _SaveCurrentPosition(PopupWindow2){
-        PopupWindow2.data("savedPosition", _GetCurrentPosition(PopupWindow2));
+    function _SaveCurrentPosition(popupWindow){
+        popupWindow.data("savedPosition", _GetCurrentPosition(popupWindow));
     }
-    function _RestoreSavedPosition(PopupWindow2){
-        return _ChangePosition(PopupWindow2, PopupWindow2.data("savedPosition"));
+    function _RestoreSavedPosition(popupWindow){
+        return _ChangePosition(popupWindow, popupWindow.data("savedPosition"));
     }
-    function _ChangePosition(PopupWindow2, params){
-        if (!_CheckPopupWindow2(PopupWindow2)) return;
+    function _ChangePosition(popupWindow, params){
+        if (!_CheckPopupWindow(popupWindow)) return;
         var defRet          = $.Deferred();
-        var settings        = PopupWindow2.data("settings");
+        var settings        = popupWindow.data("settings");
         var animationTime   = (params.animationTime !== undefined) ? parseInt(params.animationTime) : settings.animationTime;
         var newPosition     = {
             top     : params.top,
             left    : params.left
         };
         if (params.check) {
-            if (!PopupWindow2.data("opened") || PopupWindow2.data("maximized") || PopupWindow2.data("minimized")) return;
+            if (!popupWindow.data("opened") || popupWindow.data("maximized") || popupWindow.data("minimized")) return;
             if (settings.keepInViewport) {
-                var size    = _GetCurrentSize(PopupWindow2);
+                var size    = _GetCurrentSize(popupWindow);
                 var $window = $(window);
                 if (newPosition.top > $window.height() - size.height) newPosition.top = $window.height() - size.height;
                 if (newPosition.left > $window.width() - size.width) newPosition.left = $window.width() - size.width;
@@ -868,14 +868,14 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 if (newPosition.left < 0) newPosition.left = 0;
             }
         }
-        var currentPosition = _GetCurrentPosition(PopupWindow2);
+        var currentPosition = _GetCurrentPosition(popupWindow);
         if (currentPosition.top != newPosition.top || currentPosition.left != newPosition.left) {
-            PopupWindow2.animate(newPosition, {
+            popupWindow.animate(newPosition, {
                 duration    : animationTime,
                 queue       : false,
                 complete    : function(){
-                    _SetCurrentPosition(PopupWindow2, newPosition);
-                    if (params.event) _TriggerEvent(PopupWindow2, "move");
+                    _SetCurrentPosition(popupWindow, newPosition);
+                    if (params.event) _TriggerEvent(popupWindow, "move");
                     defRet.resolve();
                 }
             });
@@ -884,60 +884,60 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         }
         return defRet.promise();
     }
-    function _CheckPosition(PopupWindow2){
-        _ChangePosition(PopupWindow2, $.extend({
-            animationTime   : PopupWindow2.data("settings").animationTime / _constants.secondaryAnimationTimeFactor,
+    function _CheckPosition(popupWindow){
+        _ChangePosition(popupWindow, $.extend({
+            animationTime   : popupWindow.data("settings").animationTime / _constants.secondaryAnimationTimeFactor,
             check           : true,
             event           : true
-        }, _GetCurrentPosition(PopupWindow2)));
+        }, _GetCurrentPosition(popupWindow)));
     }
     
-    function _GetCurrentSize(PopupWindow2){
-        if (!_CheckPopupWindow2(PopupWindow2)) return undefined;
-        return $.extend({}, PopupWindow2.data("currentSize"));
+    function _GetCurrentSize(popupWindow){
+        if (!_CheckPopupWindow(popupWindow)) return undefined;
+        return $.extend({}, popupWindow.data("currentSize"));
     }
-    function _SetCurrentSize(PopupWindow2, size){
-        $.extend(PopupWindow2.data("currentSize"), size);
+    function _SetCurrentSize(popupWindow, size){
+        $.extend(popupWindow.data("currentSize"), size);
     }
-    function _SaveCurrentSize(PopupWindow2){
-        PopupWindow2.data("savedSize", _GetCurrentSize(PopupWindow2));
+    function _SaveCurrentSize(popupWindow){
+        popupWindow.data("savedSize", _GetCurrentSize(popupWindow));
     }
-    function _RestoreSavedSize(PopupWindow2){
-        return _ChangeSize(PopupWindow2, $.extend({
+    function _RestoreSavedSize(popupWindow){
+        return _ChangeSize(popupWindow, $.extend({
             checkPosition   : true,
             checkSize       : false,
             event           : false
-        }, PopupWindow2.data("savedSize")));
+        }, popupWindow.data("savedSize")));
     }
-    function _ChangeSize(PopupWindow2, params){
-        if (!_CheckPopupWindow2(PopupWindow2)) return;
+    function _ChangeSize(popupWindow, params){
+        if (!_CheckPopupWindow(popupWindow)) return;
         var defRet          = $.Deferred();
-        var settings        = PopupWindow2.data("settings");
+        var settings        = popupWindow.data("settings");
         var animationTime   = (params.animationTime !== undefined) ? parseInt(params.animationTime) : settings.animationTime;
         var newSize         = {
             width   : params.width,
             height  : params.height
         };
         if (params.checkSize) {
-            if (!PopupWindow2.data("opened") || PopupWindow2.data("maximized") || PopupWindow2.data("minimized")) return;
+            if (!popupWindow.data("opened") || popupWindow.data("maximized") || popupWindow.data("minimized")) return;
             if (settings.maxWidth && newSize.width > settings.maxWidth) newSize.width = settings.maxWidth;
             if (settings.minWidth && newSize.width < settings.minWidth) newSize.width = settings.minWidth;
             if (settings.maxHeight && newSize.height > settings.maxHeight) newSize.height = settings.maxHeight;
             if (settings.minHeight && newSize.height < settings.minHeight) newSize.height = settings.minHeight;
-            if (PopupWindow2.data("collapsed")) {
-                PopupWindow2.data("savedSize", $.extend({}, newSize));
+            if (popupWindow.data("collapsed")) {
+                popupWindow.data("savedSize", $.extend({}, newSize));
                 delete newSize.height;
             }
         }
-        var currentSize = _GetCurrentSize(PopupWindow2);
+        var currentSize = _GetCurrentSize(popupWindow);
         if (currentSize.width != newSize.width || currentSize.height != newSize.height) {
-            PopupWindow2.animate(newSize, {
+            popupWindow.animate(newSize, {
                 duration    : animationTime,
                 queue       : false,
                 complete    : function(){
-                    _SetCurrentSize(PopupWindow2, newSize);
-                    if (params.event)           _TriggerEvent(PopupWindow2, "resize");
-                    if (params.checkPosition)   _CheckPosition(PopupWindow2);
+                    _SetCurrentSize(popupWindow, newSize);
+                    if (params.event)           _TriggerEvent(popupWindow, "resize");
+                    if (params.checkPosition)   _CheckPosition(popupWindow);
                     defRet.resolve();
                 }
             });
@@ -946,92 +946,92 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         }
         return defRet.promise();
     }
-    function _CheckSize(PopupWindow2){
-        _ChangeSize(PopupWindow2, $.extend({
-            animationTime   : PopupWindow2.data("settings").animationTime / _constants.secondaryAnimationTimeFactor,
+    function _CheckSize(popupWindow){
+        _ChangeSize(popupWindow, $.extend({
+            animationTime   : popupWindow.data("settings").animationTime / _constants.secondaryAnimationTimeFactor,
             checkPosition   : false,
             checkSize       : true,
             event           : true
-        }, _GetCurrentSize(PopupWindow2)));
+        }, _GetCurrentSize(popupWindow)));
     }
     
-    function _GetState(PopupWindow2){
-        if (!PopupWindow2.length)            return undefined;
-        if (!PopupWindow2.data("opened"))    return "closed";
-        if (PopupWindow2.data("minimized"))  return "minimized";
-        if (PopupWindow2.data("collapsed"))  return "collapsed";
-        if (PopupWindow2.data("maximized"))  return "maximized";
+    function _GetState(popupWindow){
+        if (!popupWindow.length)            return undefined;
+        if (!popupWindow.data("opened"))    return "closed";
+        if (popupWindow.data("minimized"))  return "minimized";
+        if (popupWindow.data("collapsed"))  return "collapsed";
+        if (popupWindow.data("maximized"))  return "maximized";
         return "normal";
     }
-    function _SetState(PopupWindow2, state){
-        if (!_CheckPopupWindow2(PopupWindow2)) return;
+    function _SetState(popupWindow, state){
+        if (!_CheckPopupWindow(popupWindow)) return;
         switch (state.toLowerCase()) {
             case "normal":
-                if (!PopupWindow2.data("opened"))    _Open(PopupWindow2);
-                if (PopupWindow2.data("minimized"))  _Unminimize(PopupWindow2);
-                if (PopupWindow2.data("collapsed"))  _Uncollapse(PopupWindow2);
-                if (PopupWindow2.data("maximized"))  _Unmaximize(PopupWindow2);
+                if (!popupWindow.data("opened"))    _Open(popupWindow);
+                if (popupWindow.data("minimized"))  _Unminimize(popupWindow);
+                if (popupWindow.data("collapsed"))  _Uncollapse(popupWindow);
+                if (popupWindow.data("maximized"))  _Unmaximize(popupWindow);
             break;
             case "closed":
-                _Close(PopupWindow2);
+                _Close(popupWindow);
             break;
             case "maximized":
-                _Maximize(PopupWindow2);
+                _Maximize(popupWindow);
             break;
             case "unmaximized":
-                _Unmaximize(PopupWindow2);
+                _Unmaximize(popupWindow);
             break;
             case "collapsed":
-                _Collapse(PopupWindow2);
+                _Collapse(popupWindow);
             break;
             case "uncollapsed":
-                _Uncollapse(PopupWindow2);
+                _Uncollapse(popupWindow);
             break;
             case "minimized":
-                _Minimize(PopupWindow2);
+                _Minimize(popupWindow);
             break;
             case "unminimized":
-                _Unminimize(PopupWindow2);
+                _Unminimize(popupWindow);
             break;
         }
     }
     
-    function _SetTitle(PopupWindow2, title){
-        if (!_CheckPopupWindow2(PopupWindow2)) return;
-        PopupWindow2.data("settings").title = title;
-        PopupWindow2.find(".PopupWindow2_titlebar_text").text(title);
+    function _SetTitle(popupWindow, title){
+        if (!_CheckPopupWindow(popupWindow)) return;
+        popupWindow.data("settings").title = title;
+        popupWindow.find(".popupwindow_titlebar_text").text(title);
     }
-    function _StatusBar(PopupWindow2, content){
-        if (!_CheckPopupWindow2(PopupWindow2)) return;
-        PopupWindow2.find(".PopupWindow2_statusbar_content").html(content);
+    function _StatusBar(popupWindow, content){
+        if (!_CheckPopupWindow(popupWindow)) return;
+        popupWindow.find(".popupwindow_statusbar_content").html(content);
     }
     
-    function _GetBordersWidth(PopupWindow2, border){
-        if (border !== undefined) return parseInt(PopupWindow2.css("border-"+border+"-width"), 10);
+    function _GetBordersWidth(popupWindow, border){
+        if (border !== undefined) return parseInt(popupWindow.css("border-"+border+"-width"), 10);
         return {
-            top     : parseInt(PopupWindow2.css("border-top-width"), 10),
-            bottom  : parseInt(PopupWindow2.css("border-bottom-width"), 10),
-            left    : parseInt(PopupWindow2.css("border-left-width"), 10),
-            right   : parseInt(PopupWindow2.css("border-right-width"), 10)
+            top     : parseInt(popupWindow.css("border-top-width"), 10),
+            bottom  : parseInt(popupWindow.css("border-bottom-width"), 10),
+            left    : parseInt(popupWindow.css("border-left-width"), 10),
+            right   : parseInt(popupWindow.css("border-right-width"), 10)
         };
     }
     
     function _AddDocumentMouseEventHandlers(eventData){
-        eventData.PopupWindow2.fadeTo(0, eventData.opacity);
-        if (!eventData.PopupWindow2.data("settings").mouseMoveEvents) eventData.PopupWindow2.data("tempSavedData", {
-            position    : _GetCurrentPosition(eventData.PopupWindow2),
-            size        : _GetCurrentSize(eventData.PopupWindow2)
+        eventData.popupWindow.fadeTo(0, eventData.opacity);
+        if (!eventData.popupWindow.data("settings").mouseMoveEvents) eventData.popupWindow.data("tempSavedData", {
+            position    : _GetCurrentPosition(eventData.popupWindow),
+            size        : _GetCurrentSize(eventData.popupWindow)
         });
         $(document)
             .on("mousemove", eventData, _Document_MouseMove)
             .on("mouseup",   eventData, _Document_MouseUp);
     }
     
-    function _TriggerEvent(PopupWindow2, eventName){
+    function _TriggerEvent(popupWindow, eventName){
         var eventData;
-        if (eventName == "move")    eventData = _GetCurrentPosition(PopupWindow2);
-        if (eventName == "resize")  eventData = _GetCurrentSize(PopupWindow2);
-        PopupWindow2.data("originalTarget").trigger(eventName + ".PopupWindow2", eventData);
+        if (eventName == "move")    eventData = _GetCurrentPosition(popupWindow);
+        if (eventName == "resize")  eventData = _GetCurrentSize(popupWindow);
+        popupWindow.data("originalTarget").trigger(eventName + ".popupwindow", eventData);
     }
     
     function _SetMinimizedArea(){
@@ -1047,14 +1047,14 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
     }
     
     
-    function _CheckPopupWindow2(PopupWindow2){
-        if (PopupWindow2.length) return true;
-        _Warning("jQuery PopupWindow2 is not initialized on this element");
+    function _CheckPopupWindow(popupWindow){
+        if (popupWindow.length) return true;
+        _Warning("jQuery PopupWindow is not initialized on this element");
         return false;
     }
     
     function _Warning(message){
-        message = "jQuery PopupWindow2 Warning: " + message;
+        message = "jQuery PopupWindow Warning: " + message;
         if (window.console.warn) {
             console.warn(message);
         } else if (window.console.log) {
@@ -1067,41 +1067,41 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
     //  EVENT HANDLERS
     // **************************************************
     function _ButtonClose_Click(event){
-        _Close($(event.currentTarget).closest(".PopupWindow2"));
+        _Close($(event.currentTarget).closest(".popupwindow"));
     }
     function _ButtonMax_Click(event){
-        var PopupWindow2 = $(event.currentTarget).closest(".PopupWindow2");
-        if (!PopupWindow2.data("maximized")) {
-            _Maximize(PopupWindow2);
+        var popupWindow = $(event.currentTarget).closest(".popupwindow");
+        if (!popupWindow.data("maximized")) {
+            _Maximize(popupWindow);
         } else {
-            _Unmaximize(PopupWindow2);
+            _Unmaximize(popupWindow);
         }
     }
     function _ButtonCollapse_Click(event){
-        var PopupWindow2 = $(event.currentTarget).closest(".PopupWindow2");
-        if (!PopupWindow2.data("collapsed")) {
-            _Collapse(PopupWindow2);
+        var popupWindow = $(event.currentTarget).closest(".popupwindow");
+        if (!popupWindow.data("collapsed")) {
+            _Collapse(popupWindow);
         } else {
-            _Uncollapse(PopupWindow2);
+            _Uncollapse(popupWindow);
         }
     }
     function _ButtonMin_Click(event){
-        var PopupWindow2 = $(event.currentTarget).closest(".PopupWindow2");
-        if (!PopupWindow2.data("minimized")) {
-            _Minimize(PopupWindow2);
+        var popupWindow = $(event.currentTarget).closest(".popupwindow");
+        if (!popupWindow.data("minimized")) {
+            _Minimize(popupWindow);
         } else {
-            _Unminimize(PopupWindow2);
+            _Unminimize(popupWindow);
         }
     }
     
     function _Titlebar_MouseDown(event){
-        if (event.target !== event.currentTarget && !$(event.target).hasClass("PopupWindow2_titlebar_text")) return false;
-        var PopupWindow2     = $(event.currentTarget).closest(".PopupWindow2");
-        var currentPosition = _GetCurrentPosition(PopupWindow2);
-        var settings        = PopupWindow2.data("settings");
-        if (!settings.modal) PopupWindow2.data("overlay").css("background-color", "transparent").width("100%").height("100%");
+        if (event.target !== event.currentTarget && !$(event.target).hasClass("popupwindow_titlebar_text")) return false;
+        var popupWindow     = $(event.currentTarget).closest(".popupwindow");
+        var currentPosition = _GetCurrentPosition(popupWindow);
+        var settings        = popupWindow.data("settings");
+        if (!settings.modal) popupWindow.data("overlay").css("background-color", "transparent").width("100%").height("100%");
         _AddDocumentMouseEventHandlers({
-            PopupWindow2     : PopupWindow2,
+            popupWindow     : popupWindow,
             action          : "drag",
             opacity         : settings.dragOpacity,
             compensationX   : event.pageX - currentPosition.left,
@@ -1110,16 +1110,16 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
         event.preventDefault();
     }
     function _Resizer_MouseDown(event){
-        var PopupWindow2     = $(event.currentTarget).closest(".PopupWindow2");
-        var currentPosition = _GetCurrentPosition(PopupWindow2);
-        var currentSize     = _GetCurrentSize(PopupWindow2);
+        var popupWindow     = $(event.currentTarget).closest(".popupwindow");
+        var currentPosition = _GetCurrentPosition(popupWindow);
+        var currentSize     = _GetCurrentSize(popupWindow);
         _AddDocumentMouseEventHandlers({
-            PopupWindow2     : PopupWindow2,
+            popupWindow     : popupWindow,
             action          : "resize",
             dimension       : event.data.dimension,
             directionX      : event.data.directionX,
             directionY      : event.data.directionY,
-            opacity         : PopupWindow2.data("settings").resizeOpacity,
+            opacity         : popupWindow.data("settings").resizeOpacity,
             startX          : event.pageX + ((event.data.directionX == "left") ? currentSize.width : -currentSize.width),
             startY          : event.pageY + ((event.data.directionY == "top" ) ? currentSize.height : -currentSize.height),
             compensationX   : event.pageX - currentPosition.left,
@@ -1129,10 +1129,10 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
     }
     
     function _Document_MouseMove(event){
-        var PopupWindow2     = event.data.PopupWindow2;
-        var settings        = PopupWindow2.data("settings");
-        var currentPosition = _GetCurrentPosition(PopupWindow2);
-        var currentSize     = _GetCurrentSize(PopupWindow2);
+        var popupWindow     = event.data.popupWindow;
+        var settings        = popupWindow.data("settings");
+        var currentPosition = _GetCurrentPosition(popupWindow);
+        var currentSize     = _GetCurrentSize(popupWindow);
         var newPosition     = {};
         var newSize         = {};
         switch (event.data.action) {
@@ -1140,7 +1140,7 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
                 newPosition.top  = event.pageY - event.data.compensationY;
                 newPosition.left = event.pageX - event.data.compensationX;
                 if (settings.keepInViewport) {
-                    var size    = _GetCurrentSize(PopupWindow2);
+                    var size    = _GetCurrentSize(popupWindow);
                     var $window = $(window);
                     if (newPosition.top < 0)                                newPosition.top  = 0;
                     if (newPosition.left < 0)                               newPosition.left = 0;
@@ -1166,47 +1166,47 @@ PopupWindow2 - The ultimate popup/dialog/modal jQuery plugin
             break;
         }
         if ((newPosition.top !== undefined && newPosition.top != currentPosition.top) || (newPosition.left !== undefined && newPosition.left != currentPosition.left)) {
-            PopupWindow2.css(newPosition);
-            _SetCurrentPosition(PopupWindow2, newPosition);
-            if (settings.mouseMoveEvents) _TriggerEvent(PopupWindow2, "move");
+            popupWindow.css(newPosition);
+            _SetCurrentPosition(popupWindow, newPosition);
+            if (settings.mouseMoveEvents) _TriggerEvent(popupWindow, "move");
         }
         if ((newSize.width !== undefined && newSize.width != currentSize.width) || (newSize.height !== undefined && newSize.height != currentSize.height)) {
-            PopupWindow2.outerWidth(newSize.width).outerHeight(newSize.height);
-            _SetCurrentSize(PopupWindow2, newSize);
-            if (settings.mouseMoveEvents) _TriggerEvent(PopupWindow2, "resize");
+            popupWindow.outerWidth(newSize.width).outerHeight(newSize.height);
+            _SetCurrentSize(popupWindow, newSize);
+            if (settings.mouseMoveEvents) _TriggerEvent(popupWindow, "resize");
         }
     }
     function _Document_MouseUp(event){
-        var PopupWindow2 = event.data.PopupWindow2;
-        var settings    = PopupWindow2.data("settings");
-        PopupWindow2.fadeTo(0, 1);
+        var popupWindow = event.data.popupWindow;
+        var settings    = popupWindow.data("settings");
+        popupWindow.fadeTo(0, 1);
         $(document)
             .off("mousemove", _Document_MouseMove)
             .off("mouseup",   _Document_MouseUp);
-        if (!settings.modal) PopupWindow2.data("overlay").width(0).height(0).css("background-color", "");
+        if (!settings.modal) popupWindow.data("overlay").width(0).height(0).css("background-color", "");
         if (!settings.mouseMoveEvents) {
-            var currentPosition = _GetCurrentPosition(PopupWindow2);
-            var currentSize     = _GetCurrentSize(PopupWindow2);
-            var savedData       = PopupWindow2.data("tempSavedData");
-            if (savedData.position.top != currentPosition.top || savedData.position.left != currentPosition.left) _TriggerEvent(PopupWindow2, "move");
-            if (savedData.size.width != currentSize.width || savedData.size.height != currentSize.height)         _TriggerEvent(PopupWindow2, "resize");
-            PopupWindow2.removeData("tempSavedData");
+            var currentPosition = _GetCurrentPosition(popupWindow);
+            var currentSize     = _GetCurrentSize(popupWindow);
+            var savedData       = popupWindow.data("tempSavedData");
+            if (savedData.position.top != currentPosition.top || savedData.position.left != currentPosition.left) _TriggerEvent(popupWindow, "move");
+            if (savedData.size.width != currentSize.width || savedData.size.height != currentSize.height)         _TriggerEvent(popupWindow, "resize");
+            popupWindow.removeData("tempSavedData");
         }
     }
     
     
     $(function(){
         _mainContainer = $("<div>", {
-            class   : "PopupWindow2_container"
+            class   : "popupwindow_container"
         })
         .css(_css.container)
         .appendTo("body");
         _SetMinimizedArea();
         
         $(window).on("resize", function(){
-            $(document).find(".PopupWindow2").each(function(){
-                var PopupWindow2 = $(this);
-                if (PopupWindow2.data("settings").keepInViewport) _CheckPosition(PopupWindow2);
+            $(document).find(".popupwindow").each(function(){
+                var popupWindow = $(this);
+                if (popupWindow.data("settings").keepInViewport) _CheckPosition(popupWindow);
             });
         });
     });
