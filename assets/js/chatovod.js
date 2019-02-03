@@ -21,7 +21,7 @@ t.repl = function (str, f, r) {
 t.run = function () {
     $(document).ready(function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function (e) {
-            var $mms = $(this);
+            var $m = $(this);
             var h = $(this).html();
             if (h != undefined) {
                 var a = h.match(/\*...\*/g);
@@ -33,7 +33,7 @@ t.run = function () {
                         var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
                         h = t.repl(h, z, l);
                     });
-                    $($mms).html(h);
+                    $($m).html(h);
                 }
             }
         });
