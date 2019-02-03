@@ -61,5 +61,6 @@ t.run = function () {
                 $("#id").PopupWindow("open");
             });
         $('<div id="tr-win" style="display:none;">Это смайлы</div>').insertBefore($("body"));
+        console.log("run")
     });
 }
