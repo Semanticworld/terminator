@@ -39,7 +39,7 @@ t.start = function () {
     $(document).ready(function () {
         $('div.chatMessage').each(function (i, ele) {
             console.log(i + ': ' + $(ele).html());
-            t.messages(ele);
+            t.messages(this);
             // 0: <div id="outer"><div id="inner"></div></div>
             // 1: <div id="inner"></div>
         })
