@@ -25,13 +25,13 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
 .popupwindow_minimized {
     width               : 200px;
     box-shadow          : none;
-    z-index: 9999;
 }
 
 /* TitleBar */
 .popupwindow_titlebar {
     background-color    : #e9e9e9;
     padding             : 4px;
+    z-index: 9999;
 }
 .popupwindow_titlebar_draggable {
     cursor              : move;
