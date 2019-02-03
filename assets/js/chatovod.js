@@ -66,7 +66,9 @@ t.run = function () {
             .on('click', function () {
 
                 $("#trwin").PopupWindow({
-                    autoOpen    : false
+                    autoOpen: false,
+                    modal: false,
+
                 });
 
                 $("#trwin").PopupWindow("open");
