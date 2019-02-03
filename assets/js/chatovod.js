@@ -72,10 +72,10 @@ t.wininit = function () {
         keepInViewport: true
     });
     $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
-    .insertBefore($(".chatLinkSmiles"))
-    .on('click', function () {
-        $("#trwin").PopupWindow("open");
-    });
+        .insertBefore($(".chatLinkSmiles"))
+        .on('click', function () {
+            $("#trwin").PopupWindow("open");
+        });
     console.log("++")
 }
 
