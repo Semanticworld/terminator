@@ -23,7 +23,7 @@ t.repl = function (str, f, r) {
 t.start=function(){
     $(document).ready(function () {
     $('div.chatMessage').each(function(i, ele) {
-        console.log(i + ': ' + ele);  
+        console.log(i + ': ' + $(ele).html());  
         // 0: <div id="outer"><div id="inner"></div></div>
         // 1: <div id="inner"></div>
     })
