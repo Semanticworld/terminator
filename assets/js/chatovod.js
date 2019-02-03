@@ -97,7 +97,7 @@ t.wininit = function () {
 
 t.run = function () {
     $('<div />').appendTo('body').attr('id', 'trwin');
-    $('<div class="trbody">Проверка</div>').appendTo('#trwin');
+    $('<div class="trbody"></div>').appendTo('#trwin');
     t.loadjs("css", t.home + "templates/chatovod/aa");
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
     t.loadjs("css", t.home + "plugins/tab/jquery.scrolling-tabs.min");
