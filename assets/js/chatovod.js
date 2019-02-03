@@ -45,9 +45,37 @@ t.messages = function (o) {
         }
     }
 }
+t.initwin = function () {
+    if ($("#trwin").length) {
+        $("#trwin").PopupWindow({
+            autoOpen: false,
+            modal: false,
+            buttons: {
+                close: true,
+                maximize: false,
+                collapse: true,
+                minimize: true
+            },
+            buttonsTexts: {
+                close: "Закрыть",
+                unmaximize: "Восстановить",
+                minimize: "Минимизировать",
+                unminimize: "Показать",
+                collapse: "Скрыть",
+                uncollapse: "Раскрыть"
+            },
+            title: "Терминатор",
+            height: 200,
+            width: 400,
+            keepInViewport: true
+        });
+    }
+}
 t.run = function () {
-    t.loadjs("js", t.home + "plugins/popup/popupwindow");
+    $('<div />').appendTo('body').attr('id', 'trwin');
+    $('<div class="trbody">Проверка</div>').appendTo('#trwin');
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
+    t.loadjs("js", t.home + "plugins/popup/popupwindow", "initwin");
     $(document).ready(function () {
         $('div.chatMessage').each(function () {
             t.messages(this);
@@ -55,44 +83,11 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        //  $('<div id="tr-win" style="display:none;">Это смайлы</div>').insertBefore($("body"));
-
-        $('<div />').appendTo('body').attr('id', 'trwin');
-        $('<div class="trbody">Проверка</div>').appendTo('#trwin');
-
-        function initwin() {
-            if ($("#trwin").length) {
-                $("#trwin").PopupWindow({
-                    autoOpen: false,
-                    modal: false,
-                    buttons: {
-                        close: true,
-                        maximize: false,
-                        collapse: true,
-                        minimize: true
-                    },
-                    buttonsTexts: {
-                        close: "Закрыть",
-                        unmaximize: "Восстановить",
-                        minimize: "Минимизировать",
-                        unminimize: "Показать",
-                        collapse: "Скрыть",
-                        uncollapse: "Раскрыть"
-                    },
-                    title: "Терминатор",
-                    height: 200,
-                    width: 400,
-                    keepInViewport: true
-                });
-            }
-        }
-        setTimeout(initwin, 500);
-
         $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
             .insertBefore($(".chatLinkSmiles"))
             .on('click', function () {
                 $("#trwin").PopupWindow("open");
             });
-        console.log("run16")
+        console.log("run17")
     });
 }
