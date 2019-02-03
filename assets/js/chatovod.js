@@ -72,6 +72,6 @@ t.run = function () {
                 $("#trwin").PopupWindow("open");
             });
 
-        console.log("run7")
+        console.log("run8")
     });
 }
