@@ -1,6 +1,6 @@
 var t = {};
+t.home = localStorage.getItem('tr-home');
 t.loadjs = function (url) {
-    t.home = 'https://semanticworld.github.io/terminator/assets/';
     var script = document.createElement("SCRIPT");
     script.src = url;
     script.type = 'text/javascript';
