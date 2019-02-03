@@ -52,7 +52,7 @@ t.messages = function (o) {
 
 t.wininit = function () {
     function wait() {
-    console.log(typeof(jQuery.PopupWindow));
+    console.log(typeof($(PopupWindow)));
         $("#trwin").PopupWindow({
         autoOpen: false,
         modal: false,
@@ -97,6 +97,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run25")
+        console.log("run26")
     });
 }
