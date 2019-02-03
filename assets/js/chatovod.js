@@ -76,7 +76,7 @@ t.wininit = function () {
                 width: 400,
                 keepInViewport: true
             });
-            $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
+            $('<a href="#" class="tr-smiles"><span>Шмайлы</span></a>')
                 .insertBefore($(".chatLinkSmiles"))
                 .on('click', function () {
                     $("#trwin").PopupWindow("open");
