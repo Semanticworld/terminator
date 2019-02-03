@@ -21,8 +21,8 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
     background-color    : #fcfcfc;
     border              : 1px solid #c8c8c8;
     box-shadow          : 0px 2px 4px #a0a0a0;
-    top: 80px;
-    left: 17px;
+    top: 5px;
+    left: 5px;
 }
 .popupwindow_minimized {
     width               : 200px;
