@@ -71,6 +71,7 @@ t.wininit = function () {
         width: 400,
         keepInViewport: true
     });
+    console.log("++")
 }
 
 t.run = function () {
@@ -90,6 +91,6 @@ t.run = function () {
             .on('click', function () {
                 $("#trwin").PopupWindow("open");
             });
-        console.log("run20")
+        console.log("run21")
     });
 }
