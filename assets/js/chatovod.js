@@ -65,6 +65,15 @@ t.run = function () {
                 $("#trwin").PopupWindow({
                     autoOpen: false,
                     modal: false,
+                    buttonsTexts        : {
+                        close               : "Закрыть",
+                        maximize            : "На весь экран",
+                        unmaximize          : "Restore",
+                        minimize            : "Минимизировать",
+                        unminimize          : "Show",
+                        collapse            : "Collapse",
+                        uncollapse          : "Expand"
+                      },
 
                 });
             }
@@ -80,6 +89,6 @@ t.run = function () {
                 $("#trwin").PopupWindow("open");
             });
 
-        console.log("run9")
+        console.log("run10")
     });
 }
