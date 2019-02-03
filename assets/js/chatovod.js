@@ -94,6 +94,7 @@ t.run = function () {
     $('<div />').appendTo('body').attr('id', 'trwin');
     $('<div class="trbody">Проверка</div>').appendTo('#trwin');
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
+    t.loadjs("css", t.home + "templates/chatovod/aa");
     t.loadjs("js", t.home + "plugins/popup/popupwindow", "wininit");
     $(document).ready(function () {
         $('div.chatMessage').each(function () {
@@ -102,6 +103,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run30")
+        console.log("run31")
     });
 }
