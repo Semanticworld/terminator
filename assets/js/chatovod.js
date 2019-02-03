@@ -5,6 +5,7 @@ t.loadjs = function (url, fn) {
     script.src = url;
     script.type = 'text/javascript';
     script.onload = function () {
+        console.log(typeof fn);
         if (typeof fn === "function") {
             fn();
         }
