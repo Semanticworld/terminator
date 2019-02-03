@@ -58,7 +58,7 @@ t.run = function () {
         //  $('<div id="tr-win" style="display:none;">Это смайлы</div>').insertBefore($("body"));
 
         $('<div />').appendTo('body').attr('id', 'trwin');
-
+        $('<div class="trbody">Проверка</div>').appendTo('#trwin');
 
         $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
             .insertBefore($(".chatLinkSmiles"))
@@ -66,6 +66,6 @@ t.run = function () {
                 $("#trwin").PopupWindow("open");
             });
 
-        console.log("run3")
+        console.log("run4")
     });
 }
