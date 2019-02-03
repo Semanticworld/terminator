@@ -1,15 +1,12 @@
 var t = {};
 t.home = localStorage.getItem('tr-home');
-t.loadjs = function (url, fn) {
+t.loadjs = function (url, fn=false) {
     var script = document.createElement("SCRIPT");
     script.src = url;
     script.type = 'text/javascript';
     script.onload = function () {
         console.log(typeof fn);
-        if (fn) {
-            t[fn]();
-            console.log("start");
-        }
+        if (fn) t[fn]();
     };
     document.getElementsByTagName("head")[0].appendChild(script);
 }
