@@ -60,20 +60,26 @@ t.run = function () {
         $('<div />').appendTo('body').attr('id', 'trwin');
         $('<div class="trbody">Проверка</div>').appendTo('#trwin');
 
-
-        $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
-            .insertBefore($(".chatLinkSmiles"))
-            .on('click', function () {
-
+        function initwin() {
+            if ($("#trwin").length) {
                 $("#trwin").PopupWindow({
                     autoOpen: false,
                     modal: false,
 
                 });
+            }
+        }
+        setTimeout(initwin, 500);
+
+        $('<a href="#" class="tr-smiles"><span>смайлы</span></a>')
+            .insertBefore($(".chatLinkSmiles"))
+            .on('click', function () {
+
+
 
                 $("#trwin").PopupWindow("open");
             });
 
-        console.log("run8")
+        console.log("run9")
     });
 }
