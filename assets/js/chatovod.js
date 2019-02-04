@@ -105,6 +105,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run33")
+        console.log("run34")
     });
 }
