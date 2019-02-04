@@ -123,7 +123,7 @@ t.run = function () {
         $('body').on('click', 'img.tr-smile', function (e) {
             e.preventDefault();
             var sm = $(this).data("face");
-            $("input.chatSendText").val(sm);
+            $("input.chatSendText").val('*'+sm+'* ');
         });
 
         console.log("run50")
