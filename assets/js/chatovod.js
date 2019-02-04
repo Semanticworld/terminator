@@ -66,7 +66,7 @@ t.playSound = function (url) {
         var sound = document.createElement('audio');
         sound.id = 'traudio';
         sound.controls = 'controls';
-        sound.src = t.home + 'sound/'+url + '.mp3';
+        sound.src = t.home + 'sound/' + url + '.mp3';
         sound.type = 'audio/mpeg';
         sound.autobuffer = true;
         sound.controls = true;
@@ -86,6 +86,69 @@ t.playSound = function (url) {
         // }
     }
 
+}
+
+t.showfx = function (name) {
+    if (typeof $(document).snowfall != "function" || ((localStorage.getItem('tr-snow') == "1") ? "1" : "0") == "0") {
+        return false;
+    }
+    $(document).snowfall();
+    $(document).snowfall('clear');
+    switch (name) {
+        case "aa":
+            $(document).snowfall({
+                image: t.home + 'smiles/s7/aa.gif',
+                minSize: 10,
+                maxSize: 32
+            });
+            break;
+        case "ab":
+            $(document).snowfall({
+                image: t.home + 'smiles/s7/ab.gif',
+                minSize: 10,
+                maxSize: 32
+            });
+            break;
+        case "ac":
+            $(document).snowfall({
+                image: t.home + 'smiles/s7/ac.gif',
+                minSize: 10,
+                maxSize: 32
+            });
+            break;
+        case "ca":
+            $(document).snowfall({
+                image: t.home + 'smiles/s7/ca.gif',
+                minSize: 10,
+                maxSize: 32
+            });
+            break;
+        case "cb":
+            $(document).snowfall({
+                image: t.home + 'smiles/s7/cb.gif',
+                minSize: 10,
+                maxSize: 32
+            });
+            break;
+        case "cc":
+            $(document).snowfall({
+                image: t.home + 'smiles/s7/cc.gif',
+                minSize: 10,
+                maxSize: 32
+            });
+            break;
+        case "сd":
+            $(document).snowfall({
+                image: t.home + 'smiles/s7/сd.gif',
+                minSize: 10,
+                maxSize: 20,
+                flakeCount: 150
+            });
+            break;
+    }
+    setTimeout(function () {
+        $(document).snowfall('clear')
+    }, 20000);
 }
 
 t.wininit = function () {
@@ -153,9 +216,9 @@ t.run = function () {
     t.loadjs("css", t.home + "templates/chatovod/aa");
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
     t.loadjs("js", t.home + "plugins/lazy/lazy");
+    t.loadjs("js", t.home + "plugins/fx/fx");
     t.loadjs("js", t.home + "plugins/popup/popupwindow", "wininit");
     $(document).ready(function () {
-
         $('div.chatMessage').each(function () {
             t.messages(this);
         })
@@ -179,6 +242,6 @@ t.run = function () {
             }
         });
 
-        console.log("run53")
+        console.log("run54")
     });
 }
