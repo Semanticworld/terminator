@@ -90,9 +90,9 @@ t.playSound = function (url) {
 }
 
 t.showfx = function (name) {
-  //  if (typeof $(document).snowfall != "function" || ((localStorage.getItem('tr-snow') == "1") ? "1" : "0") == "0") {
-  //      return false;
-  //  }
+    if (typeof $(document).snowfall != "function" || ((localStorage.getItem('tr-snow') == "1") ? "1" : "0") == "0") {
+        return false;
+    }
     $(document).snowfall();
     $(document).snowfall('clear');
     switch (name) {
