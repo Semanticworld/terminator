@@ -631,6 +631,7 @@ smpack["1"] = [
         "zn": "О как все это не прилично...",
         "zo": "Какая прикольная тёлочка..."
     };
+    /*
 smpack.forEach(function (a, b) {
     var s = '';
     if (b == "8") {
@@ -657,5 +658,8 @@ smpack.forEach(function (a, b) {
     }
     $("div.trsec.trc" + b ).append(s);
 });
-
- 
+*/
+Object.keys(smpack).map(function(key, index) {
+   // smpack[key] *= 2;
+   console.log(key);
+  });
