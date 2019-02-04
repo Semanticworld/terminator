@@ -662,5 +662,5 @@ Object.keys(smpack).map(function(key, index) {
     // smpack[key] *= 2;
    //console.log(key);
    console.log(s);
-    $("#trc" + key ).append(s);
+    $("div.trsec#trc" + key ).append(s);
   });
