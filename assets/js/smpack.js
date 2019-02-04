@@ -631,20 +631,21 @@ smpack["1"] = [
         "zn": "О как все это не прилично...",
         "zo": "Какая прикольная тёлочка..."
     };
-    /*
-smpack.forEach(function (a, b) {
+    
+
+Object.keys(smpack).map(function(key, index) {
     var s = '';
-    if (b == "8") {
-        for (var u in a) {
+    if (key == "8") {
+        for (var u in smpack[key]) {
             if (u.length > 2) {
                 s += '<hr><center>' + u + '</center>';
             } else {
-                s += '<img title="' + a[u] + '" src="' + t.home + 'smiles/s8/aa.png" class="tr-smile" data-face="' + b + u + '">';
+                s += '<img title="' + smpack[key][u] + '" src="' + t.home + 'smiles/s8/aa.png" class="tr-smile" data-face="' + key + u + '">';
             }
         }
     } else {
         var ext = 'gif';
-        a.forEach(function (a) {
+ /*       a.forEach(function (a) {
             var ti = '';
             if (b == "6") {
                 ext = 'png';
@@ -652,14 +653,13 @@ smpack.forEach(function (a, b) {
             if (a.length > 2) {
                 s += '<hr><center>' + a + '</center>';
             } else {
-                s += '<img src="' + t.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + t.home + 'smiles/' + 's' + b + '/' + a + '.' + ext + '">';
+                s += '<img src="' + t.home + 'ico/ld.gif" class="tr-smile lazyload" data-face="' + b + a + '" data-src="' + t.home + 'smiles/' + 's' + key + '/' + a + '.' + ext + '">';
             }
-        });
+        });*/
     }
-    $("div.trsec.trc" + b ).append(s);
-});
-*/
-Object.keys(smpack).map(function(key, index) {
-   // smpack[key] *= 2;
-   console.log(key);
+   
+   
+    // smpack[key] *= 2;
+   //console.log(key);
+   // $("div.trsec.trc" + b ).append(s);
   });
