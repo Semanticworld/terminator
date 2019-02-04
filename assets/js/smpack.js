@@ -640,7 +640,7 @@ Object.keys(smpack).map(function(key, index) {
             if (u.length > 2) {
                 s += '<hr><div class="tr-titles">' + u + '</div>';
             } else {
-                s += '<img title="' + smpack[key][u] + '" src="' + t.home + 'smiles/s8/aa.png" class="tr-smile" data-face="' + key + u + '">';
+                s += '<img data-title="' + smpack[key][u] + '" src="' + t.home + 'smiles/s8/aa.png" class="tr-smile" data-face="' + key + u + '">';
             }
         }
     } else {
