@@ -105,7 +105,8 @@ t.wininit = function () {
               // какие-либо действия
             },
             mouseenter: function() {
-                console.log(22);
+              //  if ($(this).attr("class")=="")
+                console.log($(this).attr("class"));
             }
            });
 
@@ -131,6 +132,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run38")
+        console.log("run39")
     });
 }
