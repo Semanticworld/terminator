@@ -44,6 +44,42 @@ t.messages = function (o) {
         }
     }
 }
+
+tplaySound = function (url) {
+    if ($("#traudio").length) {
+        $("#traudio").remove();
+    }
+    if (!$("#traudio").length) {
+        var sound = document.createElement('audio');
+        sound.id = 'traudio';
+        sound.controls = 'controls';
+        sound.src = url;
+        sound.type = 'audio/mpeg';
+        sound.autobuffer = true;
+        sound.controls = true;
+        sound.style.position = 'fixed';
+        sound.style.bottom = '30px';
+        sound.addEventListener("play", function () {}, false);
+        sound.addEventListener("ended", function () {
+            sound.style.visibility = 'hidden';
+        }, false);
+        document.body.appendChild(sound);
+        sound.play();
+        //    const playPromise = sound.play();
+        //    if (playPromise !== null) {
+        //        playPromise.catch(() => {
+        //            sound.play();
+        //        })
+        // }
+    }
+
+}
+
+
+
+
+
+
 t.wininit = function () {
     $('<div />').appendTo('body').attr('id', 'trwin');
     $('<div class="trbody"></div>').appendTo('#trwin');
@@ -96,7 +132,7 @@ t.wininit = function () {
             $('body').on('mouseleave', 'img.tr-smile', function (e) {
                 $("#trwin").PopupWindow("statusbar", '');
             });
-            
+
 
         } else {
             setTimeout(wait, 100);
@@ -111,7 +147,7 @@ t.run = function () {
     t.loadjs("js", t.home + "plugins/lazy/lazy");
     t.loadjs("js", t.home + "plugins/popup/popupwindow", "wininit");
     $(document).ready(function () {
-        
+
         $('div.chatMessage').each(function () {
             t.messages(this);
         })
@@ -123,9 +159,18 @@ t.run = function () {
         $('body').on('click', 'img.tr-smile', function (e) {
             e.preventDefault();
             var sm = $(this).data("face");
-            $("input.chatSendText").val($("input.chatSendText").val()+'*'+sm+'* ');
+            $("input.chatSendText").val($("input.chatSendText").val() + '*' + sm + '* ');
+        });
+        $('body').on('click', '.tr-smilex', function (e) {
+            e.preventDefault();
+            var sm = $(this).data("face");
+            sm = sm.split("-").join("");
+            $("input.chatSendText").val($("input.chatSendText").val() + '*' + sm + '* ');
+            if (sm[0] == "8") {
+                t.playSound(t.home + 'sound/' + sm[1] + sm[2] + ".mp3");
+            }
         });
 
-        console.log("run50")
+        console.log("run51")
     });
 }
