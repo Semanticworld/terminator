@@ -113,6 +113,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run36")
+        console.log("run37")
     });
 }
