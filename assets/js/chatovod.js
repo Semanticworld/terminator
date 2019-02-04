@@ -69,7 +69,7 @@ t.wininit = function () {
                 },
                 title: "Терминатор",
                 height: 200,
-                width: 345,
+                width: 362,
                 keepInViewport: true
             });
             $('<a href="#" class="tr-smiles"><span>Шмайлы</span></a>')
