@@ -95,6 +95,7 @@ t.wininit = function () {
             $('body').on('mouseleave', 'img.tr-smile', function (e) {
                 $("#trwin").PopupWindow("statusbar", '');
             });
+            lazyload();
 
         } else {
             setTimeout(wait, 100);
@@ -106,8 +107,10 @@ t.wininit = function () {
 t.run = function () {
     t.loadjs("css", t.home + "templates/chatovod/aa");
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
+    t.loadjs("js", t.home + "plugins/lazy/lazy");
     t.loadjs("js", t.home + "plugins/popup/popupwindow", "wininit");
     $(document).ready(function () {
+        
         $('div.chatMessage').each(function () {
             t.messages(this);
         })
