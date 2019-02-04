@@ -88,11 +88,6 @@ t.playSound = function (url) {
 
 }
 
-
-
-
-
-
 t.wininit = function () {
     $('<div />').appendTo('body').attr('id', 'trwin');
     $('<div class="trbody"></div>').appendTo('#trwin');
@@ -184,6 +179,6 @@ t.run = function () {
             }
         });
 
-        console.log("run52")
+        console.log("run53")
     });
 }
