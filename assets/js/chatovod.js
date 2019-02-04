@@ -106,7 +106,7 @@ t.wininit = function () {
 
            $('body').on('mouseenter', 'img.tr-smile', function(e){
             e.preventDefault();
-            $("#trwin").PopupWindow("statusbar", this.title);
+            $("#trwin").PopupWindow("statusbar", $(this).data("title"));
           });
 
 
