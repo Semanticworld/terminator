@@ -88,12 +88,15 @@ t.wininit = function () {
             }
             $('<div class="trcon">' + h1 + h2 + '</div>').appendTo('.trbody');
             t.loadjs("js", t.home + "js/smpack");
-            $(".tr-smile").hover(function () {
+          //  $(".tr-smile").hover(function () {
                 //  $( this ).fadeOut( 100 );
                 //  $( this ).fadeIn( 500 );
-                console.log($(this).attr('title'));
-                $("#trwin").PopupWindow("statusbar", $(this).attr('title'));
-            });
+          //      console.log($(this).attr('title'));
+          //      $("#trwin").PopupWindow("statusbar", $(this).attr('title'));
+          //  });
+          $( ".tr-smile" ).bind( "mouseenter mouseleave", function() {
+            console.log(1);
+          });
 
         } else {
             setTimeout(wait, 100);
