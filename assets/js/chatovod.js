@@ -118,6 +118,14 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run49")
+
+
+        $('body').on('click', 'img.tr-smile', function (e) {
+            e.preventDefault();
+            var sm = $(this).data("face");
+            $("input.chatSendText").val(sm);
+        });
+
+        console.log("run50")
     });
 }
