@@ -43,7 +43,7 @@ t.messages = function (o) {
                 if (a[1] == "8") {
                     var l = '<img data-face="8-' + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s8/aa.png">';
                     if ((localStorage.getItem('tr-sound') == "1") ? "1" : "0" == "1") {
-                        t.playSound(t.home + 'sound/' + a[2] + a[3] + ".mp3");
+                        t.playSound(a[2] + a[3]);
                     }
                 } else {
                     var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
@@ -66,7 +66,7 @@ t.playSound = function (url) {
         var sound = document.createElement('audio');
         sound.id = 'traudio';
         sound.controls = 'controls';
-        sound.src = url;
+        sound.src = t.home + 'sound/'+url + '.mp3';
         sound.type = 'audio/mpeg';
         sound.autobuffer = true;
         sound.controls = true;
@@ -180,7 +180,7 @@ t.run = function () {
             sm = sm.split("-").join("");
             $("input.chatSendText").val($("input.chatSendText").val() + '*' + sm + '* ');
             if (sm[0] == "8") {
-                t.playSound(t.home + 'sound/' + sm[1] + sm[2] + ".mp3");
+                t.playSound(sm[1] + sm[2]);
             }
         });
 
