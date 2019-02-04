@@ -199,3 +199,8 @@
     background: #fd0;
     cursor: pointer;
 }
+.tr-titles{
+    font-weight: 600;
+    font-family: monospace;
+    font-size: 25px;
+}

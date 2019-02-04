@@ -638,7 +638,7 @@ Object.keys(smpack).map(function(key, index) {
     if (key == "8") {
         for (var u in smpack[key]) {
             if (u.length > 2) {
-                s += '<hr><center>' + u + '</center>';
+                s += '<hr><p class="tr-titles">' + u + '</p>';
             } else {
                 s += '<img title="' + smpack[key][u] + '" src="' + t.home + 'smiles/s8/aa.png" class="tr-smile" data-face="' + key + u + '">';
             }
