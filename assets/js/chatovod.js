@@ -75,7 +75,8 @@ t.wininit = function () {
             });
             $('<a href="#" class="tr-smiles"><span>Шмайлы</span></a>')
                 .insertBefore($(".chatLinkSmiles"))
-                .on('click', function () {
+                .on('click', function (e) {
+                    e.preventDefault()
                     $("#trwin").PopupWindow("open");
                 });
             var i = 0,
