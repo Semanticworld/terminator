@@ -51,6 +51,7 @@ t.wininit = function () {
     function wait() {
         if (typeof (jQuery().PopupWindow) == "function") {
             $("#trwin").PopupWindow({
+                statusBar: true,
                 autoOpen: false,
                 modal: false,
                 buttons: {
@@ -86,11 +87,11 @@ t.wininit = function () {
             }
             $('<div class="trcon">' + h1 + h2 + '</div>').appendTo('.trbody');
             t.loadjs("js", t.home + "js/smpack");
-            $( "img.tr-smile" ).hover(function() {
-              //  $( this ).fadeOut( 100 );
-              //  $( this ).fadeIn( 500 );
-              console.log(this.title);
-              });
+            $("img.tr-smile").hover(function () {
+                //  $( this ).fadeOut( 100 );
+                //  $( this ).fadeIn( 500 );
+                console.log(this.title);
+            });
 
         } else {
             setTimeout(wait, 100);
