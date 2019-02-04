@@ -104,11 +104,12 @@ t.wininit = function () {
 
 
 
-           $('body').on('mouseenter mouseleave', 'img.tr-smile', function(e){
-            e.preventDefault();
+           $('body').on('mouseenter', 'img.tr-smile', function(e){
             $("#trwin").PopupWindow("statusbar", $(this).data("title"));
           });
-
+          $('body').on('mouseleave', 'img.tr-smile', function(e){
+            $("#trwin").PopupWindow("statusbar", '');
+          });
 
 
 
@@ -131,6 +132,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run45")
+        console.log("run46")
     });
 }
