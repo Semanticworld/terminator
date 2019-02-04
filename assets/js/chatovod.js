@@ -1,5 +1,6 @@
 var t = {};
 t.home = localStorage.getItem('tr-home');
+t.version = localStorage.getItem('tr-ver');
 t.loadjs = function (type, url, fn = false) {
     switch (type) {
         case "css":
@@ -36,7 +37,7 @@ t.messages = function (o) {
         var a = h.match(/\*...\*/g);
         if (a != null) {
             a.forEach(function (a) {
-                
+
                 var ext = 'gif';
                 if (a[1] == "6") {
                     ext = 'png';
@@ -152,7 +153,7 @@ t.showfx = function (name) {
     }, 20000);
 }
 
-t.createInput=function (cmd, id, title) {
+t.createInput = function (cmd, id, title) {
     var f1 = (localStorage.getItem('tr-' + cmd) == "1") ? "1" : "0";
     var s = '<div class="tr-pt10">';
     s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + (f1 == "1" ? " checked" : "") + '>';
@@ -218,9 +219,9 @@ t.wininit = function () {
             s += t.createInput('sound', 'ch2', 'Звуковые эффекты');
             s += t.createInput('anticaps', 'ch3', 'Антикапс');
             s += t.createInput('antimat', 'ch4', 'Антимат');
-           // s += t.createInput('template', 'ch5', 'Стиль страницы');
-           // s += '<div class="tr-pt10"><select id="tr-t-select" data-cmd="template-name" class="form-control tr-select"><option value="aa">Стиль 1</option><option value="ab">Стиль 2</option><option value="ac">Стиль 3</option></select></div>';
-            s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
+            // s += t.createInput('template', 'ch5', 'Стиль страницы');
+            // s += '<div class="tr-pt10"><select id="tr-t-select" data-cmd="template-name" class="form-control tr-select"><option value="aa">Стиль 1</option><option value="ab">Стиль 2</option><option value="ac">Стиль 3</option></select></div>';
+            s += '<div class="tr-pt10 tr-pr">Ver:' + t.version + '</div>';
             $("#trc9").append(s);
         } else {
             setTimeout(wait, 100);
@@ -259,6 +260,6 @@ t.run = function () {
             }
         });
 
-        console.log("run57")
+        console.log("run58")
     });
 }
