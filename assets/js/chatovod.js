@@ -94,21 +94,20 @@ t.wininit = function () {
           //      console.log($(this).attr('title'));
           //      $("#trwin").PopupWindow("statusbar", $(this).attr('title'));
           //  });
-          $( ".tr-smile" ).bind( "mouseenter mouseleave", function() {
+       //   $( ".tr-smile" ).bind( "mouseenter mouseleave", function() {
            // console.log(1);
+         // });
+
+
+
+
+
+
+
+           $('body').on('mouseenter', 'img.tr-smile', function(e){
+            e.preventDefault();
+            console.log("clicked!");
           });
-
-
-
-          $(window).bind({
-            click: function() {
-              // какие-либо действия
-            },
-            mouseenter: function() {
-              //  if ($(this).attr("class")=="")
-                console.log(this);
-            }
-           });
 
 
 
