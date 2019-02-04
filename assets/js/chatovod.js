@@ -95,7 +95,7 @@ t.wininit = function () {
           //      $("#trwin").PopupWindow("statusbar", $(this).attr('title'));
           //  });
           $( ".tr-smile" ).bind( "mouseenter mouseleave", function() {
-            console.log(1);
+           // console.log(1);
           });
 
 
