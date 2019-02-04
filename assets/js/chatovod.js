@@ -156,7 +156,7 @@ t.showfx = function (name) {
 t.createInput = function (cmd, id, title) {
     var f1 = (localStorage.getItem('tr-' + cmd) == "1") ? "1" : "0";
     var s = '<div class="tr-pt10">';
-    s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + (f1 == "1" ? " checked" : "") + '>';
+    s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch" id="tr-' + id + '"' + (f1 == "1" ? " checked" : "") + '>';
     s += '<label for="tr-' + id + '">' + title + '</label>';
     s += '</div>';
     return s;
@@ -260,6 +260,6 @@ t.run = function () {
             }
         });
 
-        console.log("run58")
+        console.log("run59")
     });
 }
