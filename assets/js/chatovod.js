@@ -36,7 +36,7 @@ t.messages = function (o) {
         var a = h.match(/\*...\*/g);
         if (a != null) {
             a.forEach(function (a) {
-                console.log(a);
+                
                 var ext = 'gif';
                 if (a[1] == "6") {
                     ext = 'png';
@@ -50,6 +50,7 @@ t.messages = function (o) {
                     var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
                 }
                 if (a[1] == "7") {
+                    console.log(a);
                     t.showfx(a[2] + a[3]);
                 }
                 h = t.repl(h, a.split("*").join("/*"), l);
