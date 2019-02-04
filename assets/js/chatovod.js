@@ -50,7 +50,6 @@ t.messages = function (o) {
                     var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
                 }
                 if (a[1] == "7") {
-                    console.log(a);
                     t.showfx(a[2] + a[3]);
                 }
                 h = t.repl(h, a.split("*").join("/*"), l);
@@ -91,9 +90,9 @@ t.playSound = function (url) {
 }
 
 t.showfx = function (name) {
-    if (typeof $(document).snowfall != "function" || ((localStorage.getItem('tr-snow') == "1") ? "1" : "0") == "0") {
-       // return false;
-    }
+  //  if (typeof $(document).snowfall != "function" || ((localStorage.getItem('tr-snow') == "1") ? "1" : "0") == "0") {
+  //      return false;
+  //  }
     $(document).snowfall();
     $(document).snowfall('clear');
     switch (name) {
