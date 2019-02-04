@@ -37,7 +37,20 @@ t.messages = function (o) {
         if (a != null) {
             a.forEach(function (a) {
                 var ext = 'gif';
-                var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
+                if (a[1] == "6") {
+                    ext = 'png';
+                }
+                if (a[1] == "8") {
+                    var l = '<img data-face="8-' + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s8/aa.png">';
+                    if ((localStorage.getItem('tr-sound') == "1") ? "1" : "0" == "1") {
+                        t.playSound(t.home + 'sound/' + a[2] + a[3] + ".mp3");
+                    }
+                } else {
+                    var l = '<img data-face="' + a[1] + "-" + a[2] + a[3] + '" class="tr-smilex" src="' + t.home + 'smiles/s' + a[1] + '/' + a[2] + a[3] + '.' + ext + '">';
+                }
+                if (a[1] == "7") {
+                    //  showfx(a[2] + a[3]);
+                }
                 h = t.repl(h, a.split("*").join("/*"), l);
             });
             $($m).html(h);
@@ -171,6 +184,6 @@ t.run = function () {
             }
         });
 
-        console.log("run51")
+        console.log("run52")
     });
 }
