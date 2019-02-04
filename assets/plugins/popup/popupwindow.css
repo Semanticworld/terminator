@@ -144,7 +144,7 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
     max-width: 800px;
     padding: 10px;
     margin: 0 auto;
-    background: white;
+    background: #fcfcfc;
 }
 
 .trsec {
