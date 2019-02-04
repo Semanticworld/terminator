@@ -156,7 +156,7 @@ t.showfx = function (name) {
 t.createInput = function (cmd, id, title) {
     var f1 = (localStorage.getItem('tr-' + cmd) == "1") ? "1" : "0";
     var s = '<div class="tr-pt10">';
-    s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch" id="tr-' + id + '"' + (f1 == "1" ? " checked" : "") + '>';
+    s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + (f1 == "1" ? " checked" : "") + '>';
     s += '<label for="tr-' + id + '">' + title + '</label>';
     s += '</div>';
     return s;
@@ -259,7 +259,13 @@ t.run = function () {
                 t.playSound(sm[1] + sm[2]);
             }
         });
+        $('body').on("click", ".tr-config", function (e) {
+            var s = ($(this).val() == "1") ? "0" : "1";
+            localStorage.setItem('tr-' + $(this).data("cmd"), s);
+            $(this).val((localStorage.getItem('tr-' + $(this).data("cmd")) == "1") ? "1" : "0");
+            return true;
+        });
 
-        console.log("run59")
+        console.log("run60")
     });
 }
