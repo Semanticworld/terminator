@@ -81,7 +81,7 @@ t.wininit = function () {
                 h1 = h2 = '';
             while (i < 10) {
                 h1 += '<input class="trmu" id="trt' + i + '" type="radio" name="tabs"' + (i == 0 ? " checked" : "") + '><label class="trlab" for="trt' + i + '"><img src="' + t.home + 'ico/' + i + '.png"></img></label>';
-                h2 += '<div class="trsec" id="trc' + i + '"><p>Page' + i + '</p></div>';
+                h2 += '<div class="trsec" id="trc' + i + '"></div>';
                 i++;
             }
             $('<div class="trcon">' + h1 + h2 + '</div>').appendTo('.trbody');
