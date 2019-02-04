@@ -45,6 +45,9 @@ t.messages = function (o) {
     }
 }
 t.wininit = function () {
+    $('<div />').appendTo('body').attr('id', 'trwin');
+    $('<div class="trbody"></div>').appendTo('#trwin');
+
     function wait() {
         if (typeof (jQuery().PopupWindow) == "function") {
             $("#trwin").PopupWindow({
@@ -75,18 +78,19 @@ t.wininit = function () {
                     $("#trwin").PopupWindow("open");
                 });
 
-                var tabsData = [
-                    { paneId: 'tab01', title: 'Tab <em>1</em> of 12', content: 'Tab Number 1 Content', active: true, disabled: false },
-                    { paneId: 'tab02', title: 'Tab 2 of 12', content: 'Tab Number 2 Content', active: false, disabled: false },
-                    { paneId: 'tab03', title: 'Tab 3 of 12', content: 'Tab Number 3 Content', active: false, disabled: false },
-                    { paneId: 'tab04', title: 'Tab 4 of 12', content: 'Tab Number 4 Content', active: false, disabled: false },
-                    { paneId: 'tab05', title: 'Tab 5 of 12', content: 'Tab Number 5 Content', active: false, disabled: false }
-                  ];
-                  
-                  $('.trbody').scrollingTabs({
-                    tabs: tabsData
-                  });
+            var h = '<div class="trcon">' +
+                '<input class="trmu" id="trt0" type="radio" name="tabs" checked><label class="trlab" for="trt0">11</label>' +
+                '<input class="trmu" id="trt1" type="radio" name="tabs"><label class="trlab" for="trt1">22</label>' +
+                '<input class="trmu" id="trt2" type="radio" name="tabs"><label class="trlab" for="trt2">33</label>' +
+                '<input class="trmu" id="trt3" type="radio" name="tabs"><label class="trlab" for="trt3">44</label>' +
 
+                '<div class="trsec" id="trc0"><p>Page1</p></div>' +
+                '<div class="trsec" id="trc1"><p>Page2</p></div>' +
+                '<div class="trsec" id="trc2"><p>Page3</p></div>' +
+                '<div class="trsec" id="trc3"><p>Page4</p></div>' +
+
+                '</div>';
+            $(h).appendTo('.trbody');
 
         } else {
             setTimeout(wait, 100);
@@ -96,8 +100,6 @@ t.wininit = function () {
 }
 
 t.run = function () {
-    $('<div />').appendTo('body').attr('id', 'trwin');
-    $('<div class="trbody"></div>').appendTo('#trwin');
     t.loadjs("css", t.home + "templates/chatovod/aa");
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
     t.loadjs("css", t.home + "plugins/tab/jquery.scrolling-tabs.min");
