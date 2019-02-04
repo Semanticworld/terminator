@@ -91,8 +91,8 @@ t.wininit = function () {
             $(".tr-smile").hover(function () {
                 //  $( this ).fadeOut( 100 );
                 //  $( this ).fadeIn( 500 );
-                console.log(this.title);
-                $("#trwin").PopupWindow("statusbar", this.title);
+                console.log($(this).attr('title'));
+                $("#trwin").PopupWindow("statusbar", $(this).attr('title'));
             });
 
         } else {
