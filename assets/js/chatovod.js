@@ -73,7 +73,7 @@ t.playSound = function (url) {
         sound.autobuffer = true;
         sound.controls = true;
         sound.style.position = 'fixed';
-        sound.style.bottom = '30px';
+        sound.style.top = '10px';
         sound.addEventListener("play", function () {}, false);
         sound.addEventListener("ended", function () {
             sound.style.visibility = 'hidden';
