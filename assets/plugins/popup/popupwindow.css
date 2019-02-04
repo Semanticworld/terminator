@@ -207,3 +207,163 @@
     text-align: center;
     padding-bottom: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.chatSendLinksPanel a.tr-smiles {
+    padding-left: 21px;
+    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAvVBMVEVHcEz/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3KpUeUfkB5aj1fVjpRTDgpLzM2OTVsYDvXr0ihh0JEQzbywkuvkUPkuEqHdD4pLzMpLzO8m0UpLzPZq0H1xEqUfkDis0R4WCFlRxtvTx7Poj3su0eyijSMaCiogTGfeS6VcSvFmjrouki8kjeCYCSogS/s6OPPxriyo42MdVR4Xjj//////PT/5qb/z1j/2Xritk8p7NDyAAAAJHRSTlMAIGCPv9//UJ/vQK+Az////////////////////7/v/9///5/Su8wBAAADf0lEQVR4AZzQxQEFMAgD0FBBKvuP+92lwrsjCQYoxJT5JqcYCA6imb9kFWyhaPyHRcKqUnmoFqwg5SklTDXjBdYwRp0XdcKAGC8zGcTiLQ1/KG/S9T2eTcoOutiPoydhJ8EbMnYywqvObv1IR3moyQ3CQPiq0sG4gCmJb3sv7/90YaXFcv2vLhpGZj6ZiYCEzFReREpVSQETaJOpuojUKpPCckx8MOuqok+ZaejhQz2Q5Mb3DvcddFZMUXm2sTMS0c7A30IVc5RB4BGFMOWsSBX/0Ki7TwXZCCEaGdT0xihwIiIlZpVAo6/kIjmTxWIJTT50qZ2NFc7MlD2j1XNDgMR6s93u9gDVIFpLlTUk3LPBCo1+QIPOTSovozqyBl8wKFjutpHdISkFrhv4kV4O0TM6bpETQIn9gqQ4LJypcukZGXpR6K0vIjKVN1tiCeoRnQWw6ASwS5WukX/eAp8QyTtGy+2TBfpnEJFotOYKYcgf4DNONUSwtQJikeRHNDJta70YGKF/jf+9vrzh34ArQyNbRARE6L+REfd/e3nnZ7SAHFq5SKsUuxkdrW6n5v3lg1NrBmEf+MmxdzUMG8fD4b8fmHWkO5FnUp+wYcVplPZClWt3HjVQ2kBU3BzHLrJouCFoHJADVdYcUbvppWtugFg/9DdbckQUR6kfld2tO0VhYES7pAdkud8fXJmmiDuV8r6/LQGxBgWejVIISI7XiHAZqnCsn+S0UBmB94wifQZDIxQOKTW0eLQeUNuxka3GsuSDeFUMyT2wESNU38bBAJf3bUjARow3mSJNxddlX1CRQFWmL/jfillgOQzDQHSZbuGCFPBCmHP/WxVUVhzte5V/maZBSTO7A9ILr8dTRM3L8aRV83wsI2qejoVNzSOVWj2vx+Kv5sMxqyEm//0sQXTNbZ9MCCA2koyJAZgQNUh+ACTUAsM5mZCqZMJ3/h6+3w71NA5cMkF8bLV8nxHcnqVAoA2YikUgUm7gTkaPvb8gJSK2iSESG8OJdMF+8DU39C9+QOCH63wIU3ZGP8mLsqqBqKuyyOlZNp20Jf9g9l2yOVBVxycAsDZTFyEP7IsIp0IYLeSB3WkhFgkXShaChZBMDRcSTI1ss9pboVawWbLx626FuvstZHct1GlMbT/sGMf9fS/q6O26/wBBH2noQxb/sY8+iPIfjfkP6/Tx4RbjLdmifQ8FzAAAAABJRU5ErkJggg==') no-repeat 0 0;
+    background-size: 16px 16px;
+}
+
+
+
+input[type="checkbox"].ios8-switch {
+    position: absolute;
+    margin: 8px 0 0 16px;
+    visibility: hidden;
+}
+
+input[type="checkbox"].ios8-switch+label {
+    position: relative;
+    padding-left: 50px
+}
+
+input[type="checkbox"].ios8-switch+label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 40px;
+    /* x*5 */
+    height: 24px;
+    /* x*3 */
+    border-radius: 16px;
+    /* x*2 */
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"].ios8-switch+label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 24px;
+    /* x*3 */
+    height: 24px;
+    /* x*3 */
+    border-radius: 16px;
+    /* x*2 */
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"].ios8-switch+label:hover:after {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"].ios8-switch:checked+label:after {
+    margin-left: 16px;
+}
+
+input[type="checkbox"].ios8-switch:checked+label:before {
+    background: #55D069;
+}
+
+/* SMALL */
+
+input[type="checkbox"].ios8-switch-sm {
+    margin: 5px 0 0 10px;
+    visibility: hidden;
+}
+
+input[type="checkbox"].ios8-switch-sm+label {
+    position: relative;
+    padding-left: 32px
+}
+
+input[type="checkbox"].ios8-switch-sm+label:before {
+    width: 25px;
+    /* x*5 */
+    height: 15px;
+    /* x*3 */
+    border-radius: 10px;
+    /* x*2 */
+}
+
+input[type="checkbox"].ios8-switch-sm+label:after {
+    width: 15px;
+    /* x*3 */
+    height: 15px;
+    /* x*3 */
+    border-radius: 10px;
+    /* x*2 */
+}
+
+input[type="checkbox"].ios8-switch-sm+label:hover:after {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"].ios8-switch-sm:checked+label:after {
+    margin-left: 10px;
+    /* x*2 */
+}
+
+/* LARGE */
+
+input[type="checkbox"].ios8-switch-lg {
+    margin: 10px 0 0 20px;
+    visibility: hidden;
+}
+
+input[type="checkbox"].ios8-switch-lg+label {
+    position: relative;
+    padding-left: 60px
+}
+
+input[type="checkbox"].ios8-switch-lg+label:before {
+    width: 50px;
+    /* x*5 */
+    height: 30px;
+    /* x*3 */
+    border-radius: 20px;
+    /* x*2 */
+}
+
+input[type="checkbox"].ios8-switch-lg+label:after {
+    width: 30px;
+    height: 30px;
+    /* x*3 */
+    border-radius: 20px;
+    /* x*2 */
+}
+
+input[type="checkbox"].ios8-switch-lg+label:hover:after {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"].ios8-switch-lg:checked+label:after {
+    margin-left: 20px;
+}
