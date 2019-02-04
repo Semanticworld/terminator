@@ -78,20 +78,13 @@ t.wininit = function () {
                     $("#trwin").PopupWindow("open");
                 });
             var i = 0,
-                h = {
-                    "a": "",
-                    "b": ""
-                };
-            while (i < 9) {
-                h.a += '<input class="trmu" id="trt' + i + '" type="radio" name="tabs"';
-                if (i == 0) {
-                    h.a += ' checked';
-                }
-                h.a += '><label class="trlab" for="trt' + i + '"><img src="' + t.home + 'ico/' + i + '.png"></img></label>';
-                h.b += '<div class="trsec" id="trc' + i + '"><p>Page' + i + '</p></div>';
+                h1 = h2 = '';
+            while (i < 10) {
+                h1 += '<input class="trmu" id="trt' + i + '" type="radio" name="tabs"' + (i == 0 ? " checked" : "") + '><label class="trlab" for="trt' + i + '"><img src="' + t.home + 'ico/' + i + '.png"></img></label>';
+                h2 += '<div class="trsec" id="trc' + i + '"><p>Page' + i + '</p></div>';
                 i++;
             }
-            $('<div class="trcon">' + h.a + h.b + '</div>').appendTo('.trbody');
+            $('<div class="trcon">' + h1 + h2 + '</div>').appendTo('.trbody');
 
         } else {
             setTimeout(wait, 100);
