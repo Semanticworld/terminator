@@ -91,6 +91,7 @@ t.wininit = function () {
                 //  $( this ).fadeOut( 100 );
                 //  $( this ).fadeIn( 500 );
                 console.log(this.title);
+                $("#trwin").PopupWindow("statusbar", this.title);
             });
 
         } else {
