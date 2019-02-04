@@ -188,7 +188,7 @@ t.wininit = function () {
                     uncollapse: "Раскрыть"
                 },
                 title: "Терминатор",
-                height: 200,
+                height: 280,
                 width: 362,
                 keepInViewport: true
             });
