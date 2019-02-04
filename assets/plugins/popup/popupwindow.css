@@ -149,7 +149,7 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
 .trsec {
     display: none;
     padding: 5px 0 0;
-    border-top: 1px solid F0F0F0;
+    border-top: 1px solid #F0F0F0;
 }
 
 .trmu {
@@ -175,7 +175,7 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
 }
 
 .trmu:checked+.trlab {
-    color: #555;
+    color: #F0F0F0;
     border: 1px solid #ddd;
     border-top: 2px solid orange;
     border-bottom: 1px solid #fff;
