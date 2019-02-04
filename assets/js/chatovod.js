@@ -45,7 +45,7 @@ t.messages = function (o) {
     }
 }
 
-tplaySound = function (url) {
+t.playSound = function (url) {
     if ($("#traudio").length) {
         $("#traudio").remove();
     }
