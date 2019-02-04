@@ -106,7 +106,7 @@ t.wininit = function () {
             },
             mouseenter: function() {
               //  if ($(this).attr("class")=="")
-                console.log(this.className);
+                console.log($(this).html());
             }
            });
 
@@ -132,6 +132,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run40")
+        console.log("run41")
     });
 }
