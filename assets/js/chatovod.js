@@ -78,17 +78,17 @@ t.wininit = function () {
                     $("#trwin").PopupWindow("open");
                 });
             var i = 0,
-                h = '';
+                h = {};
             while (i < 9) {
-                h += '<input class="trmu" id="trt' + i + '" type="radio" name="tabs"';
+                h.a += '<input class="trmu" id="trt' + i + '" type="radio" name="tabs"';
                 if (i == 0) {
-                    h += ' checked';
+                    h.a += ' checked';
                 }
-                h += '><label class="trlab" for="trt' + i + '"><img src="' + t.home + 'ico/' + i + '.png"></img></label>';
-                h += '<div class="trsec" id="trc' + i + '"><p>Page'+i+'</p></div>';
+                h.a += '><label class="trlab" for="trt' + i + '"><img src="' + t.home + 'ico/' + i + '.png"></img></label>';
+                h.b += '<div class="trsec" id="trc' + i + '"><p>Page'+i+'</p></div>';
                 i++;
             }
-            $('<div class="trcon">' + h  + '</div>').appendTo('.trbody');
+            $('<div class="trcon">' + h.a + h.b + '</div>').appendTo('.trbody');
 
         } else {
             setTimeout(wait, 100);
