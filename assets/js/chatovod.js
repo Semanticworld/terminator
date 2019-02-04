@@ -85,6 +85,7 @@ t.wininit = function () {
                 i++;
             }
             $('<div class="trcon">' + h1 + h2 + '</div>').appendTo('.trbody');
+            t.loadjs("js", t.home + "js/smpack");
 
         } else {
             setTimeout(wait, 100);
