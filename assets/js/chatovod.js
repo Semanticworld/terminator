@@ -106,7 +106,7 @@ t.wininit = function () {
 
            $('body').on('mouseenter', 'img.tr-smile', function(e){
             e.preventDefault();
-            console.log(this.title);
+            $("#trwin").PopupWindow("statusbar", this.title);
           });
 
 
@@ -131,6 +131,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run43")
+        console.log("run44")
     });
 }
