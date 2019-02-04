@@ -98,6 +98,21 @@ t.wininit = function () {
             console.log(1);
           });
 
+
+
+          $(window).bind({
+            click: function() {
+              // какие-либо действия
+            },
+            mouseenter: function() {
+                console.log(22);
+            }
+           });
+
+
+
+
+
         } else {
             setTimeout(wait, 100);
         }
