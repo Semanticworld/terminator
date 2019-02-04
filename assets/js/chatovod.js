@@ -73,20 +73,20 @@ t.playSound = function (url) {
         sound.autobuffer = true;
         sound.controls = true;
         sound.style.position = 'fixed';
-        sound.style.top = '10px';
+        sound.style.top = '1px';
         sound.style.zIndex="999999";
         sound.addEventListener("play", function () {}, false);
         sound.addEventListener("ended", function () {
             sound.style.visibility = 'hidden';
         }, false);
         document.body.appendChild(sound);
-        sound.play();
-        //    const playPromise = sound.play();
-        //    if (playPromise !== null) {
-        //        playPromise.catch(() => {
-        //            sound.play();
-        //        })
-        // }
+        //sound.play();
+            const playPromise = sound.play();
+            if (playPromise !== null) {
+                playPromise.catch(() => {
+                    sound.play();
+                })
+         }
     }
     
 }
