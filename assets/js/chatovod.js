@@ -77,20 +77,19 @@ t.wininit = function () {
                 .on('click', function () {
                     $("#trwin").PopupWindow("open");
                 });
-
-            var h = '<div class="trcon">' +
-                '<input class="trmu" id="trt0" type="radio" name="tabs" checked><label class="trlab" for="trt0">11</label>' +
-                '<input class="trmu" id="trt1" type="radio" name="tabs"><label class="trlab" for="trt1">22</label>' +
-                '<input class="trmu" id="trt2" type="radio" name="tabs"><label class="trlab" for="trt2">33</label>' +
-                '<input class="trmu" id="trt3" type="radio" name="tabs"><label class="trlab" for="trt3">44</label>' +
-
-                '<div class="trsec" id="trc0"><p>Page1</p></div>' +
-                '<div class="trsec" id="trc1"><p>Page2</p></div>' +
-                '<div class="trsec" id="trc2"><p>Page3</p></div>' +
-                '<div class="trsec" id="trc3"><p>Page4</p></div>' +
-
-                '</div>';
-            $(h).appendTo('.trbody');
+            var i = 0,
+                h1 = '',
+                h2 = '';
+            while (i < 9) {
+                h1 += '<input class="trmu" id="trt' + i + '" type="radio" name="tabs"';
+                if (i == 0) {
+                    h1 += ' checked';
+                }
+                h1 += '><label class="trlab" for="trt' + i + '"><img src="' + t.home + 'ico/' + i + '.png"></img></label>';
+                h2 += '<div class="trsec" id="trc' + i + '"><p>Page1</p></div>';
+                i++;
+            }
+            $('<div class="trcon">' + h1 + h2 + '</div>').appendTo('.trbody');
 
         } else {
             setTimeout(wait, 100);
