@@ -142,7 +142,6 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
 .trcon {
     min-width: 120px;
     max-width: 800px;
-    padding: 10px;
     margin: 0 auto;
     background: #fcfcfc;
 }
@@ -150,7 +149,7 @@ PopupWindow - The ultimate popup/dialog/modal jQuery plugin
 .trsec {
     display: none;
     padding: 5px 0 0;
-    border-top: 1px solid black;
+    border-top: 1px solid F0F0F0;
 }
 
 .trmu {
