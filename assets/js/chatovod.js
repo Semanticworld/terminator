@@ -152,6 +152,15 @@ t.showfx = function (name) {
     }, 20000);
 }
 
+t.createInput=function (cmd, id, title) {
+    var f1 = (localStorage.getItem('tr-' + cmd) == "1") ? "1" : "0";
+    var s = '<div class="tr-pt10">';
+    s += '<input value="' + f1 + '" data-cmd="' + cmd + '" type="checkbox" class="ios8-switch tr-config" id="tr-' + id + '"' + (f1 == "1" ? " checked" : "") + '>';
+    s += '<label for="tr-' + id + '">' + title + '</label>';
+    s += '</div>';
+    return s;
+}
+
 t.wininit = function () {
     $('<div />').appendTo('body').attr('id', 'trwin');
     $('<div class="trbody"></div>').appendTo('#trwin');
@@ -205,7 +214,14 @@ t.wininit = function () {
                 $("#trwin").PopupWindow("statusbar", '');
             });
 
-
+            s = t.createInput('snow', 'ch1', 'Падающие эффекты');
+            s += t.createInput('sound', 'ch2', 'Звуковые эффекты');
+            s += t.createInput('anticaps', 'ch3', 'Антикапс');
+            s += t.createInput('antimat', 'ch4', 'Антимат');
+           // s += t.createInput('template', 'ch5', 'Стиль страницы');
+           // s += '<div class="tr-pt10"><select id="tr-t-select" data-cmd="template-name" class="form-control tr-select"><option value="aa">Стиль 1</option><option value="ab">Стиль 2</option><option value="ac">Стиль 3</option></select></div>';
+            s += '<div class="tr-pt10 tr-pr">Ver:' + this.version + '</div>';
+            $("#trc9").append(s);
         } else {
             setTimeout(wait, 100);
         }
