@@ -96,8 +96,6 @@ t.wininit = function () {
 t.run = function () {
     t.loadjs("css", t.home + "templates/chatovod/aa");
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
-    t.loadjs("css", t.home + "plugins/tab/jquery.scrolling-tabs.min");
-    t.loadjs("js", t.home + "plugins/tab/jquery.scrolling-tabs.min");
     t.loadjs("js", t.home + "plugins/popup/popupwindow", "wininit");
     $(document).ready(function () {
         $('div.chatMessage').each(function () {
