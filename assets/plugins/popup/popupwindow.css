@@ -181,3 +181,20 @@
 #trt9:checked~#trc9 {
     display: block;
 }
+.tr-smile {
+    padding: 10px;
+}
+
+.tr-smile:hover {
+    background: #fd0;
+    cursor: pointer;
+}
+
+.tr-smilex {
+    padding: 10px;
+}
+
+.tr-smilex:hover {
+    background: #fd0;
+    cursor: pointer;
+}
