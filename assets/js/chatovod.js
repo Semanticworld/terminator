@@ -36,6 +36,7 @@ t.messages = function (o) {
         var a = h.match(/\*...\*/g);
         if (a != null) {
             a.forEach(function (a) {
+                console.log(a);
                 var ext = 'gif';
                 if (a[1] == "6") {
                     ext = 'png';
@@ -242,6 +243,6 @@ t.run = function () {
             }
         });
 
-        console.log("run55")
+        console.log("run56")
     });
 }
