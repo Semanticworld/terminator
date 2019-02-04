@@ -78,7 +78,7 @@ t.wininit = function () {
                     $("#trwin").PopupWindow("open");
                 });
             var i = 0,
-                h = {};
+                h = {"a":"","b":""};
             while (i < 9) {
                 h.a += '<input class="trmu" id="trt' + i + '" type="radio" name="tabs"';
                 if (i == 0) {
