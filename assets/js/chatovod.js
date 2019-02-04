@@ -78,6 +78,7 @@ t.wininit = function () {
                 .on('click', function (e) {
                     e.preventDefault()
                     $("#trwin").PopupWindow("open");
+                    lazyload();
                 });
             var i = 0,
                 h1 = h2 = '';
@@ -95,7 +96,7 @@ t.wininit = function () {
             $('body').on('mouseleave', 'img.tr-smile', function (e) {
                 $("#trwin").PopupWindow("statusbar", '');
             });
-            lazyload();
+            
 
         } else {
             setTimeout(wait, 100);
@@ -117,6 +118,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-        console.log("run48")
+        console.log("run49")
     });
 }
