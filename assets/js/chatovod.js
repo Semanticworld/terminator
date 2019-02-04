@@ -84,7 +84,7 @@ t.playSound = function (url) {
             const playPromise = sound.play();
             if (playPromise !== null) {
                 playPromise.catch(() => {
-                    sound.play();
+                //    sound.play();
                 })
          }
     }
