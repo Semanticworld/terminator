@@ -174,6 +174,7 @@ $(document).ready(function () {
         smilespack["1"] = [
             "Девочка", "xe", "lm", "he", "hk", "lp", "hp", "iv", "fi", "jh", "aa", "aj", "cm", "cn", "co", "cp", "cq", "cr", "cs", "ct", "cu", "cw", "cx", "cy", "cz", "da", "db", "go", "qe", "ef", "eh", "ey", "ez", "ff", "fg", "fj", "fl", "fm", "fp", "ft", "fv", "fy", "ha", "hb", "hc", "hf", "hh", "hi", "hj", "hm", "ho", "hs", "ht", "hu", "hn", "hw", "ia", "ii", "il", "it", "ja", "je", "jf", "ji", "jj", "jk", "jl", "jm", "jo", "la", "lb", "lc", "ld", "le", "lf", "lg", "lh", "li", "lj", "lk", "ll", "ln", "lo", "lq", "lr", "ls", "lt", "lu", "lv", "lw", "lx", "ly", "lz", "ma", "mb", "mc", "md", "me", "mf", "mg", "mh", "mi", "mj", "mk", "ml", "mm", "ec", "mn", "mq", "mr", "ms", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "nb", "nc", "nd", "ne", "nf", "ng", "nh", "ni", "nk", "nl", "nm", "nn", "np", "nq", "nr", "ns", "nw", "od", "oi", "om", "ot", "ov", "ox", "ru", "xo", "xt", "xu", "xx", "yb", "yc", "yd", "yf", "yi", "yj", "yr", "yx", "yy", "zg", "zm", "zi", "zn", "zo", "zu", "zw", "zx", "zy", "rr", "rx", "qc", "oa", "nv",
             "Мальчик", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "ak", "al", "am", "an", "ao", "ap", "ar", "as", "at", "au", "av", "ax", "ay", "ba", "bc", "bd", "be", "bf", "bh", "bi", "bj", "bk", "bl", "bm", "bn", "bo", "bp", "bq", "br", "bs", "bt", "bu", "bv", "bw", "bx", "by", "bz", "ca", "cb", "cc", "cd", "ce", "cf", "cg", "ch", "ci", "cj", "ck", "cl", "cv", "dc", "dd", "de", "df", "dg", "dh", "di", "dj", "dm", "dn", "do", "dp", "dq", "dr", "ds", "dt", "du", "dw", "dx", "dy", "dz", "ek", "el", "ga", "gc", "gg", "gh", "gv", "gf", "gw", "gz", "hl", "ib", "im", "in", "ig", "io", "iq", "jg", "jn", "jp", "jq", "jr", "js", "ju", "jv", "jw", "jx", "ka", "kb", "kc", "kd", "kf", "kg", "kn", "kq", "kr", "kt", "zh", "zj", "zk", "zr", "zs", "zv",
+            "Девочка и мальчик", "aw", "dv", "en", "iw", "ix", "iy", "ok", "iu", "em", "px", "ei", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku", "mp", "nj", "rt", "rv", "gd", "if", "ij", "rj",
             "Разные", "aq", "bb", "bg", "dk", "dl",
             "ea", "eb", "ee", "eg", "ej", "eo", "eu", "ev", "ew", "ex",
             "fa", "fb", "fc", "fd", "fe", "fh", "fk", "fn", "fo", "fq", "fr", "fs", "fu", "fw", "fx",
@@ -192,7 +193,6 @@ $(document).ready(function () {
             "ye", "yh", "yk", "yn", "yo", "yp", "ys", "yt", "yu", "yw", "yz",
             "za", "zb", "zc", "zf", "zl", "zp", "zq", "zz",
             "ik",
-            "Девочка и мальчик", "aw", "dv", "en", "iw", "ix", "iy", "ok", "iu", "em", "px", "ei", "ep", "eq", "er", "es", "et", "fz", "gs", "gt", "gu", "gx", "gy", "ip", "is", "ir", "jc", "jd", "kh", "ki", "kj", "kk", "kl", "ku", "mp", "nj", "rt", "rv", "gd", "if", "ij", "rj",
             "Пьющие", "az", "ed", "hd", "hv", "qy", "rz", "xf", "xg", "xj", "yg", "ym", "yl", "yq", "yv", "zd", "ze", "zt", "ya",
             "Мишки", "kv", "kw", "kx", "ky", "kz", "xi", "xn",
             "С табличками", "gi", "gj", "gn", "gm", "gl", "gp", "gq", "gr", "xc", "xd", "xz", "xv",
