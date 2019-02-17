@@ -1097,7 +1097,14 @@ $(document).ready(function () {
                             maxSize: 32
                         });
 						break;
-                    case "сd":
+                    case "ae":
+                        $(document).snowfall({
+                            image: Terminator.home + 'smiles/s7/ae.png',
+                            minSize: 10,
+                            maxSize: 32
+                        });
+						break; 
+					case "сd":
                         $(document).snowfall({
                             image: Terminator.home + 'smiles/s7/сd.gif',
                             minSize: 10,
