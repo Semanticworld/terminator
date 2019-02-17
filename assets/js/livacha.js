@@ -1090,6 +1090,12 @@ $(document).ready(function () {
                             maxSize: 32
                         });
                         break;
+                    case "ad":
+                        $(document).snowfall({
+                            image: Terminator.home + 'smiles/s7/ad.gif',
+                            minSize: 10,
+                            maxSize: 32
+                        });
                     case "сd":
                         $(document).snowfall({
                             image: Terminator.home + 'smiles/s7/сd.gif',
