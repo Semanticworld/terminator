@@ -244,7 +244,7 @@ $(document).ready(function () {
             "ga", "gb", "gc", "gd", "ge", "gf", "gg", "gh", "gi", "gj", "gk", "gl", "gm", "gn", "go", "gp", "gq", "gr", "gs", "gt", "gu", "gv", "gw", "gx", "gy", "gz",
             "ha", "hb", "hc", "hd", "he", "hf", "hg", "hh", "hi", "hj", "hk", "hl", "hm", "hn", "ho", "hp", "hq", "hr", "hs", "ht", "hu", "hv", "hw", "hx", "hy", "hz"
         ];
-        smilespack["7"] = ["aa", "ab", "ac", "ca", "cb", "cc", "ad", "сd"];
+        smilespack["7"] = ["aa", "ab", "ae", "af", "ac", "ca", "cb", "cc", "ad", "сd"];
 
         smilespack["8"] = {
             "ДМБ": "",
@@ -1099,7 +1099,14 @@ $(document).ready(function () {
 						break;
                     case "ae":
                         $(document).snowfall({
-                            image: Terminator.home + 'smiles/s7/ae.png',
+                            image: Terminator.home + 'smiles/s7/ae.gif',
+                            minSize: 10,
+                            maxSize: 32
+                        });
+						break;
+					case "af":
+                        $(document).snowfall({
+                            image: Terminator.home + 'smiles/s7/af.gif',
                             minSize: 10,
                             maxSize: 32
                         });
