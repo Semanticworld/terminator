@@ -175,14 +175,10 @@ t.wininit = function () {
     $(document).on('click', '.sendbtn', function () {
         switch ($(this).data("btn")) {
             case "vlink":
-                console.log("[VID]" + btoa($("#evlink").val()));
+                $("input.chatSendText").val("[VID]" + btoa($("#evlink").val()));
                 break;
         }
-        
-
     });
-
-
 
     function wait() {
         if (typeof (jQuery().PopupWindow) == "function") {
