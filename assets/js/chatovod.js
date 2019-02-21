@@ -43,7 +43,7 @@ t.messages = function (o) {
                 if (vid != null) {
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
-                        if (!t.play) {
+                        if (t.play==false) {
                             $('<iframe>', {
                                 'id': 'trfrplay',
                                 'frameborder': '0',
