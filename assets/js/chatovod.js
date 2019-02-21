@@ -169,14 +169,21 @@ t.wininit = function () {
 
     $('<div />').appendTo('body').attr('id', 'trwinmedia');
     $('<div class="trmediabody"></div>')
-        .append('<div>Видео ссылка:</div><div><input class ="tr-w100" type="text" autocomplete="off" maxlength="1000"></div><div><button data-btn="vlink" class="sendbtn tr-pull-right" type="button">Отправить</button></div>')
+        .append('<div>Видео ссылка:</div><div><input id="evlink" class ="tr-w100" type="text" autocomplete="off" maxlength="1000"></div><div><button data-btn="vlink" class="sendbtn tr-pull-right" type="button">Отправить</button></div>')
         .appendTo('#trwinmedia');
 
-        $(document).on('click','.sendbtn',function(){
-            console.log($(this).data("btn"));
-        });
-
+    $(document).on('click', '.sendbtn', function () {
+        switch ($(this).data("btn")) {
+            case "vlink":
+                console.log("VIDEO:" + $("#evlink").val());
+                //var encodedString = btoa(string);
+                break;
+        }
         
+
+    });
+
+
 
     function wait() {
         if (typeof (jQuery().PopupWindow) == "function") {
