@@ -50,8 +50,8 @@ t.messages = function (o) {
                             'width': '362',
                             'height': '280',
                             'type': 'text/html',
-                            'style':'display: block;',
-                            'src': 'https://www.youtube.com/embed/' + vid[1],
+                            'style': 'display: block;',
+                            'src': 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1',
                             'allow': 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
                         }).appendTo("#trplayer");
                     }
@@ -65,7 +65,6 @@ t.messages = function (o) {
         var a = h.match(/\*...\*/g);
         if (a != null) {
             a.forEach(function (a) {
-
                 var ext = 'gif';
                 if (a[1] == "6") {
                     ext = 'png';
@@ -369,7 +368,5 @@ t.run = function () {
             $(this).val((localStorage.getItem('tr-' + $(this).data("cmd")) == "1") ? "1" : "0");
             return true;
         });
-
-        console.log("run60")
     });
 }
