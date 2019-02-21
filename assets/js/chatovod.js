@@ -195,6 +195,30 @@ t.wininit = function () {
                 width: 362,
                 keepInViewport: true
             });
+            $("#trwinmedia").PopupWindow({
+                statusBar: false,
+                autoOpen: false,
+                modal: false,
+                buttons: {
+                    close: true,
+                    maximize: false,
+                    collapse: true,
+                    minimize: true
+                },
+                buttonsTexts: {
+                    close: "Закрыть",
+                    unmaximize: "Восстановить",
+                    minimize: "Минимизировать",
+                    unminimize: "Показать",
+                    collapse: "Скрыть",
+                    uncollapse: "Раскрыть"
+                },
+                title: "Вставка медиа контента",
+                height: 280,
+                width: 362,
+                keepInViewport: true
+            });
+
             $('<a href="#" class="tr-smiles"><span>Шмайлы</span></a>')
                 .insertBefore($(".chatLinkSmiles"))
                 .on('click', function (e) {
