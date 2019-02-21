@@ -40,7 +40,6 @@ t.messages = function (o) {
             if (b != null) {
                 var link = atob(b);
                 var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
-                console.log("---"+vid)
                 if (vid != null) {
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
@@ -58,6 +57,7 @@ t.messages = function (o) {
                                 'src': 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1',
                                 'allow': 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
                             }).appendTo("#trplayer");
+                            t.play=true;
                         } else {
                             $('#trfrplay').src = 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1';
                         }
