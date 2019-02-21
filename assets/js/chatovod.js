@@ -172,7 +172,7 @@ t.wininit = function () {
         .append('<div>Видео ссылка:</div><div><input class ="tr-w100" type="text" autocomplete="off" maxlength="1000"></div><div><button data-btn="vlink" class="sendbtn tr-pull-right" type="button">Отправить</button></div>')
         .appendTo('#trwinmedia');
 
-        $(document).on('click','sendbtn',function(){
+        $(document).on('click','.sendbtn',function(){
             console.log($(this).data("btn"));
         });
 
