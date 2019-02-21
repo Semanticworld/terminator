@@ -57,6 +57,7 @@ t.messages = function (o) {
             });
 
             if(h.length>10){
+                console.log("===>"+h);
                 console.log(h.substring(1, 7));
                 if (h.substring(1, 7)=="[VID]"){
                     console.log(h);
