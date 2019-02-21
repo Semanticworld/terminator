@@ -51,6 +51,7 @@ t.messages = function (o) {
                             'width': '362',
                             'height': '280',
                             'type': 'text/html',
+                            'style':'display: block;',
                             'src': 'https://www.youtube.com/embed/' + vid[1],
                             'allow': 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
                         }).appendTo("#trplayer");
