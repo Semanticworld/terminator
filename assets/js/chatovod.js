@@ -46,7 +46,7 @@ t.messages = function (o) {
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
                         var i = '<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="362" height="280" type="text/html" src="https://www.youtube.com/embed/' + vid[1] + '?autoplay=1&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=1&start=0&end=0&origin=https://youtubeembedcode.com"></iframe>';
-                        $(".trframe").appendTo(i);
+                        $(t.player).appendTo(i);
                         
                     }
                 }
