@@ -200,7 +200,7 @@ t.wininit = function () {
                     lazyload();
                 });
 
-            $('<a href="#" class="tr-media"><span>Медиа</span></a>')
+            $('<a href="#" class="tr-media chatLinkImage"><span>Медиа</span></a>')
                 .insertBefore($(".chatLinkSmiles"))
                 .on('click', function (e) {
                     e.preventDefault()
