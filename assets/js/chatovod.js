@@ -41,10 +41,9 @@ t.messages = function (o) {
                 var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
                 if (vid[1].length>3){
                     console.log(vid[1]);
+                    $("#trplayer").PopupWindow("open");
                 }
-                
             }
-
         }
         var a = h.match(/\*...\*/g);
         if (a != null) {
@@ -179,6 +178,9 @@ t.wininit = function () {
     $('<div />').appendTo('body').attr('id', 'trwin');
     $('<div class="trbody"></div>').appendTo('#trwin');
 
+    $('<div />').appendTo('body').attr('id', 'trplayer');
+    $('<div class="trframe"></div>').appendTo('#trplayer');
+
     $('<div />').appendTo('body').attr('id', 'trwinmedia');
     $('<div class="trmediabody"></div>')
         .append('<div>Видео ссылка:</div><div><input id="evlink" class ="tr-w100" type="text" autocomplete="off" maxlength="1000"></div><div><button data-btn="vlink" class="sendbtn tr-pull-right" type="button">Отправить</button></div>')
@@ -219,6 +221,30 @@ t.wininit = function () {
                 keepInViewport: true
             });
             $("#trwinmedia").PopupWindow({
+                statusBar: false,
+                autoOpen: false,
+                modal: false,
+                buttons: {
+                    close: true,
+                    maximize: false,
+                    collapse: true,
+                    minimize: true
+                },
+                buttonsTexts: {
+                    close: "Закрыть",
+                    unmaximize: "Восстановить",
+                    minimize: "Минимизировать",
+                    unminimize: "Показать",
+                    collapse: "Скрыть",
+                    uncollapse: "Раскрыть"
+                },
+                title: "Вставка медиа контента",
+                height: 280,
+                width: 362,
+                keepInViewport: true
+            });
+
+            $("#trplayer").PopupWindow({
                 statusBar: false,
                 autoOpen: false,
                 modal: false,
