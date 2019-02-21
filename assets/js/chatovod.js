@@ -51,7 +51,7 @@ t.messages = function (o) {
                             'width': '362',
                             'height': '280',
                             'type': 'text/html',
-                            src: 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=1&start=0&end=0'
+                            src: 'https://www.youtube.com/embed/' + vid[1] 
                         }).appendTo("#trplayer");
                     }
                 }
