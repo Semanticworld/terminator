@@ -176,7 +176,7 @@ t.wininit = function () {
             console.log($(this).data("btn"));
         });
 
-        sendbtn
+        
 
     function wait() {
         if (typeof (jQuery().PopupWindow) == "function") {
