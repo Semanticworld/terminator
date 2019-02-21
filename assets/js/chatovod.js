@@ -194,7 +194,12 @@ t.wininit = function () {
     $('<div />').appendTo('body').attr('id', 'trwin');
     $('<div class="trbody"></div>').appendTo('#trwin');
 
-    $('<div />').appendTo('body').attr('id', 'trplayer');
+    $('<div />')
+        .appendTo('body')
+        .attr('id', 'trplayer')
+        .css({
+            'height': '100%'
+        });
     $('<div class="trframe"></div>').appendTo('#trplayer');
 
     $('<div />').appendTo('body').attr('id', 'trwinmedia');
