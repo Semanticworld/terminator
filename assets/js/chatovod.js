@@ -168,7 +168,9 @@ t.wininit = function () {
     $('<div class="trbody"></div>').appendTo('#trwin');
 
     $('<div />').appendTo('body').attr('id', 'trwinmedia');
-    $('<div class="trmediabody"></div>').appendTo('#trwinmedia');
+    $('<div class="trmediabody"></div>')
+        .append('<div>Видео ссылка:</div><div><input type="text" autocomplete="off" maxlength="1000"></div>')
+        .appendTo('#trwinmedia');
 
     function wait() {
         if (typeof (jQuery().PopupWindow) == "function") {
