@@ -1,4 +1,4 @@
-var t = {};
+var t = {}
 t.play = false;
 t.home = localStorage.getItem('tr-home');
 t.version = localStorage.getItem('tr-ver');
@@ -43,7 +43,7 @@ t.messages = function (o) {
                 if (vid != null) {
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
-                        if (t.play==false) {
+                        if (t.play == false) {
                             $('<iframe>', {
                                 'id': 'trfrplay',
                                 'frameborder': '0',
@@ -59,16 +59,12 @@ t.messages = function (o) {
                             }).appendTo("#trplayer");
                             t.play = true;
                         } else {
-                            $('#trfrplay').attr('src','https://www.youtube.com/embed/' + vid[1] + '?autoplay=1'); 
+                            $('#trfrplay').attr('src', 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1');
                         }
                     }
                 }
             }
         }
-
-
-
-
         var a = h.match(/\*...\*/g);
         if (a != null) {
             a.forEach(function (a) {
@@ -93,7 +89,6 @@ t.messages = function (o) {
         }
     }
 }
-
 t.playSound = function (url) {
     if ($("#traudio").length) {
         $("#traudio").remove();
@@ -124,7 +119,6 @@ t.playSound = function (url) {
     }
 
 }
-
 t.showfx = function (name) {
     if (typeof $(document).snowfall != "function" || ((localStorage.getItem('tr-snow') == "1") ? "1" : "0") == "0") {
         return false;
@@ -187,7 +181,6 @@ t.showfx = function (name) {
         $(document).snowfall('clear')
     }, 20000);
 }
-
 t.createInput = function (cmd, id, title) {
     var f1 = (localStorage.getItem('tr-' + cmd) == "1") ? "1" : "0";
     var s = '<div class="tr-pt10">';
@@ -196,7 +189,6 @@ t.createInput = function (cmd, id, title) {
     s += '</div>';
     return s;
 }
-
 t.wininit = function () {
     $('<div />').appendTo('body').attr('id', 'trwin');
     $('<div class="trbody"></div>').appendTo('#trwin');
@@ -295,8 +287,6 @@ t.wininit = function () {
                 width: 362,
                 keepInViewport: true
             });
-
-
             $('<a href="#" class="tr-smiles"><span>Шмайлы</span></a>')
                 .insertBefore($(".chatLinkSmiles"))
                 .on('click', function (e) {
@@ -304,7 +294,6 @@ t.wininit = function () {
                     $("#trwin").PopupWindow("open");
                     lazyload();
                 });
-
             $('<a href="#" class="tr-media chatLinkImage"><span>Видосы</span></a>')
                 .insertBefore($(".chatLinkSmiles"))
                 .on('click', function (e) {
@@ -312,7 +301,6 @@ t.wininit = function () {
                     $("#trwinmedia").PopupWindow("open");
                     lazyload();
                 });
-
             var i = 0,
                 h1 = h2 = '';
             while (i < 10) {
@@ -344,7 +332,6 @@ t.wininit = function () {
     }
     setTimeout(wait, 100);
 }
-
 t.run = function () {
     t.loadjs("css", t.home + "templates/chatovod/aa");
     t.loadjs("css", t.home + "plugins/popup/popupwindow");
@@ -358,8 +345,6 @@ t.run = function () {
         $(document).on('DOMNodeInserted', "div.chatMessage", function () {
             t.messages(this);
         });
-
-
         $('body').on('click', 'img.tr-smile', function (e) {
             e.preventDefault();
             var sm = $(this).data("face");
