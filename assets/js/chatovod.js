@@ -169,7 +169,7 @@ t.wininit = function () {
 
     $('<div />').appendTo('body').attr('id', 'trwinmedia');
     $('<div class="trmediabody"></div>')
-        .append('<div>Видео ссылка:</div><div><input class ="tr-w100" type="text" autocomplete="off" maxlength="1000"></div><div><button data-btn="vlink" class="sendbtn" type="button">Отправить</button></div>')
+        .append('<div>Видео ссылка:</div><div><input class ="tr-w100" type="text" autocomplete="off" maxlength="1000"></div><div><button data-btn="vlink" class="sendbtn tr-pull-right" type="button">Отправить</button></div>')
         .appendTo('#trwinmedia');
 
     function wait() {
