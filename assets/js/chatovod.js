@@ -37,7 +37,6 @@ t.messages = function (o) {
         if (h.includes("VID:[")) {
             var a = h.match(/[^[\]]+(?=])/g);
             if (a != null) {
-                atob()
                 console.log(atob(a));
             }
 
