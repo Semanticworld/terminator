@@ -41,7 +41,7 @@ t.messages = function (o) {
                 var link = atob(b);
                 var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
                 console.log("---"+vid)
-                if (vid === undefined || vid === null) {
+                if (vid != null) {
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
                         if (!t.play) {
