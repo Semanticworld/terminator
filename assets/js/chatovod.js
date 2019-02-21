@@ -198,7 +198,7 @@ t.wininit = function () {
         .appendTo('body')
         .attr('id', 'trplayer')
         .css({
-            'height': '100%'
+            'height': '95%'
         });
     $('<div class="trframe"></div>').appendTo('#trplayer');
 
