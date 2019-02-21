@@ -52,7 +52,7 @@ t.messages = function (o) {
                             'height': '280',
                             'type': 'text/html',
                             src: "https://www.youtube.com/embed/' + vid[1] + '?autoplay=1&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=1&start=0&end=0"
-                        }).appendTo(t.player);
+                        }).appendTo("#trmediabody");
                     }
                 }
             }
@@ -194,7 +194,7 @@ t.wininit = function () {
     $('<div class="trframe"></div>').appendTo('#trplayer');
 
     $('<div />').appendTo('body').attr('id', 'trwinmedia');
-    $('<div class="trmediabody"></div>')
+    $('<div id="trmediabody"></div>')
         .append('<div>Видео ссылка:</div><div><input id="evlink" class ="tr-w100" type="text" autocomplete="off" maxlength="1000"></div><div><button data-btn="vlink" class="sendbtn tr-pull-right" type="button">Отправить</button></div>')
         .appendTo('#trwinmedia');
 
