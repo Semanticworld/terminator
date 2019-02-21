@@ -40,7 +40,6 @@ t.messages = function (o) {
                 var link = atob(a);
                 var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
                 if (vid[1].length > 3) {
-                    console.log(vid[1]);
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
                         $('<iframe>', {
