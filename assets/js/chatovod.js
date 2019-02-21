@@ -167,6 +167,9 @@ t.wininit = function () {
     $('<div />').appendTo('body').attr('id', 'trwin');
     $('<div class="trbody"></div>').appendTo('#trwin');
 
+    $('<div />').appendTo('body').attr('id', 'trwinmedia');
+    $('<div class="trbody"></div>').appendTo('#trwinmedia');
+
     function wait() {
         if (typeof (jQuery().PopupWindow) == "function") {
             $("#trwin").PopupWindow({
