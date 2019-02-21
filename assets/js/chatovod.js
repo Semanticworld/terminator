@@ -39,7 +39,10 @@ t.messages = function (o) {
             if (a != null) {
                 var link = atob(a);
                 var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
-                console.log(vid);
+                if (vid[1].length>3){
+                    console.log(vid[1]);
+                }
+                
             }
 
         }
