@@ -59,7 +59,7 @@ t.messages = function (o) {
                             }).appendTo("#trplayer");
                             t.play = true;
                         } else {
-                            $('#trfrplay').src = 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1';
+                            $('#trfrplay').attr('src','https://www.youtube.com/embed/' + vid[1] + '?autoplay=1'); 
                         }
                     }
                 }
