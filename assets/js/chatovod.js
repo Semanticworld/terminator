@@ -60,7 +60,7 @@ t.messages = function (o) {
                             collapse: "Скрыть",
                             uncollapse: "Раскрыть"
                         },
-                        title: "Вставка медиа контента",
+                        title: "Видеоплеер",
                         height: 280,
                         width: 362,
                         keepInViewport: true
