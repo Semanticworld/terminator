@@ -43,8 +43,9 @@ t.messages = function (o) {
                     console.log(vid[1]);
 
 
-
+                    if (typeof (jQuery().PopupWindow) == "function") {
                     $(t.player).PopupWindow("open");
+                    }
                 }
             }
         }
