@@ -2,7 +2,7 @@
 // @name        Terminator
 // @description Terminator - Chat optimizator
 // @author      Semanticworld
-// @version     0.0.0.21
+// @version     0.0.0.22
 // @updateURL   https://semanticworld.github.io/terminator/terminator.user.js
 // @icon        https://semanticworld.github.io/terminator/assets/ico/ico128.png
 // @icon64      https://semanticworld.github.io/terminator/assets/ico/ico64.png
@@ -20,7 +20,7 @@
     'use strict';
     var home = 'https://semanticworld.github.io/terminator/assets/';
     localStorage.setItem('tr-home', home);
-    localStorage.setItem('tr-ver', '0.0.0.21');
+    localStorage.setItem('tr-ver', '0.0.0.22');
 
     function getHostName(url) {
         var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
