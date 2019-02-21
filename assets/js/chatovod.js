@@ -57,7 +57,7 @@ t.messages = function (o) {
                                 'src': 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1',
                                 'allow': 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
                             }).appendTo("#trplayer");
-                            t.play=true;
+                            t.play = true;
                         } else {
                             $('#trfrplay').src = 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1';
                         }
