@@ -1,4 +1,5 @@
 var t = {};
+t.play = false;
 t.home = localStorage.getItem('tr-home');
 t.version = localStorage.getItem('tr-ver');
 t.loadjs = function (type, url, fn = false) {
@@ -42,18 +43,23 @@ t.messages = function (o) {
                 if (vid[1].length > 3) {
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
-                        $('<iframe>', {
-                            'frameborder': '0',
-                            'scrolling': 'no',
-                            'marginheight': '0',
-                            'marginwidth': '0',
-                            'width': '362',
-                            'height': '280',
-                            'type': 'text/html',
-                            'style': 'display: block;width:100%;height:100%;',
-                            'src': 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1',
-                            'allow': 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-                        }).appendTo("#trplayer");
+                        if (!t.play) {
+                            $('<iframe>', {
+                                'id': 'trfrplay',
+                                'frameborder': '0',
+                                'scrolling': 'no',
+                                'marginheight': '0',
+                                'marginwidth': '0',
+                                'width': '362',
+                                'height': '280',
+                                'type': 'text/html',
+                                'style': 'display: block;width:100%;height:100%;',
+                                'src': 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1',
+                                'allow': 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+                            }).appendTo("#trplayer");
+                        } else {
+                            $('#trfrplay').src = 'https://www.youtube.com/embed/' + vid[1] + '?autoplay=1';
+                        }
                     }
                 }
             }
