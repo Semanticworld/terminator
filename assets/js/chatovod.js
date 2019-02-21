@@ -44,7 +44,7 @@ t.messages = function (o) {
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
                         $('<iframe>', {
-                            'frameborder': "0",
+                            'frameborder': '0',
                             'scrolling': 'no',
                             'marginheight': '0',
                             'marginwidth': '0',
