@@ -40,6 +40,7 @@ t.messages = function (o) {
             if (a != null) {
                 var link = atob(a);
                 var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
+                console.log(vid[1].length );
                 if (vid[1].length > 5) {
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
