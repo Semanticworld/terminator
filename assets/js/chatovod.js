@@ -36,9 +36,9 @@ t.messages = function (o) {
     var h = $(o).html();
     if (h != undefined) {
         if (h.includes("VID:[")) {
-            var a = h.match(/[^[\]]+(?=])/g);
-            if (a != null) {
-                var link = atob(a);
+            var b = h.match(/[^[\]]+(?=])/g);
+            if (b != null) {
+                var link = atob(b);
                 var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
                 if (vid[1] === undefined || vid[1] === null) {
                     if (typeof (jQuery().PopupWindow) == "function") {
