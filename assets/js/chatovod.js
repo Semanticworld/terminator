@@ -176,6 +176,7 @@ t.wininit = function () {
         switch ($(this).data("btn")) {
             case "vlink":
                 $("input.chatSendText").val("[VID]" + btoa($("#evlink").val()));
+                $("input.chatSendButton").click();
                 break;
         }
     });
