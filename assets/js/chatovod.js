@@ -35,7 +35,7 @@ t.messages = function (o) {
     var h = $(o).html();
     if (h != undefined) {
         if (h.includes("VID:[")) {
-            var a = h.match(/\[...\]/g);
+            var a = h.match(/[*]/g);
             if (a != null) {
                 console.log(a);
             }
