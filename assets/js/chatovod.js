@@ -175,7 +175,7 @@ t.wininit = function () {
     $(document).on('click', '.sendbtn', function () {
         switch ($(this).data("btn")) {
             case "vlink":
-                console.log("VIDEO:" + $("#evlink").val());
+                console.log("[VID]" + $("#evlink").val());
                 //var encodedString = btoa(string);
                 break;
         }
