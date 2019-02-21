@@ -39,34 +39,12 @@ t.messages = function (o) {
             if (a != null) {
                 var link = atob(a);
                 var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
-                if (vid[1].length>3){
+                if (vid[1].length > 3) {
                     console.log(vid[1]);
 
-                    $("#trplayer").PopupWindow({
-                        statusBar: false,
-                        autoOpen: false,
-                        modal: false,
-                        buttons: {
-                            close: true,
-                            maximize: false,
-                            collapse: true,
-                            minimize: true
-                        },
-                        buttonsTexts: {
-                            close: "Закрыть",
-                            unmaximize: "Восстановить",
-                            minimize: "Минимизировать",
-                            unminimize: "Показать",
-                            collapse: "Скрыть",
-                            uncollapse: "Раскрыть"
-                        },
-                        title: "Видеоплеер",
-                        height: 280,
-                        width: 362,
-                        keepInViewport: true
-                    });
 
-                    $("#trplayer").PopupWindow("open");
+
+                    $(t.player).PopupWindow("open");
                 }
             }
         }
@@ -268,7 +246,30 @@ t.wininit = function () {
                 width: 362,
                 keepInViewport: true
             });
-
+            t.player = $("#trplayer");
+            $(t.player).PopupWindow({
+                statusBar: false,
+                autoOpen: false,
+                modal: false,
+                buttons: {
+                    close: true,
+                    maximize: false,
+                    collapse: true,
+                    minimize: true
+                },
+                buttonsTexts: {
+                    close: "Закрыть",
+                    unmaximize: "Восстановить",
+                    minimize: "Минимизировать",
+                    unminimize: "Показать",
+                    collapse: "Скрыть",
+                    uncollapse: "Раскрыть"
+                },
+                title: "Видеоплеер",
+                height: 280,
+                width: 362,
+                keepInViewport: true
+            });
 
 
             $('<a href="#" class="tr-smiles"><span>Шмайлы</span></a>')
