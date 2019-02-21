@@ -55,6 +55,14 @@ t.messages = function (o) {
                 }
                 h = t.repl(h, a.split("*").join("/*"), l);
             });
+
+            if(h.length>10){
+                if (h.substring(1, 5)=="[VID]"){
+                    console.log(h);
+                }
+            }
+
+
             $($m).html(h);
         }
     }
