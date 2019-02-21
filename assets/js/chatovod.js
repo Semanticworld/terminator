@@ -74,21 +74,21 @@ t.playSound = function (url) {
         sound.controls = true;
         sound.style.position = 'fixed';
         sound.style.top = '1px';
-        sound.style.zIndex="999999";
+        sound.style.zIndex = "999999";
         sound.addEventListener("play", function () {}, false);
         sound.addEventListener("ended", function () {
             sound.style.visibility = 'hidden';
         }, false);
         document.body.appendChild(sound);
         //sound.play();
-            const playPromise = sound.play();
-            if (playPromise !== null) {
-                playPromise.catch(() => {
+        const playPromise = sound.play();
+        if (playPromise !== null) {
+            playPromise.catch(() => {
                 //    sound.play();
-                })
-         }
+            })
+        }
     }
-    
+
 }
 
 t.showfx = function (name) {
@@ -199,6 +199,15 @@ t.wininit = function () {
                     $("#trwin").PopupWindow("open");
                     lazyload();
                 });
+
+            $('<a href="#" class="tr-media"><span>Медиа</span></a>')
+                .insertBefore($(".chatLinkSmiles"))
+                .on('click', function (e) {
+                    e.preventDefault()
+                    $("#trwinmedia").PopupWindow("open");
+                    lazyload();
+                });
+
             var i = 0,
                 h1 = h2 = '';
             while (i < 10) {
