@@ -35,7 +35,11 @@ t.messages = function (o) {
     var h = $(o).html();
     if (h != undefined) {
         if (h.includes("VID:[")) {
-            console.log(h);
+            var a = h.match(/\[...\]/g);
+            if (a != null) {
+                console.log(a);
+            }
+
         }
         var a = h.match(/\*...\*/g);
         if (a != null) {
@@ -178,7 +182,7 @@ t.wininit = function () {
     $(document).on('click', '.sendbtn', function () {
         switch ($(this).data("btn")) {
             case "vlink":
-                $("input.chatSendText").val("VID:[" + btoa($("#evlink").val())+"]");
+                $("input.chatSendText").val("VID:[" + btoa($("#evlink").val()) + "]");
                 $("input.chatSendButton").click();
                 break;
         }
