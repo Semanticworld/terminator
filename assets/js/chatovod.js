@@ -37,7 +37,9 @@ t.messages = function (o) {
         if (h.includes("VID:[")) {
             var a = h.match(/[^[\]]+(?=])/g);
             if (a != null) {
-                console.log(atob(a));
+                var link = atob(a);
+                var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
+                console.log(vid);
             }
 
         }
