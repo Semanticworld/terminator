@@ -40,7 +40,8 @@ t.messages = function (o) {
             if (b != null) {
                 var link = atob(b);
                 var vid = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
-                if (vid[1] === undefined || vid[1] === null) {
+                
+                if (vid === undefined || vid === null) {
                     if (typeof (jQuery().PopupWindow) == "function") {
                         $(t.player).PopupWindow("open");
                         if (!t.play) {
