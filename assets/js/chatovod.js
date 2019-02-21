@@ -34,6 +34,15 @@ t.messages = function (o) {
     var $m = $(o);
     var h = $(o).html();
     if (h != undefined) {
+
+        if(h.length>10){
+            console.log("===>"+h);
+            console.log(h.substring(1, 7));
+            if (h.substring(1, 7)=="[VID]"){
+                console.log(h);
+            }
+        }
+
         var a = h.match(/\*...\*/g);
         if (a != null) {
             a.forEach(function (a) {
@@ -55,16 +64,6 @@ t.messages = function (o) {
                 }
                 h = t.repl(h, a.split("*").join("/*"), l);
             });
-
-            if(h.length>10){
-                console.log("===>"+h);
-                console.log(h.substring(1, 7));
-                if (h.substring(1, 7)=="[VID]"){
-                    console.log(h);
-                }
-            }
-
-
             $($m).html(h);
         }
     }
