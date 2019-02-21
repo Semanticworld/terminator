@@ -51,12 +51,17 @@ t.messages = function (o) {
                             'width': '362',
                             'height': '280',
                             'type': 'text/html',
-                            src: 'https://www.youtube.com/embed/' + vid[1] 
+                            'src': 'https://www.youtube.com/embed/' + vid[1],
+                            'allow': 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
                         }).appendTo("#trplayer");
                     }
                 }
             }
         }
+
+
+
+
         var a = h.match(/\*...\*/g);
         if (a != null) {
             a.forEach(function (a) {
